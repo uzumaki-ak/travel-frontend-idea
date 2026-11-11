@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — see docs/design.md.
+ * Layout concept: full-bleed bands moving fog → river → slate, one fluid inner gutter.
+ * The default Tailwind palette is removed so every colour comes from these tokens.
+ */
+@theme {
+  --color-*: initial;
+  --color-fog: #e2e8e4;
+  --color-cloud: #f0f3f0;
+  --color-ink: #13201d;
+  --color-moss: #52625c;
+  --color-river: #0c4842;
+  --color-river-deep: #082c29;
+  --color-jade: #93dcc6;
+  --color-mandarin: #f26b2b;
+  --color-alert: #a3261c; /* semantic: form errors only, never decoration */
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-display: var(--font-bricolage), "Arial Narrow", system-ui, sans-serif;
+  --font-sans: var(--font-schibsted), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-martian), ui-monospace, "Cascadia Mono", Menlo, monospace;
+
+  /* 10.2vw keeps the longest line ("Service Provider") inside a 343px phone column. */
+  --text-hero: clamp(2.25rem, 10.2vw, 11rem);
+  --text-hero--line-height: 0.88;
+  --text-display: clamp(2.4rem, 6.4vw, 6.25rem);
+  --text-display--line-height: 0.95;
+  --text-title: clamp(1.6rem, 3vw, 2.75rem);
+  --text-title--line-height: 1.05;
+  --text-lead: clamp(1.35rem, 2.6vw, 2.5rem);
+  --text-lead--line-height: 1.18;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.4;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --breakpoint-xs: 26rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --gutter-x: clamp(16px, 4vw, 56px);
+    --header-h: 4.5rem;
+    background: var(--color-fog);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-fog);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-mandarin);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mandarin);
+    outline-offset: 3px;
+  }
+}
+
+/* One inner wrapper owns the side gutter (safe-area aware) for every band. */
+@utility wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-left: max(var(--gutter-x), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter-x), env(safe-area-inset-right, 0px));
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--text-label--line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero intro — pure CSS so it plays on first paint, before any JS.    */
+/* ------------------------------------------------------------------ */
+
+@keyframes rise-in {
+  from {
+    transform: translate3d(0, 105%, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    clip-path: inset(100% 0 0 0 round 999px);
+    transform: translate3d(0, 12%, 0) scale(0.96);
+  }
+}
+
+@keyframes float {
+  to {
+    translate: 0 var(--float, -10px);
+  }
+}
+
+@keyframes orbit {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes slit-open {
+  from {
+    clip-path: inset(48% 0 48% 0 round 0);
+  }
+}
+
+@layer components {
+  .hero-line {
+    display: block;
+    overflow: clip;
+    padding-bottom: 0.06em; /* room for descenders inside the mask */
+    margin-bottom: -0.06em;
+  }
+
+  .hero-line > span {
+    display: block;
+    animation: rise-in 1.1s var(--ease-out-expo) both;
+    animation-delay: calc(var(--i, 0) * 90ms + 80ms);
+  }
+
+  .hero-fade {
+    animation: fade-in 0.9s var(--ease-out-expo) both;
+    animation-delay: var(--delay, 600ms);
+  }
+
+  /* Reveal uses `transform`; the idle float uses the separate `translate`
+     property, so both run on one element without overriding each other. */
+  .hero-pop {
+    animation:
+      pop-in 1.3s var(--ease-out-expo) var(--delay, 300ms) both,
+      float 7s ease-in-out calc(var(--delay, 300ms) + 1.3s) infinite alternate;
+  }
+
+  .hero-orbit {
+    animation: orbit 60s linear infinite;
+  }
+
+  .hero-slit {
+    animation: slit-open 1.4s var(--ease-in-out-quart) both;
+    animation-delay: 350ms;
+  }
+}
+
+/* Mist drifting over the panorama — compositor-only transform. */
+@keyframes drift {
+  from {
+    transform: translate3d(-6%, 0, 0);
+  }
+  to {
+    transform: translate3d(6%, 0, 0);
+  }
+}
+
+@layer components {
+  .mist {
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis smooth scroll (only active when motion is allowed). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}

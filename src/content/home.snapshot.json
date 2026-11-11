@@ -1,0 +1,866 @@
+{
+  "source": {
+    "url": "https://www.kajaawa.com/",
+    "capturedAt": "2026-11-11T19:17:19.911Z"
+  },
+  "seo": {
+    "title": "Kajaawa | Local Cabs and Hotel Service Provider in Meghalaya",
+    "description": "We provide taxi services, hotels and bike rental services in Shillong, Cherrapunjee, Meghalaya and other places. Call Us @6033114867"
+  },
+  "brand": {
+    "name": "Kajaawa",
+    "logo": "/media/home/kajaawa-logo.png"
+  },
+  "topbar": [
+    {
+      "label": "Call Us:",
+      "href": "tel:+916033114867",
+      "value": "+91-6033114867"
+    },
+    {
+      "label": "WhatsApp Us:",
+      "href": "https://wa.me/916033114867",
+      "value": "+91-6033114867"
+    },
+    {
+      "label": "Email Us:",
+      "href": "mailto:info@kajaawa.com",
+      "value": "info@kajaawa.com"
+    }
+  ],
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Tours",
+      "href": "/tours/"
+    },
+    {
+      "label": "Cabs",
+      "href": "/cars/"
+    }
+  ],
+  "hero": {
+    "src": "/media/home/Krang-Suri-1-cvimg.jpg",
+    "alt": "Krang Suri",
+    "width": 1920,
+    "height": 400
+  },
+  "intro": [
+    "Kajaawa is an online local travel website dealing in taxi services in Shillong, Cherrapunjee, Dawki in Meghalaya and Guwahati, Kaziranga and Assam. We also provide bike rental services in Shillong, Meghalaya.",
+    "We are the trusted and reliable taxi service provider in Meghalaya and Assam. We have local licensed drivers having knoweldge of Meghalaya and Assam routes. Since 2018 we have been providing taxi service in Meghalaya and Assam.",
+    "Our airport transfers are done by local drivers and we have the best airport taxi fare like for Shillong Airport Taxi and Guwahati Airport Taxi. Kajaawa also offers thoughtfully curated tour packages, making it easier to explore destinations with well-planned itineraries and worth-taking experiences.",
+    "We also provide the best hotels in Shillong. Apart from hotels we also provide experiential stays like resorts, homestays, tent stays. For groups and budget travellers, we also provide cheaper hotels and stays in Shillong, Cherrapunjee and other places of Meghalaya.",
+    "We provide car hire and bike rentals for all occasions. There are some solo travellers who want to travel alone for which we provide taxi on sharing basis.",
+    "We have in our fleet clean and maintained cabs. We have different range of economic cabs available at your doorstep."
+  ],
+  "sections": [
+    {
+      "kind": "cards",
+      "title": "Our Honeymoon Tour Packages",
+      "items": [
+        {
+          "title": "Enchanting Meghalaya Tour",
+          "href": "/tours/enchanting-meghalaya-tour/",
+          "image": "/media/home/Umiam-Lake-7-kaga.jpg",
+          "duration": "10D/9N",
+          "price": "37,100"
+        },
+        {
+          "title": "8 Days Meghalaya Holiday Tour",
+          "href": "/tours/8-days-meghalaya-holiday-tour/",
+          "image": "/media/home/Umiam-lake-1-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "29,250"
+        },
+        {
+          "title": "Mesmerizing Assam and Meghalaya Tour",
+          "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+          "image": "/media/home/dawki-river-6-kaga.jpg",
+          "duration": "7D/6N"
+        },
+        {
+          "title": "Mesmerising 7 Days Assam Meghalaya Tour",
+          "href": "/tours/mesmerising-7-days-assam-meghalaya-tour/",
+          "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,380"
+        },
+        {
+          "title": "Romantic Meghalaya Tour",
+          "href": "/tours/romantic-meghalaya-tour/",
+          "image": "/media/home/Umngot-River-1-kaga.jpg",
+          "duration": "6D/5N",
+          "price": "19,650"
+        },
+        {
+          "title": "Splendid Shillong Cherrapunji Tour",
+          "href": "/tours/splendid-shillong-cherrapunji-tour/",
+          "image": "/media/home/dawki-river-4-kaga.jpg",
+          "duration": "6D/5N",
+          "price": "21,800"
+        },
+        {
+          "title": "Romantic Shillong Cherrapunji Tour",
+          "href": "/tours/romantic-shillong-cherrapunji-tour/",
+          "image": "/media/home/wei-sawdong-falls-3-kaga.jpg",
+          "duration": "6D/5N",
+          "price": "21,430"
+        },
+        {
+          "title": "Meghalaya Adventure Honeymoon Tour",
+          "href": "/tours/meghalaya-adventure-honeymoon-tour/",
+          "image": "/media/home/Double-Decker-5-kaga.jpg",
+          "duration": "5D/4N",
+          "price": "17,500"
+        },
+        {
+          "title": "5 Days Meghalaya Offbeat Tour",
+          "href": "/tours/meghalaya-offbeat-tour/",
+          "image": "/media/home/mawphlang-sacred-forest-kaga-1.jpg",
+          "duration": "5D/4N",
+          "price": "17,520"
+        },
+        {
+          "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+          "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+          "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+          "duration": "5D/4N",
+          "price": "18,100"
+        }
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Featured Tour Packages",
+      "items": [
+        {
+          "title": "8 Days Meghalaya Holiday Tour",
+          "href": "/tours/8-days-meghalaya-holiday-tour/",
+          "image": "/media/home/Umiam-lake-1-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "29,250"
+        },
+        {
+          "title": "Mesmerising 7 Days Assam Meghalaya Tour",
+          "href": "/tours/mesmerising-7-days-assam-meghalaya-tour/",
+          "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,380"
+        },
+        {
+          "title": "Shillong Cherrapunji Honeymoon Tour",
+          "href": "/tours/shillong-cherrapunji-honeymoon-tour/",
+          "image": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
+          "duration": "5D/4N",
+          "price": "17,600"
+        },
+        {
+          "title": "Adventure Camping in Dawki",
+          "href": "/tours/camping-at-dawki-shnongpdeng/",
+          "image": "/media/home/placeholder-image.png",
+          "duration": "2D/1N",
+          "price": "400"
+        },
+        {
+          "title": "Deluxe Camping in Cafe Cherrapunji",
+          "href": "/tours/camping-in-cafe-cherrapunji/",
+          "image": "/media/home/Cafe-Cherrapunji-1-kaga.jpg",
+          "duration": "2D/1N",
+          "price": "2,000"
+        },
+        {
+          "title": "Camping at 100 Waterfalls, Cherrapunji",
+          "href": "/tours/camping-at-100-waterfalls-cherrapunji/",
+          "image": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-6-kaga.jpg",
+          "duration": "2D/1N",
+          "price": "2,250"
+        },
+        {
+          "title": "Camping in Dawki, Shnongpdeng",
+          "href": "/tours/camping-in-dawki-shnongpdeng/",
+          "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg",
+          "duration": "2D/1N",
+          "price": "400"
+        }
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Explore our Adventure Tours",
+      "items": [
+        {
+          "title": "Amazing Meghalaya Assam and Arunachal Pradesh Tour",
+          "href": "/tours/amazing-meghalaya-assam-and-arunachal-pradesh-tour/",
+          "image": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+          "duration": "13D/12N",
+          "price": "33,000"
+        },
+        {
+          "title": "Enchanting Meghalaya Tour",
+          "href": "/tours/enchanting-meghalaya-tour/",
+          "image": "/media/home/Umiam-Lake-7-kaga.jpg",
+          "duration": "10D/9N",
+          "price": "37,100"
+        },
+        {
+          "title": "Majestic 10 Days Meghalaya Tour",
+          "href": "/tours/majestic-10-days-meghalaya-tour/",
+          "image": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+          "duration": "10D/9N",
+          "price": "37,000"
+        },
+        {
+          "title": "Amazing Meghalaya Tour",
+          "href": "/tours/amazing-meghalaya-tour/",
+          "image": "/media/home/dawki-river-5-kaga.jpg",
+          "duration": "9D/8N",
+          "price": "33,100"
+        },
+        {
+          "title": "9 Days Meghalaya Assam Arunachal Tour Package",
+          "href": "/tours/9-days-meghalaya-assam-arunachal-tour-package/",
+          "image": "/media/home/Seven-Sisters-Falls-3-kaga.jpg",
+          "duration": "9D/8N",
+          "price": "29,100"
+        },
+        {
+          "title": "8 Days Tour of Meghalaya and Arunachal Pradesh",
+          "href": "/tours/8-days-tour-of-meghalaya-and-arunachal-pradesh/",
+          "image": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "25,700"
+        },
+        {
+          "title": "8 Days Meghalaya Holiday Tour",
+          "href": "/tours/8-days-meghalaya-holiday-tour/",
+          "image": "/media/home/Umiam-lake-1-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "29,250"
+        },
+        {
+          "title": "Mesmerising 7 Days Assam Meghalaya Tour",
+          "href": "/tours/mesmerising-7-days-assam-meghalaya-tour/",
+          "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,380"
+        },
+        {
+          "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+          "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+          "image": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,330"
+        },
+        {
+          "title": "Wildlife Tour of Kaziranga with Meghalaya",
+          "href": "/tours/wildlife-tour-of-kaziranga-with-meghalaya/",
+          "image": "/media/home/Dainthlen-Falls-1-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,350"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Suggested Tourism",
+      "items": [
+        {
+          "title": "Places to visit in Jowai",
+          "href": "/places-to-visit-in-jowai/",
+          "image": "/media/home/krang-suri-falls-10-kaga.jpg"
+        },
+        {
+          "title": "Places to visit in Mawsynram",
+          "href": "/places-to-visit-in-mawsynram/",
+          "image": "/media/home/Mawsynram-2-kaga.jpg"
+        },
+        {
+          "title": "Places to visit in Cherrapunji",
+          "href": "/places-to-visit-in-cherrapunji/",
+          "image": "/media/home/Nohkalikai-Falls-1-kaga.jpg"
+        },
+        {
+          "title": "Cherrapunji Tourism",
+          "href": "/cherrapunji-tourism/",
+          "image": "/media/home/Seven-Sisters-Falls-5-kaga.jpg"
+        },
+        {
+          "title": "Dawki Tourism",
+          "href": "/dawki-tourism/",
+          "image": "/media/home/dawki-shnongpdeng-camping-5.jpg"
+        },
+        {
+          "title": "Jowai Tourism",
+          "href": "/jowai-tourism/",
+          "image": "/media/home/krang-suri-falls-10-kaga.jpg"
+        },
+        {
+          "title": "Places to Visit in Shillong",
+          "href": "/places-to-visit-in-shillong/",
+          "image": "/media/home/Laitlum-Canyons-1-kaga.jpeg"
+        },
+        {
+          "title": "Places to visit in Dawki",
+          "href": "/places-to-visit-in-dawki/",
+          "image": "/media/home/dawki-river-5-kaga.jpg"
+        },
+        {
+          "title": "Places to Visit in Meghalaya",
+          "href": "/places-to-visit-in-meghalaya/",
+          "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg"
+        },
+        {
+          "title": "Mawsynram Tourism",
+          "href": "/mawsynram-tourism/",
+          "image": "/media/home/Mawsynram-1-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Explore our Tour Packages",
+      "items": [
+        {
+          "title": "Tawang Tour Packages",
+          "href": "/tawang-tour-packages/",
+          "image": "/media/home/tawang-arunachal-pradesh-unsplash-2-kaga.jpg"
+        },
+        {
+          "title": "Arunachal Tour Packages",
+          "href": "/arunachal-pradesh-tour-packages/",
+          "image": "/media/home/arunachal-pradesh-unsplash-2-kaga.jpg"
+        },
+        {
+          "title": "Majuli Tour Packages",
+          "href": "/majuli-tour-packages/",
+          "image": "/media/home/assam-unsplash-2-kaga.jpg"
+        },
+        {
+          "title": "Kaziranga Tour Packages",
+          "href": "/kaziranga-tour-packages/",
+          "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+        },
+        {
+          "title": "Guwahati Tour Packages",
+          "href": "/guwahati-tour-packages/",
+          "image": "/media/home/guwahati-assasm-unsplash-2-kaga.jpg"
+        },
+        {
+          "title": "Assam Tour Packages",
+          "href": "/assam-tour-packages/",
+          "image": "/media/home/Kaziranga-national-park-5-kaga.jpg"
+        },
+        {
+          "title": "Jowai Tour Packages",
+          "href": "/jowai-tour-packages/",
+          "image": "/media/home/krang-suri-falls-10-kaga.jpg"
+        },
+        {
+          "title": "Mawsynram Tour Packages",
+          "href": "/mawsynram-tour-packages/",
+          "image": "/media/home/Mawsynram-1-kaga.jpg"
+        },
+        {
+          "title": "Cherrapunji Tour Packages",
+          "href": "/cherrapunji-tour-packages/",
+          "image": "/media/home/Nohkalikai-Falls-1-.jpg"
+        },
+        {
+          "title": "Dawki Tour Packages",
+          "href": "/dawki-tour-packages/",
+          "image": "/media/home/dawki-river-4-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Our Camping Tours",
+      "items": [
+        {
+          "title": "Camping in Cherrapunji",
+          "href": "/camping-in-cherrapunji/",
+          "image": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-1-kaga.jpg"
+        },
+        {
+          "title": "Camping in Meghalaya",
+          "href": "/camping-in-meghalaya/",
+          "image": "/media/home/Lakefront-Nature-Camping-in-Mawsynram-2-kaga.jpg"
+        },
+        {
+          "title": "Camping in Shillong",
+          "href": "/camping-in-shillong/",
+          "image": "/media/home/Dawki-Shnongpdeng-Camping-3-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Our Honeymoon Listings",
+      "items": [
+        {
+          "title": "Tawang Honeymoon Tour Packages",
+          "href": "/tawang-honeymoon-tour-packages/",
+          "image": "/media/home/tawang-arunachal-pradesh-unsplash-1-kaga.jpg"
+        },
+        {
+          "title": "Arunachal Pradesh Honeymoon Tour Packages",
+          "href": "/arunachal-pradesh-honeymoon-packages/",
+          "image": "/media/home/arunachal-pradesh-unsplash-1-kaga.jpg"
+        },
+        {
+          "title": "Majuli Honeymoon Tour Packages",
+          "href": "/majuli-honeymoon-packages/",
+          "image": "/media/home/assam-unsplash-1-kaga.jpg"
+        },
+        {
+          "title": "Kaziranga Honeymoon Tour Packages",
+          "href": "/kaziranga-honeymoon-packages/",
+          "image": "/media/home/Kaziranga-national-park-5-kaga.jpg"
+        },
+        {
+          "title": "Guwahati Honeymoon Tour Packages",
+          "href": "/guwahati-honeymoon-packages/",
+          "image": "/media/home/guwahati-assasm-unsplash-1-kaga.jpg"
+        },
+        {
+          "title": "Assam Honeymoon Tour Packages",
+          "href": "/assam-honeymoon-packages/",
+          "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+        },
+        {
+          "title": "Jowai Honeymoon Tour Packages",
+          "href": "/jowai-honeymoon-packages/",
+          "image": "/media/home/Nartiang-Monoliths-3-kaga.jpg"
+        },
+        {
+          "title": "Cherrapunji Honeymoon Tour Packages",
+          "href": "/cherrapunji-honeymoon-packages/",
+          "image": "/media/home/krang-suri-falls-8-kaga.jpg"
+        },
+        {
+          "title": "Dawki Honeymoon Tour Packages",
+          "href": "/dawki-honeymoon-packages/",
+          "image": "/media/home/dawki-river-3-kaga.jpg"
+        },
+        {
+          "title": "Shillong Honeymoon Tour Packages",
+          "href": "/shillong-honeymoon-packages/",
+          "image": "/media/home/police-bazar-8-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Explore our Arunachal Tour Packages",
+      "items": [
+        {
+          "title": "Tawang Tour Packages",
+          "href": "/tawang-tour-packages/",
+          "image": "/media/home/tawang-arunachal-pradesh-unsplash-2-kaga.jpg"
+        },
+        {
+          "title": "Arunachal Tour Packages",
+          "href": "/arunachal-pradesh-tour-packages/",
+          "image": "/media/home/arunachal-pradesh-unsplash-2-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Adventure Day Tours",
+      "items": [
+        {
+          "title": "Scuba Diving in Meghalaya",
+          "href": "/tours/scuba-diving-in-meghalaya/",
+          "image": "/media/home/placeholder-image.png",
+          "duration": "45 min",
+          "price": "3500"
+        },
+        {
+          "title": "Bungee Jumping in Meghalaya",
+          "href": "/tours/bungee-jumping-in-meghalaya/",
+          "image": "/media/home/Bungee-Jumping-in-Meghalaya.jpg",
+          "duration": "30 min",
+          "price": "3500/-"
+        },
+        {
+          "title": "Paragliding in Nongjrong",
+          "href": "/tours/paragliding-in-nongjrong/",
+          "image": "/media/home/Paragliding-Unsplash-1-kaga.jpg",
+          "duration": "30 Mins"
+        },
+        {
+          "title": "Cliff Jumping in Dawki, Shnongpdeng",
+          "href": "/tours/cliff-jumping-in-dawki-shnongpdeng/",
+          "image": "/media/home/dawki-river-3-kaga.jpg",
+          "duration": "20 min",
+          "price": "400"
+        },
+        {
+          "title": "Zip Lining in Dawki, Meghalaya",
+          "href": "/tours/zip-lining-in-dawki-meghalaya/",
+          "image": "/media/home/Shnongpdeng-1-kaga.jpg",
+          "duration": "15 min",
+          "price": "500"
+        },
+        {
+          "title": "Kayaking in Dawki, Shnongpdeng Meghalaya",
+          "href": "/tours/kayaking-in-dawki-shnongpdeng-meghalaya/",
+          "image": "/media/home/Shnongpdeng-Kayaking-1-kaga.jpg",
+          "duration": "1 hr",
+          "price": "500"
+        },
+        {
+          "title": "Snorkeling in Dawki, Shnongpdeng Meghalaya",
+          "href": "/tours/snorkeling-in-dawki-shnongpdeng-meghalaya/",
+          "image": "/media/home/placeholder-image.png",
+          "duration": "1 hr"
+        },
+        {
+          "title": "Safari Booking at Kaziranga National Park",
+          "href": "/tours/elephant-and-jeep-safari-at-kaziranga-national-park/",
+          "image": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+          "duration": "1-2 hr",
+          "price": "1000"
+        },
+        {
+          "title": "Jeep Safari at Kaziranga National Park",
+          "href": "/tours/jeep-safari-at-kaziranga-national-park/",
+          "image": "/media/home/Kaziranga-national-park-5-kaga.jpg",
+          "duration": "1-2 hr",
+          "price": "1,000"
+        },
+        {
+          "title": "Elephant Safari Booking at Kaziranga National Park",
+          "href": "/tours/elephant-safari-at-kaziranga-national-park/",
+          "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+          "duration": "1-2 hr",
+          "price": "1,500"
+        }
+      ]
+    },
+    {
+      "kind": "destinations",
+      "title": "Suggested Things to do in Meghalaya",
+      "items": [
+        {
+          "title": "Things to do in Mawsynram",
+          "href": "/things-to-do-in-mawsynram/",
+          "image": "/media/home/Mawsynram-1-kaga.jpg"
+        },
+        {
+          "title": "Things to do in Jowai",
+          "href": "/things-to-do-in-jowai/",
+          "image": "/media/home/krang-suri-falls-10-kaga.jpg"
+        },
+        {
+          "title": "Things to do in Cherrapunji",
+          "href": "/things-to-do-in-cherrapunji/",
+          "image": "/media/home/Nohkalikai-Falls-1-.jpg"
+        },
+        {
+          "title": "Things to do in Dawki",
+          "href": "/things-to-do-in-dawki/",
+          "image": "/media/home/Dawki-River-5.jpg"
+        },
+        {
+          "title": "Things to do in Shillong",
+          "href": "/things-to-do-in-shillong/",
+          "image": "/media/home/Umiam-Lake-7-kaga.jpg"
+        },
+        {
+          "title": "Things to do in Meghalaya",
+          "href": "/things-to-do-in-meghalaya/",
+          "image": "/media/home/meghalaya_mountains-1-kaga.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Arunachal Tour Packages",
+      "items": [
+        {
+          "title": "Amazing Meghalaya Assam and Arunachal Pradesh Tour",
+          "href": "/tours/amazing-meghalaya-assam-and-arunachal-pradesh-tour/",
+          "image": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+          "duration": "13D/12N",
+          "price": "33,000"
+        },
+        {
+          "title": "9 Days Meghalaya Assam Arunachal Tour Package",
+          "href": "/tours/9-days-meghalaya-assam-arunachal-tour-package/",
+          "image": "/media/home/Seven-Sisters-Falls-3-kaga.jpg",
+          "duration": "9D/8N",
+          "price": "29,100"
+        },
+        {
+          "title": "8 Days Tour of Meghalaya and Arunachal Pradesh",
+          "href": "/tours/8-days-tour-of-meghalaya-and-arunachal-pradesh/",
+          "image": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "25,700"
+        }
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Suggested Tour Packages",
+      "items": [
+        {
+          "title": "Amazing Meghalaya Assam and Arunachal Pradesh Tour",
+          "href": "/tours/amazing-meghalaya-assam-and-arunachal-pradesh-tour/",
+          "image": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+          "duration": "13D/12N",
+          "price": "33,000"
+        },
+        {
+          "title": "Enchanting Meghalaya Tour",
+          "href": "/tours/enchanting-meghalaya-tour/",
+          "image": "/media/home/Umiam-Lake-7-kaga.jpg",
+          "duration": "10D/9N",
+          "price": "37,100"
+        },
+        {
+          "title": "Majestic 10 Days Meghalaya Tour",
+          "href": "/tours/majestic-10-days-meghalaya-tour/",
+          "image": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+          "duration": "10D/9N",
+          "price": "37,000"
+        },
+        {
+          "title": "Amazing Meghalaya Tour",
+          "href": "/tours/amazing-meghalaya-tour/",
+          "image": "/media/home/dawki-river-5-kaga.jpg",
+          "duration": "9D/8N",
+          "price": "33,100"
+        },
+        {
+          "title": "9 Days Meghalaya Assam Arunachal Tour Package",
+          "href": "/tours/9-days-meghalaya-assam-arunachal-tour-package/",
+          "image": "/media/home/Seven-Sisters-Falls-3-kaga.jpg",
+          "duration": "9D/8N",
+          "price": "29,100"
+        },
+        {
+          "title": "Magical Meghalaya Tour",
+          "href": "/tours/magical-meghalaya-tour/",
+          "image": "/media/home/Umiam-Lake-10-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "29,200"
+        },
+        {
+          "title": "8 Days Tour of Meghalaya and Arunachal Pradesh",
+          "href": "/tours/8-days-tour-of-meghalaya-and-arunachal-pradesh/",
+          "image": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "25,700"
+        },
+        {
+          "title": "8 Days Meghalaya Holiday Tour",
+          "href": "/tours/8-days-meghalaya-holiday-tour/",
+          "image": "/media/home/Umiam-lake-1-kaga.jpg",
+          "duration": "8D/7N",
+          "price": "29,250"
+        },
+        {
+          "title": "Guwahati Shillong Cherrapunji Tour Package",
+          "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+          "image": "/media/home/umiam-lake-26-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,420"
+        },
+        {
+          "title": "Mesmerising 7 Days Assam Meghalaya Tour",
+          "href": "/tours/mesmerising-7-days-assam-meghalaya-tour/",
+          "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+          "duration": "7D/6N",
+          "price": "25,380"
+        }
+      ]
+    },
+    {
+      "kind": "links",
+      "title": "Our Cab Services",
+      "items": [
+        {
+          "label": "Guwahati to Shillong Cabs",
+          "href": "/guwahati-to-shillong-cabs/"
+        },
+        {
+          "label": "Guwahati to Cherrapunji Cabs",
+          "href": "/cars/guwahati-to-cherrapunji-cabs/"
+        },
+        {
+          "label": "Guwahati to Kaziranga Cabs",
+          "href": "/cars/guwahati-to-kaziranga-cabs/"
+        },
+        {
+          "label": "Shillong to Guwahati Cabs",
+          "href": "/cars/shillong-to-guwahati-cabs/"
+        },
+        {
+          "label": "Shillong to Guwahati Airport Cabs",
+          "href": "/cars/shillong-to-guwahati-airport-cabs/"
+        },
+        {
+          "label": "Shillong to Guwahati Shared Cabs",
+          "href": "/cars/shillong-to-guwahati-shared-cabs/"
+        },
+        {
+          "label": "Shillong to Cherrapunjee Cabs",
+          "href": "/cars/shillong-to-cherrapunji-cabs/"
+        },
+        {
+          "label": "Shillong to Dawki Cabs",
+          "href": "/cars/shillong-to-dawki-cabs/"
+        },
+        {
+          "label": "Shillong to Kaziranga Cabs",
+          "href": "/cars/shillong-to-kaziranga-cabs/"
+        },
+        {
+          "label": "Shillong Taxi",
+          "href": "/shillong-taxi/"
+        },
+        {
+          "label": "Shillong Sightseeing Taxi",
+          "href": "/shillong-sightseeing-taxi/"
+        },
+        {
+          "label": "Shillong Airport Taxi",
+          "href": "/shillong-airport-taxi/"
+        }
+      ]
+    }
+  ],
+  "enquiry": {
+    "stickyButtonLabel": "Send Enquiry",
+    "whatsappHref": "https://wa.me/916033114867?text=I have a query regarding:",
+    "phoneHref": "tel:+916033114867",
+    "formTitle": "Query Form",
+    "fields": [
+      {
+        "id": "your-name",
+        "label": "Name*"
+      },
+      {
+        "id": "your-email",
+        "label": "Email Address*"
+      },
+      {
+        "id": "phone-number",
+        "label": "Phone Number*"
+      },
+      {
+        "id": "datepicker",
+        "label": "Date of Travel*"
+      },
+      {
+        "id": "number-of-people",
+        "label": "Travellers*"
+      },
+      {
+        "id": "query",
+        "label": "Your Query*"
+      }
+    ],
+    "placeholders": [
+      {
+        "name": "your-name",
+        "placeholder": "Name"
+      },
+      {
+        "name": "your-email",
+        "placeholder": "Email"
+      },
+      {
+        "name": "phone-number",
+        "placeholder": "Phone Number"
+      },
+      {
+        "name": "preferred-date",
+        "placeholder": "Date of Travel"
+      },
+      {
+        "name": "number-of-adults",
+        "placeholder": "No of Adults"
+      },
+      {
+        "name": "number-of-children",
+        "placeholder": "No of Children"
+      },
+      {
+        "name": "message",
+        "placeholder": "Query"
+      }
+    ],
+    "submitLabel": "Send Query",
+    "honeypotLabel": "Please leave this field empty.",
+    "cf7FormId": "2457"
+  },
+  "footer": {
+    "getInTouch": {
+      "title": "Get in Touch",
+      "links": [
+        {
+          "label": "About Us",
+          "href": "/about-us/"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact-us/"
+        },
+        {
+          "label": "Terms And Conditions",
+          "href": "/terms-and-conditions/"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy/"
+        }
+      ]
+    },
+    "followUs": {
+      "title": "Follow Us",
+      "links": [
+        {
+          "network": "facebook",
+          "href": "https://www.facebook.com/KajaawaToursandCabs"
+        },
+        {
+          "network": "twitter",
+          "href": "https://twitter.com/kajaawatours"
+        },
+        {
+          "network": "instagram",
+          "href": "https://www.instagram.com/kajaawatoursandcabs/"
+        }
+      ]
+    },
+    "taxiService": {
+      "title": "Our Taxi Service",
+      "links": [
+        {
+          "label": "Shillong Taxi Service",
+          "href": "/shillong-taxi/"
+        },
+        {
+          "label": "Shillong Airport Taxi",
+          "href": "/shillong-airport-taxi/"
+        },
+        {
+          "label": "Shillong Sightseeing Taxi",
+          "href": "/shillong-sightseeing-taxi/"
+        },
+        {
+          "label": "Guwahati to Shillong Cabs",
+          "href": "/guwahati-to-shillong-cabs/"
+        }
+      ]
+    },
+    "copyright": "2026 © Kajaawa"
+  }
+}
