@@ -1,4 +1,4 @@
-import { resolveSitePath } from "@/config/site";
+import { resolveSitePath } from "@/content/routes";
 import { home } from "@/content/home";
 import { DestinationPreview } from "./destination-preview";
 

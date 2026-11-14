@@ -1,0 +1,589 @@
+{
+  "slug": "camping-in-cafe-cherrapunji",
+  "url": "/tours/camping-in-cafe-cherrapunji/",
+  "seo": {
+    "title": "Book Deluxe Camping in Cafe Cherrapunji at best price- Kajaawa",
+    "description": "Book this Deluxe Camping in Cafe Cherrapunji with best accommodation only with Kajaawa at a very affordable price.",
+    "ogImage": "/media/home/Cafe-Cherrapunji-1-kaga.jpg"
+  },
+  "title": "Deluxe Camping in Cafe Cherrapunji",
+  "duration": {
+    "label": "Duration",
+    "value": "2 Days / 1 Night"
+  },
+  "gallery": [
+    {
+      "src": "/media/home/Cafe-Cherrapunji-1-kaga.jpg",
+      "alt": "Deluxe Camping in Cafe Cherrapunji"
+    },
+    {
+      "src": "/media/tours/Camping-in-Cafe-Cherrapunji-2-kaga.jpg",
+      "alt": "Deluxe Camping in Cafe Cherrapunji"
+    }
+  ],
+  "main": [
+    {
+      "kind": "includes",
+      "title": "Package Includes",
+      "items": [
+        "Breakfast",
+        "Camping"
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Cherrapunji apart from being well renowned for its stunning scenery, it also has a number of camping areas and deluxe camping in Cafe Cherrapunji is one of them. In Cherrapunji, you will spend an overnight camp stay in magnificent, well-constructed camps. Enjoy camping with a sparkling bonfire in one of the wettest places on earth."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Check-In",
+          "value": "11:00 AM"
+        },
+        {
+          "type": "fact",
+          "label": "Check-Out",
+          "value": "12:00 PM"
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Cherrapunji (1N)"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Camping"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Private Tour, Adventure Tour"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Witness the beautiful Mawkdok Dympep Valley",
+        "Head to Cherrapunji and visit Cafe Cherrapunji",
+        "Enjoy a deluxe camping at Cafe Cherrapunji with your friends or family",
+        "Get relaxed with the bonfire which will be specially prepared for you outside the tent"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Deluxe Camping in Cafe Cherrapunji Itinerary",
+      "days": [
+        {
+          "title": "Day 1 : Arrival and camping",
+          "items": [
+            "Arrive at Cafe Cherrapunji and check into the deluxe camp.",
+            "Spend some quality time with your friends or family at Cafe Cherrapunji.",
+            "You can stroll in the area and can also visit Mawkdok Dympep Valley.",
+            "In the evening enjoy a bonfire that has been prepared for you."
+          ],
+          "notes": [
+            "Relax and enjoy the ambience of the deluxe tent."
+          ]
+        },
+        {
+          "title": "Day 2 : Departure",
+          "items": [
+            "Wake up and have your delicious breakfast.",
+            "Head to your hometown with some pleasant memories of this deluxe camping trip in Cherrapunji."
+          ],
+          "notes": [
+            "Breakfast",
+            "Departure"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "How To Reach Cafe Cherrapunji Campsite",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "You can reach Cafe Cherrapunji campsite by taking a car or state transport buses from Shillong which takes almost 30km(1 Hour)."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Location Map:",
+              "bold": true
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Cafe Cherrapunji Campsite",
+              "href": "https://www.google.com/maps/place/Cafe+Cherrapunjee/@25.4295637,91.7898763,17z/data=!3m1!4b1!4m8!3m7!1s0x375088f7cc2c6a97:0x620e4449c95cd556!5m2!4m1!1i2!8m2!3d25.4295313!4d91.7920276"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "BackPack"
+              }
+            ],
+            [
+              {
+                "text": "First Aid Kit"
+              }
+            ],
+            [
+              {
+                "text": "Water Bottle"
+              }
+            ],
+            [
+              {
+                "text": "Wipes and Toilet Paper"
+              }
+            ],
+            [
+              {
+                "text": "Raincoat/Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Mosquito Repellent Cream"
+              }
+            ],
+            [
+              {
+                "text": "Good Quality Shoes"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Valid Identity Card"
+              }
+            ],
+            [
+              {
+                "text": "E-Invite from Meghalaya Tourism App"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "amount": "2,000",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Accommodation on a twin or triple sharing basis (Customizable) with Complimentary Breakfast.",
+      "Camping and Bonfire Arrangements",
+      "Instructions"
+    ],
+    "excluded": [
+      "Transportation",
+      "Parking",
+      "Meals other than what is included",
+      "Personal drinks, laundry, porterage",
+      "Cost of optional services or activity.",
+      "Tips",
+      "GST",
+      "Things which are not mentioned in inclusions"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Travellers visiting Meghalaya are required to register on Meghalaya Tourism App and generate an e-invite."
+              }
+            ],
+            [
+              {
+                "text": "You can download the Meghalaya Tourism App from Google Play Store or App Store."
+              }
+            ],
+            [
+              {
+                "text": "No reimbursed will be made against missed services."
+              }
+            ],
+            [
+              {
+                "text": "Travelers are required to show their valid identity card and the booking voucher at the time of check-in to the campsite."
+              }
+            ],
+            [
+              {
+                "text": "You should not consume alcohol or other intoxicants during your tour."
+              }
+            ],
+            [
+              {
+                "text": "Unmarried couples are not allowed to stay in one tent."
+              }
+            ],
+            [
+              {
+                "text": "Transportation including pick up from and drop to the campsite is not included in the package. ·"
+              }
+            ],
+            [
+              {
+                "text": "The menu for dinner is not fixed and may vary depending upon availability."
+              }
+            ],
+            [
+              {
+                "text": "In case of bad weather conditions, if camping may not be feasible, we will try to arrange a homestay for you and it may incur extra costs payable by you. In the event of non-availability of homestay, the camping booking shall stand cancelled with applicable refunds."
+              }
+            ],
+            [
+              {
+                "text": "There may be some days/months during monsoon when private camping may not be available. In that event we will arrange normal camping for you and the amount difference shall be refunded to you within 7(seven) business days in your bank account."
+              }
+            ],
+            [
+              {
+                "text": "In case of any unforeseen situation which is beyond our control including bad weather conditions, political disturbance etc., we may change your camping itinerary or dates of travel.·"
+              }
+            ],
+            [
+              {
+                "text": "Parking will be chargeable at Rs.30/- for 2 wheelers and Rs.50/- for four-wheelers."
+              }
+            ],
+            [
+              {
+                "text": "Kajaawa is a booking platform and may not be able to monitor the activities in the campsite."
+              }
+            ],
+            [
+              {
+                "text": "You must not litter on the campsite and throw it in the dustbin to maintain the area clean."
+              }
+            ],
+            [
+              {
+                "text": "The campsite does not have locker facilities so you may keep your valuable belongings with you inside your tent."
+              }
+            ],
+            [
+              {
+                "text": "Water activities must be performed with life jackets, gears and equipment under expert supervision."
+              }
+            ],
+            [
+              {
+                "text": "In case of bad weather conditions, water activities may not be possible and may get cancelled. In that event, you will get a refund of the payment made for the activity."
+              }
+            ],
+            [
+              {
+                "text": "You can reschedule the booking free up to 3 days prior to your arrival, subject to the availability of tents."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and booking confirmation details."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be no cancellation charges if cancellation is made 3 days before the date of"
+              }
+            ],
+            [
+              {
+                "text": "tour."
+              }
+            ],
+            [
+              {
+                "text": "30% of the total cost as cancellation charges, if cancelled 1-3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost as cancellation charges, if cancelled 0-1 day before the tour."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business in customer's bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-dawki-shnongpdeng/",
+        "title": "Camping in Dawki, Shnongpdeng",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/captivating-meghalaya-tour/",
+        "title": "6 Days Captivating Meghalaya Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/amazing-meghalaya-kaziranga-tour/",
+        "title": "Amazing Meghalaya Kaziranga Tour",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Umiam-Lake-7-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-tour-with-cherrapunji/",
+        "title": "6 Days Meghalaya Tour with Cherrapunji",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/assam-meghalaya-tour-with-kaziranga/",
+        "title": "6 Days Assam Meghalaya Tour with Kaziranga",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/umiam-lake-20-kaga.jpg"
+      },
+      {
+        "href": "/tours/lakefront-nature-camping-in-mawsynram-meghalaya/",
+        "title": "Lakefront Nature Camping in Mawsynram, Meghalaya",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "500",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Lakefront-Nature-Camping-in-Mawsynram-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-mawmluh-village-cherrapunji/",
+        "title": "Camping in Mawmluh Village",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "2000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Camping-in-Mawmluh-Village-Cherrapunji-1-kaga.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions on Deluxe Camping in Cafe Cherrapunji",
+    "items": [
+      {
+        "question": "1. Are breakfast provided at the Cafe Cherrapunji Campsite?",
+        "answer": [
+          {
+            "text": "Yes, the camping package includes complimentary breakfast, offered in the deluxe tent."
+          }
+        ]
+      },
+      {
+        "question": "2. What type of breakfast is provided in Cafe Cherrapunji deluxe camping?",
+        "answer": [
+          {
+            "text": "Indian and Asian dishes are available for breakfast."
+          }
+        ]
+      },
+      {
+        "question": "3. Does deluxe camping at Cafe Cherrapunji provide bedding, blankets and pillows?",
+        "answer": [
+          {
+            "text": "Yes, it is a deluxe tent equipped with modern amenities."
+          }
+        ]
+      },
+      {
+        "question": "4. Is there a bonfire arrangement at the campsite during the stay?",
+        "answer": [
+          {
+            "text": "Yes, a bonfire is arranged while camping at Cafe Cherrapunji."
+          }
+        ]
+      },
+      {
+        "question": "5. Is there a parking facility available at the campsite?",
+        "answer": [
+          {
+            "text": "Yes, there is parking space available inside the Cafe Cherrapunji for two-wheelers as well as four-wheelers."
+          }
+        ]
+      },
+      {
+        "question": "6. Are luggage storage facilities available during Cafe Cehrrapunji Tent Stay?",
+        "answer": [
+          {
+            "text": "You can store your luggage inside the tents but incase of valuable items you can keep it with the owner."
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

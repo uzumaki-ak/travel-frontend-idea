@@ -1,0 +1,323 @@
+{
+  "slug": "paragliding-in-nongjrong",
+  "url": "/tours/paragliding-in-nongjrong/",
+  "seo": {
+    "title": "Paragliding in Nongjrong - Kajaawa",
+    "description": "Enjoy the exhilaration of paragliding in the Meghalayan sky as you take in Nongjrong from the perspective of a bird.",
+    "ogImage": "/media/home/Paragliding-Unsplash-1-kaga.jpg"
+  },
+  "title": "Paragliding in Nongjrong",
+  "duration": {
+    "label": "Duration",
+    "value": "30 Mins"
+  },
+  "gallery": [
+    {
+      "src": "/media/home/Paragliding-Unsplash-1-kaga.jpg",
+      "alt": "Paragliding in Nongjrong"
+    }
+  ],
+  "main": [
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "In the adventure sport of paragliding, athletes fly free while using a gliding craft without any fixed parts. Because the participant will be accompanied by a qualified co-pilot, no prior training is necessary. The paraglider must be at least 6 years old and weigh no more than 95 kg to participate in paragliding. Pregnant women, persons with heart problems, sinus problems, lung problems, ear infections, and claustrophobia should avoid paragliding. The whole length of the paragliding includes the instructor briefing, strapping on and off of the safety harness, and real flying time. Enjoy the exhilaration of paragliding in the Meghalayan sky as you take in Nongjrong from the perspective of a bird. A once-in-a-lifetime experience, gliding between snow-capped peaks, an expanse of clear blue sky, and breathtaking views of the valleys all around you. Engage in this fascinating sport under the supervision of a competent teacher to ensure a great encounter! And have memorable adventures while paragliding in Nongjrong. As of now Paragliding is not available in Nongjrong but it will be open soon, and one paragliding will be available in Nongjrong we would publish in this page."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Nongjrong"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Paragliding"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Adventure"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Take off from the beautiful Nongjrong valley with your paragliding suit",
+        "Enjoy paragliding from about 830 metre high peak of Nongjrong"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Paragliding in Nongjrong Itinerary",
+      "days": [
+        {
+          "items": [
+            "Arrive at the beautiful hilltop of Nongjrong.",
+            "Witness the spectacular scenic view of the valleys.",
+            "Gear up with your equipment for paragliding.",
+            "Enjoy paragliding and experience a beautiful bird eye view of Nongjrong valleys.",
+            "Later after the adventurous activities return back to your destination."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Camera"
+              }
+            ],
+            [
+              {
+                "text": "Comfortable shoes"
+              }
+            ],
+            [
+              {
+                "text": "Water bottles"
+              }
+            ],
+            [
+              {
+                "text": "Watch"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Activities",
+      "Equipment Usage",
+      "Instructions"
+    ],
+    "excluded": [
+      "Transportation",
+      "Things which are not included above"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and booking confirmation details."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be no cancellation charges, if cancellation is made 3 days before the date of tour."
+              }
+            ],
+            [
+              {
+                "text": "30% of the total cost as cancellation charges, if cancelled 2 days before the date of tour."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost as cancellation charges, if cancelled 0-1 day before the date of tour."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business in customer's bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-dawki-shnongpdeng/",
+        "title": "Camping in Dawki, Shnongpdeng",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/captivating-meghalaya-tour/",
+        "title": "6 Days Captivating Meghalaya Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/amazing-meghalaya-kaziranga-tour/",
+        "title": "Amazing Meghalaya Kaziranga Tour",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Umiam-Lake-7-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-tour-with-cherrapunji/",
+        "title": "6 Days Meghalaya Tour with Cherrapunji",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/assam-meghalaya-tour-with-kaziranga/",
+        "title": "6 Days Assam Meghalaya Tour with Kaziranga",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/umiam-lake-20-kaga.jpg"
+      },
+      {
+        "href": "/tours/lakefront-nature-camping-in-mawsynram-meghalaya/",
+        "title": "Lakefront Nature Camping in Mawsynram, Meghalaya",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "500",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Lakefront-Nature-Camping-in-Mawsynram-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-mawmluh-village-cherrapunji/",
+        "title": "Camping in Mawmluh Village",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "2000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Camping-in-Mawmluh-Village-Cherrapunji-1-kaga.jpg"
+      }
+    ]
+  },
+  "faq": null,
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

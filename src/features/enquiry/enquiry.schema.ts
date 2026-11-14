@@ -58,13 +58,15 @@ export const enquirySchema = z.object({
       z.minLength(1, "Tell us what you'd like to book."),
       z.maxLength(ENQUIRY_LIMITS.message, `Keep your query under ${ENQUIRY_LIMITS.message} characters.`),
     ),
+  /** Which tour page the enquiry came from. The server looks it up; unknown slugs are ignored. */
+  tourSlug: z.optional(z.string().check(z.regex(/^[a-z0-9-]{1,150}$/, "Unknown tour."))),
   /** Honeypot: hidden from people, filled by bots. */
   website: z._default(z.string().check(z.maxLength(200)), ""),
 });
 
 export type EnquiryInput = z.input<typeof enquirySchema>;
 export type Enquiry = z.output<typeof enquirySchema>;
-export type EnquiryField = Exclude<keyof Enquiry, "submissionId" | "website">;
+export type EnquiryField = Exclude<keyof Enquiry, "submissionId" | "website" | "tourSlug">;
 
 /** One response shape for every outcome, so the UI never parses provider errors. */
 export type EnquiryResponse =

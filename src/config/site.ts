@@ -1,10 +1,9 @@
 /**
  * Public site configuration. The only module that reads public env vars.
  *
- * Until the rest of the site is migrated, every inner page (tours, cabs,
- * tourism guides) still lives on the WordPress site. Links keep their exact
- * original paths and are resolved against `LEGACY_SITE_ORIGIN`; once those
- * pages are rebuilt here, set it to an empty string and links become relative.
+ * Pages not rebuilt yet still live on the WordPress site. Their links keep the
+ * exact original paths and point at `legacyOrigin`; see `src/content/routes.ts`
+ * for which paths are served by this app.
  */
 const DEFAULT_LEGACY_ORIGIN = "https://www.kajaawa.com";
 
@@ -16,10 +15,7 @@ export const siteConfig = {
   legacyOrigin,
 } as const;
 
-/** Resolves an original site path (e.g. `/tours/x/`) to where that page lives today. */
-export function resolveSitePath(path: string): string {
-  if (/^(https?:|mailto:|tel:)/.test(path)) return path;
-  if (path === "/") return "/"; // the homepage is this app
-
+/** Absolute URL of an original path on the WordPress site. */
+export function legacyUrl(path: string): string {
   return `${siteConfig.legacyOrigin}${path}`;
 }

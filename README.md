@@ -34,11 +34,23 @@ docs/design.md         design brief: tokens, type, motion rules
 
 ## Content
 
-Never edit `src/content/home.snapshot.json` by hand. To refresh it from the live site:
+Never edit the snapshots by hand — they are copies of the live site. To refresh them:
 
 ```bash
-node scripts/sync-home-snapshot.mjs
+node scripts/sync-home-snapshot.mjs     # homepage  → src/content/home.snapshot.json
+node scripts/sync-tours-snapshot.mjs    # 93 tours  → src/content/tours/*.json (+ photos)
 ```
+
+The tour sync whitelists links (site paths, Google Maps, own phone/WhatsApp/email),
+drops scripts/iframes/forms, and prints every link or image it could not keep.
+
+## Routes
+
+| Path | Source |
+|---|---|
+| `/` | homepage snapshot |
+| `/tours/<slug>/` | tour snapshots (all prerendered; unknown slugs return 404 via `src/proxy.ts`) |
+| everything else | still links to the WordPress site (`src/content/routes.ts`) |
 
 ## Environment
 

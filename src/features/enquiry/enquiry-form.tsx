@@ -38,6 +38,9 @@ export type EnquiryFormCopy = {
   fallback: { label: string; value: string; href: string };
 };
 
+/** Optional context: which tour the enquiry is about, and the source form's traveller limits. */
+export type EnquiryFormContext = { tourSlug?: string; adultsMax?: number; childrenMax?: number };
+
 type Status =
   | { kind: "idle" }
   | { kind: "submitting" }
@@ -74,10 +77,11 @@ function readForm(form: HTMLFormElement, submissionId: string): EnquiryInput {
     children: text("children"),
     message: text("message"),
     website: text("website"),
+    ...(data.get("tourSlug") ? { tourSlug: text("tourSlug") } : {}),
   };
 }
 
-export function EnquiryForm({ copy }: { copy: EnquiryFormCopy }) {
+export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; context?: EnquiryFormContext }) {
   const submissionId = useRef<string>("");
   const dateInput = useRef<HTMLInputElement>(null);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
@@ -124,7 +128,7 @@ export function EnquiryForm({ copy }: { copy: EnquiryFormCopy }) {
 
     let response: EnquiryResponse;
     try {
-      const res = await fetch("/api/enquiry", {
+      const res = await fetch("/api/enquiry/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(input),
@@ -235,7 +239,7 @@ export function EnquiryForm({ copy }: { copy: EnquiryFormCopy }) {
               type="number"
               inputMode="numeric"
               min={1}
-              max={ENQUIRY_LIMITS.travellers}
+              max={context.adultsMax ?? ENQUIRY_LIMITS.travellers}
               required
               aria-label={copy.placeholders.adults}
               placeholder={copy.placeholders.adults}
@@ -246,7 +250,7 @@ export function EnquiryForm({ copy }: { copy: EnquiryFormCopy }) {
               type="number"
               inputMode="numeric"
               min={0}
-              max={ENQUIRY_LIMITS.travellers}
+              max={context.childrenMax ?? ENQUIRY_LIMITS.travellers}
               aria-label={copy.placeholders.children}
               placeholder={copy.placeholders.children}
               className={inputClass}
@@ -273,6 +277,8 @@ export function EnquiryForm({ copy }: { copy: EnquiryFormCopy }) {
           </span>
         </Field>
       </div>
+
+      {context.tourSlug ? <input type="hidden" name="tourSlug" value={context.tourSlug} /> : null}
 
       {/* Honeypot: off-screen for people, tempting for bots. Label is the live site's own. */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">

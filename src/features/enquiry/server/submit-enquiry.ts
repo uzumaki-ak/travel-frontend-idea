@@ -2,6 +2,7 @@ import "server-only";
 import { serverEnv } from "@/config/server-env";
 import { siteConfig } from "@/config/site";
 import { home } from "@/content/home";
+import { tourTitle } from "@/content/tours";
 import { enquirySchema, fieldErrors, type EnquiryResponse } from "../enquiry.schema";
 import { deliverToCf7 } from "./cf7-gateway";
 import { recallOutcome, rememberOutcome, takeRateLimit } from "./request-guards";
@@ -46,11 +47,23 @@ export async function submitEnquiry(raw: unknown, clientKey: string): Promise<Su
     };
   }
 
-  const delivery = await deliverToCf7(enquiry, {
-    origin: serverEnv.ENQUIRY_CF7_ORIGIN,
-    formId: serverEnv.ENQUIRY_CF7_FORM_ID,
-    pageUrl: `${siteConfig.url}/`,
-  });
+  // The browser only says which tour; the form id, package name and link come from our own data.
+  const tour = enquiry.tourSlug ? tourTitle(enquiry.tourSlug) : null;
+  const delivery = await deliverToCf7(
+    enquiry,
+    tour
+      ? {
+          origin: serverEnv.ENQUIRY_CF7_ORIGIN,
+          formId: serverEnv.ENQUIRY_CF7_TOUR_FORM_ID,
+          pageUrl: `${siteConfig.url}/tours/${enquiry.tourSlug}/`,
+          packageName: tour,
+        }
+      : {
+          origin: serverEnv.ENQUIRY_CF7_ORIGIN,
+          formId: serverEnv.ENQUIRY_CF7_FORM_ID,
+          pageUrl: `${siteConfig.url}/`,
+        },
+  );
 
   const result = describe(delivery);
   // Only settled outcomes are replayed; failures may be retried with the same id.

@@ -8,8 +8,8 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import { useState } from "react";
 import type { TourCollection } from "@/content/home";
-import { TourCard } from "./tour-card";
-import { TourRail } from "./tour-rail";
+import { TourCard } from "@/features/tours/tour-card";
+import { Rail } from "@/ui/rail";
 
 const RAIL_IMAGE_SIZES = "(min-width: 640px) 336px, 78vw";
 
@@ -44,11 +44,11 @@ export function TourCollections({ collections }: { collections: TourCollection[]
           className="outline-none focus-visible:outline-none"
         >
           <h2 className="sr-only">{collection.title}</h2>
-          <TourRail label={collection.title}>
+          <Rail label={collection.title}>
             {collection.items.map((tour) => (
               <TourCard key={tour.href} tour={tour} layout="rail" sizes={RAIL_IMAGE_SIZES} />
             ))}
-          </TourRail>
+          </Rail>
         </Tabs.Content>
       ))}
     </Tabs.Root>

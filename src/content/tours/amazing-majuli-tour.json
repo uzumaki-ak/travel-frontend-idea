@@ -1,0 +1,525 @@
+{
+  "slug": "amazing-majuli-tour",
+  "url": "/tours/amazing-majuli-tour/",
+  "seo": {
+    "title": "Book Amazing Majuli and Jorhat Tour Package - Kajaawa",
+    "description": "Explore the best places of Jorhat and enjoy nature and culture at Majuli at the best price offered by Kajaawa.",
+    "ogImage": "/media/home/assam-unsplash-2-kaga.jpg"
+  },
+  "title": "Amazing Majuli Tour",
+  "duration": {
+    "label": "Duration",
+    "value": "4 Days / 3 Nights"
+  },
+  "gallery": [
+    {
+      "src": "/media/home/assam-unsplash-2-kaga.jpg",
+      "alt": "Amazing Majuli Tour"
+    },
+    {
+      "src": "/media/home/guwahati-assasm-unsplash-1-kaga.jpg",
+      "alt": "Amazing Majuli Tour"
+    },
+    {
+      "src": "/media/tours/assam-unsplash-1-cvimg.jpg",
+      "alt": "Amazing Majuli Tour"
+    }
+  ],
+  "main": [
+    {
+      "kind": "includes",
+      "title": "Package Includes",
+      "items": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "This is a beautiful tour package to the wonderful river island, probably the largest one in the entire world, the Majuli River Island. It is a must visit place for all nature lovers. A land full of exciting games and water sports with beautiful villages and monuments to witness all around, you will definitely love it"
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Jorhat (1N), Majuli (2N)"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Sightseeing"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Private Tour"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Visit Jorhat and explore its famous places.",
+        "Witness nature and local culture at Majuli Island",
+        "Enjoy the wonderful ferry Ride in Majuli"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Amazing Majuli Tour Itinerary",
+      "days": [
+        {
+          "title": "Day 1 : Arrival at Guwahati -Jorhat",
+          "items": [
+            "Arrive at Guwahati and directly travel to Jorhat which will take about 7-8 hours of travel."
+          ],
+          "notes": [
+            "Overnight stay in Jorhat."
+          ]
+        },
+        {
+          "title": "Day 2 : Jorhat- Majuli Travel",
+          "items": [
+            "After breakfast you will be starting your day tour and witness Jorhat's famous places, namely:",
+            "Hoollongapar Gibbon Sanctuary, Tocklai Tea Research Centre, Molai Forest",
+            "Also visit Jorhat Science Centre and Planetarium and Ganesh Gogoi Kabita Kanon.",
+            "Later on you will be taken to Majuli."
+          ],
+          "notes": [
+            "Breakfast",
+            "Overnight stay in Majuli"
+          ]
+        },
+        {
+          "title": "Day 3 : Ferry Ride at Majuli",
+          "items": [
+            "Wake up and have your delicious breakfast.",
+            "Enjoy the ferry ride in the beautiful Majuli Island.",
+            "Spend the quality time with your loved ones.",
+            "Later back to the hotel in Majuli."
+          ],
+          "notes": [
+            "Breakfast",
+            "Overnight stay in Majuli"
+          ]
+        },
+        {
+          "title": "Day 4 : Guwahati - Departure",
+          "items": [
+            "Wake up in the morning and pack your bags to leave for your home.",
+            "Have a delicious breakfast and bid goodbye to Majuli.",
+            "Later on move to Guwahati with all your wonderful memories of the tour."
+          ],
+          "notes": [
+            "Breakfast",
+            "Departure"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "hotels",
+      "title": "Hotels",
+      "tiers": [
+        {
+          "name": "Standard",
+          "stays": [
+            {
+              "place": "Jorhat",
+              "names": "Hotel Dilip/ Similar"
+            },
+            {
+              "place": "Majuli ",
+              "names": "Ygdrasill Bamboo Cottage, River Wind Cottage, Similar"
+            }
+          ]
+        },
+        {
+          "name": "Deluxe",
+          "stays": [
+            {
+              "place": "Jorhat",
+              "names": "Hotel Wings The Pride/ Similar"
+            },
+            {
+              "place": "Majuli ",
+              "names": "Enchanting Majuli Resort/ Similar"
+            }
+          ]
+        },
+        {
+          "name": "Premium",
+          "stays": [
+            {
+              "place": "Jorhat",
+              "names": "Hotel Jironi/ Similar"
+            },
+            {
+              "place": "Majuli ",
+              "names": "Majuli Prashanti Eco Tourism Resort/ Similar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "First Aid Kit"
+              }
+            ],
+            [
+              {
+                "text": "Water Bottle"
+              }
+            ],
+            [
+              {
+                "text": "Wipes and Toilet Paper"
+              }
+            ],
+            [
+              {
+                "text": "Raincoat/Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Mosquito Repellent Cream"
+              }
+            ],
+            [
+              {
+                "text": "Good Quality Shoes"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Valid Identity Card"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "name": "Standard",
+        "amount": "13,450",
+        "unit": "per person"
+      },
+      {
+        "name": "Deluxe",
+        "amount": "15,700",
+        "unit": "per person"
+      },
+      {
+        "name": "Premium",
+        "amount": "23,200",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Accommodation on a twin or triple sharing basis (Customizable) with Complimentary Breakfast",
+      "Transportation with Driver for 10 hours each day",
+      "Tour and Sightseeing",
+      "Parking Charges and Toll Tax"
+    ],
+    "excluded": [
+      "Entry Fees of all sightseeing spots",
+      "Breakfast in places other than the hotel provided",
+      "Meals except breakfast",
+      "Personal drinks, laundry, porterage",
+      "Cost of optional service or activity",
+      "Tour Guide",
+      "Extra Usage of Vehicle",
+      "Driver, hotel or restaurant tips",
+      "GST",
+      "Things which are not mentioned in inclusions"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "No reimbursement will be made against missed services."
+              }
+            ],
+            [
+              {
+                "text": "Travellers are required to show their valid identity cards at the time of check-in to the hotel."
+              }
+            ],
+            [
+              {
+                "text": "You should not consume alcohol or other intoxicants during your tour."
+              }
+            ],
+            [
+              {
+                "text": "The vehicle allotted for the tour will be available as per the itinerary and not for general disposal."
+              }
+            ],
+            [
+              {
+                "text": "In the Northeast, generally, vehicles like Sedan do not have carriers. You are advised to carry one bag per person. Kindly give us prior information in case you have more luggage."
+              }
+            ],
+            [
+              {
+                "text": "Delay in arrival due to many reasons including flight reschedules shall have to inform to us at an earliest and in case of any sightseeing spot missed due to any delay including spending more time in one sightseeing spot, will not be refundable."
+              }
+            ],
+            [
+              {
+                "text": "Kajaawa will provide accommodation as per the hotels in the list and in case the listed hotels cannot be provided for any reason like unavailability, scheduled or general maintenance, accident at the hotel, risky road conditions due to bad weather or political disturbance, similar hotels will be provided and you will be informed about the changes in advance."
+              }
+            ],
+            [
+              {
+                "text": "In Deluxe and Premium Tour Packages, we will generally arrange Deluxe and Premium Hotels but in interior places, we will arrange Homestays, Guest Houses or Standard Hotels as Deluxe and Premium accommodations may not be available in the interiors for any reason."
+              }
+            ],
+            [
+              {
+                "text": "In case of any unforeseen situations which are beyond our control including bad weather conditions, political disturbance etc., we may change your itinerary or dates of travel."
+              }
+            ],
+            [
+              {
+                "text": "Travellers may have to bear additional expenses in case of natural calamity including situations like changes in the hotel, changes in tour date etc"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and also booking confirmation details containing your detailed travel itinerary and hotel information"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "25% of the total cost, if the tour is cancelled 30 days before the tour starts."
+              }
+            ],
+            [
+              {
+                "text": "50% of the total cost, if the tour is cancelled 15-30 days before the tour starts."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost, if the tour is cancelled 0-15 days before the tour starts"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid 1 (one) week before the tour starts."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Refunds will be processed within 7(seven) business days in the customer’s bank account"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+        "title": "Mesmerizing Assam and Meghalaya Tour",
+        "duration": "7 Days / 6 Nights",
+        "image": "/media/home/dawki-river-6-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+        "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "18,100",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/kaziranga-weekend-tour-package/",
+        "title": "Kaziranga Weekend Tour Package",
+        "duration": "2 Days / 1 Night",
+        "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,420",
+          "unit": "per person"
+        },
+        "image": "/media/home/umiam-lake-26-kaga.jpg"
+      },
+      {
+        "href": "/tours/kaziranga-meghalaya-wildlife-trip/",
+        "title": "7 Days Kaziranga Meghalaya Wildlife Trip",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,300",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-assam-tour/",
+        "title": "Meghalaya Assam Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,400",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Umiam-Lake-13-kaga.jpg"
+      },
+      {
+        "href": "/tours/splendid-assam-meghalaya-tour/",
+        "title": "Splendid 4 Days 3 Nights Assam Meghalaya Tour",
+        "duration": "4 Days / 3 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,650",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Mawlynnong-Village-3-kaga.jpg"
+      }
+    ]
+  },
+  "faq": null,
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

@@ -6,7 +6,9 @@
  * word-for-word identical. This module validates its shape at build time and
  * groups sections by role so the UI never matches on raw strings.
  */
+import "server-only";
 import { z } from "zod";
+import { resolveSitePath } from "./routes";
 import snapshot from "./home.snapshot.json";
 
 const PLACEHOLDER_IMAGE = "/media/home/placeholder-image.png";
@@ -74,6 +76,11 @@ export type TextLink = z.infer<typeof textLinkSchema>;
 type Section = z.infer<typeof sectionSchema>;
 
 export type TourCollection = { title: string; items: TourCard[] };
+
+const withResolvedLinks = <T extends { items: TourCard[] }>(s: T): T => ({
+  ...s,
+  items: s.items.map((item) => ({ ...item, href: resolveSitePath(item.href) })),
+});
 export type DestinationGroup = { title: string; items: Destination[] };
 
 const content = snapshotSchema.parse(snapshot);
@@ -113,10 +120,12 @@ export const home = {
   },
   hero: content.hero,
   intro: content.intro,
-  tourCollections: cardSections.filter((s) => s.title !== DAY_TOURS_TITLE) satisfies TourCollection[],
-  dayTours: requireOne(
-    cardSections.filter((s) => s.title === DAY_TOURS_TITLE),
-    `the "${DAY_TOURS_TITLE}" section`,
+  tourCollections: cardSections.filter((s) => s.title !== DAY_TOURS_TITLE).map(withResolvedLinks) satisfies TourCollection[],
+  dayTours: withResolvedLinks(
+    requireOne(
+      cardSections.filter((s) => s.title === DAY_TOURS_TITLE),
+      `the "${DAY_TOURS_TITLE}" section`,
+    ),
   ) satisfies TourCollection,
   destinationGroups: ofKind("destinations") satisfies DestinationGroup[],
   cabServices: requireOne(ofKind("links"), "the cab services list"),

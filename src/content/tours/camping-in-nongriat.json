@@ -1,0 +1,591 @@
+{
+  "slug": "camping-in-nongriat",
+  "url": "/tours/camping-in-nongriat/",
+  "seo": {
+    "title": "Book Camping in Nongriat - Kajaawa",
+    "description": "Book this amazing camping in Nongriat package and experience a overnight camping in Nongriat with our best accomodation offered by Kajaawa",
+    "ogImage": "/media/tours/Camping-in-Nongriat-1-kaga.jpg"
+  },
+  "title": "Camping in Nongriat",
+  "duration": {
+    "label": "Duration",
+    "value": "2 Days / 1 Night"
+  },
+  "gallery": [
+    {
+      "src": "/media/tours/Camping-in-Nongriat-1-kaga.jpg",
+      "alt": "Camping in Nongriat"
+    },
+    {
+      "src": "/media/tours/Camping-in-Nongrait-2-kaga.jpg",
+      "alt": "Camping in Nongriat"
+    }
+  ],
+  "main": [
+    {
+      "kind": "includes",
+      "title": "Package Includes",
+      "items": [
+        "Breakfast",
+        "Camping",
+        "Activities"
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Camping in Nongriat is an adventurous experience. This locale is jam-packed with activities, making it a fantastic weekend vacation destination. Camping in Nongriat is an amazing experience as adventure begins with trekking through lush green forest and villages to the campsite. Trek through tiny communities to the Double Decker Living Root Bridge which is over a hundred foot long. Enjoy an overnight camping in Nongriat, complete with a campfire that has been particularly arranged for you."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Check-In",
+          "value": "11:00 AM"
+        },
+        {
+          "type": "fact",
+          "label": "Check-Out",
+          "value": "12:00 PM"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Camping, Trekking"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Adventure Tour, Private Tour"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Visit the magnificent Double Decker Root Bridge in Tyrna",
+        "En route, stop to see the gorgeous greenery and a tiny pool",
+        "Nongriat provides a peaceful yet unique private camping experience",
+        "Enjoy camping with a bonfire that will make you feel calm"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Camping in Nongriat Itinerary",
+      "days": [
+        {
+          "title": "Day 1 : Arrival, Trekking and Camping",
+          "items": [
+            "rrive at Tyrna to begin your journey to the Double Decker Root Bridge.",
+            "Begin your trip and enjoy the beautiful flora and a little pool along the way.",
+            "Witness the incredible Double Decker Root Bridge and cool down with the cold water that runs beneath the bridge.",
+            "In the evening, proceed to Nongriat's campsite.",
+            "Enjoy overnight camping in Nongriat with a bonfire."
+          ],
+          "notes": [
+            "Overnight camping in Nongriat"
+          ]
+        },
+        {
+          "title": "Day 2 : Departure",
+          "items": [
+            "Wake up in the arms of nature in Nongriat and have your delightful breakfast.",
+            "With this fantastic camping excursion, you may leave your campsite in Nongriat and return to your hometown."
+          ],
+          "notes": [
+            "Breakfast",
+            "Departure"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "How To Reach Nongriat Campsite",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "You can hire a car from Shillong to Cherrapunji. Distance from Cherrapunji main town to Nongriat is about 12km."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Location Map:",
+              "bold": true
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Nongriat Campsite",
+              "href": "https://www.google.com/maps/place/Nongriat,+Meghalaya+793112/@25.2373633,91.6708182,15z/data=!3m1!4b1!4m5!3m4!1s0x3750f2833fada503:0x5506bd978e92a206!8m2!3d25.237364!4d91.679573"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "BackPack"
+              }
+            ],
+            [
+              {
+                "text": "First Aid Kit"
+              }
+            ],
+            [
+              {
+                "text": "Water Bottle"
+              }
+            ],
+            [
+              {
+                "text": "Wipes and Toilet Paper"
+              }
+            ],
+            [
+              {
+                "text": "Raincoat/Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Mosquito Repellent Cream"
+              }
+            ],
+            [
+              {
+                "text": "Good Quality Shoes"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Valid Identity Card"
+              }
+            ],
+            [
+              {
+                "text": "E-Invite from Meghalaya Tourism App"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Accommodation on a twin or triple sharing basis (Customizable) with Complimentary Breakfast.",
+      "Dinner (Veg) from Camping Package onwards.",
+      "Camping and Bonfire Arrangements",
+      "Equipment Usage in Activities",
+      "Instructions"
+    ],
+    "excluded": [
+      "Transportation",
+      "Parking",
+      "Meals other than what is included",
+      "Personal drinks, laundry, porterage",
+      "Cost of optional service or activity",
+      "Tips",
+      "GST",
+      "Things which are not mentioned in inclusions"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Travellers visiting Meghalaya are required to register on Meghalaya Tourism App and generate an e-invite."
+              }
+            ],
+            [
+              {
+                "text": "You can download the Meghalaya Tourism App from Google Play Store or App Store."
+              }
+            ],
+            [
+              {
+                "text": "No reimbursed will be made against missed services."
+              }
+            ],
+            [
+              {
+                "text": "Travelers are required to show their valid identity card and the booking voucher at the time of check-in to the campsite."
+              }
+            ],
+            [
+              {
+                "text": "You should not consume alcohol or other intoxicants during your tour."
+              }
+            ],
+            [
+              {
+                "text": "Unmarried couples are not allowed to stay in one tent."
+              }
+            ],
+            [
+              {
+                "text": "Transportation including pick up from and drop to the campsite is not included in the package. ·"
+              }
+            ],
+            [
+              {
+                "text": "The menu for dinner is not fixed and may vary depending upon availability."
+              }
+            ],
+            [
+              {
+                "text": "In case of bad weather conditions, if camping may not be feasible, we will try to arrange a homestay for you and it may incur extra costs payable by you. In the event of non-availability of homestay, the camping booking shall stand cancelled with applicable refunds."
+              }
+            ],
+            [
+              {
+                "text": "There may be some days/months during monsoon when private camping may not be available. In that event we will arrange normal camping for you and the amount difference shall be refunded to you within 7(seven) business days in your bank account."
+              }
+            ],
+            [
+              {
+                "text": "In case of any unforeseen situation which is beyond our control including bad weather conditions, political disturbance etc., we may change your camping itinerary or dates of travel.·"
+              }
+            ],
+            [
+              {
+                "text": "Parking will be chargeable at Rs.30/- for 2 wheelers and Rs.50/- for four-wheelers."
+              }
+            ],
+            [
+              {
+                "text": "Kajaawa is a booking platform and may not be able to monitor the activities in the campsite."
+              }
+            ],
+            [
+              {
+                "text": "You must not litter on the campsite and throw it in the dustbin to maintain the area clean."
+              }
+            ],
+            [
+              {
+                "text": "The campsite does not have locker facilities so you may keep your valuable belongings with you inside your tent."
+              }
+            ],
+            [
+              {
+                "text": "Water activities must be performed with life jackets, gears and equipment under expert supervision."
+              }
+            ],
+            [
+              {
+                "text": "In case of bad weather conditions, water activities may not be possible and may get cancelled. In that event, you will get a refund of the payment made for the activity."
+              }
+            ],
+            [
+              {
+                "text": "You can reschedule the booking free up to 3 days prior to your arrival, subject to the availability of tents."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and booking confirmation details."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be no cancellation charges if cancellation is made 3 days before the date of"
+              }
+            ],
+            [
+              {
+                "text": "tour."
+              }
+            ],
+            [
+              {
+                "text": "30% of the total cost as cancellation charges, if cancelled 1-3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost as cancellation charges, if cancelled 0-1 day before the tour."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business in the customer's bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-dawki-shnongpdeng/",
+        "title": "Camping in Dawki, Shnongpdeng",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/captivating-meghalaya-tour/",
+        "title": "6 Days Captivating Meghalaya Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/amazing-meghalaya-kaziranga-tour/",
+        "title": "Amazing Meghalaya Kaziranga Tour",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Umiam-Lake-7-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-tour-with-cherrapunji/",
+        "title": "6 Days Meghalaya Tour with Cherrapunji",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/assam-meghalaya-tour-with-kaziranga/",
+        "title": "6 Days Assam Meghalaya Tour with Kaziranga",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/umiam-lake-20-kaga.jpg"
+      },
+      {
+        "href": "/tours/lakefront-nature-camping-in-mawsynram-meghalaya/",
+        "title": "Lakefront Nature Camping in Mawsynram, Meghalaya",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "500",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Lakefront-Nature-Camping-in-Mawsynram-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-mawmluh-village-cherrapunji/",
+        "title": "Camping in Mawmluh Village",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "2000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Camping-in-Mawmluh-Village-Cherrapunji-1-kaga.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions on Camping in Nongriat",
+    "items": [
+      {
+        "question": "1. Are breakfast and meals provided at the Nongriat Campsite?",
+        "answer": [
+          {
+            "text": "Yes, breakfast is provided while camping in Nongriat."
+          }
+        ]
+      },
+      {
+        "question": "2. Does camping at Nongriat provide bedding, blankets and pillows?",
+        "answer": [
+          {
+            "text": "Yes, bedding, blankets, and pillows are provided during camping."
+          }
+        ]
+      },
+      {
+        "question": "3. Is bonfire arrangement available during the stay?",
+        "answer": [
+          {
+            "text": "Yes, a campfire is provided during the camping."
+          }
+        ]
+      },
+      {
+        "question": "4. What type of camping is offered at Nongriat?",
+        "answer": [
+          {
+            "text": "Camping at Nongriat is a forest camping surrounded by lush greenery."
+          }
+        ]
+      },
+      {
+        "question": "5. Is lighting provided inside tents at Nongriat?",
+        "answer": [
+          {
+            "text": "Yes, while overnight camping, rechargeable lights are installed inside the tents."
+          }
+        ]
+      },
+      {
+        "question": "6. Is there a parking facility available at the campsite?",
+        "answer": [
+          {
+            "text": "Yes, there is parking space available outside the Nongriat Campsite for two-wheelers as well as four-wheelers."
+          }
+        ]
+      },
+      {
+        "question": "7. Are luggage storage facilities available for the Nongriat Tent Stay?",
+        "answer": [
+          {
+            "text": "You can store your luggage inside the tents, but if you have anything costly, you can keep it with the campsite owner."
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

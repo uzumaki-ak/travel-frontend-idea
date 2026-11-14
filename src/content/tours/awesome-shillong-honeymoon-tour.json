@@ -1,0 +1,559 @@
+{
+  "slug": "awesome-shillong-honeymoon-tour",
+  "url": "/tours/awesome-shillong-honeymoon-tour/",
+  "seo": {
+    "title": "Book Awesome Shillong Honeymoon Tour - Kajaawa",
+    "description": "Book this Awesome Shillong Honeymoon Tour with us and have a romantic vacation with your loved one at a minimal price.",
+    "ogImage": "/media/tours/Lady-hydari-park-2-kaga.jpg"
+  },
+  "title": "Awesome Shillong Honeymoon Tour",
+  "duration": {
+    "label": "Duration",
+    "value": "3 Days / 2 Nights"
+  },
+  "gallery": [
+    {
+      "src": "/media/tours/Lady-hydari-park-2-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/tours/Mawkdok-Dympep-Valley-2-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/tours/Elephant-Falls-1-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/home/Dawki-River-5.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/tours/Umiam-lake-2-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/tours/Shillong-Golf-Course-2-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/home/Shnongpdeng-Kayaking-1-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    },
+    {
+      "src": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg",
+      "alt": "Awesome Shillong Honeymoon Tour"
+    }
+  ],
+  "main": [
+    {
+      "kind": "includes",
+      "title": "Package Includes",
+      "items": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping",
+        "Sightseeing"
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "In this Shillong Tour Package, you will explore the major tourist attractions in Shillong and its nearby areas. With its stunning landscape and pleasant climate, Shillong is a perfect destination for a romantic getaway. This Shillong package offers a variety of services such as planning a peaceful and romantic honeymoon and arranging comfortable transportation tailored to traveller's needs. You’ll also find several beautiful resort hotels in prime locations, featuring pools, fine dining restaurants, and breathtaking views."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Shillong(1N), Shnongpdeng(1N)"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Sightseeing, Camping"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Honeymoon Tour"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Witness the beautiful scenic view of Umiam Lake",
+        "Visit Shillong and witness many beautiful tourist sites",
+        "Get mesmerised by the amazing view of Mawkdok Dympep Valley",
+        "Explore Mawlynnong which is Asia’s cleanest village",
+        "Enjoy boating on the crystal clear Umngot River",
+        "Overnight Camping at Shnongpdeng with a warm bonfire"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Awesome Shillong Honeymoon Tour Itinerary",
+      "days": [
+        {
+          "title": "Day 1 : Guwahati - Shillong",
+          "items": [
+            "Our agent will pick you up at Guwahati.",
+            "Visit Nehru Park in Barapani and see the stunning man-made Umiam Lake.",
+            "Visit Ward's Lake, Shillong Golf Course, and Lady Hydari Park in Shillong.",
+            "Spend some time with your loved ones shopping in Police Bazar in the evening.",
+            "Later, check into your hotel for a good night's sleep."
+          ],
+          "notes": [
+            "Overnight stay in Shillong"
+          ]
+        },
+        {
+          "title": "Day 2 : Mawlynnong-Dawki-Shnongpdeng",
+          "items": [
+            "Start your excursion to Mawlynnong after breakfast.",
+            "En route, take in the breathtaking Mawkdok viewpoint.",
+            "Head to Dawki town after visiting Asia's cleanest hamlet, Mawlynnong.",
+            "Enjoy a boat trip on the clear waters of the Umngot River, where you can see the riverbed.",
+            "After that, drive to Shnongpdeng for overnight camping at the riverbank campground, where you'll be greeted by a toasty bonfire."
+          ],
+          "notes": [
+            "Breakfast",
+            "Overnight camping at Shnongpdeng"
+          ]
+        },
+        {
+          "title": "Day 3 : End of this Tour",
+          "items": [
+            "With all of the beautiful memories of this vacation still fresh in your mind, depart for Guwahati Airport/ Railway Station."
+          ],
+          "notes": [
+            "Breakfast",
+            "Departure"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "hotels",
+      "title": "Hotels",
+      "tiers": [
+        {
+          "name": "Standard",
+          "stays": [
+            {
+              "place": "Shillong",
+              "names": "Hotel Blue Pine/ Hotel Rainbow/ Similar"
+            },
+            {
+              "place": "Shnongpdeng",
+              "names": "Kajaawa Camping/ Similar"
+            }
+          ]
+        },
+        {
+          "name": "Deluxe",
+          "stays": [
+            {
+              "place": "Shillong",
+              "names": "Hotel Holiday Hills / Orange Homestay / Similar"
+            },
+            {
+              "place": "Shnongpdeng",
+              "names": "Kajaawa Private Camping/ Similar"
+            }
+          ]
+        },
+        {
+          "name": "Premium",
+          "stays": [
+            {
+              "place": "Shillong",
+              "names": "Ri Kynjai / Similar"
+            },
+            {
+              "place": "Shnongpdeng",
+              "names": "Kajaawa Private Camping/ Similar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "First Aid Kit"
+              }
+            ],
+            [
+              {
+                "text": "Water Bottle"
+              }
+            ],
+            [
+              {
+                "text": "Wipes and Toilet Paper"
+              }
+            ],
+            [
+              {
+                "text": "Raincoat/Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Mosquito Repellent Cream"
+              }
+            ],
+            [
+              {
+                "text": "Good Quality Shoes"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Valid Identity Card"
+              }
+            ],
+            [
+              {
+                "text": "E-Invite from Meghalaya Tourism App"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "name": "Standard",
+        "amount": "10,200",
+        "unit": "per person"
+      },
+      {
+        "name": "Deluxe",
+        "amount": "11,300",
+        "unit": "per person"
+      },
+      {
+        "name": "Premium",
+        "amount": "15,550",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Accommodation on a twin or triple sharing basis (Customizable) with Complimentary Breakfast.",
+      "Transportation with Driver for 10 hours each day",
+      "Tour and Sightseeing",
+      "Parking Charges and Toll Tax"
+    ],
+    "excluded": [
+      "Entry Fees of all sightseeing spots",
+      "Breakfast in places other than the hotel provided",
+      "Meals",
+      "Personal drinks, laundry, porterage",
+      "Cost of optional service or activity",
+      "Tour Guide",
+      "Extra Usage of Vehicle",
+      "Driver, hotel or restaurant tips",
+      "GST",
+      "Things which are not mentioned in inclusions"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Travellers visiting Meghalaya are required to register on Meghalaya Tourism App and generate an e-invite."
+              }
+            ],
+            [
+              {
+                "text": "You can download the Meghalaya Tourism App from Google Play Store or App Store."
+              }
+            ],
+            [
+              {
+                "text": "No reimbursement will be made against missed services."
+              }
+            ],
+            [
+              {
+                "text": "Travellers are required to show their valid identity cards at the time of check-in to the hotel."
+              }
+            ],
+            [
+              {
+                "text": "You should not consume alcohol or other intoxicants during your tour."
+              }
+            ],
+            [
+              {
+                "text": "The vehicle allotted for the tour will be available as per the itinerary and not for general disposal."
+              }
+            ],
+            [
+              {
+                "text": "In the Northeast, generally, vehicles like Sedan do not have carriers. You are advised to carry one bag per person. Kindly give us prior information in case you have more luggage."
+              }
+            ],
+            [
+              {
+                "text": "Delay in arrival due to many reasons including flight reschedules shall have to inform to us at an earliest and in case of any sightseeing spot missed due to any delay including spending more time in one sightseeing spot, will not be refundable."
+              }
+            ],
+            [
+              {
+                "text": "Kajaawa will provide accommodation as per the hotels in the list and in case the listed hotels cannot be provided for any reason like unavailability, scheduled or general maintenance, accident at the hotel, risky road conditions due to bad weather or political disturbance, similar hotels will be provided and you will be informed about the changes in advance."
+              }
+            ],
+            [
+              {
+                "text": "In Deluxe and Premium Tour Packages, we will generally arrange Deluxe and Premium Hotels but in interior places, we will arrange Homestays, Guest Houses or Standard Hotels as Deluxe and Premium accommodations may not be available in the interiors for any reason."
+              }
+            ],
+            [
+              {
+                "text": "In case of any unforeseen situations which are beyond our control including bad weather conditions, political disturbance etc., we may change your itinerary or dates of travel."
+              }
+            ],
+            [
+              {
+                "text": "Travellers may have to bear additional expenses in case of natural calamity including situations like changes in the hotel, changes in tour date etc."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and also booking confirmation details containing your detailed travel itinerary and hotel information."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "25% of the total cost, if the tour is cancelled 30 days before the tour starts."
+              }
+            ],
+            [
+              {
+                "text": "50% of the total cost, if the tour is cancelled 15-30 days before the tour starts."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost, if the tour is cancelled 0-15 days before the tour starts."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid 1 (one) week before the tour starts."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Refunds will be processed within 7(seven) business days in the customer’s bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/meghalaya-tour-package-with-dawki/",
+        "title": "Meghalaya Tour Package with Dawki",
+        "duration": "3 Days / 2 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "10,000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Dawki-River-6.jpg"
+      },
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/5-days-shillong-cherrapunji-tour-package/",
+        "title": "5 Days Shillong Cherrapunji Tour Package",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "34,000",
+          "unit": "per person"
+        },
+        "image": "/media/home/Laitlum-Canyons-1-kaga.jpeg"
+      },
+      {
+        "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+        "title": "Mesmerizing Assam and Meghalaya Tour",
+        "duration": "7 Days / 6 Nights",
+        "image": "/media/home/dawki-river-6-kaga.jpg"
+      },
+      {
+        "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+        "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "18,100",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,420",
+          "unit": "per person"
+        },
+        "image": "/media/home/umiam-lake-26-kaga.jpg"
+      },
+      {
+        "href": "/tours/awesome-meghalaya-trip/",
+        "title": "Awesome Meghalaya Trip",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "17,600",
+          "unit": "per person"
+        },
+        "image": "/media/home/police-bazar-8-kaga.jpg"
+      },
+      {
+        "href": "/tours/kaziranga-meghalaya-wildlife-trip/",
+        "title": "7 Days Kaziranga Meghalaya Wildlife Trip",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,300",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-assam-tour/",
+        "title": "Meghalaya Assam Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,400",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Umiam-Lake-13-kaga.jpg"
+      }
+    ]
+  },
+  "faq": null,
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

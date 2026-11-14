@@ -1,5 +1,5 @@
 import { home } from "@/content/home";
-import { TourCard } from "./tour-card";
+import { TourCard } from "@/features/tours/tour-card";
 import { TourCollections } from "./tour-collections";
 
 export function ToursSection() {

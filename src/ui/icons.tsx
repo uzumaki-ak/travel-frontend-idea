@@ -114,6 +114,122 @@ export function InstagramIcon(props: IconProps) {
   );
 }
 
+/* ---- Tour details ---------------------------------------------------- */
+
+export function BedIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M3 6v13M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-8v6" />
+      <circle cx="6.5" cy="11.5" r="1.8" />
+    </Svg>
+  );
+}
+
+export function CarIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 16v-4l2-5h12l2 5v4z" />
+      <path d="M4 12h16M6 16v2.5M18 16v2.5" />
+      <path d="M7.5 14h.01M16.5 14h.01" strokeWidth={2.4} />
+    </Svg>
+  );
+}
+
+export function CupIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" />
+      <path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H15.5M8 3.5v2.5M12 3.5v2.5" />
+    </Svg>
+  );
+}
+
+export function TentIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 4 2.5 20h19z" />
+      <path d="M12 4v16M9 20l3-6 3 6" />
+    </Svg>
+  );
+}
+
+export function BinocularsIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <circle cx="6.5" cy="15.5" r="3.5" />
+      <circle cx="17.5" cy="15.5" r="3.5" />
+      <path d="M10 15.5h4M4.5 12.5 7 5h3l.5 7M19.5 12.5 17 5h-3l-.5 7" />
+    </Svg>
+  );
+}
+
+export function PaddleIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M5 19 19 5" />
+      <path d="M17 3.5 20.5 7l-2 2L15 5.5zM7 20.5 3.5 17l2-2L9 18.5z" />
+    </Svg>
+  );
+}
+
+export function MoonIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10Z" />
+    </Svg>
+  );
+}
+
+export function DepartIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M3.5 20.5h17M5 15l14-5.5a2 2 0 0 0-1.5-3.7L13 7.6 7.5 4.5 5.5 5.3l3.6 4.1-3.2 1.3-2.4-1.5-1.3.6L5 15Z" />
+    </Svg>
+  );
+}
+
+export function CheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="m4.5 12.5 4.5 4.5 10.5-11" />
+    </Svg>
+  );
+}
+
+export function CrossIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="m6 6 12 12M18 6 6 18" />
+    </Svg>
+  );
+}
+
+export function ChevronDownIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="m5.5 9 6.5 6.5L18.5 9" />
+    </Svg>
+  );
+}
+
+export function PinIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11Z" />
+      <circle cx="12" cy="10" r="2.3" />
+    </Svg>
+  );
+}
+
+/** Filled star — used only to draw a numeric review rating. */
+export function StarIcon(props: IconProps) {
+  return (
+    <Svg {...props} fill="currentColor" stroke="none">
+      <path d="m12 3 2.7 5.9 6.3.7-4.7 4.3 1.3 6.3L12 17l-5.6 3.2 1.3-6.3L3 9.6l6.3-.7z" />
+    </Svg>
+  );
+}
+
 export const socialIcons: Record<string, (props: IconProps) => React.JSX.Element> = {
   facebook: FacebookIcon,
   twitter: TwitterIcon,

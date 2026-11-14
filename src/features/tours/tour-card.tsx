@@ -1,15 +1,26 @@
 import Image from "next/image";
-import { resolveSitePath } from "@/config/site";
-import type { TourCard as TourCardData } from "@/content/home";
 import { ArrowUpRightIcon, ClockIcon } from "@/ui/icons";
 import { LEAF } from "@/ui/shape";
+
+/** What a card shows. `href` must already be resolved (see `content/routes.ts`). */
+export type TourCardData = {
+  title: string;
+  href: string;
+  image: string | null;
+  duration?: string;
+  price?: string;
+  /** e.g. "Starting From:" — shown before the amount when the source page has it. */
+  priceLabel?: string;
+  /** e.g. "per person" — shown after the amount when the source page has it. */
+  priceUnit?: string;
+};
 
 type TourCardProps = {
   tour: TourCardData;
   /** `rail`: fixed width inside a horizontal rail. `grid`: fills its grid cell. */
   layout: "rail" | "grid";
   tone?: "light" | "dark";
-  /** Pixel width hint for responsive images. */
+  /** Responsive image sizes hint. */
   sizes: string;
 };
 
@@ -18,7 +29,7 @@ export function TourCard({ tour, layout, tone = "light", sizes }: TourCardProps)
 
   return (
     <a
-      href={resolveSitePath(tour.href)}
+      href={tour.href}
       draggable={false}
       className={`group relative flex flex-col ${layout === "rail" ? "w-[78vw] max-w-[24rem] shrink-0 snap-start sm:w-[21rem]" : "w-full"}`}
     >
@@ -54,9 +65,11 @@ export function TourCard({ tour, layout, tone = "light", sizes }: TourCardProps)
 
       {tour.price ? (
         <p className={`mt-2 font-mono text-[0.85rem] tabular-nums ${dark ? "text-jade" : "text-moss"}`}>
+          {tour.priceLabel ? <span className="mr-1.5">{tour.priceLabel}</span> : null}
           <span aria-hidden="true">₹ </span>
           <span className="sr-only">Rupees </span>
-          {tour.price}
+          <span className={dark ? "" : "text-ink"}>{tour.price}</span>
+          {tour.priceUnit ? <span> {tour.priceUnit}</span> : null}
         </p>
       ) : null}
     </a>
@@ -64,11 +77,11 @@ export function TourCard({ tour, layout, tone = "light", sizes }: TourCardProps)
 }
 
 /** Shown where the live site has no photo: still water, not a grey placeholder. */
-function RippleTile() {
+export function RippleTile({ className = "" }: { className?: string }) {
   return (
     <div
       aria-hidden="true"
-      className="absolute inset-0 bg-[repeating-radial-gradient(circle_at_72%_115%,transparent_0_22px,rgb(147_220_198/0.14)_22px_23px),linear-gradient(160deg,var(--color-river),var(--color-river-deep))] transition-transform duration-[1.4s] ease-out-expo group-hover:scale-[1.07]"
+      className={`absolute inset-0 bg-[repeating-radial-gradient(circle_at_72%_115%,transparent_0_22px,rgb(147_220_198/0.14)_22px_23px),linear-gradient(160deg,var(--color-river),var(--color-river-deep))] transition-transform duration-[1.4s] ease-out-expo group-hover:scale-[1.07] ${className}`}
     />
   );
 }

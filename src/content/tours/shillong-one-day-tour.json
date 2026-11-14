@@ -1,0 +1,527 @@
+{
+  "slug": "shillong-one-day-tour",
+  "url": "/tours/shillong-one-day-tour/",
+  "seo": {
+    "title": "Shillong One Day Tour - Outskirts starting @ Rs.1000/- | Kajaawa",
+    "description": "Explore Shillong outskirts with Shillong One Day Tour covering Laitlum Canyons, Mawphlang Sacred Forest and Khasi Heritage Village.",
+    "ogImage": "/media/tours/Laitlum-Canyons-3-kaga.jpg"
+  },
+  "title": "Shillong One Day Tour - Outskirts",
+  "duration": {
+    "label": "Duration",
+    "value": "1 Day"
+  },
+  "gallery": [
+    {
+      "src": "/media/tours/Laitlum-Canyons-2-kaga.jpg",
+      "alt": "Shillong One Day Tour - Outskirts"
+    },
+    {
+      "src": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+      "alt": "Shillong One Day Tour - Outskirts"
+    },
+    {
+      "src": "/media/tours/Laitlum-Canyons-6-kaga.jpg",
+      "alt": "Shillong One Day Tour - Outskirts"
+    },
+    {
+      "src": "/media/tours/Laitlum-Canyons-4-kaga.jpg",
+      "alt": "Shillong One Day Tour - Outskirts"
+    }
+  ],
+  "main": [
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Discover the best of Meghalaya’s charming capital with our Shillong One Day Tour that takes you through Laitlum Canyons, Mawphlang Sacred Forest and Khasi Heritage Village. This day tour is an ideal glimpse of Shillong outskirts."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Shillong Outskirts"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Sightseeing"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Private Tour"
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Sightseeing Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Laitlum Canyons"
+              }
+            ],
+            [
+              {
+                "text": "Mawphlang Sacred Forest"
+              }
+            ],
+            [
+              {
+                "text": "Khasi Heritage Village"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Note"
+        },
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We confirm reservations of day tours with a minimum of 3 (three) individuals."
+              }
+            ],
+            [
+              {
+                "text": "For less than 3 persons you can reserve the entire cab"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Vehicles will be provided as follows:"
+        },
+        {
+          "type": "table",
+          "head": [
+            "No. of Persons",
+            "Vehicle Type"
+          ],
+          "rows": [
+            [
+              "1-3",
+              "Hatchback (Maruti Alto/Celerio/Similar)"
+            ],
+            [
+              "4",
+              "Sedan (Swift Dzire/Similar)"
+            ],
+            [
+              "5-7",
+              "Sedan (Swift Dzire/Similar"
+            ],
+            [
+              "8-10",
+              "SUV (Tata Sumo/Similar)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Pricing of Shillong Sightseeing Taxi"
+        },
+        {
+          "type": "table",
+          "head": [
+            "No. of Persons",
+            "Price (Per Person)"
+          ],
+          "rows": [
+            [
+              "Upto 3",
+              "₹1,000"
+            ],
+            [
+              "4",
+              "₹950"
+            ],
+            [
+              "5-7",
+              "₹950"
+            ],
+            [
+              "8-10",
+              "₹800"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Scout the outskirts of Meghalaya's capital city, Shillong",
+        "Witness the majestic Laitlum Canyons",
+        "Relish the charm of nature at Mawphlang Sacred Forest",
+        "Visit and explore the traditional Khasi Heritage Village"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Shillong One Day Tour - Outskirts Itinerary",
+      "days": [
+        {
+          "items": [
+            "Your Shillong One Day Tour will begin by meeting our representative early in the morning, who will drive you around Shillong and lead you on this tour.",
+            "We will first take you to the Laitlum Canyons which translates to 'The End of the Hills'. Take in the charm of the vast landscapes and enjoy the fresh morning air at this destination. You can also engage in photography, capturing some amazing pictures at this beautiful spot.",
+            "After a refreshing visit to Laitlum Canyons, your next stop would be Mawphlang Sacred Forest. This mystical forest is preserved for centuries by Khasi tradition. This forest is an abode to various rare plant species and nothing could be taken away from here, not even a leaf as per traditional beliefs of the locals. Take a worthwhile walk to this forest and dive in the beauty of nature.",
+            "Our last stop would be the Khasi Heritage Village which is a recreated space that showcases the traditional Khasi culture, homes and lifestyles. You can witness some ancient tools, instruments and many such things there.",
+            "At the conclusion of your Shillong One Day Tour, our representative will drop you off at the location of your choice in Shillong.",
+            "Our team will do everything in our power to make your tour amazing and unforgettable."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Valid Identity Proof"
+              }
+            ],
+            [
+              {
+                "text": "Warm and Comfortable Clothes"
+              }
+            ],
+            [
+              {
+                "text": "Small Medicine Box"
+              }
+            ],
+            [
+              {
+                "text": "Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Sunglasses"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Nice Quality Shoes"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "amount": "1000/-",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Sightseeing and Transportation"
+    ],
+    "excluded": [
+      "GST",
+      "Entry fees for visiting various locations",
+      "Lunch throughout the fare",
+      "Personal Drinks, laundry, camera fees, etc.",
+      "Airfares, airport tax, visa fees, or insurance",
+      "Things that are not mentioned above."
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We confirm reservations of day tours with a minimum of 3 (three) individuals."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We will send you an email acknowledging receipt and payment confirmation as soon as we receive the payment."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "25% of the entire package price if the cancellation is made 30 days prior to the starting date of the trip."
+              }
+            ],
+            [
+              {
+                "text": "50% of entire package price if the cancellation is made 15-30 days before the starting date of the trip."
+              }
+            ],
+            [
+              {
+                "text": "100% of entire package price if the cancellation is made 0-15 days before the starting date of the trip."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business in the customer's bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/meghalaya-tour-package-with-dawki/",
+        "title": "Meghalaya Tour Package with Dawki",
+        "duration": "3 Days / 2 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "10,000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Dawki-River-6.jpg"
+      },
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/5-days-shillong-cherrapunji-tour-package/",
+        "title": "5 Days Shillong Cherrapunji Tour Package",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "34,000",
+          "unit": "per person"
+        },
+        "image": "/media/home/Laitlum-Canyons-1-kaga.jpeg"
+      },
+      {
+        "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+        "title": "Mesmerizing Assam and Meghalaya Tour",
+        "duration": "7 Days / 6 Nights",
+        "image": "/media/home/dawki-river-6-kaga.jpg"
+      },
+      {
+        "href": "/tours/adoring-meghalaya-tour-package/",
+        "title": "Adoring Meghalaya Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "24,150",
+          "unit": "per person"
+        },
+        "image": "/media/tours/umiam-lake-19-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+        "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "18,100",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,420",
+          "unit": "per person"
+        },
+        "image": "/media/home/umiam-lake-26-kaga.jpg"
+      },
+      {
+        "href": "/tours/awesome-meghalaya-trip/",
+        "title": "Awesome Meghalaya Trip",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "17,600",
+          "unit": "per person"
+        },
+        "image": "/media/home/police-bazar-8-kaga.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions on Shillong One Day Tour – Outskirts",
+    "items": [
+      {
+        "question": "1. What are some of the top places covered in Shillong One Day Tour?",
+        "answer": [
+          {
+            "text": "The top places covered in Shillong One Day tour includes Laitlum Canyons, Mawphlang Sacred Forest and Khasi Heritage Village."
+          }
+        ]
+      },
+      {
+        "question": "2. Does Shillong One Day Tour include a guide or just a driver?",
+        "answer": [
+          {
+            "text": "A skilled driver who can give basic site knowledge is included in most packages. You can also choose to hire a professional guide."
+          }
+        ]
+      },
+      {
+        "question": "3. Is it safe for solo travellers to take up Shillong One Day Tour?",
+        "answer": [
+          {
+            "text": "Yes, anyone can take up Shillong One Day tour. Shillong is secure for everyone, especially women travelling alone, and they can freely visit all of its stunning locations."
+          }
+        ]
+      },
+      {
+        "question": "4. What kind of vehicle is used during the Shillong One Day tour?",
+        "answer": [
+          {
+            "text": "Depending entirely on the size of the group and the number of people, the Shillong One Day Tour uses vehicles such as SUVs, sedans, and hatchbacks."
+          }
+        ]
+      },
+      {
+        "question": "5. Can I book the Shillong One Day Tour online?",
+        "answer": [
+          {
+            "text": "Yes, You can book the tour online by visiting our website."
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

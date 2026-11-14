@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  // The WordPress site uses trailing slashes everywhere (/tours/x/); keep URLs identical for SEO.
+  trailingSlash: true,
+  poweredByHeader: false,
   partialPrefetching: true,
   images: {
     // AVIF first (smallest), WebP fallback. Source photos are max 975px wide,

@@ -1,0 +1,404 @@
+{
+  "slug": "cliff-jumping-in-dawki-shnongpdeng",
+  "url": "/tours/cliff-jumping-in-dawki-shnongpdeng/",
+  "seo": {
+    "title": "Book Cliff Jumping in Dawki, Shnongpdeng @ Rs 400 - Kajaawa",
+    "description": "Boost your adrenaline by performing Cliff Jumping in Dawki, Shnongpdeng @ Rs 400/- only per person with Kajaawa.",
+    "ogImage": "/media/home/dawki-river-3-kaga.jpg"
+  },
+  "title": "Cliff Jumping in Dawki, Shnongpdeng",
+  "duration": {
+    "label": "Duration",
+    "value": "20 min"
+  },
+  "gallery": [
+    {
+      "src": "/media/home/dawki-river-3-kaga.jpg",
+      "alt": "Cliff Jumping in Dawki, Shnongpdeng"
+    }
+  ],
+  "main": [
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Cliff jumping is one of the famous water sports activity done in the Umngot River at Shnongpdeng near Dawki. Here you can perform the cliff jumping activity from three different heights in ascending order i.e. 8, 14, and 22 feet. Not only swimmers but even non-swimmers can perform cliff jumping activity at the Umngot River, as the experts out here will provide you with the basic lessons of swimming before the activity. Children below 11 (eleven) years of age are not allowed to do cliff jumping. To ensure the greatest safety of every individual at the spot, the tour operator also supplies the essential gears and equipment."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Shnongpdeng"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Cliff Jumping"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Adventure Tour"
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Arrive at the spot and ready yourself with life jackets",
+        "Perform Cliff Jumping in the cleanest river",
+        "Experience and enjoy the diving thrill",
+        "Pump your adrenaline while cliff jumping"
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Cliff Jumping in Dawki, Shnongpdeng Itinerary",
+      "days": [
+        {
+          "items": [
+            "After your arrival you will be given instructions on the required equipment for Cliff Jumping at Shnongpdeng, Dawki.",
+            "Then you will jump from the cliff and dive inside the Umngot River at Shnongpdeng Village.",
+            "After the activity you can stroll around the area and later leave Shnongpdeng with a pleasant memory."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Comfortable shoes"
+              }
+            ],
+            [
+              {
+                "text": "Trousers and shorts"
+              }
+            ],
+            [
+              {
+                "text": "Sunglasses"
+              }
+            ],
+            [
+              {
+                "text": "Camera"
+              }
+            ],
+            [
+              {
+                "text": "Sunscreen"
+              }
+            ],
+            [
+              {
+                "text": "Extra pair of clothes"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "amount": "400",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Activities",
+      "Equipment Usage",
+      "Instructions"
+    ],
+    "excluded": [
+      "Transportation",
+      "Things which are not included above"
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Arrive at the spot on time provided by the tour operator."
+              }
+            ],
+            [
+              {
+                "text": "Life jackets are mandatory and even swimmers have to wear them."
+              }
+            ],
+            [
+              {
+                "text": "In the state of alcohol or any other intoxicants, cliff jumping is strictly not allowed."
+              }
+            ],
+            [
+              {
+                "text": "After having heavy food do not try cliff jumping."
+              }
+            ],
+            [
+              {
+                "text": "Instructions given by the professionals should be listened to properly before the activity."
+              }
+            ],
+            [
+              {
+                "text": "Cliff Jumping is not allowed for individuals suffering from diseases like asthma, blood pressure and sinus."
+              }
+            ],
+            [
+              {
+                "text": "Heart patients are not allowed to do Cliff Jumping in Shnogpdeng, Dawki."
+              }
+            ],
+            [
+              {
+                "text": "Cliff Jumping activity is not allowed for pregnant women."
+              }
+            ],
+            [
+              {
+                "text": "Changing rooms are available near the spot."
+              }
+            ],
+            [
+              {
+                "text": "If your cliff jumping activity gets cancelled for reasons other than bad weather. Activities like zip lining, kayaking etc will be provided as per your choice."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "You have to pay 50% of the total tour cost at the time of booking."
+              }
+            ],
+            [
+              {
+                "text": "After paying 50% you will receive an invoice of your payment and booking confirmation details."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be no cancellation charges if cancellation is made 3 days before the date of the tour."
+              }
+            ],
+            [
+              {
+                "text": "30% of the total cost as cancellation charges, if cancelled 2 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "100% of the total cost as cancellation charges, if cancelled 0-1 day before the tour."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business days in the customer's given bank account."
+              }
+            ],
+            [
+              {
+                "text": "If your cliff jumping activity gets cancelled due to some reason other than bad weather and you do not want alternative activities like zip lining, kayaking etc., a full refund shall be made."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-dawki-shnongpdeng/",
+        "title": "Camping in Dawki, Shnongpdeng",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/captivating-meghalaya-tour/",
+        "title": "6 Days Captivating Meghalaya Tour",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "21,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Shillong-Peak-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/amazing-meghalaya-kaziranga-tour/",
+        "title": "Amazing Meghalaya Kaziranga Tour",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,400",
+          "unit": "per person"
+        },
+        "image": "/media/home/Umiam-Lake-7-kaga.jpg"
+      },
+      {
+        "href": "/tours/meghalaya-tour-with-cherrapunji/",
+        "title": "6 Days Meghalaya Tour with Cherrapunji",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/assam-meghalaya-tour-with-kaziranga/",
+        "title": "6 Days Assam Meghalaya Tour with Kaziranga",
+        "duration": "6 Days / 5 Nights",
+        "image": "/media/tours/umiam-lake-20-kaga.jpg"
+      },
+      {
+        "href": "/tours/lakefront-nature-camping-in-mawsynram-meghalaya/",
+        "title": "Lakefront Nature Camping in Mawsynram, Meghalaya",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "500",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Lakefront-Nature-Camping-in-Mawsynram-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/camping-in-mawmluh-village-cherrapunji/",
+        "title": "Camping in Mawmluh Village",
+        "duration": "2 Days / 1 Night",
+        "price": {
+          "label": "Starting From:",
+          "amount": "2000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Camping-in-Mawmluh-Village-Cherrapunji-1-kaga.jpg"
+      }
+    ]
+  },
+  "faq": null,
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

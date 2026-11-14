@@ -1,8 +1,14 @@
 import { home } from "@/content/home";
 import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/ui/icons";
-import { EnquiryForm, type EnquiryFormCopy } from "./enquiry-form";
+import { EnquiryForm, type EnquiryFormContext, type EnquiryFormCopy } from "./enquiry-form";
 
-export function EnquirySection() {
+type EnquirySectionProps = {
+  /** Heading from the source page ("Query Form" on the homepage, "Package Query Form" on tours). */
+  title?: string;
+  context?: EnquiryFormContext;
+};
+
+export function EnquirySection({ title, context }: EnquirySectionProps = {}) {
   const { enquiry, contact } = home;
 
   const copy: EnquiryFormCopy = {
@@ -28,7 +34,7 @@ export function EnquirySection() {
             data-motion="lines"
             className="font-display text-display font-bold tracking-[-0.04em] uppercase"
           >
-            {enquiry.formTitle}
+            {title ?? enquiry.formTitle}
           </h2>
           <ul className="flex flex-col gap-4">
             {lines.map(({ label, value, href, Icon }) => (
@@ -48,7 +54,7 @@ export function EnquirySection() {
         </div>
 
         <div className="relative lg:col-span-7">
-          <EnquiryForm copy={copy} />
+          <EnquiryForm copy={copy} context={context} />
         </div>
       </div>
     </section>

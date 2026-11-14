@@ -10,7 +10,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@/ui/icons";
 
 const DRAG_THRESHOLD_PX = 6;
 
-export function TourRail({ label, children }: { label: string; children: ReactNode }) {
+export function Rail({ label, children }: { label: string; children: ReactNode }) {
   const scroller = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ atStart: true, atEnd: false });
   const [progress, setProgress] = useState(0);

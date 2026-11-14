@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { resolveSitePath } from "@/config/site";
+import { resolveSitePath } from "@/content/routes";
 import { home } from "@/content/home";
 import { HeaderShell } from "./header-shell";
 
-export function SiteHeader() {
+export function SiteHeader({ section }: { section: string }) {
   const { contact, nav, brand, enquiry } = home;
 
   return (
@@ -34,8 +34,8 @@ export function SiteHeader() {
               <li key={item.href}>
                 <a
                   href={resolveSitePath(item.href)}
-                  aria-current={item.href === "/" ? "page" : undefined}
-                  className="relative px-2 py-2 font-display text-[0.95rem] font-medium after:absolute after:inset-x-2 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-out-expo hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"
+                  aria-current={item.href === section ? (section === "/" ? "page" : "true") : undefined}
+                  className="relative px-2 py-2 font-display text-[0.95rem] font-medium after:absolute after:inset-x-2 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-out-expo hover:after:scale-x-100 aria-[current]:after:scale-x-100"
                 >
                   {item.label}
                 </a>

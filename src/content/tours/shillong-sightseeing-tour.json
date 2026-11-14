@@ -1,0 +1,570 @@
+{
+  "slug": "shillong-sightseeing-tour",
+  "url": "/tours/shillong-sightseeing-tour/",
+  "seo": {
+    "title": "Shillong Sightseeing Cost @Rs.1000/- per person | Kajaawa",
+    "description": "Shillong Sightseeing Full Day Tour covering Don Bosco Museum, Shillong Peak, Elephant Falls, Ward's Lake and other places of Shillong.",
+    "ogImage": "/media/tours/meghalaya-mountains-2-kaga.jpg"
+  },
+  "title": "Shillong Sightseeing Tour",
+  "duration": {
+    "label": "Duration",
+    "value": "1-Day"
+  },
+  "gallery": [
+    {
+      "src": "/media/tours/Elephant-Falls-1-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Elephant-Falls-2-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Shillong-Peak-1-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Wards-Lake-2-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Wards-lake-1-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Shillong-Golf-Course-1-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Shillong-Golf-Course-3-Kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    },
+    {
+      "src": "/media/tours/Lady-hydari-park-2-kaga.jpg",
+      "alt": "Shillong Sightseeing Tour"
+    }
+  ],
+  "main": [
+    {
+      "kind": "generic",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "content": [
+            {
+              "text": "Experience the best of Meghalaya with our Shillong Sightseeing Tour. Visit and explore the top attractions like Don Bosco Museum, Elephant Falls, Shillong Peak, Ward's Lake, Botanical Garden, Shillong Golf Course and Lady Hydari Park. This tour is perfect for everyone who is looking to witness both cultural and scenic beauty of Shillong."
+            }
+          ]
+        },
+        {
+          "type": "fact",
+          "label": "Places Covered",
+          "value": "Shillong"
+        },
+        {
+          "type": "fact",
+          "label": "Activities",
+          "value": "Sightseeing"
+        },
+        {
+          "type": "fact",
+          "label": "Tour Type",
+          "value": "Private Tour"
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Sightseeing Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Don Bosco Museum"
+              }
+            ],
+            [
+              {
+                "text": "Elephant Falls"
+              }
+            ],
+            [
+              {
+                "text": "Shillong Peak"
+              }
+            ],
+            [
+              {
+                "text": "Ward's Lake"
+              }
+            ],
+            [
+              {
+                "text": "Botanical Garden"
+              }
+            ],
+            [
+              {
+                "text": "Shillong Golf Course"
+              }
+            ],
+            [
+              {
+                "text": "Lady Hydari Park"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Note"
+        },
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We confirm reservations of day tours with a minimum of 3 (three) individuals."
+              }
+            ],
+            [
+              {
+                "text": "For less than 3 persons you can reserve the entire cab."
+              }
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Vehicles will be provided as follows:"
+        },
+        {
+          "type": "table",
+          "head": [
+            "No. of Persons",
+            "Vehicle Type"
+          ],
+          "rows": [
+            [
+              "1-3",
+              "Hatchback (Maruti Alto/Celerio/Similar)"
+            ],
+            [
+              "4",
+              "Sedan (Swift Dzire/Similar)"
+            ],
+            [
+              "5-7",
+              "Sedan (Swift Dzire/Similar"
+            ],
+            [
+              "8-10",
+              "SUV (Tata Sumo/Similar)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Pricing of Shillong Sightseeing Taxi"
+        },
+        {
+          "type": "table",
+          "head": [
+            "No. of Persons",
+            "Price (Per Person)"
+          ],
+          "rows": [
+            [
+              "Upto 3",
+              "₹1,000"
+            ],
+            [
+              "4",
+              "₹950"
+            ],
+            [
+              "5-7",
+              "₹950"
+            ],
+            [
+              "8-10",
+              "₹800"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "highlights",
+      "title": "Tour Highlights",
+      "items": [
+        "Explore Shillong, the “Scotland of the East\"",
+        "Visit Don Bosco Museum, Elephant Falls, Shillong Peak, Ward's Lake and Botanical Garden.",
+        "Enjoy nature at Shillong Golf Course and Lady Hydari Park."
+      ]
+    },
+    {
+      "kind": "itinerary",
+      "title": "Shillong Sightseeing Tour Itinerary",
+      "days": [
+        {
+          "items": [
+            "Your Shillong Sightseeing Tour will begin with the exploration of Shillong City, often referred to as the ‘Scotland of the East’, along with its scenic surrounding areas.",
+            "This tour package covers all the major places of Shillong, ensuring a complete experience of this charming city.",
+            "As a part of your Shillong Sightseeing Tour, you will visit popular attractions such as Don Bosco Museum where you will discover more about the Northeast's indigenous civilizations. Get a glimpse of the clothing, tools, and artefacts that the native tribes of the northeastern states used as you explore the museum. For a broad perspective of Shillong, you can tour the Skywalk as well.",
+            "Our next spot will be the breathtaking Elephant Falls. It is a well-known destination and a three-step waterfall. It was named for an elephant-shaped boulder that can be seen at the base of the Falls and is renowned for its beauty.",
+            "Next, we'll visit Shillong Peak. It provides a panoramic view of the stunning city of Shillong. If you're fortunate enough, you can also witness the worth watching sunset from this location.",
+            "Meghalaya's capital city is home to several other fantastic tourist attractions, such as Ward's Lake, which is well-liked for boating and quick garden walks. This wonderful destination would be your next stop.",
+            "Further, you'll be exploring the Botanical Garden and witness some wonderful species of orchids spending a relaxing time as well.",
+            "After a relaxing visit to Botanical Garden, we will explore and visit Shillong Golf Course which is among the largest and oldest Golf Courses in India. It is an 18-hole Golf Course nestled amidst thick pine groves and rhododendron trees.",
+            "Our last stop would be Lady Hydari Park which is a wonderful park with long expanses of roses and other lovely blooms. A Mini Zoo with over 70 birds, 135 animals, and reptiles is another feature of the park.",
+            "After a wonderful excursion, our cab will drop you off at your respective hotel in Shillong, concluding your Shillong Sightseeing Tour."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Things To Carry",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "Valid Identity Proof"
+              }
+            ],
+            [
+              {
+                "text": "Warm and Comfortable Clothes"
+              }
+            ],
+            [
+              {
+                "text": "Small Medicine Box"
+              }
+            ],
+            [
+              {
+                "text": "Umbrella"
+              }
+            ],
+            [
+              {
+                "text": "Sunglasses"
+              }
+            ],
+            [
+              {
+                "text": "Charger"
+              }
+            ],
+            [
+              {
+                "text": "Nice Quality Shoes"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "price": {
+    "tiers": [
+      {
+        "amount": "1000/-",
+        "unit": "per person"
+      }
+    ],
+    "note": "Package price may vary at the time of booking.",
+    "enquireLabel": "Send Enquiry"
+  },
+  "inclusions": {
+    "includedLabel": "Inclusions",
+    "excludedLabel": "Exclusions",
+    "included": [
+      "Sightseeing and Transportation"
+    ],
+    "excluded": [
+      "GST",
+      "Entry fees for visiting various locations",
+      "Lunch throughout the fare",
+      "Personal Drinks, laundry, camera fees, etc.",
+      "Airfares, airport tax, visa fees, or insurance",
+      "Things that are not mentioned above."
+    ]
+  },
+  "policies": [
+    {
+      "kind": "generic",
+      "title": "Please Note",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We confirm reservations of day tours with a minimum of 3 (three) individuals."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Confirmation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "We will send you an email acknowledging receipt and payment confirmation as soon as we receive the payment."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Cancellation Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "25% of the entire package price if the cancellation is made 30 days prior to the starting date of the trip."
+              }
+            ],
+            [
+              {
+                "text": "50% of entire package price if the cancellation is made 15-30 days before the starting date of the trip."
+              }
+            ],
+            [
+              {
+                "text": "100% of entire package price if the cancellation is made 0-15 days before the starting date of the trip."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Payment Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "100% of the tour cost has to be paid on the day of arrival."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "generic",
+      "title": "Refund Policy",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            [
+              {
+                "text": "There shall be a refund of 100% if cancellation is made 3 days before the tour."
+              }
+            ],
+            [
+              {
+                "text": "Refunds will be processed within 7 (seven) business in the customer's bank account."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "related": {
+    "title": "Suggested Tour Packages",
+    "items": [
+      {
+        "href": "/tours/meghalaya-tour-package-with-dawki/",
+        "title": "Meghalaya Tour Package with Dawki",
+        "duration": "3 Days / 2 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "10,000",
+          "unit": "per person"
+        },
+        "image": "/media/tours/Dawki-River-6.jpg"
+      },
+      {
+        "href": "/tours/shillong-tour-package-from-guwahati/",
+        "title": "Shillong Tour Package From Guwahati",
+        "duration": "",
+        "price": {
+          "label": "Starting From:",
+          "amount": "13,450",
+          "unit": "per person"
+        },
+        "image": "/media/tours/meghalaya-mountains-3-kaga.jpg"
+      },
+      {
+        "href": "/tours/5-days-shillong-cherrapunji-tour-package/",
+        "title": "5 Days Shillong Cherrapunji Tour Package",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "34,000",
+          "unit": "per person"
+        },
+        "image": "/media/home/Laitlum-Canyons-1-kaga.jpeg"
+      },
+      {
+        "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+        "title": "Mesmerizing Assam and Meghalaya Tour",
+        "duration": "7 Days / 6 Nights",
+        "image": "/media/home/dawki-river-6-kaga.jpg"
+      },
+      {
+        "href": "/tours/adoring-meghalaya-tour-package/",
+        "title": "Adoring Meghalaya Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "24,150",
+          "unit": "per person"
+        },
+        "image": "/media/tours/umiam-lake-19-kaga.jpg"
+      },
+      {
+        "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+        "title": "Fascinating Assam Meghalaya Tour Package",
+        "duration": "6 Days / 5 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "23,950",
+          "unit": "per person"
+        },
+        "image": "/media/home/dawki-river-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+        "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "18,100",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,330",
+          "unit": "per person"
+        },
+        "image": "/media/home/Kaziranga-national-park-4-kaga.jpg"
+      },
+      {
+        "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+        "title": "Guwahati Shillong Cherrapunji Tour Package",
+        "duration": "7 Days / 6 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "25,420",
+          "unit": "per person"
+        },
+        "image": "/media/home/umiam-lake-26-kaga.jpg"
+      },
+      {
+        "href": "/tours/awesome-meghalaya-trip/",
+        "title": "Awesome Meghalaya Trip",
+        "duration": "5 Days / 4 Nights",
+        "price": {
+          "label": "Starting From:",
+          "amount": "17,600",
+          "unit": "per person"
+        },
+        "image": "/media/home/police-bazar-8-kaga.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions on Shillong Sightseeing Tour",
+    "items": [
+      {
+        "question": "1. What are the top places covered in the Shillong Sightseeing Tour?",
+        "answer": [
+          {
+            "text": "Some popular tourist attractions like Don Bosco Museum, Elephant Falls, Shillong Peak, Ward’s Lake, Botanical Garden, Shillong Golf Course and Lady Hydari Park are included in the Shillong Sightseeing Tour."
+          }
+        ]
+      },
+      {
+        "question": "2. How long does the Shillong Sightseeing Tour take?",
+        "answer": [
+          {
+            "text": "It is a complete 1-Day tour which will take around 6 to 8 hours, depending on the number of places that will be covered and the pace of the tour."
+          }
+        ]
+      },
+      {
+        "question": "3. Is Shillong safe for travelling?",
+        "answer": [
+          {
+            "text": "Yes, Shillong is safe for everyone especially solo women travellers to explore all its beautiful places without any hesitation."
+          }
+        ]
+      },
+      {
+        "question": "4. Does Shillong Sightseeing Tour include a guide or just a driver?",
+        "answer": [
+          {
+            "text": "The majority of packages include an experienced driver who can provide basic site information. However, you can also opt for a professional guide at an additional cost."
+          }
+        ]
+      },
+      {
+        "question": "5. What type of vehicle is used for the Shillong Sightseeing Tour?",
+        "answer": [
+          {
+            "text": "Vehicles like Hatchbacks, Sedans or SUV’s are used for the Shillong Sightseeing Tour but it completely depends on the number of individuals and the size of the group."
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": null,
+  "enquiry": {
+    "formTitle": "Package Query Form",
+    "cf7FormId": "1295",
+    "adultsMax": 20,
+    "childrenMax": 15
+  }
+}

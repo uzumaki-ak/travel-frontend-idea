@@ -39,7 +39,7 @@ function toDayFirst(isoDate: string): string {
 
 export async function deliverToCf7(
   enquiry: Enquiry,
-  config: { origin: string; formId: string; pageUrl: string },
+  config: { origin: string; formId: string; pageUrl: string; packageName?: string },
 ): Promise<DeliveryResult> {
   const body = new FormData();
   body.set("_wpcf7", config.formId);
@@ -53,6 +53,7 @@ export async function deliverToCf7(
   body.set("number-of-children", String(enquiry.children));
   body.set("message", enquiry.message);
   body.set("link", config.pageUrl);
+  if (config.packageName) body.set("package", config.packageName);
 
   let res: Response;
   try {

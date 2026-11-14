@@ -137,4 +137,16 @@ export const pointerDepth: MotionEffect = ({ gsap }, root) => {
   return () => cleanups.forEach((fn) => fn());
 };
 
-export const effects: MotionEffect[] = [lines, rise, words, parallax, panorama, pointerDepth];
+/** Timelines: a line grows along its track as the reader scrolls through the list. */
+export const draw: MotionEffect = ({ gsap }, root) => {
+  for (const el of all(root, '[data-motion="draw"]')) {
+    const track = el.closest("ol, ul") ?? el.parentElement ?? el;
+    gsap.fromTo(
+      el,
+      { scaleY: 0 },
+      { scaleY: 1, ease: "none", scrollTrigger: { trigger: track, start: "top 70%", end: "bottom 60%", scrub: 0.4 } },
+    );
+  }
+};
+
+export const effects: MotionEffect[] = [lines, rise, words, parallax, panorama, pointerDepth, draw];
