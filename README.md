@@ -39,6 +39,7 @@ Never edit the snapshots by hand — they are copies of the live site. To refres
 ```bash
 node scripts/sync-home-snapshot.mjs     # homepage  → src/content/home.snapshot.json
 node scripts/sync-tours-snapshot.mjs    # 93 tours  → src/content/tours/*.json (+ photos)
+node scripts/sync-tour-archive.mjs      # /tours/ listing → src/content/tour-archive.json
 ```
 
 The tour sync whitelists links (site paths, Google Maps, own phone/WhatsApp/email),
@@ -49,6 +50,8 @@ drops scripts/iframes/forms, and prints every link or image it could not keep.
 | Path | Source |
 |---|---|
 | `/` | homepage snapshot |
+| `/tours/` | listing snapshot — all 93 cards, "Load More" reveals 9 at a time (same order and card text as the live listing after Load More) |
+| `/tours/page/2/` … `/10/` | same listing, self canonical — as on the live site; `/page/1/` → 301 `/tours/`, `/page/02/` → 301 `/page/2/`, `/page/11/`+ → 404 |
 | `/tours/<slug>/` | tour snapshots (all prerendered; unknown slugs return 404 via `src/proxy.ts`) |
 | everything else | still links to the WordPress site (`src/content/routes.ts`) |
 

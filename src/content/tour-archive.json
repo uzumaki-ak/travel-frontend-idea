@@ -1,0 +1,1659 @@
+{
+  "capturedAt": "2026-11-14T08:52:43.938Z",
+  "lastPagedUrl": 10,
+  "seo": {
+    "title": "Tour Package booking with Kajaawa. Choose from our handpicked tour which are curated for an awesome travel experience.",
+    "description": "You can choose your tour from our handpicked itineraries which have been curated for giving you an awesome travel experience.",
+    "canonical": "/tours/"
+  },
+  "heading": "Our Tours",
+  "loadMoreLabel": "Load More",
+  "perPage": 9,
+  "cards": [
+    {
+      "title": "Adventure Camping in Dawki",
+      "href": "/tours/camping-at-dawki-shnongpdeng/",
+      "image": null,
+      "duration": "2 Days / 1 Night",
+      "price": {
+        "label": "Starting From:",
+        "amount": "400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping",
+        "Activities"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping in Sohbar",
+      "href": "/tours/camping-in-sohbar/",
+      "image": "/media/tours/Sohbar-campsite-sunset.jpg",
+      "duration": "2 Days / 1 Night",
+      "price": {
+        "label": "Starting From:",
+        "amount": "2,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping",
+        "Activities"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Enchanting Meghalaya Tour",
+      "href": "/tours/enchanting-meghalaya-tour/",
+      "image": "/media/home/Umiam-Lake-7-kaga.jpg",
+      "duration": "10 Days / 9 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "37,100",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "5 Days Meghalaya Offbeat Tour",
+      "href": "/tours/meghalaya-offbeat-tour/",
+      "image": "/media/home/mawphlang-sacred-forest-kaga-1.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,520",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Exotic Meghalaya Rural Tour",
+      "href": "/tours/exotic-meghalaya-rural-tour/",
+      "image": "/media/tours/Dawki-River-6.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,850",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Majestic Kaziranga and Meghalaya Tour",
+      "href": "/tours/majestic-kaziranga-and-meghalaya-tour/",
+      "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,550",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Mesmerising Tour of Shillong, Cherrapunji and Dawki",
+      "href": "/tours/mesmerising-tour-of-shillong-cherrapunji-dawki/",
+      "image": "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Amazing Shillong Tour with Mawphlang Village",
+      "href": "/tours/amazing-shillong-mawphlang-village-tour/",
+      "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,450",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Magical Shillong and Cherrapunji Tour",
+      "href": "/tours/magical-shillong-and-cherrapunji-tour/",
+      "image": "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,600",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Splendid Shillong Cherrapunji Tour",
+      "href": "/tours/splendid-shillong-cherrapunji-tour/",
+      "image": "/media/home/dawki-river-4-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,800",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Romantic Shillong Cherrapunji Tour",
+      "href": "/tours/romantic-shillong-cherrapunji-tour/",
+      "image": "/media/home/wei-sawdong-falls-3-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,430",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Thrilling 3 Days Meghalaya Trip",
+      "href": "/tours/thrilling-3-days-meghalaya-trip/",
+      "image": "/media/home/Shnongpdeng-Kayaking-1-kaga.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "10,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "4 Days Adventure Trip to Meghalaya",
+      "href": "/tours/4-days-adventure-trip-to-meghalaya/",
+      "image": "/media/tours/double-decker-living-root-bridge-1-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,600",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Nongjrong Shillong Tour Package",
+      "href": "/tours/nongjrong-shillong-tour-package/",
+      "image": "/media/tours/Nongjrong-2-kaga.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "9,700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Mesmerising 7 Days Assam Meghalaya Tour",
+      "href": "/tours/mesmerising-7-days-assam-meghalaya-tour/",
+      "image": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,380",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Laitlum Shillong Tour Package",
+      "href": "/tours/laitlum-shillong-tour-package/",
+      "image": "/media/tours/Laitlum-Canyons1-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Amazing Meghalaya Tour",
+      "href": "/tours/amazing-meghalaya-tour/",
+      "image": "/media/home/dawki-river-5-kaga.jpg",
+      "duration": "9 Days / 8 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "33,100",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Sightseeing Tour With Laitlum",
+      "href": "/tours/meghalaya-sightseeing-tour-with-laitlum/",
+      "image": "/media/tours/nokhalikai_falls2-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,520",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Tour with Mawryngkhang Trek",
+      "href": "/tours/meghalaya-tour-with-mawryngkhang-trek/",
+      "image": "/media/tours/Mawryngkhang-Trek-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Majestic Cherrapunji Dawki Mawlynnong Tour",
+      "href": "/tours/majestic-cherrapunji-dawki-mawlynnong-tour/",
+      "image": "/media/tours/Seven-sister-falls-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,320",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Majestic 10 Days Meghalaya Tour",
+      "href": "/tours/majestic-10-days-meghalaya-tour/",
+      "image": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+      "duration": "10 Days / 9 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "37,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Adventurous Meghalaya Tour",
+      "href": "/tours/adventurous-meghalaya-tour/",
+      "image": "/media/tours/Umiam-lake-2-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,520",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "8 Days Meghalaya Holiday Tour",
+      "href": "/tours/8-days-meghalaya-holiday-tour/",
+      "image": "/media/home/Umiam-lake-1-kaga.jpg",
+      "duration": "8 Days / 7 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "29,250",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "6 Days Magical Meghalaya Tour",
+      "href": "/tours/6-days-magical-meghalaya-tour/",
+      "image": "/media/tours/Wards-lake-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Excursion with Kaziranga Tour",
+      "href": "/tours/meghalaya-excursion-with-kaziranga-tour/",
+      "image": "/media/tours/Elephant-Falls-2-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Awesome Shillong Tour",
+      "href": "/tours/awesome-shillong-tour/",
+      "image": "/media/home/Shnongpdeng-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,300",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Wildlife Tour of Kaziranga with Meghalaya",
+      "href": "/tours/wildlife-tour-of-kaziranga-with-meghalaya/",
+      "image": "/media/home/Dainthlen-Falls-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,350",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "6 Days Majestic Meghalaya Tour",
+      "href": "/tours/6-days-majestic-meghalaya-tour/",
+      "image": "/media/home/Nohkalikai-Falls-1-.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,420",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Breathtaking Meghalaya Tour",
+      "href": "/tours/breathtaking-meghalaya-tour/",
+      "image": "/media/tours/Dainthlen-Falls-3-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,530",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Best of Shillong Tour",
+      "href": "/tours/best-of-shillong-tour/",
+      "image": "/media/tours/Rainbow-Falls-2-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,550",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Adorable Meghalaya Honeymoon Tour",
+      "href": "/tours/adorable-meghalaya-honeymoon-tour/",
+      "image": "/media/tours/Nohkalikai-Falls-3-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,800",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Romantic Meghalaya Tour",
+      "href": "/tours/romantic-meghalaya-tour/",
+      "image": "/media/home/Umngot-River-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "19,650",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Awesome Shillong Honeymoon Tour",
+      "href": "/tours/awesome-shillong-honeymoon-tour/",
+      "image": "/media/tours/Lady-hydari-park-2-kaga.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "10,200",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Romantic Shillong Honeymoon Tour",
+      "href": "/tours/romantic-shillong-honeymoon-tour/",
+      "image": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,650",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Shillong Cherrapunji Honeymoon Tour",
+      "href": "/tours/shillong-cherrapunji-honeymoon-tour/",
+      "image": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,600",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Tour with Mawphlang",
+      "href": "/tours/meghalaya-tour-with-mawphlang/",
+      "image": "/media/tours/Nartiang-Monoliths-1-kaga.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "9,900",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Adventure Honeymoon Tour",
+      "href": "/tours/meghalaya-adventure-honeymoon-tour/",
+      "image": "/media/home/Double-Decker-5-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,500",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Adventurous Living Root Bridge Trekking Tour",
+      "href": "/tours/adventurous-living-root-bridge-trekking-tour/",
+      "image": "/media/tours/Double-Decker-4-kaga.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "9,800",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Amazing Meghalaya Assam and Arunachal Pradesh Tour",
+      "href": "/tours/amazing-meghalaya-assam-and-arunachal-pradesh-tour/",
+      "image": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+      "duration": "13 Days / 12 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "33,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "9 Days Meghalaya Assam Arunachal Tour Package",
+      "href": "/tours/9-days-meghalaya-assam-arunachal-tour-package/",
+      "image": "/media/home/Seven-Sisters-Falls-3-kaga.jpg",
+      "duration": "9 Days / 8 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "29,100",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Double Decker Root Bridge Trek with David Scott Trail",
+      "href": "/tours/double-decker-root-bridge-trek-with-david-scott-trail/",
+      "image": "/media/tours/david-scott-trail-1-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,900",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "8 Days Tour of Meghalaya and Arunachal Pradesh",
+      "href": "/tours/8-days-tour-of-meghalaya-and-arunachal-pradesh/",
+      "image": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+      "duration": "8 Days / 7 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping at Nongjrong",
+      "href": "/tours/camping-at-nongjrong/",
+      "image": "/media/tours/Nongjrong-unsplash-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "700",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping in Krang Suri",
+      "href": "/tours/camping-in-krang-suri/",
+      "image": "/media/tours/Krang-Suri-Falls-3.jpg",
+      "duration": "2 Days / 1 Nights",
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Deluxe Camping in Cafe Cherrapunji",
+      "href": "/tours/camping-in-cafe-cherrapunji/",
+      "image": "/media/home/Cafe-Cherrapunji-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "2,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping in Nongriat",
+      "href": "/tours/camping-in-nongriat/",
+      "image": "/media/tours/Camping-in-Nongriat-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "includes": [
+        "Breakfast",
+        "Camping",
+        "Activities"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping at 100 Waterfalls, Cherrapunji",
+      "href": "/tours/camping-at-100-waterfalls-cherrapunji/",
+      "image": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-6-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "2,250",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping in Mawmluh Village, Cherrapunji",
+      "href": "/tours/camping-in-mawmluh-village-cherrapunji/",
+      "image": "/media/tours/Camping-in-Mawmluh-Village-Cherrapunji-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "2000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Lakefront Nature Camping in Mawsynram, Meghalaya",
+      "href": "/tours/lakefront-nature-camping-in-mawsynram-meghalaya/",
+      "image": "/media/tours/Lakefront-Nature-Camping-in-Mawsynram-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "500",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Jeep Safari Booking at Kaziranga National Park",
+      "href": "/tours/jeep-safari-at-kaziranga-national-park/",
+      "image": "/media/home/Kaziranga-national-park-5-kaga.jpg",
+      "duration": "1-2 hr",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1,000",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Elephant Safari Booking at Kaziranga National Park",
+      "href": "/tours/elephant-safari-at-kaziranga-national-park/",
+      "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+      "duration": "1-2 hr",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1,500",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Elephant and Jeep Safari Booking at Kaziranga National Park",
+      "href": "/tours/elephant-and-jeep-safari-at-kaziranga-national-park/",
+      "image": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+      "duration": "1-2 hr",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "7 Days 6 Nights Delightful Assam Meghalaya Tour",
+      "href": "/tours/delightful-assam-meghalaya-tour/",
+      "image": "/media/tours/Wei-Sawdong-Falls-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,450",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "5 Days Mesmerizing Meghalaya Tour",
+      "href": "/tours/mesmerizing-meghalaya-tour/",
+      "image": "/media/tours/umiam-lake-28-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,550",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "7 Days Fascinating Assam Meghalaya Tour",
+      "href": "/tours/fascinating-assam-meghalaya-tour/",
+      "image": "/media/tours/police-bazar-5-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,300",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "6 Days Assam Meghalaya Tour with Kaziranga",
+      "href": "/tours/assam-meghalaya-tour-with-kaziranga/",
+      "image": "/media/tours/umiam-lake-20-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "6 Days Meghalaya Tour with Cherrapunji",
+      "href": "/tours/meghalaya-tour-with-cherrapunji/",
+      "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Amazing Meghalaya Kaziranga Tour",
+      "href": "/tours/amazing-meghalaya-kaziranga-tour/",
+      "image": "/media/home/Umiam-Lake-7-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Magical Meghalaya Tour",
+      "href": "/tours/magical-meghalaya-tour/",
+      "image": "/media/home/Umiam-Lake-10-kaga.jpg",
+      "duration": "8 Days / 7 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "29,200",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Book Shillong Cherrapunji Dawki Guwahati Tour",
+      "href": "/tours/shillong-cherrapunji-dawki-guwahati-tour/",
+      "image": "/media/tours/Umiam-Lake-3-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,600",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "6 Days Captivating Meghalaya Tour",
+      "href": "/tours/captivating-meghalaya-tour/",
+      "image": "/media/tours/Shillong-Peak-1-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,450",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "5 Days 4 Nights Assam Meghalaya Tour",
+      "href": "/tours/5-days-4-nights-assam-meghalaya-tour/",
+      "image": "/media/home/Kaziranga-national-park-5-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "18,530",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Splendid 4 Days 3 Nights Assam Meghalaya Tour",
+      "href": "/tours/splendid-assam-meghalaya-tour/",
+      "image": "/media/tours/Mawlynnong-Village-3-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,650",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Enthralling Assam Meghalaya Tour",
+      "href": "/tours/enthralling-assam-meghalaya-tour/",
+      "image": "/media/home/Seven-Sisters-Falls-5-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,650",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Assam Tour",
+      "href": "/tours/meghalaya-assam-tour/",
+      "image": "/media/tours/Umiam-Lake-13-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "21,400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "7 Days Kaziranga Meghalaya Wildlife Trip",
+      "href": "/tours/kaziranga-meghalaya-wildlife-trip/",
+      "image": "/media/tours/Shillong-Peak-1-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,300",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Awesome Meghalaya Trip",
+      "href": "/tours/awesome-meghalaya-trip/",
+      "image": "/media/home/police-bazar-8-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "17,600",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Scuba Diving in Meghalaya",
+      "href": "/tours/scuba-diving-in-meghalaya/",
+      "image": null,
+      "duration": "45 min",
+      "price": {
+        "label": "Starting From:",
+        "amount": "3500",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Guwahati Shillong Cherrapunji Tour Package",
+      "href": "/tours/guwahati-shillong-cherrapunji-tour-package/",
+      "image": "/media/home/umiam-lake-26-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,420",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Zip Lining in Dawki, Meghalaya",
+      "href": "/tours/zip-lining-in-dawki-meghalaya/",
+      "image": "/media/home/Shnongpdeng-1-kaga.jpg",
+      "duration": "15 min",
+      "price": {
+        "label": "Starting From:",
+        "amount": "500",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "10 Days Mesmerizing Assam Tour",
+      "href": "/tours/10-days-mesmerizing-assam-tour/",
+      "image": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+      "duration": "10 Days / 9 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "38,750",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Guwahati Kaziranga Shillong Cherrapunji Tour Package",
+      "href": "/tours/guwahati-kaziranga-shillong-cherrapunji-tour-package/",
+      "image": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "25,330",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Kaziranga Weekend Tour Package",
+      "href": "/tours/kaziranga-weekend-tour-package/",
+      "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Splendid Guwahati Shillong Cherrapunji Tour",
+      "href": "/tours/splendid-guwahati-shillong-cherrapunji-tour/",
+      "image": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "18,100",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Snorkeling in Dawki, Shnongpdeng Meghalaya",
+      "href": "/tours/snorkeling-in-dawki-shnongpdeng-meghalaya/",
+      "image": null,
+      "duration": "1 hr",
+      "price": {
+        "label": "Starting From:",
+        "amount": "",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Cliff Jumping in Dawki, Shnongpdeng",
+      "href": "/tours/cliff-jumping-in-dawki-shnongpdeng/",
+      "image": "/media/home/dawki-river-3-kaga.jpg",
+      "duration": "20 min",
+      "price": {
+        "label": "Starting From:",
+        "amount": "400",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Kayaking in Dawki, Shnongpdeng Meghalaya",
+      "href": "/tours/kayaking-in-dawki-shnongpdeng-meghalaya/",
+      "image": "/media/home/Shnongpdeng-Kayaking-1-kaga.jpg",
+      "duration": "1 hr",
+      "price": {
+        "label": "Starting From:",
+        "amount": "500",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Paragliding in Nongjrong",
+      "href": "/tours/paragliding-in-nongjrong/",
+      "image": "/media/home/Paragliding-Unsplash-1-kaga.jpg",
+      "duration": "30 Mins",
+      "price": {
+        "label": "Starting From:",
+        "amount": "",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Private Camping at Dawki, Shnongpdeng",
+      "href": "/tours/private-camping-at-dawki-shnongpdeng/",
+      "image": "/media/home/Shnongpdeng-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "2,100",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping",
+        "Activities"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Fascinating Assam Meghalaya Tour Package",
+      "href": "/tours/fascinating-assam-meghalaya-tour-package/",
+      "image": "/media/home/dawki-river-4-kaga.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "23,950",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Amazing Majuli Tour",
+      "href": "/tours/amazing-majuli-tour/",
+      "image": "/media/home/assam-unsplash-2-kaga.jpg",
+      "duration": "4 Days / 3 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,450",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Adoring Meghalaya Tour Package",
+      "href": "/tours/adoring-meghalaya-tour-package/",
+      "image": "/media/tours/umiam-lake-19-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "24,150",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Mesmerizing Assam and Meghalaya Tour",
+      "href": "/tours/mesmerizing-assam-and-meghalaya-tour/",
+      "image": "/media/home/dawki-river-6-kaga.jpg",
+      "duration": "7 Days / 6 Nights",
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Bungee Jumping in Meghalaya",
+      "href": "/tours/bungee-jumping-in-meghalaya/",
+      "image": null,
+      "duration": "30 min",
+      "price": {
+        "label": "Starting From:",
+        "amount": "3500/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Shillong One Day Tour – Outskirts",
+      "href": "/tours/shillong-one-day-tour/",
+      "image": "/media/tours/Laitlum-Canyons-3-kaga.jpg",
+      "duration": "1 Day",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Shillong Sightseeing Tour",
+      "href": "/tours/shillong-sightseeing-tour/",
+      "image": "/media/tours/meghalaya-mountains-2-kaga.jpg",
+      "duration": "1-Day",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Camping in Dawki, Shnongpdeng",
+      "href": "/tours/camping-in-dawki-shnongpdeng/",
+      "image": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg",
+      "duration": "2 Days / 1 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "400",
+        "unit": "per person"
+      },
+      "includes": [
+        "Breakfast",
+        "Camping",
+        "Sightseeing",
+        "Activities"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "5 Days Shillong Cherrapunji Tour Package",
+      "href": "/tours/5-days-shillong-cherrapunji-tour-package/",
+      "image": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+      "duration": "5 Days / 4 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "34,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Shillong Tour Package from Guwahati",
+      "href": "/tours/shillong-tour-package-from-guwahati/",
+      "image": "/media/tours/meghalaya-mountains-3-kaga.jpg",
+      "duration": "4 Days / 3 Nights Days / NaN Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "13,450",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Camping"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Meghalaya Tour Package with Dawki",
+      "href": "/tours/meghalaya-tour-package-with-dawki/",
+      "image": "/media/tours/Dawki-River-6.jpg",
+      "duration": "3 Days / 2 Nights",
+      "price": {
+        "label": "Starting From:",
+        "amount": "10,000",
+        "unit": "per person"
+      },
+      "includes": [
+        "Hotel",
+        "Transportation",
+        "Breakfast",
+        "Sightseeing"
+      ],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Enchanting Shillong Day Trip",
+      "href": "/tours/enchanting-shillong-day-trip/",
+      "image": "/media/tours/Shillong-Golf-Course-1-kaga.jpeg",
+      "duration": "1 Day",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Splendid Meghalaya Day Trip from Guwahati",
+      "href": "/tours/splendid-meghalaya-day-trip-from-guwahati/",
+      "image": null,
+      "duration": "1 Day",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    },
+    {
+      "title": "Shillong & Lum ‘er Pyngngad (Mini Pahalgam) One-Day Sightseeing Tour",
+      "href": "/tours/shillong-lum-er-pyngngad-one-day-sightseeing-tour/",
+      "image": "/media/tours/Lum-er-Pyngngad-3-kaga.jpeg",
+      "duration": "1 Day",
+      "price": {
+        "label": "Starting From:",
+        "amount": "1000/-",
+        "unit": "per person"
+      },
+      "includes": [],
+      "queryLabel": "Send Query",
+      "detailsLabel": "View Details"
+    }
+  ]
+}

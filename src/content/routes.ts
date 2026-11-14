@@ -1,5 +1,6 @@
 import "server-only";
 import { legacyUrl } from "@/config/site";
+import { archivePageNumbers } from "./tour-archive";
 import tourIndex from "./tours/index.json";
 
 /**
@@ -7,7 +8,12 @@ import tourIndex from "./tours/index.json";
  * WordPress site, so no link breaks while pages are migrated one group at a time.
  * Add a path group here when its pages are rebuilt.
  */
-const servedPaths = new Set<string>(["/", ...tourIndex.tours.map((t) => `/tours/${t.slug}/`)]);
+const servedPaths = new Set<string>([
+  "/",
+  "/tours/",
+  ...archivePageNumbers.map((n) => `/tours/page/${n}/`),
+  ...tourIndex.tours.map((t) => `/tours/${t.slug}/`),
+]);
 
 /** Resolves an original site path to where that page lives today. External links pass through. */
 export function resolveSitePath(path: string): string {

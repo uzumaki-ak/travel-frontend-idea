@@ -1,17 +1,7 @@
 import type { HotelTier, ItineraryDay, MainSection } from "@/content/tours";
-import {
-  BedIcon,
-  BinocularsIcon,
-  CarIcon,
-  CheckIcon,
-  CupIcon,
-  DepartIcon,
-  MoonIcon,
-  PaddleIcon,
-  PinIcon,
-  TentIcon,
-} from "@/ui/icons";
+import { CheckIcon, CupIcon, DepartIcon, MoonIcon, PinIcon } from "@/ui/icons";
 import { ContentBlocks } from "./content-blocks";
+import { includeIcon } from "./include-icons";
 
 /** One wrapper for every section so spacing and headings stay identical. */
 export function SectionShell({ title, children }: { title: string; children: React.ReactNode }) {
@@ -34,7 +24,7 @@ export function MainSectionView({ section }: { section: MainSection }) {
         <SectionShell title={section.title}>
           <ul className="flex flex-wrap gap-2.5">
             {section.items.map((item) => {
-              const Icon = INCLUDE_ICONS[item] ?? CheckIcon;
+              const Icon = includeIcon(item);
               return (
                 <li key={item} data-motion="rise" className="flex items-center gap-2.5 rounded-full bg-cloud py-2 pr-4 pl-2.5">
                   <span className="grid size-8 place-items-center rounded-full bg-river text-[1.05rem] text-jade">
@@ -82,15 +72,6 @@ export function MainSectionView({ section }: { section: MainSection }) {
       );
   }
 }
-
-const INCLUDE_ICONS: Record<string, typeof CheckIcon> = {
-  Hotel: BedIcon,
-  Transportation: CarIcon,
-  Breakfast: CupIcon,
-  Camping: TentIcon,
-  Sightseeing: BinocularsIcon,
-  Activities: PaddleIcon,
-};
 
 /** "Day 1 : Arrival and Pickup" → ["Day 1", "Arrival and Pickup"]; other titles stay whole. */
 function splitDayTitle(title: string): [string | null, string] {
