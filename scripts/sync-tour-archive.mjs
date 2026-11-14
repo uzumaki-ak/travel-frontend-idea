@@ -67,7 +67,8 @@ const args = process.argv.slice(2);
 const fromIdx = args.indexOf("--from");
 const fromDir = fromIdx >= 0 ? args[fromIdx + 1] : null;
 
-const clean = (s) => s.replace(/\s+/g, " ").trim();
+// Collapse ordinary whitespace like a browser does, but keep non-breaking spaces (they render).
+const clean = (s) => s.replace(/[ \t\n\r\f]+/g, " ").replace(/^[ \t\n\r\f]+|[ \t\n\r\f]+$/g, "");
 const textOf = (n) => (n ? clean(n.text) : "");
 const exists = (f) => access(f).then(() => true, () => false);
 
@@ -174,7 +175,14 @@ async function cardFromApi(item) {
       item._kajaawa_tour_settings_deluxe_price,
       item._kajaawa_tour_settings_luxury_price,
     ].find((p) => typeof p === "string" && p.length > 0);
-    duration = day ? `${day} Days / ${Number(day) - 1} Nights` : "";
+    // The live script only builds "N Days / N-1 Nights" when the value is numeric
+    // (`duration > 2` / `duration <= 2`). For a non-numeric value it prints the literal
+    // text "undefined" — a bug we don't reproduce: the card shows no duration instead.
+    if (day && !Number.isNaN(Number(day))) {
+      duration = `${day} Days / ${Number(day) - 1} Nights`;
+    } else if (day) {
+      console.warn(`  note: "${decode(item.title.rendered)}" duration "${day}" renders as "undefined" on the live listing — shown without a duration`);
+    }
     if (first) price = { label: "Starting From:", amount: first, unit: "per person" };
     if (Array.isArray(includes) && includes.length) {
       // Same as the script: all 6 → four fixed icons; otherwise the first four in order.

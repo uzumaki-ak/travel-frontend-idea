@@ -6,9 +6,10 @@
  * Uses `zod/mini` (tree-shakeable) because this file ships to the browser.
  */
 import * as z from "zod/mini";
+import { bookableRange, isRealIsoDate } from "@/ui/business-date";
 
-const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const ONE_DAY_MS = 86_400_000;
+/** How far ahead the query-form calendar allows (passed to the DatePicker too). */
+export const TRAVEL_YEARS_AHEAD = 2;
 
 export const ENQUIRY_LIMITS = { name: 40, email: 400, phone: 15, message: 300, travellers: 99 } as const;
 
@@ -40,11 +41,14 @@ export const enquirySchema = z.object({
       return digits >= 10 && digits <= ENQUIRY_LIMITS.phone;
     }, "Enter a phone number with 10 to 15 digits."),
   ),
+  // Same rule as the calendar: a real date from today to today + 2 years (India time).
   travelDate: z.string().check(
-    z.regex(ISO_DATE, "Choose your date of travel."),
-    z.refine((v: string) => !Number.isNaN(Date.parse(v)), "Choose your date of travel."),
-    // Slack covers visitors whose local date is ahead of the server's.
-    z.refine((v: string) => Date.parse(v) >= Date.now() - 2 * ONE_DAY_MS, "Choose a date that hasn't passed."),
+    z.refine((v: string) => isRealIsoDate(v), "Choose your date of travel."),
+    z.refine((v: string) => !isRealIsoDate(v) || v >= bookableRange(0, TRAVEL_YEARS_AHEAD).from, "Choose a date that hasn't passed."),
+    z.refine(
+      (v: string) => !isRealIsoDate(v) || v <= bookableRange(0, TRAVEL_YEARS_AHEAD).to,
+      `Choose a date within the next ${TRAVEL_YEARS_AHEAD} years.`,
+    ),
   ),
   adults: travellerCount(1, "At least 1 adult is needed."),
   children: z.pipe(

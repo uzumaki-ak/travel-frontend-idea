@@ -5,6 +5,7 @@
  * date from today up to 2 years ahead. Uses zod/mini because it ships to the browser.
  */
 import * as z from "zod/mini";
+import { bookableRange, isRealIsoDate } from "@/ui/business-date";
 
 export type CabFormOptions = {
   locations: readonly string[];
@@ -16,9 +17,6 @@ export type CabFormOptions = {
 
 export const CAB_LIMITS = { name: 400, email: 400, phone: 10 } as const;
 
-const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const DAY_MS = 86_400_000;
-
 const oneOf = (values: readonly string[], message: string) =>
   z.string().check(z.refine((v: string) => values.includes(v), message));
 
@@ -27,12 +25,14 @@ export function makeCabEnquirySchema(o: CabFormOptions) {
     submissionId: z.uuid(),
     pickup: oneOf(o.locations, "Choose a pickup location."),
     drop: oneOf(o.locations, "Choose a drop location."),
+    // Same rule as the calendar: a real date from today to today + maxYearsAhead (India time).
     date: z.string().check(
-      z.regex(ISO_DATE, "Choose your pickup date."),
-      z.refine((v: string) => !Number.isNaN(Date.parse(v)), "Choose your pickup date."),
-      // A day of slack either side covers visitors whose local date differs from the server's.
-      z.refine((v: string) => Date.parse(v) >= Date.now() - 2 * DAY_MS, "Choose a date that hasn't passed."),
-      z.refine((v: string) => Date.parse(v) <= Date.now() + (o.maxYearsAhead * 366 + 1) * DAY_MS, "Choose a date within the next 2 years."),
+      z.refine((v: string) => isRealIsoDate(v), "Choose your pickup date."),
+      z.refine((v: string) => !isRealIsoDate(v) || v >= bookableRange(0, o.maxYearsAhead).from, "Choose a date that hasn't passed."),
+      z.refine(
+        (v: string) => !isRealIsoDate(v) || v <= bookableRange(0, o.maxYearsAhead).to,
+        `Choose a date within the next ${o.maxYearsAhead} years.`,
+      ),
     ),
     time: oneOf(o.times, "Choose a pickup time."),
     name: z

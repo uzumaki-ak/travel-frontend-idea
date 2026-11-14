@@ -16,6 +16,7 @@ import { DatePicker } from "@/ui/date-picker";
 import { ArrowRightIcon } from "@/ui/icons";
 import {
   ENQUIRY_LIMITS,
+  TRAVEL_YEARS_AHEAD,
   enquirySchema,
   fieldErrors,
   type EnquiryField,
@@ -237,7 +238,7 @@ export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; con
             name="travelDate"
             placeholder={copy.placeholders.date}
             minDaysFromToday={0}
-            maxYearsAhead={2}
+            maxYearsAhead={TRAVEL_YEARS_AHEAD}
             invalid={Boolean(errors.travelDate)}
             describedBy={errors.travelDate ? errorId("travelDate") : undefined}
             onPick={() => setPickTick((t) => t + 1)}

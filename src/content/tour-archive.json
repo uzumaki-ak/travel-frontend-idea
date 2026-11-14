@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-14T08:52:43.938Z",
+  "capturedAt": "2026-11-14T10:15:26.573Z",
   "lastPagedUrl": 10,
   "seo": {
     "title": "Tour Package booking with Kajaawa. Choose from our handpicked tour which are curated for an awesome travel experience.",
@@ -123,7 +123,7 @@
       "detailsLabel": "View Details"
     },
     {
-      "title": "Mesmerising Tour of Shillong, Cherrapunji and Dawki",
+      "title": "Mesmerising Tour of  Shillong, Cherrapunji and Dawki",
       "href": "/tours/mesmerising-tour-of-shillong-cherrapunji-dawki/",
       "image": "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
       "duration": "6 Days / 5 Nights",
@@ -1579,7 +1579,7 @@
       "title": "Shillong Tour Package from Guwahati",
       "href": "/tours/shillong-tour-package-from-guwahati/",
       "image": "/media/tours/meghalaya-mountains-3-kaga.jpg",
-      "duration": "4 Days / 3 Nights Days / NaN Nights",
+      "duration": "",
       "price": {
         "label": "Starting From:",
         "amount": "13,450",

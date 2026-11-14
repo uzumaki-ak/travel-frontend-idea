@@ -9,6 +9,7 @@
 import * as Popover from "@radix-ui/react-popover";
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
+import { bookableRange, isoToLocalDate } from "./business-date";
 import { ArrowLeftIcon, ArrowRightIcon } from "./icons";
 
 type DatePickerProps = {
@@ -34,14 +35,9 @@ export function DatePicker({ id, name, placeholder, minDaysFromToday = 0, maxYea
 
   const onOpenChange = (next: boolean) => {
     if (next) {
-      // The visitor's local "today" is only known in the browser — work it out when the calendar opens.
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      const from = new Date(today);
-      from.setDate(from.getDate() + minDaysFromToday);
-      const to = new Date(today);
-      to.setFullYear(to.getFullYear() + maxYearsAhead);
-      setRange({ from, to });
+      // Same rule as the server (India time), worked out when the calendar opens.
+      const r = bookableRange(minDaysFromToday, maxYearsAhead);
+      setRange({ from: isoToLocalDate(r.from), to: isoToLocalDate(r.to) });
     }
     setOpen(next);
   };
