@@ -1,0 +1,291 @@
+{
+  "slug": "",
+  "url": "/cars/",
+  "seo": {
+    "title": "Cab booking with Kajaawa. You can book cabs with us for different places in Shillong, Meghalaya and Northeast.",
+    "description": "You can book cabs with us for different places in Shillong, Meghalaya and other parts of Northeast.",
+    "canonical": "/cars/"
+  },
+  "heroImage": "/media/cabs/Seven-Sister-Falls.jpeg",
+  "features": [
+    "Clean & Maintained Cars",
+    "No Hidden Charges",
+    "Experienced Drivers",
+    "Backend Assistance"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kajaawa Cab Booking"
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Kajaawa aggregates Cabs and Taxi Services online in Shillong, Guwahati and other regions of North East Region to provide customers the best cabs for their NorthEast Travel."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Often travellers face inconvenience for booking a cab in Shillong, Guwahati and other places of Northeast. To provide solution to their problem we have come up with a hassle free online cab booking process."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How to Book"
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "You simply have to fill the cab booking form online and we will arrange a cab for you at the best fare."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Wide Fleet of Cars"
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "We have wide fleet of Cars for our customers so that they can choose the vehicle a per their requirement."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Hatchback – 4 Seater (Ideal for Small Family)"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Sedans - 4 Seater (Ideal for longer trip)"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "SUV – 7 Seater (Ideal for comfortable long trip)"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Tempo Travellers – 13-27 Seater (Ideal for Students and Groups)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Highlights of our Service"
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "At Kajaawa we ensure that the vehicles are regularly maintained and cleaned to provide a comfortable and safe ride to our customers."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Our drivers are polite and professional. They are well acquainted with the places in the region of travel and are drivers cum guide who are trained to provide the best customer experience."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "At Kajaawa we provide phone and chat support to our customers during their ride to assist them and provide solutions if they face any problem."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "For booking a cab you can call us right away at "
+        },
+        {
+          "text": "6033114867",
+          "bold": true,
+          "href": "tel:+916033114867"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Our Taxi Services:"
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Guwahati Shared Cabs",
+          "href": "/cars/shillong-to-guwahati-shared-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Guwahati Airport Cabs",
+          "href": "/cars/shillong-to-guwahati-airport-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Guwahati to Shillong Shared Taxi",
+          "href": "/cars/guwahati-to-shillong-shared-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Cherrapunji Cabs",
+          "href": "/cars/shillong-to-cherrapunji-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Guwahati to Cherrapunji Cabs",
+          "href": "/cars/guwahati-to-cherrapunji-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Kaziranga Cabs",
+          "href": "/cars/shillong-to-kaziranga-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Guwahati Airport to Shillong Cabs",
+          "href": "/cars/guwahati-airport-to-shillong-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Guwahati Cabs",
+          "href": "/cars/shillong-to-guwahati-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Guwahati to Kaziranga Cabs",
+          "href": "/cars/guwahati-to-kaziranga-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Kaziranga to Shillong Cabs",
+          "href": "/cars/kaziranga-to-shillong-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Jorhat to Kaziranga Cabs",
+          "href": "/cars/jorhat-to-kaziranga-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Shillong to Dawki Cabs",
+          "href": "/cars/shillong-to-dawki-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Guwahati to Shillong Cabs",
+          "href": "/cars/guwahati-to-shillong-cabs/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Tempo Traveller in Guwahati by Kajaawa",
+          "href": "/cars/tempo-traveller-in-guwahati/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Tempo Traveller in Shillong by Kajaawa",
+          "href": "/cars/tempo-traveller-in-shillong/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        {
+          "text": "Urbania in Guwahati",
+          "href": "/cars/urbania-in-guwahati/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "from": "/cars/guwahati-to-shillong-shared-cabs/",
+    "to": "/guwahati-to-shillong-cabs/",
+    "status": 301
+  },
+  {
+    "from": "/cars/guwahati-to-shillong-cabs/",
+    "to": "/guwahati-to-shillong-cabs/",
+    "status": 301
+  }
+]

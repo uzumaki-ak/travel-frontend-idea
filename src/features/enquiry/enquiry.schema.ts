@@ -76,7 +76,8 @@ export type EnquiryResponse =
       error: {
         code: "VALIDATION_ERROR" | "RATE_LIMITED" | "NOT_CONFIGURED" | "UPSTREAM_REJECTED" | "UPSTREAM_UNAVAILABLE" | "OUTCOME_UNKNOWN";
         message: string;
-        fields?: Partial<Record<EnquiryField, string>>;
+        /** Field name → message. Each form maps these onto its own fields. */
+        fields?: Record<string, string>;
       };
     };
 

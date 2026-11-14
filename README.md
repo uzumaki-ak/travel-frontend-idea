@@ -40,6 +40,7 @@ Never edit the snapshots by hand — they are copies of the live site. To refres
 node scripts/sync-home-snapshot.mjs     # homepage  → src/content/home.snapshot.json
 node scripts/sync-tours-snapshot.mjs    # 93 tours  → src/content/tours/*.json (+ photos)
 node scripts/sync-tour-archive.mjs      # /tours/ listing → src/content/tour-archive.json
+node scripts/sync-cabs-snapshot.mjs     # /cars/ pages + cab form + redirects → src/content/cabs/
 ```
 
 The tour sync whitelists links (site paths, Google Maps, own phone/WhatsApp/email),
@@ -53,7 +54,8 @@ drops scripts/iframes/forms, and prints every link or image it could not keep.
 | `/tours/` | listing snapshot — all 93 cards, "Load More" reveals 9 at a time (same order and card text as the live listing after Load More) |
 | `/tours/page/2/` … `/10/` | same listing, self canonical — as on the live site; `/page/1/` → 301 `/tours/`, `/page/02/` → 301 `/page/2/`, `/page/11/`+ → 404 |
 | `/tours/<slug>/` | tour snapshots (all prerendered; unknown slugs return 404 via `src/proxy.ts`) |
-| everything else | still links to the WordPress site (`src/content/routes.ts`) |
+| `/cars/`, `/cars/<slug>/` | cab snapshots (15 pages) with the cab booking form; unknown slugs 404; cab URLs the live site redirects keep redirecting (301) |
+| everything else | still links to the WordPress site (`src/content/served-paths.ts`) |
 
 ## Environment
 
@@ -61,4 +63,6 @@ drops scripts/iframes/forms, and prints every link or image it could not keep.
 |---|---|
 | `NEXT_PUBLIC_LEGACY_SITE_ORIGIN` | Where inner pages (tours, cabs, guides) live. Defaults to `https://www.kajaawa.com`. |
 | `ENQUIRY_CF7_ORIGIN` | WordPress origin whose Contact Form 7 receives enquiries. Unset = form asks visitors to WhatsApp/call instead. |
-| `ENQUIRY_CF7_FORM_ID` | CF7 form id (default `2457`). |
+| `ENQUIRY_CF7_FORM_ID` | CF7 query form id (default `2457`). |
+| `ENQUIRY_CF7_TOUR_FORM_ID` | CF7 package query form id for tour pages (default `1295`). |
+| `ENQUIRY_CF7_CAB_FORM_ID` | CF7 cab booking form id for cab pages (default `291`). |

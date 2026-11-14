@@ -12,6 +12,7 @@
  * - says "sent" only when the server confirms it.
  */
 import { useEffect, useId, useRef, useState } from "react";
+import { DatePicker } from "@/ui/date-picker";
 import { ArrowRightIcon } from "@/ui/icons";
 import {
   ENQUIRY_LIMITS,
@@ -58,12 +59,6 @@ function newSubmissionId() {
   return crypto.randomUUID();
 }
 
-function todayLocalIso() {
-  const now = new Date();
-  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-  return now.toISOString().slice(0, 10);
-}
-
 function readForm(form: HTMLFormElement, submissionId: string): EnquiryInput {
   const data = new FormData(form);
   const text = (key: string) => String(data.get(key) ?? "");
@@ -83,20 +78,33 @@ function readForm(form: HTMLFormElement, submissionId: string): EnquiryInput {
 
 export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; context?: EnquiryFormContext }) {
   const submissionId = useRef<string>("");
-  const dateInput = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [pickTick, setPickTick] = useState(0);
+  const [resetKey, setResetKey] = useState(0);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
   const [errors, setErrors] = useState<Errors>({});
   const [messageLength, setMessageLength] = useState(0);
   const uid = useId();
 
+  // The date picker isn't a native input, so it reports picks here; re-validate after a failed attempt.
   useEffect(() => {
-    // The server can't know the visitor's local date, so set it on the element after mount.
-    if (dateInput.current) dateInput.current.min = todayLocalIso();
-  }, []);
+    if (!pickTick || !formRef.current) return;
+    const form = formRef.current;
+    setErrors((current) => {
+      if (Object.keys(current).length === 0) return current;
+      const result = enquirySchema.safeParse(readForm(form, VALIDATION_ONLY_ID));
+      return result.success ? {} : fieldErrors(result.error);
+    });
+  }, [pickTick]);
 
   const focusFirstError = (form: HTMLFormElement, found: Errors) => {
     const first = FIELD_ORDER.find((f) => found[f]);
-    if (first) form.querySelector<HTMLElement>(`[name="${first}"]`)?.focus();
+    if (!first) return;
+    const target =
+      first === "travelDate"
+        ? form.querySelector<HTMLElement>(`#${CSS.escape(`${uid}-date`)}`)
+        : form.querySelector<HTMLElement>(`[name="${first}"]`);
+    target?.focus();
   };
 
   /** After a failed attempt, fields re-validate as the visitor fixes them (delegated from <form>). */
@@ -149,12 +157,13 @@ export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; con
     if (response.ok) {
       setStatus({ kind: "sent", message: response.message });
       form.reset();
+      setResetKey((k) => k + 1); // clears the custom date picker too
       setMessageLength(0);
       submissionId.current = ""; // the next message is a new enquiry
       return;
     }
 
-    const found = response.error.fields ?? {};
+    const found = (response.error.fields ?? {}) as Errors;
     setErrors(found);
     setStatus({ kind: "failed", message: response.error.message });
     focusFirstError(form, found);
@@ -171,6 +180,7 @@ export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; con
 
   return (
     <form
+      ref={formRef}
       noValidate
       onSubmit={onSubmit}
       onChange={revalidate}
@@ -221,14 +231,16 @@ export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; con
         </Field>
 
         <Field id={`${uid}-date`} label={copy.labels.date} error={errors.travelDate} errorId={errorId("travelDate")}>
-          <input
-            ref={dateInput}
+          <DatePicker
+            key={resetKey}
             id={`${uid}-date`}
-            type="date"
-            required
-            aria-label={copy.placeholders.date}
-            className={`${inputClass} [color-scheme:light]`}
-            {...fieldProps("travelDate")}
+            name="travelDate"
+            placeholder={copy.placeholders.date}
+            minDaysFromToday={0}
+            maxYearsAhead={2}
+            invalid={Boolean(errors.travelDate)}
+            describedBy={errors.travelDate ? errorId("travelDate") : undefined}
+            onPick={() => setPickTick((t) => t + 1)}
           />
         </Field>
 

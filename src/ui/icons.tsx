@@ -221,6 +221,36 @@ export function PinIcon(props: IconProps) {
   );
 }
 
+/** Rupee with a strike — "No Hidden Charges". */
+export function RupeeCheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M7 5h10M7 9h10M10.5 5c3 0 4.5 1.6 4.5 4s-1.5 4-4.5 4H7l7 6" />
+      <path d="M4 20 20 4" strokeWidth={1.2} />
+    </Svg>
+  );
+}
+
+export function SteeringIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="2.2" />
+      <path d="M3.8 10.5c2.6.6 5.4.6 8.2 0s5.6-.6 8.2 0M10.2 13.8 7 19.6M13.8 13.8l3.2 5.8" />
+    </Svg>
+  );
+}
+
+export function HeadsetIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4.5 14v-2a7.5 7.5 0 0 1 15 0v2" />
+      <path d="M4.5 13.5h3v5h-3zM16.5 13.5h3v5h-3z" />
+      <path d="M19.5 18.5c0 1.5-1.5 2.5-4 2.5h-2.5" />
+    </Svg>
+  );
+}
+
 /** Filled star — used only to draw a numeric review rating. */
 export function StarIcon(props: IconProps) {
   return (
