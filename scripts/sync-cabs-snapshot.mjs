@@ -89,6 +89,8 @@ function localize(src) {
         } catch {
           return null;
         }
+        // The theme's grey lazy-load placeholder means "no photo" — the site shows its own tile instead.
+        if (url.pathname.includes("placeholder-image")) return null;
         if (url.hostname !== "www.kajaawa.com" || !url.pathname.startsWith("/wp-content/uploads/")) {
           report.warnings.push(`image from unexpected host skipped: ${src}`);
           return null;
