@@ -177,11 +177,13 @@ async function cardFromApi(item) {
     ].find((p) => typeof p === "string" && p.length > 0);
     // The live script only builds "N Days / N-1 Nights" when the value is numeric
     // (`duration > 2` / `duration <= 2`). For a non-numeric value it prints the literal
-    // text "undefined" — a bug we don't reproduce: the card shows no duration instead.
+    // text "undefined" — a bug we don't reproduce. Agreed with the client: show the
+    // API's own value as-is (e.g. "4 Days / 3 Nights").
     if (day && !Number.isNaN(Number(day))) {
       duration = `${day} Days / ${Number(day) - 1} Nights`;
     } else if (day) {
-      console.warn(`  note: "${decode(item.title.rendered)}" duration "${day}" renders as "undefined" on the live listing — shown without a duration`);
+      duration = day;
+      console.warn(`  note: "${decode(item.title.rendered)}" duration "${day}" renders as "undefined" on the live listing — shown as the API value`);
     }
     if (first) price = { label: "Starting From:", amount: first, unit: "per person" };
     if (Array.isArray(includes) && includes.length) {
