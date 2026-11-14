@@ -13,7 +13,11 @@ export function proxy(request: NextRequest) {
   const match = request.nextUrl.pathname.match(/^\/tours\/([^/]+)\/?$/);
   if (match && !knownTours.has(match[1])) {
     // No route exists at this path, so Next renders app/not-found.tsx with status 404.
-    return NextResponse.rewrite(new URL("/__not-found__/", request.url));
+    // Clone nextUrl (don't build from request.url): behind nginx, request.url carries the
+    // public "https" scheme, which would turn this into an external rewrite and fail.
+    const target = request.nextUrl.clone();
+    target.pathname = "/__not-found__/";
+    return NextResponse.rewrite(target);
   }
   return NextResponse.next();
 }
