@@ -251,6 +251,70 @@ export function HeadsetIcon(props: IconProps) {
   );
 }
 
+export function CalendarCheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 6h16v14H4zM4 10h16M8 3.5V7M16 3.5V7M9 15l2 2 4-4" />
+    </Svg>
+  );
+}
+
+export function WalletIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 7h14v12H4zM4 7l11-3v3M14 13h4" />
+    </Svg>
+  );
+}
+
+export function FlagIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M6 21V4M6 4h11l-2 4 2 4H6" />
+    </Svg>
+  );
+}
+
+export function ShieldCheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6zM9 12l2 2 4-4" />
+    </Svg>
+  );
+}
+
+export function UsersIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.2a3 3 0 0 1 0 5.6M18 14.4c1.8.9 3 2.9 3 5.6" />
+    </Svg>
+  );
+}
+
+export function MinusIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M5 12h14" />
+    </Svg>
+  );
+}
+
+export function PlusIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 5v14M5 12h14" />
+    </Svg>
+  );
+}
+
+export function GridIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" />
+    </Svg>
+  );
+}
+
 /** Filled star — used only to draw a numeric review rating. */
 export function StarIcon(props: IconProps) {
   return (

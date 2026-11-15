@@ -1,0 +1,83 @@
+{
+  "slug": "shillong-after-dark",
+  "title": "Shillong After Dark: 3-Hour Private City Lights Drive",
+  "seo": {
+    "title": "Shillong by Night: 3-Hour Private City Drive | Kajaawa",
+    "description": "See Shillong light up on a private 3-hour evening drive: Shillong Peak views, Police Bazar, Ward's Lake and a café stop with a local host."
+  },
+  "location": { "name": "Shillong", "region": "Meghalaya", "href": "/destinations/shillong/" },
+  "categories": ["Hourly", "Evening tours", "City tours"],
+  "badge": "New",
+  "duration": { "type": "hourly", "label": "3 hours" },
+  "rating": { "average": 4.9, "count": 38, "breakdown": [] },
+  "gallery": [
+    { "src": "/media/home/police-bazar-8-kaga.jpg", "alt": "Police Bazar, Shillong" },
+    { "src": "/media/tours/Lady-Hydari-Park-1-kaga.jpg", "alt": "Lady Hydari Park" },
+    { "src": "/media/home/Umiam-Lake-7-kaga.jpg", "alt": "Umiam Lake" }
+  ],
+  "facts": [
+    { "icon": "cancel", "title": "Free cancellation", "text": "Up to 6 hours before" },
+    { "icon": "duration", "title": "3 hours", "text": "Starts between 5 and 7 pm" },
+    { "icon": "pickup", "title": "Hotel pickup", "text": "Anywhere in Shillong" }
+  ],
+  "summary": "An easy evening loop through the hill capital — viewpoints, lamplit lakes and the buzz of Police Bazar — with time for a cup of local tea.",
+  "highlights": ["City lights from the road to Shillong Peak", "An evening stroll around Ward's Lake", "Street food at Police Bazar"],
+  "description": ["Perfect for your first or last evening in Shillong. Your driver picks you up at dusk and builds the loop around what you'd like to see."],
+  "includes": ["Private car with driver", "Hotel pickup and drop-off"],
+  "excludes": ["Food and drinks"],
+  "packages": [
+    {
+      "id": "private-car",
+      "name": "Private car",
+      "chips": ["Free cancellation (6 hours notice)", "Group size: 1 to 4"],
+      "priceOptions": [{ "id": "car", "label": "1 car · up to 4 people", "guests": { "min": 1, "max": 4 }, "price": 1800 }],
+      "itinerary": [
+        {
+          "title": "Evening loop",
+          "stops": [
+            { "time": "17:30", "title": "Pickup from your hotel", "kind": "start" },
+            { "time": "18:00", "title": "City viewpoint", "kind": "visit", "duration": "30 min", "tags": ["Photo stop"] },
+            { "time": "18:45", "title": "Ward's Lake", "kind": "visit", "duration": "45 min" },
+            { "time": "19:45", "title": "Police Bazar street food", "kind": "meal", "duration": "45 min" },
+            { "time": "20:30", "title": "Drop-off at your hotel", "kind": "end" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "private-car-host",
+      "name": "Private car + local host",
+      "tag": "Recommended",
+      "summary": "A Shillong local joins you with stories and food picks.",
+      "chips": ["Free cancellation (6 hours notice)", "Group size: 1 to 4", "English-speaking host"],
+      "priceOptions": [{ "id": "car", "label": "1 car · up to 4 people", "guests": { "min": 1, "max": 4 }, "price": 2900 }],
+      "itinerary": [
+        {
+          "title": "Evening loop with a local",
+          "stops": [
+            { "time": "17:30", "title": "Pickup with your host", "kind": "start" },
+            { "time": "18:00", "title": "City viewpoint", "kind": "visit", "duration": "30 min", "tags": ["Guided"] },
+            { "time": "18:45", "title": "Ward's Lake", "kind": "visit", "duration": "45 min", "tags": ["Guided"] },
+            { "time": "19:45", "title": "Host's favourite food stalls", "kind": "meal", "duration": "45 min" },
+            { "time": "20:30", "title": "Drop-off at your hotel", "kind": "end" }
+          ]
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    { "name": "Meera", "country": "India", "date": "2026-11-08", "rating": 5, "packageName": "Private car + local host", "text": "Our host knew the best momo stall in town. Lovely, relaxed evening." }
+  ],
+  "faqs": [],
+  "related": ["shillong-cherrapunji-dawki-escape", "dawki-mawlynnong-day-trip"],
+  "tagGroups": [
+    {
+      "title": "Shillong",
+      "links": [
+        { "label": "Things to do in Shillong", "href": "/things-to-do-in-shillong/" },
+        { "label": "Places to visit in Shillong", "href": "/places-to-visit-in-shillong/" },
+        { "label": "Shillong taxi", "href": "/shillong-taxi/" }
+      ]
+    }
+  ]
+}

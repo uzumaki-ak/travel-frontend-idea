@@ -43,6 +43,9 @@ export type EnquiryFormCopy = {
 /** Optional context: which tour the enquiry is about, and the source form's traveller limits. */
 export type EnquiryFormContext = { tourSlug?: string; adultsMax?: number; childrenMax?: number };
 
+/** Window event that fills the message field: `new CustomEvent(ENQUIRY_PREFILL_EVENT, { detail: { message } })`. */
+export const ENQUIRY_PREFILL_EVENT = "kajaawa:enquiry-prefill";
+
 type Status =
   | { kind: "idle" }
   | { kind: "submitting" }
@@ -97,6 +100,19 @@ export function EnquiryForm({ copy, context = {} }: { copy: EnquiryFormCopy; con
       return result.success ? {} : fieldErrors(result.error);
     });
   }, [pickTick]);
+
+  // Pages can hand over a ready-made message (e.g. the chosen experience package).
+  useEffect(() => {
+    const onPrefill = (e: Event) => {
+      const text = (e as CustomEvent<{ message?: string }>).detail?.message;
+      const field = formRef.current?.querySelector<HTMLTextAreaElement>('textarea[name="message"]');
+      if (!field || typeof text !== "string") return;
+      field.value = text.slice(0, ENQUIRY_LIMITS.message);
+      setMessageLength(field.value.length);
+    };
+    window.addEventListener(ENQUIRY_PREFILL_EVENT, onPrefill);
+    return () => window.removeEventListener(ENQUIRY_PREFILL_EVENT, onPrefill);
+  }, []);
 
   const focusFirstError = (form: HTMLFormElement, found: Errors) => {
     const first = FIELD_ORDER.find((f) => found[f]);

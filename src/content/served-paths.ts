@@ -5,6 +5,7 @@
  */
 import cabIndex from "./cabs/index.json";
 import tourArchive from "./tour-archive.json";
+import { experiencePath, experienceSlugs } from "./experiences/slugs";
 import tourIndex from "./tours/index.json";
 
 const archivePages = Array.from({ length: Math.max(0, tourArchive.lastPagedUrl - 1) }, (_, i) => `/tours/page/${i + 2}/`);
@@ -16,6 +17,7 @@ export const servedPaths: ReadonlySet<string> = new Set<string>([
   ...tourIndex.tours.map((t) => `/tours/${t.slug}/`),
   "/cars/",
   ...cabIndex.slugs.map((s) => `/cars/${s}/`),
+  ...experienceSlugs.map(experiencePath),
 ]);
 
 export const isServedPath = (path: string) => servedPaths.has(path);

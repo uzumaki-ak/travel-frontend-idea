@@ -1,0 +1,142 @@
+{
+  "slug": "dawki-mawlynnong-day-trip",
+  "title": "Dawki Crystal River & Mawlynnong Village Day Trip from Shillong",
+  "seo": {
+    "title": "Dawki & Mawlynnong Day Trip from Shillong | Kajaawa",
+    "description": "A full day from Shillong to the glass-clear Dawki river, the living root bridge at Riwai and Mawlynnong village, by private car or shared seat."
+  },
+  "location": { "name": "Dawki", "region": "Meghalaya", "href": "/destinations/dawki/" },
+  "categories": ["Day trips", "Boat rides", "Villages"],
+  "duration": { "type": "day", "label": "Full day · 10 hours" },
+  "rating": {
+    "average": 4.7,
+    "count": 342,
+    "breakdown": [
+      { "label": "Driver", "score": 4.8 },
+      { "label": "Itinerary", "score": 4.7 },
+      { "label": "Value for money", "score": 4.6 }
+    ]
+  },
+  "gallery": [
+    { "src": "/media/home/Dawki-River-5.jpg", "alt": "A boat on the emerald Dawki river" },
+    { "src": "/media/home/Umngot-River-1-kaga.jpg", "alt": "The Umngot river from above" },
+    { "src": "/media/home/Shnongpdeng-1-kaga.jpg", "alt": "Shnongpdeng riverside" },
+    { "src": "/media/tours/Balancing-Rock-1-kaga.jpg", "alt": "The balancing rock" },
+    { "src": "/media/tours/Dawki-River-2.jpg", "alt": "Boats on the Dawki river" }
+  ],
+  "facts": [
+    { "icon": "cancel", "title": "Free cancellation", "text": "Cancel up to 24 hours before for a full refund" },
+    { "icon": "duration", "title": "10 hours", "text": "Leaves Shillong at 7:30 am" },
+    { "icon": "pickup", "title": "Hotel pickup", "text": "Anywhere in Shillong city" },
+    { "icon": "confirm", "title": "Instant confirmation", "text": "Your booking is confirmed right away" }
+  ],
+  "summary": "Leave Shillong early, ride a boat across a river so clear it looks like glass, cross a living root bridge and walk through one of Asia's cleanest villages — back in time for dinner.",
+  "highlights": [
+    "Boat across the Umngot river at Dawki, right by the Bangladesh border",
+    "Walk the single-decker living root bridge at Riwai",
+    "Explore Mawlynnong's flower-lined lanes and bamboo skywalk",
+    "See the balancing rock on the way back"
+  ],
+  "description": [
+    "Your driver collects you from your Shillong hotel and takes the winding road south through the Khasi hills, stopping at viewpoints over the Bangladesh plains.",
+    "At Dawki you'll take a boat out on the Umngot, then continue to Riwai for its living root bridge and to Mawlynnong for a slow walk and a local lunch before the drive back."
+  ],
+  "includes": ["Private or shared car with driver", "Hotel pickup and drop-off in Shillong", "Fuel, tolls and parking"],
+  "excludes": ["Boat ride (₹800 – ₹1,200 per boat, paid locally)", "Entry fees", "Lunch"],
+  "notSuitableFor": ["Children under 2"],
+  "importantInfo": [
+    { "title": "What to bring", "items": ["Photo ID", "Cash for the boat and entries", "Sunscreen and a hat"] },
+    { "title": "Know before you go", "items": ["Boating can close after heavy rain; you'll get a partial refund if it does"] }
+  ],
+  "packages": [
+    {
+      "id": "private-sedan",
+      "name": "Private sedan (up to 4 people)",
+      "tag": "Most popular",
+      "chips": ["Free cancellation (24 hours notice)", "Group size: 1 to 4", "Instant confirmation"],
+      "priceOptions": [{ "id": "car", "label": "1 car · up to 4 people", "guests": { "min": 1, "max": 4 }, "price": 3500 }],
+      "itinerary": [
+        {
+          "title": "Shillong → Dawki → Mawlynnong → Shillong",
+          "stops": [
+            { "time": "07:30", "title": "Hotel pickup in Shillong", "kind": "start" },
+            { "time": "10:00", "title": "Dawki river boat ride", "kind": "visit", "duration": "1 hour", "tags": ["Paid locally"], "image": { "src": "/media/home/Dawki-River-5.jpg", "alt": "Dawki river" } },
+            { "time": "12:00", "title": "Riwai living root bridge", "kind": "visit", "duration": "45 min" },
+            { "time": "13:00", "title": "Lunch in Mawlynnong", "kind": "meal", "duration": "1 hour" },
+            { "time": "14:30", "title": "Balancing rock", "kind": "visit", "duration": "20 min", "tags": ["Photo stop"] },
+            { "time": "17:30", "title": "Drop-off at your hotel", "kind": "end" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "private-suv",
+      "name": "Private SUV (up to 7 people)",
+      "chips": ["Free cancellation (24 hours notice)", "Group size: 1 to 7", "Instant confirmation"],
+      "priceOptions": [{ "id": "car", "label": "1 SUV · up to 7 people", "guests": { "min": 1, "max": 7 }, "price": 5500 }],
+      "itinerary": [
+        {
+          "title": "Shillong → Dawki → Mawlynnong → Shillong",
+          "stops": [
+            { "time": "07:30", "title": "Hotel pickup in Shillong", "kind": "start" },
+            { "time": "10:00", "title": "Dawki river boat ride", "kind": "visit", "duration": "1 hour", "tags": ["Paid locally"] },
+            { "time": "12:00", "title": "Riwai living root bridge", "kind": "visit", "duration": "45 min" },
+            { "time": "13:00", "title": "Lunch in Mawlynnong", "kind": "meal", "duration": "1 hour" },
+            { "time": "17:30", "title": "Drop-off at your hotel", "kind": "end" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shared-seat",
+      "name": "Shared seat in a group car",
+      "tag": "Budget",
+      "summary": "Join other travellers; fixed departure at 7:30 am.",
+      "chips": ["Free cancellation (24 hours notice)", "Max 7 per car", "Confirmation within 4 hours"],
+      "pricingMode": "per-unit",
+      "priceOptions": [
+        { "id": "adult", "label": "Adult", "guests": { "min": 1, "max": 1 }, "price": 900, "compareAt": 1100 },
+        { "id": "child", "label": "Child (2 – 11)", "guests": { "min": 1, "max": 1 }, "price": 600 }
+      ],
+      "itinerary": [
+        {
+          "title": "Shillong → Dawki → Mawlynnong → Shillong",
+          "stops": [
+            { "time": "07:30", "title": "Meet at Police Bazar", "kind": "start" },
+            { "time": "10:00", "title": "Dawki river", "kind": "visit", "duration": "1 hour" },
+            { "time": "13:00", "title": "Mawlynnong village", "kind": "visit", "duration": "1.5 hours" },
+            { "time": "17:30", "title": "Back at Police Bazar", "kind": "end" }
+          ]
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    { "name": "Kavya", "country": "India", "date": "2026-11-02", "rating": 5, "packageName": "Private sedan (up to 4 people)", "text": "The river is unreal — you can see every pebble. Our driver timed it so we beat the crowds." },
+    { "name": "Tom", "country": "United Kingdom", "date": "2026-10-19", "rating": 4, "packageName": "Shared seat in a group car", "text": "Great value. Long day in the car but the stops are worth it." },
+    { "name": "Ishaan", "country": "India", "date": "2026-10-03", "rating": 5, "text": "Mawlynnong was spotless and the people were lovely. Highly recommend the SUV if you're 5 or more." }
+  ],
+  "faqs": [
+    { "question": "Is the boat ride included?", "answer": "No — boats are run by the local cooperative and paid in cash on the spot." },
+    { "question": "Can we swim at Dawki?", "answer": "Swimming is allowed at Shnongpdeng, a short drive upstream, when the river is calm." }
+  ],
+  "related": ["shillong-cherrapunji-dawki-escape", "shillong-after-dark"],
+  "tagGroups": [
+    {
+      "title": "Things to do nearby",
+      "links": [
+        { "label": "Things to do in Dawki", "href": "/things-to-do-in-dawki/" },
+        { "label": "Places to visit in Dawki", "href": "/places-to-visit-in-dawki/" },
+        { "label": "Camping in Meghalaya", "href": "/camping-in-meghalaya/" }
+      ]
+    },
+    {
+      "title": "Top destinations",
+      "links": [
+        { "label": "Shillong", "href": "/shillong-tour-packages/" },
+        { "label": "Dawki", "href": "/dawki-tourism/" },
+        { "label": "Cherrapunji", "href": "/cherrapunji-tourism/" }
+      ]
+    }
+  ]
+}

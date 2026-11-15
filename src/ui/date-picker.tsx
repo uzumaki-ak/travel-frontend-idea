@@ -22,7 +22,7 @@ type DatePickerProps = {
   invalid?: boolean;
   describedBy?: string;
   /** Called when the visitor picks a date, so the parent form can re-validate. */
-  onPick?: () => void;
+  onPick?: (iso: string | undefined) => void;
 };
 
 const toIso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -67,7 +67,7 @@ export function DatePicker({ id, name, placeholder, minDaysFromToday = 0, maxYea
             onSelect={(d) => {
               setSelected(d);
               setOpen(false);
-              onPick?.();
+              onPick?.(d ? toIso(d) : undefined);
             }}
             disabled={range ? [{ before: range.from }, { after: range.to }] : undefined}
             startMonth={range?.from}
