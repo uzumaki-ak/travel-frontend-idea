@@ -25,7 +25,7 @@ export function ExperienceReviews({ rating, reviews }: { rating: Experience["rat
   if (!reviews.length && !rating.count) return null;
 
   return (
-    <section id="reviews" aria-labelledby="reviews-title" className="scroll-mt-24 flex flex-col gap-10">
+    <section id="reviews" aria-labelledby="reviews-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-10">
       <div className="flex flex-col gap-3">
         <span className="label text-moss">Traveller reviews</span>
         <h2 id="reviews-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">

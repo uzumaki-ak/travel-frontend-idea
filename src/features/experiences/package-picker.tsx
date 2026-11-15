@@ -54,7 +54,7 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
   const saving = q.total != null ? savingPercent(q.total, q.compareAt ?? undefined) : 0;
 
   return (
-    <section id="packages" aria-labelledby="packages-title" className="scroll-mt-24 bg-cloud py-20 md:py-28">
+    <section id="packages" aria-labelledby="packages-title" className="scroll-mt-32 md:scroll-mt-44 bg-cloud py-20 md:py-28">
       <div className="wrap flex flex-col gap-12">
         <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="flex flex-col gap-3">
@@ -105,7 +105,7 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
           </div>
 
           {/* Live summary: sticky beside the steps from lg up. */}
-          <aside aria-label="Your selection" className="lg:sticky lg:top-28 lg:col-span-5 lg:row-span-2 lg:self-start">
+          <aside aria-label="Your selection" className="lg:sticky lg:top-48 lg:col-span-5 lg:row-span-2 lg:self-start">
             <div className="flex flex-col gap-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-ink p-6 text-fog md:p-7">
               <div className="flex flex-col gap-1">
                 <span className="label text-jade">Your selection</span>
@@ -177,7 +177,7 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
           </aside>
 
           {/* Details of the selected package. Re-keyed so it animates on change. */}
-          <div className="min-w-0 lg:col-span-7">
+          <div id="itinerary" className="scroll-mt-32 md:scroll-mt-44 min-w-0 lg:col-span-7">
             <PackageDetails key={pkg.id} pkg={pkg} />
           </div>
         </div>
@@ -310,7 +310,7 @@ function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
   return (
     <div className="flex flex-col gap-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-fog p-6 motion-safe:animate-[fade-in_0.5s_var(--ease-out-expo)] md:p-8">
       <div className="flex flex-col gap-1">
-        <span className="label text-moss">Package details</span>
+        <span className="label text-moss">Itinerary &amp; details · changes with the package</span>
         <h3 className="font-display text-[1.4rem] leading-tight font-semibold tracking-[-0.01em]">{pkg.name}</h3>
       </div>
       <Tabs.Root defaultValue="itinerary" className="flex flex-col gap-7">

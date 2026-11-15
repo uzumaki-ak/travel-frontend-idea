@@ -5,36 +5,114 @@
     "title": "3-Day Shillong, Cherrapunji & Dawki Private Tour | Kajaawa",
     "description": "A private 3-day Meghalaya escape: Umiam Lake, the living root bridges of Cherrapunji and the glass-clear Dawki river, with car, driver and handpicked stays."
   },
-  "location": { "name": "Shillong", "region": "Meghalaya", "href": "/destinations/shillong/" },
-  "categories": ["Multi-day tours", "Private tours", "Nature & waterfalls"],
+  "location": {
+    "name": "Shillong",
+    "region": "Meghalaya",
+    "href": "/destinations/shillong/"
+  },
+  "categories": [
+    "Multi-day tours",
+    "Private tours",
+    "Nature & waterfalls"
+  ],
   "badge": "Top rated",
-  "duration": { "type": "multi", "label": "3 days · 2 nights" },
+  "duration": {
+    "type": "multi",
+    "label": "3 days · 2 nights"
+  },
   "rating": {
     "average": 4.8,
     "count": 126,
     "breakdown": [
-      { "label": "Driver & guide", "score": 4.9 },
-      { "label": "Stays", "score": 4.6 },
-      { "label": "Value for money", "score": 4.8 }
+      {
+        "label": "Driver & guide",
+        "score": 4.9
+      },
+      {
+        "label": "Stays",
+        "score": 4.6
+      },
+      {
+        "label": "Value for money",
+        "score": 4.8
+      }
     ]
   },
   "gallery": [
-    { "src": "/media/home/Nohkalikai-Falls-1-.jpg", "alt": "Nohkalikai Falls dropping into a green gorge" },
-    { "src": "/media/home/Dawki-River-5.jpg", "alt": "A boat on the clear water of the Dawki river" },
-    { "src": "/media/home/Umiam-Lake-7-kaga.jpg", "alt": "Umiam Lake in the morning mist" },
-    { "src": "/media/home/Double-Decker-5-kaga.jpg", "alt": "The double decker living root bridge" },
-    { "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg", "alt": "Clouds over Laitlum Canyons" },
-    { "src": "/media/home/wei-sawdong-falls-2-kaga.jpg", "alt": "Wei Sawdong Falls" },
-    { "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg", "alt": "Seven Sisters Falls" },
-    { "src": "/media/tours/Balancing-Rock-1-kaga.jpg", "alt": "The balancing rock near Mawlynnong" }
+    {
+      "src": "/media/home/Nohkalikai-Falls-1-.jpg",
+      "alt": "Nohkalikai Falls dropping into a green gorge"
+    },
+    {
+      "src": "/media/home/Dawki-River-5.jpg",
+      "alt": "A boat on the clear water of the Dawki river"
+    },
+    {
+      "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+      "alt": "Umiam Lake in the morning mist"
+    },
+    {
+      "src": "/media/home/Double-Decker-5-kaga.jpg",
+      "alt": "The double decker living root bridge"
+    },
+    {
+      "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+      "alt": "Clouds over Laitlum Canyons"
+    },
+    {
+      "src": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+      "alt": "Wei Sawdong Falls"
+    },
+    {
+      "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+      "alt": "Seven Sisters Falls"
+    },
+    {
+      "src": "/media/tours/Balancing-Rock-1-kaga.jpg",
+      "alt": "The balancing rock near Mawlynnong"
+    }
   ],
   "facts": [
-    { "icon": "cancel", "title": "Free cancellation", "text": "Cancel up to 72 hours before for a full refund" },
-    { "icon": "pay-later", "title": "Reserve now, pay later", "text": "Hold your dates today and pay closer to the trip" },
-    { "icon": "duration", "title": "3 days · 2 nights", "text": "Starts and ends in Guwahati or Shillong" },
-    { "icon": "pickup", "title": "Pickup included", "text": "Guwahati airport, railway station or your hotel" },
-    { "icon": "guide", "title": "Local driver-guide", "text": "English, Hindi and Khasi" },
-    { "icon": "group", "title": "Private group", "text": "Only your party in the car" }
+    {
+      "icon": "cancel",
+      "title": "Free cancellation",
+      "text": "Cancel up to 72 hours before for a full refund"
+    },
+    {
+      "icon": "pay-later",
+      "title": "Reserve now, pay later",
+      "text": "Hold your dates today and pay closer to the trip"
+    },
+    {
+      "icon": "duration",
+      "title": "3 days · 2 nights",
+      "text": "Starts and ends in Guwahati or Shillong"
+    },
+    {
+      "icon": "pickup",
+      "title": "Pickup included",
+      "text": "Guwahati airport, railway station or your hotel"
+    },
+    {
+      "icon": "guide",
+      "title": "Local driver-guide",
+      "text": "English, Hindi and Khasi"
+    },
+    {
+      "icon": "group",
+      "title": "Private group",
+      "text": "Only your party in the car"
+    },
+    {
+      "icon": "hotel",
+      "title": "Handpicked stays",
+      "text": "3★ or 4★ hotels with breakfast, or bring your own"
+    },
+    {
+      "icon": "confirm",
+      "title": "Instant confirmation",
+      "text": "We reply on WhatsApp within the hour"
+    }
   ],
   "summary": "Three slow days through the abode of the clouds: a lakeside drive into Shillong, waterfalls and living root bridges around Cherrapunji, and a boat on the clearest river in India at Dawki — with your own car, driver and stays sorted.",
   "highlights": [
@@ -62,9 +140,19 @@
     "Personal expenses and tips",
     "Anything not listed under included"
   ],
-  "notSuitableFor": ["Wheelchair users", "Travellers with serious knee problems (root bridge trail has steps)"],
+  "notSuitableFor": [
+    "Wheelchair users",
+    "Travellers with serious knee problems (root bridge trail has steps)"
+  ],
   "importantInfo": [
-    { "title": "What to bring", "items": ["Valid photo ID", "Comfortable walking shoes", "Light rain jacket — it rains here a lot"] },
+    {
+      "title": "What to bring",
+      "items": [
+        "Valid photo ID",
+        "Comfortable walking shoes",
+        "Light rain jacket — it rains here a lot"
+      ]
+    },
     {
       "title": "Know before you go",
       "items": [
@@ -72,55 +160,269 @@
         "Boat rides at Dawki depend on river levels and may close after heavy rain",
         "Itinerary order can change with weather; every stop is still covered"
       ]
+    },
+    {
+      "title": "Cancellation policy",
+      "items": [
+        "Full refund up to 72 hours before the trip",
+        "50% refund between 72 and 24 hours",
+        "No refund within 24 hours or for no-shows"
+      ]
+    },
+    {
+      "title": "Accessibility",
+      "items": [
+        "Most viewpoints are a short walk from the car",
+        "The root bridge trail has around 300 steps each way"
+      ]
     }
   ],
-  "meetingPoint": { "title": "Pickup", "text": "We pick you up from Guwahati airport (LGBI), Guwahati railway station or any hotel in Guwahati or Shillong." },
+  "meetingPoint": {
+    "title": "Pickup",
+    "text": "We pick you up from Guwahati airport (LGBI), Guwahati railway station or any hotel in Guwahati or Shillong."
+  },
   "packages": [
     {
       "id": "car-guide-4-star",
       "name": "Private car, driver-guide & 4★ hotels",
       "tag": "Most popular",
       "summary": "Comfortable 4-star stays in Shillong and Cherrapunji.",
-      "chips": ["Free cancellation (72 hours notice)", "Group size: 1 to 15", "Instant confirmation", "Breakfast included"],
+      "chips": [
+        "Free cancellation (72 hours notice)",
+        "Group size: 1 to 15",
+        "Instant confirmation",
+        "Breakfast included"
+      ],
       "priceOptions": [
-        { "id": "p1", "label": "1 person", "guests": { "min": 1, "max": 1 }, "price": 18400, "compareAt": 23000 },
-        { "id": "p2", "label": "2 people", "guests": { "min": 2, "max": 2 }, "price": 24600, "compareAt": 30750 },
-        { "id": "p3-4", "label": "3 – 4 people", "guests": { "min": 3, "max": 4 }, "price": 34800, "compareAt": 43500 },
-        { "id": "p5-7", "label": "5 – 7 people", "guests": { "min": 5, "max": 7 }, "price": 52900, "compareAt": 66100 },
-        { "id": "p8-15", "label": "8 – 15 people", "guests": { "min": 8, "max": 15 }, "price": 96500, "compareAt": 120600 }
+        {
+          "id": "p1",
+          "label": "1 person",
+          "guests": {
+            "min": 1,
+            "max": 1
+          },
+          "price": 18400,
+          "compareAt": 23000
+        },
+        {
+          "id": "p2",
+          "label": "2 people",
+          "guests": {
+            "min": 2,
+            "max": 2
+          },
+          "price": 24600,
+          "compareAt": 30750
+        },
+        {
+          "id": "p3-4",
+          "label": "3 – 4 people",
+          "guests": {
+            "min": 3,
+            "max": 4
+          },
+          "price": 34800,
+          "compareAt": 43500
+        },
+        {
+          "id": "p5-7",
+          "label": "5 – 7 people",
+          "guests": {
+            "min": 5,
+            "max": 7
+          },
+          "price": 52900,
+          "compareAt": 66100
+        },
+        {
+          "id": "p8-15",
+          "label": "8 – 15 people",
+          "guests": {
+            "min": 8,
+            "max": 15
+          },
+          "price": 96500,
+          "compareAt": 120600
+        }
       ],
       "hotels": [
-        { "place": "Shillong", "name": "Hotel Polo Tower or similar", "stars": 4, "nights": 1, "image": { "src": "/media/home/police-bazar-8-kaga.jpg", "alt": "Shillong city" } },
-        { "place": "Cherrapunji", "name": "Polo Orchid Resort or similar", "stars": 4, "nights": 1, "image": { "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg", "alt": "Cherrapunji valley" } }
+        {
+          "place": "Shillong",
+          "name": "Hotel Polo Tower or similar",
+          "stars": 4,
+          "nights": 1,
+          "image": {
+            "src": "/media/home/police-bazar-8-kaga.jpg",
+            "alt": "Shillong city"
+          }
+        },
+        {
+          "place": "Cherrapunji",
+          "name": "Polo Orchid Resort or similar",
+          "stars": 4,
+          "nights": 1,
+          "image": {
+            "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+            "alt": "Cherrapunji valley"
+          }
+        }
       ],
       "itinerary": [
         {
           "title": "Guwahati → Shillong",
           "stops": [
-            { "time": "10:00", "title": "Pickup in Guwahati", "kind": "start", "text": "Your driver-guide meets you at the airport, station or hotel." },
-            { "time": "12:30", "title": "Umiam Lake viewpoint", "kind": "visit", "duration": "45 min", "tags": ["Photo stop"], "text": "A misty reservoir ringed by pine hills — the gateway to Shillong.", "image": { "src": "/media/home/Umiam-Lake-7-kaga.jpg", "alt": "Umiam Lake" } },
-            { "time": "14:30", "title": "Check in & lunch break", "kind": "meal", "duration": "1 hour" },
-            { "time": "16:00", "title": "Ward's Lake & Police Bazar", "kind": "visit", "duration": "2 hours", "tags": ["Free time"] },
-            { "title": "Overnight in Shillong", "kind": "stay" }
+            {
+              "time": "10:00",
+              "title": "Pickup in Guwahati",
+              "kind": "start",
+              "text": "Your driver-guide meets you at the airport, station or hotel."
+            },
+            {
+              "time": "12:30",
+              "title": "Umiam Lake viewpoint",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Photo stop"
+              ],
+              "text": "A misty reservoir ringed by pine hills — the gateway to Shillong.",
+              "image": {
+                "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+                "alt": "Umiam Lake"
+              }
+            },
+            {
+              "time": "14:30",
+              "title": "Check in & lunch break",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Settle into your hotel and grab lunch at a local Khasi eatery."
+            },
+            {
+              "time": "16:00",
+              "title": "Ward's Lake & Police Bazar",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Free time"
+              ],
+              "text": "A lamplit lake walk, then the bustle of the city's busiest market.",
+              "image": {
+                "src": "/media/home/police-bazar-8-kaga.jpg",
+                "alt": "Police Bazar, Shillong"
+              }
+            },
+            {
+              "title": "Overnight in Shillong",
+              "kind": "stay",
+              "text": "Hotel Polo Tower or similar."
+            }
           ]
         },
         {
           "title": "Shillong → Cherrapunji",
           "stops": [
-            { "time": "08:30", "title": "Laitlum Canyons", "kind": "visit", "duration": "1 hour", "tags": ["Guided", "Photo stop"], "image": { "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg", "alt": "Laitlum Canyons" } },
-            { "time": "11:00", "title": "Nohkalikai Falls", "kind": "visit", "duration": "45 min", "tags": ["Entry included"], "text": "A 340-metre plunge into a turquoise pool.", "image": { "src": "/media/home/Nohkalikai-Falls-1-.jpg", "alt": "Nohkalikai Falls" } },
-            { "time": "13:00", "title": "Lunch in Sohra", "kind": "meal", "duration": "1 hour" },
-            { "time": "14:30", "title": "Living root bridge trail", "kind": "visit", "duration": "2 hours", "tags": ["Guided"], "text": "A short trail down to a bridge woven from rubber-tree roots." },
-            { "title": "Overnight in Cherrapunji", "kind": "stay" }
+            {
+              "time": "08:30",
+              "title": "Laitlum Canyons",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Guided",
+                "Photo stop"
+              ],
+              "image": {
+                "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+                "alt": "Laitlum Canyons"
+              },
+              "text": "Clouds drift through the valleys below — best early in the morning."
+            },
+            {
+              "time": "11:00",
+              "title": "Nohkalikai Falls",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Entry included"
+              ],
+              "text": "A 340-metre plunge into a turquoise pool.",
+              "image": {
+                "src": "/media/home/Nohkalikai-Falls-1-.jpg",
+                "alt": "Nohkalikai Falls"
+              }
+            },
+            {
+              "time": "13:00",
+              "title": "Lunch in Sohra",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Try jadoh, the Khasi rice-and-meat dish, at a roadside kitchen."
+            },
+            {
+              "time": "14:30",
+              "title": "Living root bridge trail",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "A short trail down to a bridge woven from rubber-tree roots.",
+              "image": {
+                "src": "/media/home/Double-Decker-5-kaga.jpg",
+                "alt": "Living root bridge"
+              }
+            },
+            {
+              "title": "Overnight in Cherrapunji",
+              "kind": "stay",
+              "text": "Polo Orchid Resort or similar, with valley views."
+            }
           ]
         },
         {
           "title": "Cherrapunji → Dawki → drop-off",
           "stops": [
-            { "time": "08:00", "title": "Drive to Dawki", "kind": "transfer", "duration": "2.5 hours" },
-            { "time": "10:30", "title": "Boat ride on the Umngot river", "kind": "visit", "duration": "1 hour", "tags": ["Paid locally"], "image": { "src": "/media/home/Dawki-River-5.jpg", "alt": "Dawki river" } },
-            { "time": "13:00", "title": "Mawlynnong village & balancing rock", "kind": "visit", "duration": "1.5 hours", "tags": ["Guided"] },
-            { "time": "18:30", "title": "Drop-off in Shillong or Guwahati", "kind": "end" }
+            {
+              "time": "08:00",
+              "title": "Drive to Dawki",
+              "kind": "transfer",
+              "duration": "2.5 hours",
+              "text": "Down through the Jaintia hills, with views over the Bangladesh plains."
+            },
+            {
+              "time": "10:30",
+              "title": "Boat ride on the Umngot river",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Paid locally"
+              ],
+              "image": {
+                "src": "/media/home/Dawki-River-5.jpg",
+                "alt": "Dawki river"
+              },
+              "text": "So clear the boats seem to float on air. Boats are paid locally."
+            },
+            {
+              "time": "13:00",
+              "title": "Mawlynnong village & balancing rock",
+              "kind": "visit",
+              "duration": "1.5 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "Flower-lined lanes, a bamboo skywalk and a rock balanced on a stone.",
+              "image": {
+                "src": "/media/tours/Balancing-Rock-1-kaga.jpg",
+                "alt": "Balancing rock"
+              }
+            },
+            {
+              "time": "18:30",
+              "title": "Drop-off in Shillong or Guwahati",
+              "kind": "end",
+              "text": "Your driver drops you at your hotel, the airport or the station."
+            }
           ]
         }
       ]
@@ -130,43 +432,237 @@
       "name": "Private car, driver-guide & 3★ hotels",
       "tag": "Best value",
       "summary": "Clean, well-reviewed 3-star stays.",
-      "chips": ["Free cancellation (72 hours notice)", "Group size: 1 to 15", "Instant confirmation", "Breakfast included"],
+      "chips": [
+        "Free cancellation (72 hours notice)",
+        "Group size: 1 to 15",
+        "Instant confirmation",
+        "Breakfast included"
+      ],
       "priceOptions": [
-        { "id": "p1", "label": "1 person", "guests": { "min": 1, "max": 1 }, "price": 14200 },
-        { "id": "p2", "label": "2 people", "guests": { "min": 2, "max": 2 }, "price": 18900 },
-        { "id": "p3-4", "label": "3 – 4 people", "guests": { "min": 3, "max": 4 }, "price": 27400 },
-        { "id": "p5-7", "label": "5 – 7 people", "guests": { "min": 5, "max": 7 }, "price": 41800 },
-        { "id": "p8-15", "label": "8 – 15 people", "guests": { "min": 8, "max": 15 }, "price": 77900 }
+        {
+          "id": "p1",
+          "label": "1 person",
+          "guests": {
+            "min": 1,
+            "max": 1
+          },
+          "price": 14200
+        },
+        {
+          "id": "p2",
+          "label": "2 people",
+          "guests": {
+            "min": 2,
+            "max": 2
+          },
+          "price": 18900
+        },
+        {
+          "id": "p3-4",
+          "label": "3 – 4 people",
+          "guests": {
+            "min": 3,
+            "max": 4
+          },
+          "price": 27400
+        },
+        {
+          "id": "p5-7",
+          "label": "5 – 7 people",
+          "guests": {
+            "min": 5,
+            "max": 7
+          },
+          "price": 41800
+        },
+        {
+          "id": "p8-15",
+          "label": "8 – 15 people",
+          "guests": {
+            "min": 8,
+            "max": 15
+          },
+          "price": 77900
+        }
       ],
       "hotels": [
-        { "place": "Shillong", "name": "Hotel Rainbow or similar", "stars": 3, "nights": 1 },
-        { "place": "Cherrapunji", "name": "Cordial Lodge or similar", "stars": 3, "nights": 1 }
+        {
+          "place": "Shillong",
+          "name": "Hotel Rainbow or similar",
+          "stars": 3,
+          "nights": 1,
+          "image": {
+            "src": "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
+            "alt": "Shillong"
+          }
+        },
+        {
+          "place": "Cherrapunji",
+          "name": "Cordial Lodge or similar",
+          "stars": 3,
+          "nights": 1,
+          "image": {
+            "src": "/media/tours/Dainthlen-Falls-2-kaga.jpg",
+            "alt": "Cherrapunji"
+          }
+        }
       ],
       "itinerary": [
         {
           "title": "Guwahati → Shillong",
           "stops": [
-            { "time": "10:00", "title": "Pickup in Guwahati", "kind": "start" },
-            { "time": "12:30", "title": "Umiam Lake viewpoint", "kind": "visit", "duration": "45 min", "tags": ["Photo stop"], "image": { "src": "/media/home/Umiam-Lake-7-kaga.jpg", "alt": "Umiam Lake" } },
-            { "time": "16:00", "title": "Ward's Lake & Police Bazar", "kind": "visit", "duration": "2 hours", "tags": ["Free time"] },
-            { "title": "Overnight in Shillong", "kind": "stay" }
+            {
+              "time": "10:00",
+              "title": "Pickup in Guwahati",
+              "kind": "start",
+              "text": "Your driver-guide meets you at the airport, station or hotel."
+            },
+            {
+              "time": "12:30",
+              "title": "Umiam Lake viewpoint",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Photo stop"
+              ],
+              "text": "A misty reservoir ringed by pine hills — the gateway to Shillong.",
+              "image": {
+                "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+                "alt": "Umiam Lake"
+              }
+            },
+            {
+              "time": "14:30",
+              "title": "Check in & lunch break",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Settle into your hotel and grab lunch at a local Khasi eatery."
+            },
+            {
+              "time": "16:00",
+              "title": "Ward's Lake & Police Bazar",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Free time"
+              ],
+              "text": "A lamplit lake walk, then the bustle of the city's busiest market.",
+              "image": {
+                "src": "/media/home/police-bazar-8-kaga.jpg",
+                "alt": "Police Bazar, Shillong"
+              }
+            },
+            {
+              "title": "Overnight in Shillong",
+              "kind": "stay",
+              "text": "Hotel Rainbow or similar."
+            }
           ]
         },
         {
           "title": "Shillong → Cherrapunji",
           "stops": [
-            { "time": "08:30", "title": "Laitlum Canyons", "kind": "visit", "duration": "1 hour", "tags": ["Photo stop"] },
-            { "time": "11:00", "title": "Nohkalikai Falls", "kind": "visit", "duration": "45 min", "tags": ["Entry included"], "image": { "src": "/media/home/Nohkalikai-Falls-1-.jpg", "alt": "Nohkalikai Falls" } },
-            { "time": "14:30", "title": "Living root bridge trail", "kind": "visit", "duration": "2 hours", "tags": ["Guided"] },
-            { "title": "Overnight in Cherrapunji", "kind": "stay" }
+            {
+              "time": "08:30",
+              "title": "Laitlum Canyons",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Guided",
+                "Photo stop"
+              ],
+              "image": {
+                "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+                "alt": "Laitlum Canyons"
+              },
+              "text": "Clouds drift through the valleys below — best early in the morning."
+            },
+            {
+              "time": "11:00",
+              "title": "Nohkalikai Falls",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Entry included"
+              ],
+              "text": "A 340-metre plunge into a turquoise pool.",
+              "image": {
+                "src": "/media/home/Nohkalikai-Falls-1-.jpg",
+                "alt": "Nohkalikai Falls"
+              }
+            },
+            {
+              "time": "13:00",
+              "title": "Lunch in Sohra",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Try jadoh, the Khasi rice-and-meat dish, at a roadside kitchen."
+            },
+            {
+              "time": "14:30",
+              "title": "Living root bridge trail",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "A short trail down to a bridge woven from rubber-tree roots.",
+              "image": {
+                "src": "/media/home/Double-Decker-5-kaga.jpg",
+                "alt": "Living root bridge"
+              }
+            },
+            {
+              "title": "Overnight in Cherrapunji",
+              "kind": "stay",
+              "text": "Cordial Lodge or similar."
+            }
           ]
         },
         {
           "title": "Cherrapunji → Dawki → drop-off",
           "stops": [
-            { "time": "10:30", "title": "Boat ride on the Umngot river", "kind": "visit", "duration": "1 hour", "tags": ["Paid locally"] },
-            { "time": "13:00", "title": "Mawlynnong village", "kind": "visit", "duration": "1.5 hours" },
-            { "time": "18:30", "title": "Drop-off in Shillong or Guwahati", "kind": "end" }
+            {
+              "time": "08:00",
+              "title": "Drive to Dawki",
+              "kind": "transfer",
+              "duration": "2.5 hours",
+              "text": "Down through the Jaintia hills, with views over the Bangladesh plains."
+            },
+            {
+              "time": "10:30",
+              "title": "Boat ride on the Umngot river",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Paid locally"
+              ],
+              "image": {
+                "src": "/media/home/Dawki-River-5.jpg",
+                "alt": "Dawki river"
+              },
+              "text": "So clear the boats seem to float on air. Boats are paid locally."
+            },
+            {
+              "time": "13:00",
+              "title": "Mawlynnong village & balancing rock",
+              "kind": "visit",
+              "duration": "1.5 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "Flower-lined lanes, a bamboo skywalk and a rock balanced on a stone.",
+              "image": {
+                "src": "/media/tours/Balancing-Rock-1-kaga.jpg",
+                "alt": "Balancing rock"
+              }
+            },
+            {
+              "time": "18:30",
+              "title": "Drop-off in Shillong or Guwahati",
+              "kind": "end",
+              "text": "Your driver drops you at your hotel, the airport or the station."
+            }
           ]
         }
       ]
@@ -175,97 +671,426 @@
       "id": "car-guide-only",
       "name": "Private car & driver-guide only — no hotels",
       "tag": "Flexible",
-      "summary": "Book your own stays; we handle the driving and the stories.",
-      "chips": ["Free cancellation (24 hours notice)", "Group size: 1 to 15", "Instant confirmation"],
+      "summary": "Book your own homestays; we handle the driving, the route and the stories.",
+      "chips": [
+        "Free cancellation (24 hours notice)",
+        "Group size: 1 to 15",
+        "Instant confirmation"
+      ],
       "priceOptions": [
-        { "id": "p1-4", "label": "1 – 4 people (sedan)", "guests": { "min": 1, "max": 4 }, "price": 9800 },
-        { "id": "p5-7", "label": "5 – 7 people (SUV)", "guests": { "min": 5, "max": 7 }, "price": 13600 },
-        { "id": "p8-15", "label": "8 – 15 people (tempo traveller)", "guests": { "min": 8, "max": 15 }, "price": 24500 }
+        {
+          "id": "p1-4",
+          "label": "1 – 4 people (sedan)",
+          "guests": {
+            "min": 1,
+            "max": 4
+          },
+          "price": 9800,
+          "compareAt": 11300
+        },
+        {
+          "id": "p5-7",
+          "label": "5 – 7 people (SUV)",
+          "guests": {
+            "min": 5,
+            "max": 7
+          },
+          "price": 13600,
+          "compareAt": 15600
+        },
+        {
+          "id": "p8-15",
+          "label": "8 – 15 people (tempo traveller)",
+          "guests": {
+            "min": 8,
+            "max": 15
+          },
+          "price": 24500,
+          "compareAt": 28200
+        }
       ],
       "itinerary": [
         {
           "title": "Guwahati → Shillong",
           "stops": [
-            { "time": "10:00", "title": "Pickup in Guwahati", "kind": "start" },
-            { "time": "12:30", "title": "Umiam Lake viewpoint", "kind": "visit", "duration": "45 min", "tags": ["Photo stop"] },
-            { "time": "17:00", "title": "Drop at your Shillong stay", "kind": "end" }
+            {
+              "time": "10:00",
+              "title": "Pickup in Guwahati",
+              "kind": "start",
+              "text": "Your driver-guide meets you at the airport, station or hotel."
+            },
+            {
+              "time": "12:30",
+              "title": "Umiam Lake viewpoint",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Photo stop"
+              ],
+              "text": "A misty reservoir ringed by pine hills — the gateway to Shillong.",
+              "image": {
+                "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+                "alt": "Umiam Lake"
+              }
+            },
+            {
+              "time": "14:30",
+              "title": "Lunch break",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Your driver suggests a local place."
+            },
+            {
+              "time": "16:00",
+              "title": "Ward's Lake & Police Bazar",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Free time"
+              ],
+              "text": "A lamplit lake walk, then the bustle of the city's busiest market.",
+              "image": {
+                "src": "/media/home/police-bazar-8-kaga.jpg",
+                "alt": "Police Bazar, Shillong"
+              }
+            },
+            {
+              "title": "Drop at your own stay in Shillong",
+              "kind": "stay",
+              "text": "You book the stay; we pick you up there next morning."
+            }
           ]
         },
         {
           "title": "Shillong → Cherrapunji",
           "stops": [
-            { "time": "08:30", "title": "Pickup from your stay", "kind": "start" },
-            { "time": "11:00", "title": "Nohkalikai Falls", "kind": "visit", "duration": "45 min" },
-            { "time": "14:30", "title": "Living root bridge trail", "kind": "visit", "duration": "2 hours", "tags": ["Guided"] },
-            { "time": "18:00", "title": "Drop at your Cherrapunji stay", "kind": "end" }
+            {
+              "time": "08:30",
+              "title": "Laitlum Canyons",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Guided",
+                "Photo stop"
+              ],
+              "image": {
+                "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+                "alt": "Laitlum Canyons"
+              },
+              "text": "Clouds drift through the valleys below — best early in the morning."
+            },
+            {
+              "time": "11:00",
+              "title": "Nohkalikai Falls",
+              "kind": "visit",
+              "duration": "45 min",
+              "tags": [
+                "Entry included"
+              ],
+              "text": "A 340-metre plunge into a turquoise pool.",
+              "image": {
+                "src": "/media/home/Nohkalikai-Falls-1-.jpg",
+                "alt": "Nohkalikai Falls"
+              }
+            },
+            {
+              "time": "13:00",
+              "title": "Lunch in Sohra",
+              "kind": "meal",
+              "duration": "1 hour",
+              "text": "Try jadoh, the Khasi rice-and-meat dish, at a roadside kitchen."
+            },
+            {
+              "time": "14:30",
+              "title": "Living root bridge trail",
+              "kind": "visit",
+              "duration": "2 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "A short trail down to a bridge woven from rubber-tree roots.",
+              "image": {
+                "src": "/media/home/Double-Decker-5-kaga.jpg",
+                "alt": "Living root bridge"
+              }
+            },
+            {
+              "title": "Drop at your own stay in Cherrapunji",
+              "kind": "stay",
+              "text": "You book the stay; we pick you up there next morning."
+            }
           ]
         },
         {
           "title": "Cherrapunji → Dawki → drop-off",
           "stops": [
-            { "time": "08:00", "title": "Pickup from your stay", "kind": "start" },
-            { "time": "10:30", "title": "Dawki river", "kind": "visit", "duration": "1 hour" },
-            { "time": "18:30", "title": "Drop-off in Shillong or Guwahati", "kind": "end" }
+            {
+              "time": "08:00",
+              "title": "Drive to Dawki",
+              "kind": "transfer",
+              "duration": "2.5 hours",
+              "text": "Down through the Jaintia hills, with views over the Bangladesh plains."
+            },
+            {
+              "time": "10:30",
+              "title": "Boat ride on the Umngot river",
+              "kind": "visit",
+              "duration": "1 hour",
+              "tags": [
+                "Paid locally"
+              ],
+              "image": {
+                "src": "/media/home/Dawki-River-5.jpg",
+                "alt": "Dawki river"
+              },
+              "text": "So clear the boats seem to float on air. Boats are paid locally."
+            },
+            {
+              "time": "13:00",
+              "title": "Mawlynnong village & balancing rock",
+              "kind": "visit",
+              "duration": "1.5 hours",
+              "tags": [
+                "Guided"
+              ],
+              "text": "Flower-lined lanes, a bamboo skywalk and a rock balanced on a stone.",
+              "image": {
+                "src": "/media/tours/Balancing-Rock-1-kaga.jpg",
+                "alt": "Balancing rock"
+              }
+            },
+            {
+              "time": "18:30",
+              "title": "Drop-off in Shillong or Guwahati",
+              "kind": "end",
+              "text": "Your driver drops you at your hotel, the airport or the station."
+            }
           ]
         }
       ]
     }
   ],
   "reviews": [
-    { "name": "Ananya", "country": "India", "date": "2026-10-28", "rating": 5, "packageName": "Private car, driver-guide & 4★ hotels", "text": "Our driver Bah Donbok knew every shortcut and every viewpoint. The root bridge walk was the highlight — tiring but absolutely worth it. Hotels were spotless.", "reply": { "date": "2026-10-30", "text": "Thank you, Ananya! We'll pass your kind words to Donbok." } },
-    { "name": "Marcus", "country": "Germany", "date": "2026-10-12", "rating": 5, "packageName": "Private car & driver-guide only — no hotels", "text": "Booked our own homestays and used this for the driving — perfect. Dawki really is that clear." },
-    { "name": "Priya & Rahul", "country": "India", "date": "2026-09-30", "rating": 4, "packageName": "Private car, driver-guide & 3★ hotels", "text": "Great trip overall. It rained a lot on day two so we swapped the order of stops, and the team handled it smoothly. The 3-star hotel in Cherrapunji was basic but clean." },
-    { "name": "Sofia", "country": "Spain", "date": "2026-09-14", "rating": 5, "text": "Laitlum at sunrise with clouds below us — unforgettable. Communication on WhatsApp before the trip was quick and clear." },
-    { "name": "Arjun", "country": "India", "date": "2026-08-22", "rating": 5, "packageName": "Private car, driver-guide & 4★ hotels", "text": "Travelled with my parents. The pace was relaxed and the driver made sure they were comfortable at every stop." }
+    {
+      "name": "Ananya",
+      "country": "India",
+      "date": "2026-10-28",
+      "rating": 5,
+      "packageName": "Private car, driver-guide & 4★ hotels",
+      "text": "Our driver Bah Donbok knew every shortcut and every viewpoint. The root bridge walk was the highlight — tiring but absolutely worth it. Hotels were spotless.",
+      "reply": {
+        "date": "2026-10-30",
+        "text": "Thank you, Ananya! We'll pass your kind words to Donbok."
+      }
+    },
+    {
+      "name": "Marcus",
+      "country": "Germany",
+      "date": "2026-10-12",
+      "rating": 5,
+      "packageName": "Private car & driver-guide only — no hotels",
+      "text": "Booked our own homestays and used this for the driving — perfect. Dawki really is that clear."
+    },
+    {
+      "name": "Priya & Rahul",
+      "country": "India",
+      "date": "2026-09-30",
+      "rating": 4,
+      "packageName": "Private car, driver-guide & 3★ hotels",
+      "text": "Great trip overall. It rained a lot on day two so we swapped the order of stops, and the team handled it smoothly. The 3-star hotel in Cherrapunji was basic but clean."
+    },
+    {
+      "name": "Sofia",
+      "country": "Spain",
+      "date": "2026-09-14",
+      "rating": 5,
+      "text": "Laitlum at sunrise with clouds below us — unforgettable. Communication on WhatsApp before the trip was quick and clear."
+    },
+    {
+      "name": "Arjun",
+      "country": "India",
+      "date": "2026-08-22",
+      "rating": 5,
+      "packageName": "Private car, driver-guide & 4★ hotels",
+      "text": "Travelled with my parents. The pace was relaxed and the driver made sure they were comfortable at every stop."
+    },
+    {
+      "name": "Lukas",
+      "country": "Austria",
+      "date": "2026-08-03",
+      "rating": 5,
+      "packageName": "Private car & driver-guide only — no hotels",
+      "text": "We stayed in homestays and this was the perfect middle ground. The driver even waited while we swam at Shnongpdeng."
+    },
+    {
+      "name": "Neha",
+      "country": "India",
+      "date": "2026-07-19",
+      "rating": 3,
+      "packageName": "Private car, driver-guide & 3★ hotels",
+      "text": "Monsoon meant the Dawki boats were closed on our day, which was disappointing. Everything else went to plan.",
+      "reply": {
+        "date": "2026-07-21",
+        "text": "Sorry the river was closed, Neha — we have refunded the boat portion and hope to see you in the dry season."
+      }
+    },
+    {
+      "name": "James",
+      "country": "Australia",
+      "date": "2026-06-30",
+      "rating": 5,
+      "packageName": "Private car, driver-guide & 4★ hotels",
+      "text": "Best three days of our India trip. The hotel in Cherrapunji had a view straight down the valley."
+    },
+    {
+      "name": "Riya",
+      "country": "India",
+      "date": "2026-06-11",
+      "rating": 4,
+      "text": "Lovely trip with friends. Pickup was ten minutes late at the airport but the driver called ahead."
+    }
   ],
   "faqs": [
-    { "question": "Can we start from Shillong instead of Guwahati?", "answer": "Yes. Choose either city at booking; the itinerary stays the same and the price doesn't change." },
-    { "question": "Is the living root bridge walk difficult?", "answer": "The short trail on day two has around 300 steps each way. Your guide will suggest an easier viewpoint if you prefer." },
-    { "question": "What happens if it rains?", "answer": "Rain is part of Meghalaya's magic. We reorder stops to catch the clearest windows; the falls are at their best after a downpour." },
-    { "question": "Do we need a permit?", "answer": "No permit, but every visitor must register on the Meghalaya Tourism app and carry the e-invite. We'll send you the link." }
+    {
+      "question": "Can we start from Shillong instead of Guwahati?",
+      "answer": "Yes. Choose either city at booking; the itinerary stays the same and the price doesn't change."
+    },
+    {
+      "question": "Is the living root bridge walk difficult?",
+      "answer": "The short trail on day two has around 300 steps each way. Your guide will suggest an easier viewpoint if you prefer."
+    },
+    {
+      "question": "What happens if it rains?",
+      "answer": "Rain is part of Meghalaya's magic. We reorder stops to catch the clearest windows; the falls are at their best after a downpour."
+    },
+    {
+      "question": "Do we need a permit?",
+      "answer": "No permit, but every visitor must register on the Meghalaya Tourism app and carry the e-invite. We'll send you the link."
+    },
+    {
+      "question": "Which season is best?",
+      "answer": "October to April for clear views and calm rivers. June to September is monsoon: the waterfalls are at their biggest but Dawki boating may close."
+    },
+    {
+      "question": "Can you add a day or a stop?",
+      "answer": "Yes. Tell us in your request and we will send a revised itinerary and price."
+    },
+    {
+      "question": "Is it suitable for children and older travellers?",
+      "answer": "Yes — the pace is relaxed and you can skip the root bridge trail. Child seats are available on request."
+    }
   ],
-  "related": ["dawki-mawlynnong-day-trip", "shillong-after-dark"],
+  "related": [
+    "dawki-mawlynnong-day-trip",
+    "shillong-after-dark"
+  ],
   "tagGroups": [
     {
       "title": "Things to do in Meghalaya",
       "links": [
-        { "label": "Things to do in Shillong", "href": "/things-to-do-in-shillong/" },
-        { "label": "Things to do in Cherrapunji", "href": "/things-to-do-in-cherrapunji/" },
-        { "label": "Things to do in Dawki", "href": "/things-to-do-in-dawki/" },
-        { "label": "Things to do in Mawsynram", "href": "/things-to-do-in-mawsynram/" },
-        { "label": "Things to do in Jowai", "href": "/things-to-do-in-jowai/" },
-        { "label": "Things to do in Meghalaya", "href": "/things-to-do-in-meghalaya/" }
+        {
+          "label": "Things to do in Shillong",
+          "href": "/things-to-do-in-shillong/"
+        },
+        {
+          "label": "Things to do in Cherrapunji",
+          "href": "/things-to-do-in-cherrapunji/"
+        },
+        {
+          "label": "Things to do in Dawki",
+          "href": "/things-to-do-in-dawki/"
+        },
+        {
+          "label": "Things to do in Mawsynram",
+          "href": "/things-to-do-in-mawsynram/"
+        },
+        {
+          "label": "Things to do in Jowai",
+          "href": "/things-to-do-in-jowai/"
+        },
+        {
+          "label": "Things to do in Meghalaya",
+          "href": "/things-to-do-in-meghalaya/"
+        }
       ]
     },
     {
       "title": "Top destinations",
       "links": [
-        { "label": "Shillong", "href": "/shillong-tour-packages/" },
-        { "label": "Cherrapunji", "href": "/cherrapunji-tourism/" },
-        { "label": "Dawki", "href": "/dawki-tourism/" },
-        { "label": "Kaziranga", "href": "/kaziranga-tour-packages/" },
-        { "label": "Guwahati", "href": "/guwahati-tour-packages/" },
-        { "label": "Tawang", "href": "/tawang-tour-packages/" },
-        { "label": "Majuli", "href": "/majuli-tour-packages/" }
+        {
+          "label": "Shillong",
+          "href": "/shillong-tour-packages/"
+        },
+        {
+          "label": "Cherrapunji",
+          "href": "/cherrapunji-tourism/"
+        },
+        {
+          "label": "Dawki",
+          "href": "/dawki-tourism/"
+        },
+        {
+          "label": "Kaziranga",
+          "href": "/kaziranga-tour-packages/"
+        },
+        {
+          "label": "Guwahati",
+          "href": "/guwahati-tour-packages/"
+        },
+        {
+          "label": "Tawang",
+          "href": "/tawang-tour-packages/"
+        },
+        {
+          "label": "Majuli",
+          "href": "/majuli-tour-packages/"
+        }
       ]
     },
     {
       "title": "Popular attractions",
       "links": [
-        { "label": "Places to visit in Shillong", "href": "/places-to-visit-in-shillong/" },
-        { "label": "Places to visit in Cherrapunji", "href": "/places-to-visit-in-cherrapunji/" },
-        { "label": "Places to visit in Dawki", "href": "/places-to-visit-in-dawki/" },
-        { "label": "Places to visit in Meghalaya", "href": "/places-to-visit-in-meghalaya/" }
+        {
+          "label": "Places to visit in Shillong",
+          "href": "/places-to-visit-in-shillong/"
+        },
+        {
+          "label": "Places to visit in Cherrapunji",
+          "href": "/places-to-visit-in-cherrapunji/"
+        },
+        {
+          "label": "Places to visit in Dawki",
+          "href": "/places-to-visit-in-dawki/"
+        },
+        {
+          "label": "Places to visit in Meghalaya",
+          "href": "/places-to-visit-in-meghalaya/"
+        }
       ]
     },
     {
       "title": "Tours in Northeast India",
       "links": [
-        { "label": "Meghalaya tour packages", "href": "/meghalaya-tour-packages/" },
-        { "label": "Shillong tour packages", "href": "/shillong-tour-packages/" },
-        { "label": "Assam tour packages", "href": "/assam-tour-packages/" },
-        { "label": "Meghalaya honeymoon packages", "href": "/meghalaya-honeymoon-packages/" },
-        { "label": "Camping in Meghalaya", "href": "/camping-in-meghalaya/" }
+        {
+          "label": "Meghalaya tour packages",
+          "href": "/meghalaya-tour-packages/"
+        },
+        {
+          "label": "Shillong tour packages",
+          "href": "/shillong-tour-packages/"
+        },
+        {
+          "label": "Assam tour packages",
+          "href": "/assam-tour-packages/"
+        },
+        {
+          "label": "Meghalaya honeymoon packages",
+          "href": "/meghalaya-honeymoon-packages/"
+        },
+        {
+          "label": "Camping in Meghalaya",
+          "href": "/camping-in-meghalaya/"
+        }
       ]
     }
   ]

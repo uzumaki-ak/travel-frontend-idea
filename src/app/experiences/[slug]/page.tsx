@@ -13,6 +13,7 @@ import { ExperienceHero } from "@/features/experiences/experience-hero";
 import { ExperienceReviews } from "@/features/experiences/experience-reviews";
 import { ExperienceFaq, GoodToKnow, Inclusions, KeyFacts, Overview } from "@/features/experiences/experience-sections";
 import { PackagePicker } from "@/features/experiences/package-picker";
+import { SectionNav, type SectionLink } from "@/features/experiences/section-nav";
 import { TagGroups } from "@/features/experiences/tag-groups";
 import { SiteShell } from "@/features/site-chrome/site-shell";
 import { JsonLd } from "@/ui/json-ld";
@@ -60,12 +61,13 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
     <SiteShell section="/tours/">
       <ExperienceHero experience={experience} crumbs={crumbs} from={fromPrice(experience)} />
       <ExperienceGallery photos={experience.gallery} title={experience.title} />
+      <SectionNav links={sectionLinks(experience)} />
 
       <div className="wrap grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-10">
         <div className="min-w-0 lg:col-span-7">
           <Overview experience={experience} />
         </div>
-        <div className="lg:sticky lg:top-28 lg:col-span-5 lg:self-start">
+        <div className="lg:sticky lg:top-48 lg:col-span-5 lg:self-start">
           <KeyFacts facts={experience.facts} />
         </div>
       </div>
@@ -108,6 +110,20 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
       <JsonLd data={structuredData(experience, crumbs)} />
     </SiteShell>
   );
+}
+
+/** Only sections this experience actually has. */
+function sectionLinks(e: Experience): SectionLink[] {
+  const links: (SectionLink | false)[] = [
+    { id: "overview", label: "Overview" },
+    { id: "packages", label: "Packages" },
+    { id: "itinerary", label: "Itinerary" },
+    (e.includes.length > 0 || e.excludes.length > 0) && { id: "included", label: "What’s included" },
+    (e.importantInfo.length > 0 || e.notSuitableFor.length > 0 || Boolean(e.meetingPoint)) && { id: "know", label: "Good to know" },
+    (e.reviews.length > 0 || e.rating.count > 0) && { id: "reviews", label: "Reviews" },
+    e.faqs.length > 0 && { id: "faq", label: "FAQ" },
+  ];
+  return links.filter((l): l is SectionLink => Boolean(l));
 }
 
 /** Breadcrumb + FAQ only. No review/rating markup while reviews are sample content. */

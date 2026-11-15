@@ -54,7 +54,7 @@ export function KeyFacts({ facts }: { facts: Experience["facts"] }) {
 
 export function Overview({ experience }: { experience: Experience }) {
   return (
-    <section aria-labelledby="overview-title" className="flex flex-col gap-8">
+    <section id="overview" aria-labelledby="overview-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
       <SectionTitle id="overview-title" eyebrow="Overview">
         About this experience
       </SectionTitle>
@@ -88,7 +88,7 @@ export function Overview({ experience }: { experience: Experience }) {
 export function Inclusions({ includes, excludes }: { includes: string[]; excludes: string[] }) {
   if (!includes.length && !excludes.length) return null;
   return (
-    <section aria-labelledby="includes-title" className="flex flex-col gap-8">
+    <section id="included" aria-labelledby="includes-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
       <SectionTitle id="includes-title" eyebrow="The fine print">
         What’s included
       </SectionTitle>
@@ -123,7 +123,7 @@ export function GoodToKnow({ experience }: { experience: Experience }) {
   const { importantInfo, notSuitableFor, meetingPoint } = experience;
   if (!importantInfo.length && !notSuitableFor.length && !meetingPoint) return null;
   return (
-    <section aria-labelledby="know-title" className="flex flex-col gap-8">
+    <section id="know" aria-labelledby="know-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
       <SectionTitle id="know-title" eyebrow="Before you go">
         Good to know
       </SectionTitle>
@@ -169,7 +169,7 @@ export function GoodToKnow({ experience }: { experience: Experience }) {
 export function ExperienceFaq({ faqs }: { faqs: Experience["faqs"] }) {
   if (!faqs.length) return null;
   return (
-    <section aria-labelledby="faq-title" className="flex flex-col gap-8">
+    <section id="faq" aria-labelledby="faq-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
       <SectionTitle id="faq-title" eyebrow="Questions">
         Frequently asked
       </SectionTitle>
