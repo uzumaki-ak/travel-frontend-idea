@@ -66,10 +66,19 @@ export function proxy(request: NextRequest) {
 
   if (!isKnown(pathname)) {
     // No route exists at this path, so Next renders app/not-found.tsx with status 404.
-    // Clone nextUrl (don't build from request.url): behind nginx, request.url carries the
-    // public "https" scheme, which would turn this into an external rewrite and fail.
+    //
+    // Why the target is forced to plain http: on the VPS the app runs with
+    // `next start -H 127.0.0.1` behind nginx (X-Forwarded-Proto: https). Next compares
+    // rewrites against "https://127.0.0.1:<port>", but inside the proxy every URL's
+    // host is normalised to "localhost", so the origins never match and Next proxies
+    // the rewrite to itself over the network. With an https target that hits the
+    // plain-http port and fails (500). With http it reaches this same server and
+    // returns the not-found page with status 404. The target is fixed — this app's
+    // own not-found route on its own port — and never built from request input.
     const target = request.nextUrl.clone();
+    target.protocol = "http:";
     target.pathname = "/__not-found__/";
+    target.search = "";
     return NextResponse.rewrite(target);
   }
   return NextResponse.next();
