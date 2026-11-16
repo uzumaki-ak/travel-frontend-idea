@@ -42,7 +42,9 @@ const priceOption = z.object({
   /** e.g. "2 people", "8 – 15 people". */
   label: z.string().min(1),
   /** How many travellers one unit covers (for the summary). */
-  guests: z.object({ min: z.number().int().min(1), max: z.number().int().min(1) }),
+  guests: z
+    .object({ min: z.number().int().min(1), max: z.number().int().min(1) })
+    .refine((g) => g.min <= g.max, { message: "guests.min must not exceed guests.max" }),
   /** Price for one unit of this option, in INR. */
   price: z.number().nonnegative(),
   /** Optional "was" price for a discount display. */
@@ -67,6 +69,23 @@ const pkg = z.object({
   priceOptions: z.array(priceOption).min(1),
   itinerary: z.array(day).min(1),
   hotels: z.array(hotel).default([]),
+}).superRefine((p, ctx) => {
+  const ids = new Set<string>();
+  p.priceOptions.forEach((o, i) => {
+    if (ids.has(o.id)) ctx.addIssue({ code: "custom", path: ["priceOptions", i, "id"], message: `Duplicate price option id "${o.id}"` });
+    ids.add(o.id);
+  });
+  // Group brackets must not overlap, or one group size would match two prices.
+  if (p.pricingMode === "group") {
+    const sorted = [...p.priceOptions].sort((a, b) => a.guests.min - b.guests.min);
+    for (let i = 1; i < sorted.length; i++) {
+      const prev = sorted[i - 1];
+      const cur = sorted[i];
+      if (prev && cur && cur.guests.min <= prev.guests.max) {
+        ctx.addIssue({ code: "custom", path: ["priceOptions"], message: `Group ranges overlap: "${prev.label}" and "${cur.label}"` });
+      }
+    }
+  }
 });
 export type ExperiencePackage = z.infer<typeof pkg>;
 
@@ -108,7 +127,10 @@ export const experienceSchema = z.object({
   notSuitableFor: z.array(z.string()).default([]),
   importantInfo: z.array(z.object({ title: z.string(), items: z.array(z.string()).min(1) })).default([]),
   meetingPoint: z.object({ title: z.string(), text: z.string() }).optional(),
-  packages: z.array(pkg).min(1),
+  packages: z
+    .array(pkg)
+    .min(1)
+    .refine((list) => new Set(list.map((p) => p.id)).size === list.length, { message: "Package ids must be unique" }),
   reviews: z.array(review).default([]),
   faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
   related: z.array(z.string()).default([]),

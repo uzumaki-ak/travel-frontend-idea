@@ -162,15 +162,17 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
                     <ArrowRightIcon />
                   </span>
                 </a>
-                <a
-                  href={waHref}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-[0.9rem] transition-colors hover:border-jade hover:text-jade"
-                >
-                  <WhatsAppIcon className="text-lg" />
-                  Ask on WhatsApp
-                </a>
+                {waHref ? (
+                  <a
+                    href={waHref}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-[0.9rem] transition-colors hover:border-jade hover:text-jade"
+                  >
+                    <WhatsAppIcon className="text-lg" />
+                    Ask on WhatsApp
+                  </a>
+                ) : null}
               </div>
               <p className="text-[0.8rem] leading-relaxed text-fog/55">No payment now. We confirm availability and send the final price first.</p>
             </div>
@@ -383,14 +385,16 @@ function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
   );
 }
 
-/** Same WhatsApp chat, with the selection as the opening message. Non-WhatsApp links pass through unchanged. */
-function withText(href: string, text: string): string {
+const WHATSAPP_HOSTS = new Set(["wa.me", "api.whatsapp.com"]);
+
+/** Same WhatsApp chat, with the selection as the opening message. Anything that is not a WhatsApp https link gives null (no button). */
+function withText(href: string, text: string): string | null {
   try {
     const url = new URL(href);
-    if (url.hostname !== "wa.me" && url.hostname !== "api.whatsapp.com") return href;
+    if (url.protocol !== "https:" || !WHATSAPP_HOSTS.has(url.hostname)) return null;
     // encodeURIComponent (spaces as %20): some WhatsApp clients show "+" literally.
     return `${url.origin}${url.pathname}?text=${encodeURIComponent(text)}`;
   } catch {
-    return href;
+    return null;
   }
 }

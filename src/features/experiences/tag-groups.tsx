@@ -34,7 +34,7 @@ export function TagGroups({ groups }: { groups: Group[] }) {
             <ul className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
               {g.links.map((l) => (
                 <li key={l.href} className="border-b border-ink/10">
-                  <a href={l.href} className="group flex items-center justify-between gap-4 py-4 transition-colors hover:text-river">
+                  <a href={l.href} rel="noreferrer noopener" className="group flex items-center justify-between gap-4 py-4 transition-colors hover:text-river">
                     <span>{l.label}</span>
                     <ArrowUpRightIcon className="shrink-0 text-moss transition-transform duration-500 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-river" />
                   </a>
