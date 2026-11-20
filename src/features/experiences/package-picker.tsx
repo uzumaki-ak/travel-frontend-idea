@@ -1,19 +1,18 @@
 "use client";
 
 /**
- * The booking core: 01 date → 02 package → 03 travellers, a live price summary,
+ * The booking core: 01 package → 02 travellers, a live price summary,
  * and the selected package's details (itinerary, stays, what's in it).
- * Nothing is charged online yet: "Request to book" hands the selection to the
- * enquiry form (and WhatsApp). Online payment plugs in at `onRequest` later.
+ * Nothing is charged online yet: "Book now" and "Request to book" open the
+ * enquiry popup with the selection filled in (WhatsApp stays as an option). Online payment plugs in at `onRequest` later.
  */
 import * as Tabs from "@radix-ui/react-tabs";
 import Image from "next/image";
 import { useId, useMemo, useState } from "react";
 import type { ExperiencePackage } from "@/content/experiences/schema";
 import { ENQUIRY_PREFILL_EVENT } from "@/features/enquiry/enquiry-form";
-import { DatePicker } from "@/ui/date-picker";
 import { ArrowRightIcon, CheckIcon, MinusIcon, PlusIcon, StarIcon, WhatsAppIcon } from "@/ui/icons";
-import { formatFullDate, formatInr, plural, savingPercent } from "./format";
+import { formatInr, plural, savingPercent } from "./format";
 import { ItineraryTimeline } from "./itinerary-timeline";
 import { PER_UNIT_MAX, groupRange, initialSelection, optionFor, quote, type Selection } from "./pricing";
 
@@ -28,7 +27,6 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
   const [active, setActive] = useState(0);
   const pkg = packages[active] ?? packages[0];
   const [selection, setSelection] = useState<Selection>(() => initialSelection(pkg));
-  const [date, setDate] = useState<string>();
   const q = useMemo(() => quote(pkg, selection), [pkg, selection]);
 
   const choosePackage = (i: number) => {
@@ -41,7 +39,6 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
   const message = [
     `Booking request: ${experienceTitle}`,
     `Package: ${pkg.name}`,
-    `Date: ${date ? formatFullDate(date) : "Not chosen yet"}`,
     `Travellers: ${selection.mode === "group" ? plural(q.travellers, "person", "people") : q.lines.map((l) => `${l.qty} × ${l.label}`).join(", ") || "—"}`,
     q.total != null ? `Quoted total: ${formatInr(q.total)}` : "Quote needed for this group size",
   ].join("\n");
@@ -56,34 +53,31 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
   return (
     <section id="packages" aria-labelledby="packages-title" className="scroll-mt-32 md:scroll-mt-44 bg-cloud py-20 md:py-28">
       <div className="wrap flex flex-col gap-12">
-        <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="flex flex-col gap-3">
-            <span className="label text-moss">Reserve now · pay later</span>
-            <h2 id="packages-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
-              Choose your package
-            </h2>
-          </div>
-          <p className="max-w-[40ch] text-[0.95rem] text-moss">Pick a date, a package and your group size. The price updates as you go.</p>
-        </header>
+        <h2 id="packages-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
+          Choose your package
+        </h2>
 
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-14">
           {/* Steps */}
           <div className="flex min-w-0 flex-col gap-10 lg:col-span-7">
-            <Step n="01" title="When are you going?" htmlFor={`${uid}-date`}>
-              <div className="rounded-2xl bg-fog px-5 py-1">
-                <DatePicker id={`${uid}-date`} name="experienceDate" placeholder="Select a date" minDaysFromToday={1} onPick={setDate} />
-              </div>
-            </Step>
-
-            <Step n="02" title="Package type" as="fieldset">
-              <div className="flex flex-col gap-3">
+            <Step n="01" title="Package type">
+              {/* Phones: a swipe row (next card peeks in). Tablet up: a stacked list. */}
+              <div className="scrollbar-none -mx-(--gutter-x) flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:mx-0 md:flex-col md:overflow-visible md:px-0 md:pb-0">
                 {packages.map((p, i) => (
-                  <PackageOption key={p.id} pkg={p} name={`${uid}-pkg`} checked={i === active} onChange={() => choosePackage(i)} />
+                  <PackageOption
+                    key={p.id}
+                    pkg={p}
+                    name={`${uid}-pkg`}
+                    checked={i === active}
+                    onChange={() => choosePackage(i)}
+                    bookHref="#enquiry"
+                    onBook={onRequest}
+                  />
                 ))}
               </div>
             </Step>
 
-            <Step n="03" title={selection.mode === "group" ? "Group size" : "Tickets"} as="fieldset">
+            <Step n="02" title={selection.mode === "group" ? "Group size" : "Tickets"}>
               {selection.mode === "group" ? (
                 <GroupStepper pkg={pkg} travellers={selection.travellers} onChange={(n) => setSelection({ mode: "group", travellers: n })} />
               ) : (
@@ -113,8 +107,6 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
               </div>
 
               <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[0.9rem]">
-                <dt className="text-fog/60">Date</dt>
-                <dd className="text-right">{date ? formatFullDate(date) : <span className="text-fog/50">Not chosen</span>}</dd>
                 <dt className="text-fog/60">Travellers</dt>
                 <dd className="text-right tabular-nums">{q.travellers ? plural(q.travellers, "person", "people") : "—"}</dd>
                 {q.lines.map((l) => (
@@ -188,46 +180,50 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
   );
 }
 
-function Step({ n, title, as = "div", htmlFor, children }: { n: string; title: string; as?: "div" | "fieldset"; htmlFor?: string; children: React.ReactNode }) {
-  const heading = (
-    <span className="flex items-baseline gap-3">
-      <span className="font-mono text-[0.8rem] text-mandarin tabular-nums">{n}</span>
-      <span className="font-display text-[1.25rem] font-semibold tracking-[-0.01em]">{title}</span>
-    </span>
-  );
-  if (as === "fieldset") {
-    return (
-      <fieldset className="flex min-w-0 flex-col gap-4">
-        <legend className="mb-4">{heading}</legend>
-        {children}
-      </fieldset>
-    );
-  }
+function Step({ n, title, children }: { n: string; title: string; children: React.ReactNode }) {
   return (
-    <div className="flex flex-col gap-4">
-      {htmlFor ? <label htmlFor={htmlFor}>{heading}</label> : heading}
+    <fieldset className="flex min-w-0 flex-col gap-4">
+      <legend className="mb-4 flex items-baseline gap-3">
+        <span className="font-mono text-[0.8rem] text-mandarin tabular-nums">{n}</span>
+        <span className="font-display text-[1.25rem] font-semibold tracking-[-0.01em]">{title}</span>
+      </legend>
       {children}
-    </div>
+    </fieldset>
   );
 }
 
-function PackageOption({ pkg, name, checked, onChange }: { pkg: ExperiencePackage; name: string; checked: boolean; onChange: () => void }) {
+type PackageOptionProps = {
+  pkg: ExperiencePackage;
+  name: string;
+  checked: boolean;
+  onChange: () => void;
+  /** Where "Book now" goes (only the selected card shows it). */
+  bookHref: string;
+  onBook: () => void;
+};
+
+function PackageOption({ pkg, name, checked, onChange, bookHref, onBook }: PackageOptionProps) {
   const cheapest = pkg.priceOptions.reduce((a, b) => (b.price < a.price ? b : a));
   const from = pkg.pricingMode === "per-unit" ? "per person" : `for ${cheapest.label}`;
   return (
-    <label className="group relative flex cursor-pointer flex-col gap-3 rounded-2xl border border-ink/12 bg-fog p-5 transition-[background-color,border-color,color] duration-300 hover:border-ink/40 has-checked:border-ink has-checked:bg-ink has-checked:text-fog has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-mandarin md:p-6">
+    <label className="group relative flex w-[84%] shrink-0 cursor-pointer snap-start flex-col gap-3 rounded-2xl border border-ink/12 bg-fog p-5 transition-[background-color,border-color,color] duration-300 hover:border-ink/40 has-checked:border-ink has-checked:bg-ink has-checked:text-fog has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-mandarin md:w-auto md:p-6">
       <input type="radio" name={name} checked={checked} onChange={onChange} className="sr-only" />
       <span className="flex items-start justify-between gap-4">
         <span className="flex min-w-0 flex-col gap-1.5">
           {pkg.tag ? <span className="label text-mandarin">{pkg.tag}</span> : null}
           <span className="font-display text-[1.1rem] leading-snug font-semibold">{pkg.name}</span>
+          <span className="flex flex-wrap items-baseline gap-x-1.5">
+            <span className="text-[0.8rem] text-moss group-has-checked:text-fog/60">From</span>
+            <span className="font-mono text-[1.15rem] font-semibold tabular-nums">{formatInr(cheapest.price)}</span>
+            <span className="text-[0.8rem] text-moss group-has-checked:text-fog/60">{from}</span>
+          </span>
           {pkg.summary ? <span className="text-[0.9rem] text-moss group-has-checked:text-fog/70">{pkg.summary}</span> : null}
         </span>
         <span aria-hidden="true" className="grid size-7 shrink-0 place-items-center rounded-full border border-ink/25 text-[0.9rem] text-transparent transition-colors group-has-checked:border-jade group-has-checked:bg-jade group-has-checked:text-river-deep">
           <CheckIcon />
         </span>
       </span>
-      <span className="flex flex-wrap items-end justify-between gap-3">
+      <span className="mt-auto flex flex-wrap items-end justify-between gap-3">
         <span className="flex flex-wrap gap-1.5">
           {pkg.chips.slice(0, 3).map((c) => (
             <span key={c} className="rounded-full bg-ink/6 px-2.5 py-1 text-[0.75rem] group-has-checked:bg-white/10">
@@ -235,11 +231,19 @@ function PackageOption({ pkg, name, checked, onChange }: { pkg: ExperiencePackag
             </span>
           ))}
         </span>
-        <span className="flex items-baseline gap-1.5 whitespace-nowrap">
-          <span className="text-[0.8rem] text-moss group-has-checked:text-fog/60">From</span>
-          <span className="font-mono text-[1rem] font-semibold tabular-nums">{formatInr(cheapest.price)}</span>
-          <span className="text-[0.8rem] text-moss group-has-checked:text-fog/60">{from}</span>
-        </span>
+        {checked ? (
+          <a
+            href={bookHref}
+            {...(bookHref.startsWith("#") ? {} : { target: "_blank", rel: "noreferrer noopener" })}
+            onClick={onBook}
+            className="group/book inline-flex shrink-0 cursor-pointer items-center gap-3 rounded-full bg-mandarin py-1.5 pr-1.5 pl-5 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
+          >
+            Book now
+            <span className="grid size-8 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover/book:translate-x-1">
+              <ArrowRightIcon />
+            </span>
+          </a>
+        ) : null}
       </span>
     </label>
   );
@@ -311,10 +315,7 @@ function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
   ];
   return (
     <div className="flex flex-col gap-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-fog p-6 motion-safe:animate-[fade-in_0.5s_var(--ease-out-expo)] md:p-8">
-      <div className="flex flex-col gap-1">
-        <span className="label text-moss">Itinerary &amp; details · changes with the package</span>
-        <h3 className="font-display text-[1.4rem] leading-tight font-semibold tracking-[-0.01em]">{pkg.name}</h3>
-      </div>
+      <h3 className="font-display text-[1.4rem] leading-tight font-semibold tracking-[-0.01em]">{pkg.name}</h3>
       <Tabs.Root defaultValue="itinerary" className="flex flex-col gap-7">
         <Tabs.List aria-label="Package details" className="flex gap-6 border-b border-ink/12">
           {tabs.map((t) => (

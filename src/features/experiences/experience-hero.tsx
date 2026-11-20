@@ -5,16 +5,16 @@ import type { Experience } from "@/content/experiences/schema";
 import { ArrowRightIcon, ClockIcon, PinIcon } from "@/ui/icons";
 import { formatInr, plural, savingPercent } from "./format";
 import { RatingStars } from "./rating-stars";
+import { SmoothAnchor } from "./smooth-anchor";
 
 type Crumb = { label: string; href: string };
 
 /**
  * Opener: breadcrumb, title and a "trail ticket" — a perforated stub with the
- * rating, the lowest price and the jump to the package picker.
+ * lowest price and the jump to the package picker. The ticket is hidden on phones.
  */
 export function ExperienceHero({ experience, crumbs, from }: { experience: Experience; crumbs: Crumb[]; from: FromPrice }) {
   const { location, rating, duration, badge, categories } = experience;
-  const saving = savingPercent(from.price, from.compareAt);
   // Location hubs are not built yet; only link them once they exist.
   const locationHref = location.href && isServedPath(location.href) ? location.href : null;
 
@@ -85,49 +85,55 @@ export function ExperienceHero({ experience, crumbs, from }: { experience: Exper
           </ul>
         </div>
 
-        {/* The ticket stub. Notches are cut with radial gradients in the fog colour. */}
-        <div className="hero-fade lg:col-span-4 [--delay:520ms]">
-          <div className="relative flex flex-col overflow-hidden rounded-[1.75rem] bg-ink text-fog">
-            <div className="flex items-start justify-between gap-4 p-6 pb-5">
-              <div className="flex flex-col gap-1">
-                <span className="label text-jade">From</span>
-                <span className="flex flex-wrap items-baseline gap-x-2">
-                  <span className="font-display text-[clamp(2rem,3.4vw,2.75rem)] leading-none font-bold tracking-[-0.03em] tabular-nums">
-                    {formatInr(from.price)}
-                  </span>
-                  {from.compareAt && saving ? (
-                    <s className="font-mono text-[0.85rem] text-fog/50 tabular-nums">{formatInr(from.compareAt)}</s>
-                  ) : null}
-                </span>
-                <span className="text-[0.85rem] text-fog/60">{from.unit}</span>
-              </div>
-              {saving ? <span className="shrink-0 rounded-full bg-jade px-3 py-1 label text-river-deep">−{saving}%</span> : null}
-            </div>
-
-            <div aria-hidden="true" className="relative mx-6 border-t border-dashed border-white/20">
-              <span className="absolute -top-3 -left-9 size-6 rounded-full bg-fog" />
-              <span className="absolute -top-3 -right-9 size-6 rounded-full bg-fog" />
-            </div>
-
-            <div className="flex items-center justify-between gap-4 p-6 pt-5">
-              <span className="font-mono text-[0.75rem] leading-relaxed text-fog/60">
-                {plural(experience.packages.length, "package", "packages")}
-                <br />
-                Reserve now, pay later
-              </span>
-              <a
-                href="#packages"
-                className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-mandarin py-2 pr-2 pl-5 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
-              >
-                Choose package
-                <span className="grid size-9 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
-                  <ArrowRightIcon />
-                </span>
-              </a>
-            </div>
-          </div>
+        {/* Hidden on phones. On desktop a pinned copy (StickyTicket) takes over below the photos. */}
+        <div id="hero-ticket" className="hero-fade hidden md:block lg:col-span-4 [--delay:520ms]">
+          <PriceTicket from={from} packageCount={experience.packages.length} />
         </div>
       </div>
     </section>
+  );
+}
+
+/** The ticket stub. Notches are circles in the page (fog) colour. */
+export function PriceTicket({ from, packageCount }: { from: FromPrice; packageCount: number }) {
+  const saving = savingPercent(from.price, from.compareAt);
+  return (
+    <div className="relative flex flex-col overflow-hidden rounded-[1.75rem] bg-ink text-fog">
+      <div className="flex items-start justify-between gap-4 p-6 pb-5">
+        <div className="flex flex-col gap-1">
+          <span className="label text-jade">From</span>
+          <span className="flex flex-wrap items-baseline gap-x-2">
+            <span className="font-display text-[clamp(2rem,3.4vw,2.75rem)] leading-none font-bold tracking-[-0.03em] tabular-nums">
+              {formatInr(from.price)}
+            </span>
+            {from.compareAt && saving ? <s className="font-mono text-[0.85rem] text-fog/50 tabular-nums">{formatInr(from.compareAt)}</s> : null}
+          </span>
+          <span className="text-[0.85rem] text-fog/60">{from.unit}</span>
+        </div>
+        {saving ? <span className="shrink-0 rounded-full bg-jade px-3 py-1 label text-river-deep">−{saving}%</span> : null}
+      </div>
+
+      <div aria-hidden="true" className="relative mx-6 border-t border-dashed border-white/20">
+        <span className="absolute -top-3 -left-9 size-6 rounded-full bg-fog" />
+        <span className="absolute -top-3 -right-9 size-6 rounded-full bg-fog" />
+      </div>
+
+      <div className="flex flex-wrap items-center justify-between gap-4 p-6 pt-5">
+        <span className="font-mono text-[0.75rem] leading-relaxed whitespace-nowrap text-fog/60">
+          {plural(packageCount, "package", "packages")}
+          <br />
+          Reserve now, pay later
+        </span>
+        <SmoothAnchor
+          href="#packages"
+          className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-mandarin py-2 pr-2 pl-5 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
+        >
+          Choose package
+          <span className="grid size-9 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
+            <ArrowRightIcon />
+          </span>
+        </SmoothAnchor>
+      </div>
+    </div>
   );
 }

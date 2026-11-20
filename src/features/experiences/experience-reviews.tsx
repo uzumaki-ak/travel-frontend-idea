@@ -2,7 +2,7 @@
 
 /**
  * Reviews: overall score, per-aspect bars, star distribution, and the list,
- * filterable by package, newest first, four at a time.
+ * newest first, four at a time.
  */
 import { useMemo, useState } from "react";
 import type { Experience } from "@/content/experiences/schema";
@@ -12,29 +12,20 @@ import { RatingStars } from "./rating-stars";
 const PAGE = 4;
 
 export function ExperienceReviews({ rating, reviews }: { rating: Experience["rating"]; reviews: Experience["reviews"] }) {
-  const [filter, setFilter] = useState<string>("all");
   const [shown, setShown] = useState(PAGE);
-
-  const packages = useMemo(() => [...new Set(reviews.map((r) => r.packageName).filter((p): p is string => Boolean(p)))], [reviews]);
-  const sorted = useMemo(
-    () => [...reviews].filter((r) => filter === "all" || r.packageName === filter).sort((a, b) => b.date.localeCompare(a.date)),
-    [reviews, filter],
-  );
+  const sorted = useMemo(() => [...reviews].sort((a, b) => b.date.localeCompare(a.date)), [reviews]);
   const distribution = [5, 4, 3, 2, 1].map((stars) => ({ stars, count: reviews.filter((r) => r.rating === stars).length }));
 
   if (!reviews.length && !rating.count) return null;
 
   return (
     <section id="reviews" aria-labelledby="reviews-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-10">
-      <div className="flex flex-col gap-3">
-        <span className="label text-moss">Traveller reviews</span>
-        <h2 id="reviews-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
-          What travellers say
-        </h2>
-      </div>
+      <h2 id="reviews-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
+        What travellers say
+      </h2>
 
-      <div className="grid gap-10 lg:grid-cols-12">
-        <div className="flex flex-col gap-8 lg:col-span-4">
+      <div className="grid gap-10">
+        <div className="grid gap-8 md:grid-cols-2">
           <div className="flex items-end gap-4">
             <span className="font-display text-[clamp(3.5rem,7vw,5.5rem)] leading-[0.85] font-bold tracking-[-0.04em] tabular-nums">{rating.average.toFixed(1)}</span>
             <span className="flex flex-col gap-1.5 pb-1">
@@ -74,26 +65,7 @@ export function ExperienceReviews({ rating, reviews }: { rating: Experience["rat
           ) : null}
         </div>
 
-        <div className="flex min-w-0 flex-col gap-6 lg:col-span-8">
-          {packages.length > 1 ? (
-            <div role="group" aria-label="Filter reviews by package" className="scrollbar-none -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
-              {["all", ...packages].map((p) => (
-                <button
-                  key={p}
-                  type="button"
-                  aria-pressed={filter === p}
-                  onClick={() => {
-                    setFilter(p);
-                    setShown(PAGE);
-                  }}
-                  className="shrink-0 rounded-full border border-ink/15 px-4 py-2 text-[0.85rem] transition-colors hover:border-ink aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-fog"
-                >
-                  {p === "all" ? "All packages" : p}
-                </button>
-              ))}
-            </div>
-          ) : null}
-
+        <div className="flex min-w-0 flex-col gap-6">
           <ul className="flex flex-col">
             {sorted.slice(0, shown).map((r) => (
               <li key={`${r.name}-${r.date}`} className="flex flex-col gap-3 border-t border-ink/10 py-6 first:border-t-0 first:pt-0">

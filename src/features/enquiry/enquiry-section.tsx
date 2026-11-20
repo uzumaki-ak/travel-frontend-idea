@@ -6,9 +6,11 @@ type EnquirySectionProps = {
   /** Heading from the source page ("Query Form" on the homepage, "Package Query Form" on tours). */
   title?: string;
   context?: EnquiryFormContext;
+  /** Tighter spacing and a smaller heading when shown inside the enquiry popup. */
+  inDialog?: boolean;
 };
 
-export function EnquirySection({ title, context }: EnquirySectionProps = {}) {
+export function EnquirySection({ title, context, inDialog = false }: EnquirySectionProps = {}) {
   const { enquiry, contact } = home;
 
   const copy: EnquiryFormCopy = {
@@ -26,24 +28,29 @@ export function EnquirySection({ title, context }: EnquirySectionProps = {}) {
   ];
 
   return (
-    <section id="enquiry" aria-labelledby="enquiry-title" className="scroll-mt-24 py-24 md:py-36">
-      <div className="wrap grid gap-16 lg:grid-cols-12">
-        <div className="flex flex-col gap-10 lg:col-span-5">
+    <section
+      id="enquiry"
+      aria-labelledby="enquiry-title"
+      className={inDialog ? "px-5 pt-5 pb-10 md:p-10 md:pt-12" : "scroll-mt-24 py-24 md:py-36"}
+    >
+      <div className={inDialog ? "grid gap-10 lg:grid-cols-12" : "wrap grid gap-16 lg:grid-cols-12"}>
+        <div className={inDialog ? "flex flex-col gap-6 lg:col-span-5" : "flex flex-col gap-10 lg:col-span-5"}>
           <h2
             id="enquiry-title"
-            data-motion="lines"
-            className="font-display text-display font-bold tracking-[-0.04em] uppercase"
+            data-motion={inDialog ? undefined : "lines"}
+            className={`font-display font-bold tracking-[-0.04em] uppercase ${inDialog ? "hidden pr-14 text-title md:block" : "text-display"}`}
           >
             {title ?? enquiry.formTitle}
           </h2>
-          <ul className="flex flex-col gap-4">
+          {/* In the popup on phones the contact lines shrink to a row of icon buttons. */}
+          <ul className={inDialog ? "flex gap-3 md:flex-col md:gap-4" : "flex flex-col gap-4"}>
             {lines.map(({ label, value, href, Icon }) => (
-              <li key={label} data-motion="rise">
-                <a href={href} className="group flex items-center gap-4">
+              <li key={label} data-motion={inDialog ? undefined : "rise"}>
+                <a href={href} aria-label={inDialog ? `${label} ${value}` : undefined} className="group flex items-center gap-4">
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-cloud text-xl transition-colors group-hover:bg-ink group-hover:text-fog">
                     <Icon />
                   </span>
-                  <span className="flex flex-col">
+                  <span className={inDialog ? "hidden flex-col md:flex" : "flex flex-col"}>
                     <span className="label text-moss">{label}</span>
                     <span className="font-mono text-[0.95rem] tabular-nums">{value}</span>
                   </span>

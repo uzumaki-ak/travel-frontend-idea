@@ -6,14 +6,16 @@ import type { Experience } from "@/content/experiences/schema";
 import { experiencePath } from "@/content/experiences/slugs";
 import { home } from "@/content/home";
 import { resolveSitePath } from "@/content/routes";
+import { EnquiryDialog } from "@/features/enquiry/enquiry-dialog";
 import { EnquirySection } from "@/features/enquiry/enquiry-section";
 import { ExperienceCard } from "@/features/experiences/experience-card";
 import { ExperienceGallery } from "@/features/experiences/experience-gallery";
-import { ExperienceHero } from "@/features/experiences/experience-hero";
+import { ExperienceHero, PriceTicket } from "@/features/experiences/experience-hero";
 import { ExperienceReviews } from "@/features/experiences/experience-reviews";
 import { ExperienceFaq, GoodToKnow, Inclusions, KeyFacts, Overview } from "@/features/experiences/experience-sections";
 import { PackagePicker } from "@/features/experiences/package-picker";
 import { SectionNav, type SectionLink } from "@/features/experiences/section-nav";
+import { StickyTicket } from "@/features/experiences/sticky-ticket";
 import { TagGroups } from "@/features/experiences/tag-groups";
 import { SiteShell } from "@/features/site-chrome/site-shell";
 import { JsonLd } from "@/ui/json-ld";
@@ -61,30 +63,40 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
     <SiteShell section="/tours/">
       <ExperienceHero experience={experience} crumbs={crumbs} from={fromPrice(experience)} />
       <ExperienceGallery photos={experience.gallery} title={experience.title} />
+      <KeyFacts facts={experience.facts} />
       <SectionNav links={sectionLinks(experience)} />
 
-      <div className="wrap grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-10">
-        <div className="min-w-0 lg:col-span-7">
-          <Overview experience={experience} />
-        </div>
-        <div className="lg:sticky lg:top-48 lg:col-span-5 lg:self-start">
-          <KeyFacts facts={experience.facts} />
-        </div>
-      </div>
+      {/*
+        Price ticket: hidden on phones, shown under the title on tablets; from lg up it is
+        pinned in a right-hand column for the whole content (overview → FAQ). The package
+        section has its own "Your selection" card, so the ticket steps aside there.
+      */}
+      <div className="relative">
+        <StickyTicket yieldTo="packages" afterId="hero-ticket">
+          <PriceTicket from={fromPrice(experience)} packageCount={experience.packages.length} />
+        </StickyTicket>
 
-      <PackagePicker experienceTitle={experience.title} packages={experience.packages} whatsappHref={home.enquiry.whatsappHref} />
+        <div className="wrap py-16 md:py-24 lg:grid lg:grid-cols-12 lg:gap-10">
+          <div className="min-w-0 lg:col-span-7">
+            <Overview experience={experience} />
+          </div>
+        </div>
 
-      <div className="wrap flex flex-col gap-20 py-20 md:gap-28 md:py-28">
-        <Inclusions includes={experience.includes} excludes={experience.excludes} />
-        <GoodToKnow experience={experience} />
-        <ExperienceReviews rating={experience.rating} reviews={experience.reviews} />
-        <ExperienceFaq faqs={experience.faqs} />
+        <PackagePicker experienceTitle={experience.title} packages={experience.packages} whatsappHref={home.enquiry.whatsappHref} />
+
+        <div className="wrap py-20 md:py-28 lg:grid lg:grid-cols-12 lg:gap-10">
+          <div className="flex min-w-0 flex-col gap-20 md:gap-28 lg:col-span-7">
+            <Inclusions includes={experience.includes} excludes={experience.excludes} />
+            <GoodToKnow experience={experience} />
+            <ExperienceReviews rating={experience.rating} reviews={experience.reviews} />
+            <ExperienceFaq faqs={experience.faqs} />
+          </div>
+        </div>
       </div>
 
       {related.length ? (
         <section aria-labelledby="related-title" className="flex flex-col gap-10 bg-cloud py-20 md:py-28">
-          <div className="wrap flex flex-col gap-3">
-            <span className="label text-moss">More like this</span>
+          <div className="wrap">
             <h2 id="related-title" data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
               You might also like
             </h2>
@@ -105,7 +117,10 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
         </div>
       ) : null}
 
-      <EnquirySection title="Request to book" />
+      {/* The enquiry form opens as a popup from "Book now", "Request to book" and "Send Enquiry". */}
+      <EnquiryDialog title="Request to book">
+        <EnquirySection title="Request to book" inDialog />
+      </EnquiryDialog>
 
       <JsonLd data={structuredData(experience, crumbs)} />
     </SiteShell>

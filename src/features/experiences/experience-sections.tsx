@@ -28,22 +28,20 @@ const FACT_ICON = {
   hotel: BedIcon,
 } as const;
 
+/** One horizontal, swipeable row of short facts right under the photos. */
 export function KeyFacts({ facts }: { facts: Experience["facts"] }) {
   if (!facts.length) return null;
   return (
-    <section aria-label="Key details">
-      <ul className="grid gap-px overflow-hidden rounded-tl-[2rem] rounded-br-[2rem] border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-1">
+    <section aria-label="Key details" className="wrap pt-6 md:pt-8">
+      <ul className="scrollbar-none -mx-(--gutter-x) flex snap-x gap-2.5 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1">
         {facts.map((f) => {
           const Icon = FACT_ICON[f.icon];
           return (
-            <li key={f.title} data-motion="rise" className="flex items-start gap-4 bg-fog p-5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-river text-lg text-jade">
+            <li key={f.title} className="flex shrink-0 snap-start items-center gap-2.5 rounded-full border border-ink/12 py-1.5 pr-4 pl-1.5">
+              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-river text-jade">
                 <Icon />
               </span>
-              <span className="flex flex-col gap-0.5">
-                <span className="font-semibold">{f.title}</span>
-                <span className="text-[0.9rem] leading-snug text-moss">{f.text}</span>
-              </span>
+              <span className="text-[0.92rem] font-medium whitespace-nowrap">{f.title}</span>
             </li>
           );
         })}
@@ -55,7 +53,7 @@ export function KeyFacts({ facts }: { facts: Experience["facts"] }) {
 export function Overview({ experience }: { experience: Experience }) {
   return (
     <section id="overview" aria-labelledby="overview-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
-      <SectionTitle id="overview-title" eyebrow="Overview">
+      <SectionTitle id="overview-title">
         About this experience
       </SectionTitle>
       <p data-motion="words" className="font-display text-lead font-medium tracking-[-0.02em]">
@@ -89,7 +87,7 @@ export function Inclusions({ includes, excludes }: { includes: string[]; exclude
   if (!includes.length && !excludes.length) return null;
   return (
     <section id="included" aria-labelledby="includes-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
-      <SectionTitle id="includes-title" eyebrow="The fine print">
+      <SectionTitle id="includes-title">
         What’s included
       </SectionTitle>
       <div className="grid gap-4 md:grid-cols-2">
@@ -124,7 +122,7 @@ export function GoodToKnow({ experience }: { experience: Experience }) {
   if (!importantInfo.length && !notSuitableFor.length && !meetingPoint) return null;
   return (
     <section id="know" aria-labelledby="know-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
-      <SectionTitle id="know-title" eyebrow="Before you go">
+      <SectionTitle id="know-title">
         Good to know
       </SectionTitle>
       <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
@@ -170,7 +168,7 @@ export function ExperienceFaq({ faqs }: { faqs: Experience["faqs"] }) {
   if (!faqs.length) return null;
   return (
     <section id="faq" aria-labelledby="faq-title" className="scroll-mt-32 md:scroll-mt-44 flex flex-col gap-8">
-      <SectionTitle id="faq-title" eyebrow="Questions">
+      <SectionTitle id="faq-title">
         Frequently asked
       </SectionTitle>
       <div className="flex flex-col">
@@ -191,13 +189,10 @@ export function ExperienceFaq({ faqs }: { faqs: Experience["faqs"] }) {
   );
 }
 
-export function SectionTitle({ id, eyebrow, children }: { id: string; eyebrow: string; children: React.ReactNode }) {
+export function SectionTitle({ id, children }: { id: string; children: React.ReactNode }) {
   return (
-    <div className="flex flex-col gap-3">
-      <span className="label text-moss">{eyebrow}</span>
-      <h2 id={id} data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
-        {children}
-      </h2>
-    </div>
+    <h2 id={id} data-motion="lines" className="font-display text-title font-bold tracking-[-0.03em]">
+      {children}
+    </h2>
   );
 }

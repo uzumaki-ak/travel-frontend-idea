@@ -11,7 +11,7 @@ import { ArrowLeftIcon, ArrowRightIcon, CrossIcon, GridIcon } from "@/ui/icons";
 
 type Photo = { src: string; alt: string };
 
-const TILE = "group relative block h-full w-full overflow-hidden bg-cloud focus-visible:outline-offset-[-3px]";
+const TILE = "group relative block h-full w-full cursor-pointer overflow-hidden bg-cloud focus-visible:outline-offset-[-3px]";
 const IMG = "object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.04]";
 
 export function ExperienceGallery({ photos, title }: { photos: Photo[]; title: string }) {
@@ -84,7 +84,7 @@ function MobileRail({ photos, onOpen }: { photos: Photo[]; onOpen: (i: number) =
             type="button"
             onClick={() => onOpen(i)}
             aria-label={`Open photo ${i + 1}: ${p.alt}`}
-            className={`relative aspect-[4/5] w-[86%] shrink-0 snap-start overflow-hidden bg-cloud ${i === 0 ? "rounded-tl-[2.5rem] rounded-br-[2.5rem]" : "rounded-[1.25rem]"}`}
+            className={`relative aspect-[4/5] w-[86%] shrink-0 cursor-pointer snap-start overflow-hidden bg-cloud ${i === 0 ? "rounded-tl-[2.5rem] rounded-br-[2.5rem]" : "rounded-[1.25rem]"}`}
           >
             <Image src={p.src} alt="" fill sizes="86vw" preload={i === 0} className="object-cover" />
           </button>
@@ -145,7 +145,7 @@ function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: Lightb
               <span className="font-mono text-[0.8rem] text-fog/70 tabular-nums" aria-live="polite">
                 {index + 1} / {count}
               </span>
-              <Dialog.Close aria-label="Close photos" className="grid size-11 place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink">
+              <Dialog.Close aria-label="Close photos" className="grid size-11 cursor-pointer place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink">
                 <CrossIcon />
               </Dialog.Close>
             </div>
@@ -162,10 +162,10 @@ function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: Lightb
             ) : null}
             {count > 1 ? (
               <>
-                <button type="button" aria-label="Previous photo" onClick={() => go(-1)} className="absolute top-1/2 left-(--gutter-x) hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink sm:grid">
+                <button type="button" aria-label="Previous photo" onClick={() => go(-1)} className="absolute top-1/2 left-(--gutter-x) hidden size-12 cursor-pointer -translate-y-1/2 place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink sm:grid">
                   <ArrowLeftIcon />
                 </button>
-                <button type="button" aria-label="Next photo" onClick={() => go(1)} className="absolute top-1/2 right-(--gutter-x) hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink sm:grid">
+                <button type="button" aria-label="Next photo" onClick={() => go(1)} className="absolute top-1/2 right-(--gutter-x) hidden size-12 cursor-pointer -translate-y-1/2 place-items-center rounded-full bg-white/10 text-xl transition-colors hover:bg-fog hover:text-ink sm:grid">
                   <ArrowRightIcon />
                 </button>
               </>
@@ -181,7 +181,7 @@ function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: Lightb
                 onClick={() => setIndex(i)}
                 aria-label={`Show photo ${i + 1}`}
                 aria-current={i === index || undefined}
-                className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg opacity-50 transition-opacity aria-[current]:opacity-100 aria-[current]:ring-2 aria-[current]:ring-mandarin hover:opacity-90"
+                className="relative h-14 w-20 shrink-0 cursor-pointer overflow-hidden rounded-lg opacity-50 transition-opacity aria-[current]:opacity-100 aria-[current]:ring-2 aria-[current]:ring-mandarin hover:opacity-90"
               >
                 <Image src={p.src} alt="" fill sizes="96px" className="object-cover" />
               </button>
