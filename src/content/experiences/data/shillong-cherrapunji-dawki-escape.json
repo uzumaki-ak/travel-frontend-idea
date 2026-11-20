@@ -254,7 +254,17 @@
           "image": {
             "src": "/media/home/police-bazar-8-kaga.jpg",
             "alt": "Shillong city"
-          }
+          },
+          "images": [
+            {
+              "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+              "alt": "Umiam Lake on the drive into Shillong"
+            },
+            {
+              "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+              "alt": "Laitlum Canyons near Shillong"
+            }
+          ]
         },
         {
           "place": "Cherrapunji",
@@ -264,7 +274,17 @@
           "image": {
             "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
             "alt": "Cherrapunji valley"
-          }
+          },
+          "images": [
+            {
+              "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+              "alt": "Seven Sisters Falls, Cherrapunji"
+            },
+            {
+              "src": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+              "alt": "Wei Sawdong falls, Cherrapunji"
+            }
+          ]
         }
       ],
       "itinerary": [
@@ -494,7 +514,17 @@
           "image": {
             "src": "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
             "alt": "Shillong"
-          }
+          },
+          "images": [
+            {
+              "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+              "alt": "Umiam Lake on the drive into Shillong"
+            },
+            {
+              "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+              "alt": "Laitlum Canyons near Shillong"
+            }
+          ]
         },
         {
           "place": "Cherrapunji",
@@ -504,7 +534,17 @@
           "image": {
             "src": "/media/tours/Dainthlen-Falls-2-kaga.jpg",
             "alt": "Cherrapunji"
-          }
+          },
+          "images": [
+            {
+              "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+              "alt": "Seven Sisters Falls, Cherrapunji"
+            },
+            {
+              "src": "/media/home/wei-sawdong-falls-2-kaga.jpg",
+              "alt": "Wei Sawdong falls, Cherrapunji"
+            }
+          ]
         }
       ],
       "itinerary": [

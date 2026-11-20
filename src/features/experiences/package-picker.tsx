@@ -3,37 +3,46 @@
 /**
  * The booking core: 01 package → 02 travellers, a live price summary,
  * and the selected package's details (itinerary, stays, what's in it).
- * Nothing is charged online yet: "Book now" and "Request to book" open the
- * enquiry popup with the selection filled in (WhatsApp stays as an option). Online payment plugs in at `onRequest` later.
+ * Nothing is charged online yet: "Book now" opens the enquiry popup with the
+ * selection filled in. The pick is shared (selection-store) so the price ticket,
+ * the phone bar and the popup show it. Online payment plugs in at `onBook` later.
  */
 import * as Tabs from "@radix-ui/react-tabs";
 import Image from "next/image";
-import { useId, useMemo, useState } from "react";
-import type { ExperiencePackage } from "@/content/experiences/schema";
-import { ENQUIRY_PREFILL_EVENT } from "@/features/enquiry/enquiry-form";
-import { ArrowRightIcon, CheckIcon, MinusIcon, PlusIcon, StarIcon, WhatsAppIcon } from "@/ui/icons";
-import { formatInr, plural, savingPercent } from "./format";
+import { useEffect, useId, useMemo, useState } from "react";
+import type { ExperiencePackage, PackageHotel } from "@/content/experiences/schema";
+import { ArrowRightIcon, CheckIcon, GridIcon, MinusIcon, PlusIcon, StarIcon } from "@/ui/icons";
+import { Lightbox } from "./experience-gallery";
+import { formatInr, plural } from "./format";
 import { ItineraryTimeline } from "./itinerary-timeline";
+import { prefillBooking, setPackageSelection, type PackageSelection } from "./selection-store";
 import { PER_UNIT_MAX, groupRange, initialSelection, optionFor, quote, type Selection } from "./pricing";
 
 type PackagePickerProps = {
   experienceTitle: string;
   packages: ExperiencePackage[];
-  whatsappHref: string;
 };
 
-export function PackagePicker({ experienceTitle, packages, whatsappHref }: PackagePickerProps) {
+export function PackagePicker({ experienceTitle, packages }: PackagePickerProps) {
   const uid = useId();
   const [active, setActive] = useState(0);
   const pkg = packages[active] ?? packages[0];
   const [selection, setSelection] = useState<Selection>(() => initialSelection(pkg));
+  // False until the visitor picks a package or changes travellers; until then the
+  // ticket and the phone bar keep saying "Choose package".
+  const [picked, setPicked] = useState(false);
   const q = useMemo(() => quote(pkg, selection), [pkg, selection]);
 
   const choosePackage = (i: number) => {
     const next = packages[i];
     if (!next) return;
+    setPicked(true);
     setActive(i);
     setSelection(initialSelection(next, q.travellers || 2));
+  };
+  const changeTravellers = (next: Selection) => {
+    setPicked(true);
+    setSelection(next);
   };
 
   const message = [
@@ -43,12 +52,27 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
     q.total != null ? `Quoted total: ${formatInr(q.total)}` : "Quote needed for this group size",
   ].join("\n");
 
-  const onRequest = () => {
-    window.dispatchEvent(new CustomEvent(ENQUIRY_PREFILL_EVENT, { detail: { message } }));
+  const snapshot: PackageSelection = {
+    packageName: pkg.name,
+    total: q.total ?? null,
+    compareAt: q.compareAt ?? null,
+    travellers: q.travellers ? plural(q.travellers, "person", "people") : "no travellers yet",
+    message,
   };
+  const snapshotKey = JSON.stringify(snapshot);
 
-  const waHref = withText(whatsappHref, message);
-  const saving = q.total != null ? savingPercent(q.total, q.compareAt ?? undefined) : 0;
+  // Share the pick with the ticket, the phone bar and the enquiry popup.
+  useEffect(() => {
+    if (picked) setPackageSelection(JSON.parse(snapshotKey) as PackageSelection);
+  }, [picked, snapshotKey]);
+  useEffect(() => () => setPackageSelection(null), []);
+
+  // "Book now" on a card: counts as a pick, and fills the form right away.
+  const onBook = () => {
+    setPicked(true);
+    setPackageSelection(snapshot);
+    prefillBooking();
+  };
 
   return (
     <section id="packages" aria-labelledby="packages-title" className="scroll-mt-32 md:scroll-mt-44 bg-cloud py-20 md:py-28">
@@ -71,7 +95,7 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
                     checked={i === active}
                     onChange={() => choosePackage(i)}
                     bookHref="#enquiry"
-                    onBook={onRequest}
+                    onBook={onBook}
                   />
                 ))}
               </div>
@@ -79,7 +103,7 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
 
             <Step n="02" title={selection.mode === "group" ? "Group size" : "Tickets"}>
               {selection.mode === "group" ? (
-                <GroupStepper pkg={pkg} travellers={selection.travellers} onChange={(n) => setSelection({ mode: "group", travellers: n })} />
+                <GroupStepper pkg={pkg} travellers={selection.travellers} onChange={(n) => changeTravellers({ mode: "group", travellers: n })} />
               ) : (
                 <div className="flex flex-col divide-y divide-ink/10 rounded-2xl bg-fog px-5">
                   {pkg.priceOptions.map((o) => (
@@ -90,85 +114,13 @@ export function PackagePicker({ experienceTitle, packages, whatsappHref }: Packa
                       value={selection.counts[o.id] ?? 0}
                       min={0}
                       max={PER_UNIT_MAX}
-                      onChange={(n) => setSelection({ mode: "per-unit", counts: { ...selection.counts, [o.id]: n } })}
+                      onChange={(n) => changeTravellers({ mode: "per-unit", counts: { ...selection.counts, [o.id]: n } })}
                     />
                   ))}
                 </div>
               )}
             </Step>
           </div>
-
-          {/* Live summary: sticky beside the steps from lg up. */}
-          <aside aria-label="Your selection" className="lg:sticky lg:top-48 lg:col-span-5 lg:row-span-2 lg:self-start">
-            <div className="flex flex-col gap-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-ink p-6 text-fog md:p-7">
-              <div className="flex flex-col gap-1">
-                <span className="label text-jade">Your selection</span>
-                <p className="font-display text-[1.2rem] leading-tight font-semibold">{pkg.name}</p>
-              </div>
-
-              <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[0.9rem]">
-                <dt className="text-fog/60">Travellers</dt>
-                <dd className="text-right tabular-nums">{q.travellers ? plural(q.travellers, "person", "people") : "—"}</dd>
-                {q.lines.map((l) => (
-                  <div key={l.label} className="col-span-2 grid grid-cols-subgrid">
-                    <dt className="text-fog/60">{selection.mode === "per-unit" ? `${l.qty} × ${l.label}` : l.label}</dt>
-                    <dd className="text-right font-mono tabular-nums">{formatInr(l.amount)}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              <div className="border-t border-dashed border-white/20 pt-5" aria-live="polite">
-                {q.total != null ? (
-                  <div className="flex items-end justify-between gap-4">
-                    <div className="flex flex-col gap-1">
-                      <span className="label text-fog/60">Total</span>
-                      <span key={q.total} className="font-display text-[clamp(2.2rem,4vw,3rem)] leading-none font-bold tracking-[-0.03em] tabular-nums motion-safe:animate-[fade-in_0.4s_var(--ease-out-expo)]">
-                        {formatInr(q.total)}
-                      </span>
-                      {q.travellers > 1 ? (
-                        <span className="font-mono text-[0.75rem] text-fog/60 tabular-nums">≈ {formatInr(q.total / q.travellers)} per person</span>
-                      ) : null}
-                    </div>
-                    {q.compareAt ? (
-                      <div className="flex flex-col items-end gap-1">
-                        {saving ? <span className="rounded-full bg-jade px-2.5 py-0.5 label text-river-deep">Save {saving}%</span> : null}
-                        <s className="font-mono text-[0.85rem] text-fog/50 tabular-nums">{formatInr(q.compareAt)}</s>
-                      </div>
-                    ) : null}
-                  </div>
-                ) : (
-                  <p className="text-[0.95rem] text-fog/80">
-                    {selection.mode === "per-unit" ? "Add at least one ticket to see the price." : "Tell us your group size and we’ll send a quote."}
-                  </p>
-                )}
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <a
-                  href="#enquiry"
-                  onClick={onRequest}
-                  className="group inline-flex items-center justify-between gap-3 rounded-full bg-mandarin py-2.5 pr-2.5 pl-6 font-display text-[1.05rem] font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
-                >
-                  Request to book
-                  <span className="grid size-10 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
-                    <ArrowRightIcon />
-                  </span>
-                </a>
-                {waHref ? (
-                  <a
-                    href={waHref}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-[0.9rem] transition-colors hover:border-jade hover:text-jade"
-                  >
-                    <WhatsAppIcon className="text-lg" />
-                    Ask on WhatsApp
-                  </a>
-                ) : null}
-              </div>
-              <p className="text-[0.8rem] leading-relaxed text-fog/55">No payment now. We confirm availability and send the final price first.</p>
-            </div>
-          </aside>
 
           {/* Details of the selected package. Re-keyed so it animates on change. */}
           <div id="itinerary" className="scroll-mt-32 md:scroll-mt-44 min-w-0 lg:col-span-7">
@@ -307,6 +259,77 @@ function Counter({ label, hint, value, min, max, onChange }: { label: string; hi
   );
 }
 
+/**
+ * Stays: a swipe row on phones, a two-column grid from sm up. A stay can carry
+ * several photos; tapping the photo opens them all in the lightbox.
+ */
+function HotelList({ hotels }: { hotels: PackageHotel[] }) {
+  const [viewer, setViewer] = useState<{ name: string; photos: { src: string; alt: string }[] } | null>(null);
+  const [index, setIndex] = useState(0);
+  return (
+    <>
+      <ul className="scrollbar-none -mx-6 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-6 px-6 pb-1 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0">
+        {hotels.map((h) => {
+          const photos = hotelPhotos(h);
+          const cover = photos[0];
+          return (
+            <li key={`${h.place}-${h.name}`} className="flex w-[80%] shrink-0 snap-start flex-col overflow-hidden rounded-2xl bg-cloud sm:w-auto">
+              {cover ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIndex(0);
+                    setViewer({ name: h.name, photos });
+                  }}
+                  aria-label={`View ${photos.length > 1 ? `${photos.length} photos` : "photo"} of ${h.name}`}
+                  className="group relative aspect-[16/10] cursor-pointer overflow-hidden focus-visible:outline-offset-[-3px]"
+                >
+                  <Image src={cover.src} alt="" fill sizes="(min-width: 640px) 320px, 80vw" className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.04]" />
+                  {photos.length > 1 ? (
+                    <span className="absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded-full bg-fog/90 px-3 py-1.5 text-[0.8rem] font-medium text-ink backdrop-blur">
+                      <GridIcon />
+                      {photos.length} photos
+                    </span>
+                  ) : null}
+                </button>
+              ) : null}
+              <div className="flex flex-col gap-1.5 p-5">
+                <span className="label text-moss">
+                  {h.place}
+                  {h.nights ? ` · ${plural(h.nights, "night", "nights")}` : ""}
+                </span>
+                <span className="font-medium">{h.name}</span>
+                {h.stars ? (
+                  <span className="flex items-center gap-0.5 text-[0.85rem] text-mandarin" aria-label={`${h.stars}-star hotel`}>
+                    {Array.from({ length: h.stars }, (_, i) => (
+                      <StarIcon key={i} />
+                    ))}
+                  </span>
+                ) : null}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      {viewer ? (
+        <Lightbox
+          photos={viewer.photos}
+          title={viewer.name}
+          open
+          onOpenChange={(o) => !o && setViewer(null)}
+          index={index}
+          setIndex={setIndex}
+        />
+      ) : null}
+    </>
+  );
+}
+
+/** The stay's photos: the single `image` (older data) followed by `images`. */
+function hotelPhotos(h: PackageHotel) {
+  return [...(h.image ? [h.image] : []), ...h.images];
+}
+
 function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
   const tabs = [
     { id: "itinerary", label: "Itinerary" },
@@ -335,31 +358,7 @@ function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
 
         {pkg.hotels.length ? (
           <Tabs.Content value="stays" className="focus-visible:outline-offset-8">
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {pkg.hotels.map((h) => (
-                <li key={`${h.place}-${h.name}`} className="flex flex-col overflow-hidden rounded-2xl bg-cloud">
-                  {h.image ? (
-                    <div className="relative aspect-[16/10]">
-                      <Image src={h.image.src} alt={h.image.alt} fill sizes="(min-width: 640px) 320px, 90vw" className="object-cover" />
-                    </div>
-                  ) : null}
-                  <div className="flex flex-col gap-1.5 p-5">
-                    <span className="label text-moss">
-                      {h.place}
-                      {h.nights ? ` · ${plural(h.nights, "night", "nights")}` : ""}
-                    </span>
-                    <span className="font-medium">{h.name}</span>
-                    {h.stars ? (
-                      <span className="flex items-center gap-0.5 text-[0.85rem] text-mandarin" aria-label={`${h.stars}-star hotel`}>
-                        {Array.from({ length: h.stars }, (_, i) => (
-                          <StarIcon key={i} />
-                        ))}
-                      </span>
-                    ) : null}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <HotelList hotels={pkg.hotels} />
           </Tabs.Content>
         ) : null}
 
@@ -384,18 +383,4 @@ function PackageDetails({ pkg }: { pkg: ExperiencePackage }) {
       </Tabs.Root>
     </div>
   );
-}
-
-const WHATSAPP_HOSTS = new Set(["wa.me", "api.whatsapp.com"]);
-
-/** Same WhatsApp chat, with the selection as the opening message. Anything that is not a WhatsApp https link gives null (no button). */
-function withText(href: string, text: string): string | null {
-  try {
-    const url = new URL(href);
-    if (url.protocol !== "https:" || !WHATSAPP_HOSTS.has(url.hostname)) return null;
-    // encodeURIComponent (spaces as %20): some WhatsApp clients show "+" literally.
-    return `${url.origin}${url.pathname}?text=${encodeURIComponent(text)}`;
-  } catch {
-    return null;
-  }
 }

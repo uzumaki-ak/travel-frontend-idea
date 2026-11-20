@@ -16,6 +16,7 @@ import {
   UsersIcon,
   WalletIcon,
 } from "@/ui/icons";
+import { ReadMore } from "./read-more";
 
 const FACT_ICON = {
   cancel: CalendarCheckIcon,
@@ -56,7 +57,7 @@ export function Overview({ experience }: { experience: Experience }) {
       <SectionTitle id="overview-title">
         About this experience
       </SectionTitle>
-      <p data-motion="words" className="font-display text-lead font-medium tracking-[-0.02em]">
+      <p data-motion="words" className="font-display text-[clamp(1.15rem,1.7vw,1.5rem)] leading-[1.35] font-medium tracking-[-0.015em]">
         {experience.summary}
       </p>
       {experience.highlights.length ? (
@@ -73,11 +74,11 @@ export function Overview({ experience }: { experience: Experience }) {
         </div>
       ) : null}
       {experience.description.length ? (
-        <div className="flex max-w-[68ch] flex-col gap-4 text-[1.02rem] leading-relaxed text-ink/85">
+        <ReadMore lines={6} className="flex max-w-[68ch] flex-col gap-4 text-[1.02rem] leading-relaxed text-ink/85">
           {experience.description.map((p) => (
             <p key={p}>{p}</p>
           ))}
-        </div>
+        </ReadMore>
       ) : null}
     </section>
   );

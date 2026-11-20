@@ -5,8 +5,10 @@ import { PhoneIcon, WhatsAppIcon } from "@/ui/icons";
  * The original site's sticky bar (Send Enquiry · WhatsApp · Call).
  * Phones: full-width bar above the home indicator. Desktop: a compact pill,
  * since the header already carries "Send Enquiry".
+ * `primary` replaces the phone "Send Enquiry" button (experience pages use a
+ * package-aware one).
  */
-export function ContactDock() {
+export function ContactDock({ primary }: { primary?: React.ReactNode } = {}) {
   const { enquiry, contact } = home;
 
   return (
@@ -19,12 +21,14 @@ export function ContactDock() {
       }}
     >
       <div className="flex items-stretch gap-2 border-t border-white/10 bg-river-deep/95 p-2 text-cloud backdrop-blur-md md:rounded-full md:border-0 md:shadow-[0_12px_40px_-12px_rgb(8_44_41/0.6)]">
-        <a
-          href="#enquiry"
-          className="flex flex-1 items-center justify-center rounded-full bg-mandarin px-5 py-3 font-display text-base font-semibold text-ink md:hidden"
-        >
-          {enquiry.stickyButtonLabel}
-        </a>
+        {primary ?? (
+          <a
+            href="#enquiry"
+            className="flex flex-1 items-center justify-center rounded-full bg-mandarin px-5 py-3 font-display text-base font-semibold text-ink md:hidden"
+          >
+            {enquiry.stickyButtonLabel}
+          </a>
+        )}
         <a
           href={enquiry.whatsappHref}
           target="_blank"

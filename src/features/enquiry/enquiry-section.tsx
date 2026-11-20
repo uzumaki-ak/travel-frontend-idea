@@ -8,9 +8,11 @@ type EnquirySectionProps = {
   context?: EnquiryFormContext;
   /** Tighter spacing and a smaller heading when shown inside the enquiry popup. */
   inDialog?: boolean;
+  /** Shown above the contact lines (the popup puts the chosen package here). On phones it replaces them. */
+  summary?: React.ReactNode;
 };
 
-export function EnquirySection({ title, context, inDialog = false }: EnquirySectionProps = {}) {
+export function EnquirySection({ title, context, inDialog = false, summary }: EnquirySectionProps = {}) {
   const { enquiry, contact } = home;
 
   const copy: EnquiryFormCopy = {
@@ -42,8 +44,9 @@ export function EnquirySection({ title, context, inDialog = false }: EnquirySect
           >
             {title ?? enquiry.formTitle}
           </h2>
-          {/* In the popup on phones the contact lines shrink to a row of icon buttons. */}
-          <ul className={inDialog ? "flex gap-3 md:flex-col md:gap-4" : "flex flex-col gap-4"}>
+          {summary}
+          {/* In the popup on phones the contact lines shrink to a row of icon buttons, or give way to the summary. */}
+          <ul className={inDialog ? `${summary ? "hidden md:flex" : "flex"} gap-3 md:flex-col md:gap-4` : "flex flex-col gap-4"}>
             {lines.map(({ label, value, href, Icon }) => (
               <li key={label} data-motion={inDialog ? undefined : "rise"}>
                 <a href={href} aria-label={inDialog ? `${label} ${value}` : undefined} className="group flex items-center gap-4">

@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   partialPrefetching: true,
+  // Optional cap on build workers for low-memory machines: NEXT_BUILD_CPUS=2 npm run build.
+  ...(process.env.NEXT_BUILD_CPUS ? { experimental: { cpus: Number(process.env.NEXT_BUILD_CPUS) } } : {}),
   images: {
     // AVIF first (smallest), WebP fallback. Source photos are max 975px wide,
     // so there is no point generating anything above 1920.

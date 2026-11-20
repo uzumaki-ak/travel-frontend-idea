@@ -4,16 +4,18 @@ import { siteConfig } from "@/config/site";
 import { fromPrice, getExperience, getExperienceCards, listExperienceSlugs } from "@/content/experiences";
 import type { Experience } from "@/content/experiences/schema";
 import { experiencePath } from "@/content/experiences/slugs";
-import { home } from "@/content/home";
 import { resolveSitePath } from "@/content/routes";
 import { EnquiryDialog } from "@/features/enquiry/enquiry-dialog";
 import { EnquirySection } from "@/features/enquiry/enquiry-section";
 import { ExperienceCard } from "@/features/experiences/experience-card";
 import { ExperienceGallery } from "@/features/experiences/experience-gallery";
-import { ExperienceHero, PriceTicket } from "@/features/experiences/experience-hero";
+import { ExperienceHero } from "@/features/experiences/experience-hero";
 import { ExperienceReviews } from "@/features/experiences/experience-reviews";
 import { ExperienceFaq, GoodToKnow, Inclusions, KeyFacts, Overview } from "@/features/experiences/experience-sections";
+import { BookingDockButton } from "@/features/experiences/booking-dock-button";
 import { PackagePicker } from "@/features/experiences/package-picker";
+import { PriceTicket } from "@/features/experiences/price-ticket";
+import { SelectionSummary } from "@/features/experiences/selection-summary";
 import { SectionNav, type SectionLink } from "@/features/experiences/section-nav";
 import { StickyTicket } from "@/features/experiences/sticky-ticket";
 import { TagGroups } from "@/features/experiences/tag-groups";
@@ -60,7 +62,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
   const tagGroups = experience.tagGroups.map((g) => ({ title: g.title, links: g.links.map((l) => ({ label: l.label, href: resolveSitePath(l.href) })) }));
 
   return (
-    <SiteShell section="/tours/">
+    <SiteShell section="/tours/" dockAction={<BookingDockButton />}>
       <ExperienceHero experience={experience} crumbs={crumbs} from={fromPrice(experience)} />
       <ExperienceGallery photos={experience.gallery} title={experience.title} />
       <KeyFacts facts={experience.facts} />
@@ -68,11 +70,11 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
 
       {/*
         Price ticket: hidden on phones, shown under the title on tablets; from lg up it is
-        pinned in a right-hand column for the whole content (overview → FAQ). The package
-        section has its own "Your selection" card, so the ticket steps aside there.
+        pinned in a right-hand column for the whole content (overview → FAQ). Once a package
+        is picked the ticket shows it, with "Book now".
       */}
       <div className="relative">
-        <StickyTicket yieldTo="packages" afterId="hero-ticket">
+        <StickyTicket afterId="hero-ticket">
           <PriceTicket from={fromPrice(experience)} packageCount={experience.packages.length} />
         </StickyTicket>
 
@@ -82,7 +84,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
           </div>
         </div>
 
-        <PackagePicker experienceTitle={experience.title} packages={experience.packages} whatsappHref={home.enquiry.whatsappHref} />
+        <PackagePicker experienceTitle={experience.title} packages={experience.packages} />
 
         <div className="wrap py-20 md:py-28 lg:grid lg:grid-cols-12 lg:gap-10">
           <div className="flex min-w-0 flex-col gap-20 md:gap-28 lg:col-span-7">
@@ -119,7 +121,11 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
 
       {/* The enquiry form opens as a popup from "Book now", "Request to book" and "Send Enquiry". */}
       <EnquiryDialog title="Request to book">
-        <EnquirySection title="Request to book" inDialog />
+        <EnquirySection
+          title="Request to book"
+          inDialog
+          summary={<SelectionSummary experienceTitle={experience.title} from={fromPrice(experience)} />}
+        />
       </EnquiryDialog>
 
       <JsonLd data={structuredData(experience, crumbs)} />

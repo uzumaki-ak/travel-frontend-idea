@@ -6,35 +6,22 @@
  * as tall as the content, on the same 12-column grid as the page.
  *
  * It stays hidden while the hero's own ticket (`afterId`) is still on screen, so
- * only one ticket is ever visible. While the package section (`yieldTo`) is on
- * screen its own "Your selection" card takes that spot, so the ticket fades out
- * there too and comes back afterwards.
+ * only one ticket is ever visible.
  */
 import { useEffect, useState } from "react";
 
-export function StickyTicket({ children, yieldTo, afterId }: { children: React.ReactNode; yieldTo: string; afterId: string }) {
-  const [inPackages, setInPackages] = useState(false);
+export function StickyTicket({ children, afterId }: { children: React.ReactNode; afterId: string }) {
   const [heroVisible, setHeroVisible] = useState(true);
 
   useEffect(() => {
-    const target = document.getElementById(yieldTo);
-    if (!target) return;
-    const observer = new IntersectionObserver(([entry]) => setInPackages(Boolean(entry?.isIntersecting)), {
-      rootMargin: "-150px 0px -40% 0px",
-    });
-    observer.observe(target);
-    return () => observer.disconnect();
-  }, [yieldTo]);
-
-  useEffect(() => {
     const hero = document.getElementById(afterId);
-    if (!hero) return setHeroVisible(false);
+    if (!hero) return;
     const observer = new IntersectionObserver(([entry]) => setHeroVisible(Boolean(entry?.isIntersecting)));
     observer.observe(hero);
     return () => observer.disconnect();
   }, [afterId]);
 
-  const hidden = inPackages || heroVisible;
+  const hidden = heroVisible;
 
   return (
     <div className="pointer-events-none absolute inset-0 z-10 hidden lg:block">

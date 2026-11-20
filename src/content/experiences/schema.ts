@@ -33,7 +33,9 @@ const hotel = z.object({
   name: z.string(),
   stars: z.number().int().min(1).max(5).optional(),
   nights: z.number().int().min(1).optional(),
+  /** Cover photo. More photos go in `images`; all of them open in the lightbox. */
   image: image.optional(),
+  images: z.array(image).default([]),
 });
 export type PackageHotel = z.infer<typeof hotel>;
 

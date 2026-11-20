@@ -107,7 +107,7 @@ type LightboxProps = {
   setIndex: (i: number) => void;
 };
 
-function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: LightboxProps) {
+export function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: LightboxProps) {
   const count = photos.length;
   const go = useCallback((step: number) => setIndex((index + step + count) % count), [index, count, setIndex]);
   const touchX = useRef<number | null>(null);
@@ -153,7 +153,7 @@ function Lightbox({ photos, title, open, onOpenChange, index, setIndex }: Lightb
 
           <div className="relative min-h-0 flex-1">
             {photo ? (
-              <figure key={photo.src} className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-(--gutter-x) pb-4 motion-safe:animate-[fade-in_0.4s_var(--ease-out-expo)]">
+              <figure key={photo.src} className="absolute inset-0 flex flex-col items-center justify-center gap-3 pb-4 sm:px-(--gutter-x) motion-safe:animate-[fade-in_0.4s_var(--ease-out-expo)]">
                 <div className="relative h-full w-full">
                   <Image src={photo.src} alt={photo.alt} fill sizes="100vw" className="object-contain" />
                 </div>

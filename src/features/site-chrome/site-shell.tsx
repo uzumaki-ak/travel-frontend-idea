@@ -6,8 +6,9 @@ import { SiteHeader } from "./site-header";
 /**
  * Shared page frame: skip link, header, main, footer, contact dock and the motion island.
  * `section` is the nav path this page belongs to ("/" for home, "/tours/" for tour pages).
+ * `dockAction` replaces the phone dock's "Send Enquiry" button.
  */
-export function SiteShell({ children, section = "/" }: { children: React.ReactNode; section?: string }) {
+export function SiteShell({ children, section = "/", dockAction }: { children: React.ReactNode; section?: string; dockAction?: React.ReactNode }) {
   return (
     <>
       <a
@@ -19,7 +20,7 @@ export function SiteShell({ children, section = "/" }: { children: React.ReactNo
       <SiteHeader section={section} />
       <main id="content">{children}</main>
       <SiteFooter />
-      <ContactDock />
+      <ContactDock primary={dockAction} />
       <MotionDirector />
     </>
   );
