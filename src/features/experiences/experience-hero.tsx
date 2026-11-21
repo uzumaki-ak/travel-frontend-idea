@@ -1,19 +1,17 @@
 import { resolveSitePath } from "@/content/routes";
 import { isServedPath } from "@/content/served-paths";
-import type { FromPrice } from "@/content/experiences";
 import type { Experience } from "@/content/experiences/schema";
 import { ClockIcon, PinIcon } from "@/ui/icons";
 import { plural } from "./format";
 import { RatingStars } from "./rating-stars";
-import { PriceTicket } from "./price-ticket";
 
 type Crumb = { label: string; href: string };
 
 /**
- * Opener: breadcrumb, title and a "trail ticket" — a perforated stub with the
- * lowest price and the jump to the package picker. The ticket is hidden on phones.
+ * Opener: breadcrumb, badges, title, rating, place and duration. The price
+ * ticket lives beside the content below (StickyTicket), not here.
  */
-export function ExperienceHero({ experience, crumbs, from }: { experience: Experience; crumbs: Crumb[]; from: FromPrice }) {
+export function ExperienceHero({ experience, crumbs }: { experience: Experience; crumbs: Crumb[] }) {
   const { location, rating, duration, badge, categories } = experience;
   // Location hubs are not built yet; only link them once they exist.
   const locationHref = location.href && isServedPath(location.href) ? location.href : null;
@@ -83,11 +81,6 @@ export function ExperienceHero({ experience, crumbs, from }: { experience: Exper
               <span>{duration.label}</span>
             </li>
           </ul>
-        </div>
-
-        {/* Hidden on phones. On desktop a pinned copy (StickyTicket) takes over below the photos. */}
-        <div id="hero-ticket" className="hero-fade hidden md:block lg:col-span-4 [--delay:520ms]">
-          <PriceTicket from={from} packageCount={experience.packages.length} />
         </div>
       </div>
     </section>

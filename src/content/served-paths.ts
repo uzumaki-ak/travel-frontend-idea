@@ -5,6 +5,7 @@
  */
 import cabIndex from "./cabs/index.json";
 import tourArchive from "./tour-archive.json";
+import { destinationPath, destinationSlugs } from "./destinations/slugs";
 import { experiencePath, experienceSlugs } from "./experiences/slugs";
 import tourIndex from "./tours/index.json";
 
@@ -18,6 +19,7 @@ export const servedPaths: ReadonlySet<string> = new Set<string>([
   "/cars/",
   ...cabIndex.slugs.map((s) => `/cars/${s}/`),
   ...experienceSlugs.map(experiencePath),
+  ...destinationSlugs.map(destinationPath),
 ]);
 
 export const isServedPath = (path: string) => servedPaths.has(path);

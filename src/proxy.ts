@@ -2,13 +2,14 @@ import { NextResponse, type NextRequest } from "next/server";
 import { legacyUrl } from "@/config/site";
 import cabIndex from "@/content/cabs/index.json";
 import cabRedirects from "@/content/cabs/redirects.json";
+import { destinationSlugs } from "@/content/destinations/slugs";
 import { experienceSlugs } from "@/content/experiences/slugs";
 import { isServedPath } from "@/content/served-paths";
 import tourArchive from "@/content/tour-archive.json";
 import tourIndex from "@/content/tours/index.json";
 
 /**
- * Runs only on /tours/*, /cars/* and /experiences/*, before rendering:
+ * Runs only on /tours/*, /cars/*, /experiences/* and /destinations/*, before rendering:
  *  - redirects that the live site performs (301), to the same targets;
  *  - a real 404 status for unknown slugs (prerendered pages stream their shell
  *    before a page could call notFound(), which would leave a 200).
@@ -16,6 +17,7 @@ import tourIndex from "@/content/tours/index.json";
 const knownTours = new Set(tourIndex.tours.map((t) => t.slug));
 const knownCabs = new Set(cabIndex.slugs);
 const knownExperiences = new Set<string>(experienceSlugs);
+const knownDestinations = new Set<string>(destinationSlugs);
 const lastPagedUrl = tourArchive.lastPagedUrl;
 const redirects = new Map<string, string>(cabRedirects.map((r) => [r.from, r.to]));
 
@@ -43,6 +45,8 @@ function isKnown(pathname: string): boolean {
   if (cab) return knownCabs.has(cab[1]);
   const experience = pathname.match(/^\/experiences\/([^/]+)\/?$/);
   if (experience) return knownExperiences.has(experience[1]);
+  const destination = pathname.match(/^\/destinations\/([^/]+)\/?$/);
+  if (destination) return knownDestinations.has(destination[1]);
   return true;
 }
 
@@ -85,5 +89,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/tours/:slug/", "/tours/page/:n/", "/cars/:slug/", "/experiences/:slug/"],
+  matcher: ["/tours/:slug/", "/tours/page/:n/", "/cars/:slug/", "/experiences/:slug/", "/destinations/:slug/"],
 };

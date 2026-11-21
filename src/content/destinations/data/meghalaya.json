@@ -1,0 +1,1218 @@
+{
+  "slug": "meghalaya",
+  "name": "Meghalaya",
+  "seo": {
+    "title": "Meghalaya Tours & Things to Do | Kajaawa",
+    "description": "Private tours, treks, waterfall trails and river camps across Meghalaya — Shillong, Cherrapunji, Dawki and beyond, planned by a local team."
+  },
+  "hero": {
+    "tagline": "Waterfalls, living root bridges and the clearest river in India — a few hours from Guwahati.",
+    "intro": [
+      "Meghalaya is a high green plateau where the clouds sit low enough to walk through. Shillong is the easy-going capital, Cherrapunji is where the rain makes waterfalls on every cliff, and down at Dawki the Umngot river runs so clear the boats seem to float on air.",
+      "Most visitors come for two or three days, but the state rewards a slower trip. Khasi villages grow bridges out of living tree roots, the Jaintia hills hide monoliths and quiet lakes, and the caves around Mawsynram run deeper than most people ever go.",
+      "Every tour below is run by our own local team — private car, a driver who knows the roads, and stays we have checked ourselves. Pick a tour, or tell us what you have in mind and we will plan it around you."
+    ],
+    "images": [
+      {
+        "src": "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+        "alt": "Nohkalikai Falls plunging into a green pool, Cherrapunji",
+        "place": "Nohkalikai Falls · Cherrapunji"
+      },
+      {
+        "src": "/media/home/Dawki-River-5.jpg",
+        "alt": "A boat on the clear Umngot river at Dawki",
+        "place": "Umngot River · Dawki"
+      },
+      {
+        "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+        "alt": "Clouds rolling through the valleys at Laitlum Canyons",
+        "place": "Laitlum Canyons · near Shillong"
+      },
+      {
+        "src": "/media/home/Double-Decker-5-kaga.jpg",
+        "alt": "The double decker living root bridge at Nongriat",
+        "place": "Double Decker Root Bridge · Nongriat"
+      }
+    ],
+    "video": {
+      "src": "/media/video/meghalaya-hero.mp4",
+      "poster": "/media/home/Nohkalikai-Falls-1-kaga.jpg"
+    }
+  },
+  "categories": [
+    {
+      "id": "waterfalls",
+      "label": "Waterfalls"
+    },
+    {
+      "id": "trekking",
+      "label": "Trekking"
+    },
+    {
+      "id": "honeymoon",
+      "label": "Honeymoon"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "id": "camping",
+      "label": "Camping"
+    },
+    {
+      "id": "culture",
+      "label": "Culture & food"
+    }
+  ],
+  "interlude": {
+    "title": "Tell us your dates. We'll build the route.",
+    "text": "Our Shillong team plans every trip by hand — how many days, which falls are running, where to stay. No payment until you're happy with the plan.",
+    "cta": "Talk to a local expert"
+  },
+  "listings": [
+    {
+      "id": "shillong-cherrapunji-dawki-3d",
+      "title": "3-Day Shillong, Cherrapunji & Dawki Private Escape",
+      "summary": "The classic loop: Umiam Lake, the big falls of Cherrapunji, a living root bridge and a boat on the Umngot.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Nohkalikai-Falls-1-.jpg",
+          "alt": "Nohkalikai Falls, Cherrapunji"
+        },
+        {
+          "src": "/media/home/Dawki-River-5.jpg",
+          "alt": "Boat on the Umngot river at Dawki"
+        },
+        {
+          "src": "/media/home/Umiam-Lake-7-kaga.jpg",
+          "alt": "Umiam Lake near Shillong"
+        }
+      ],
+      "days": 3,
+      "durationLabel": "3 days · 2 nights",
+      "route": [
+        "Shillong",
+        "Cherrapunji",
+        "Dawki"
+      ],
+      "rating": {
+        "average": 4.8,
+        "count": 126
+      },
+      "price": {
+        "from": 9800,
+        "compareAt": 11300,
+        "unit": "per group"
+      },
+      "categories": [
+        "waterfalls",
+        "family",
+        "honeymoon"
+      ],
+      "badge": "Top rated",
+      "rank": 1,
+      "popular": true
+    },
+    {
+      "id": "dawki-mawlynnong-day",
+      "title": "Dawki & Mawlynnong Day Trip",
+      "summary": "Glass-clear water at Dawki, then Asia's cleanest village and the balancing rock on the way back.",
+      "experience": "dawki-mawlynnong-day-trip",
+      "images": [
+        {
+          "src": "/media/home/dawki-river-3-kaga.jpg",
+          "alt": "Boats on the Dawki river"
+        },
+        {
+          "src": "/media/home/Umngot-River-1-kaga.jpg",
+          "alt": "The Umngot river from above"
+        },
+        {
+          "src": "/media/tours/Balancing-Rock-1-kaga.jpg",
+          "alt": "The balancing rock near Mawlynnong"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Full day",
+      "route": [
+        "Shillong",
+        "Dawki",
+        "Mawlynnong"
+      ],
+      "rating": {
+        "average": 4.7,
+        "count": 88
+      },
+      "price": {
+        "from": 3200,
+        "compareAt": 3800,
+        "unit": "per person"
+      },
+      "categories": [
+        "family",
+        "culture"
+      ],
+      "rank": 2,
+      "popular": true
+    },
+    {
+      "id": "shillong-after-dark",
+      "title": "Shillong After Dark: Food & Music Walk",
+      "summary": "Street food at Police Bazar, a live-music bar and the city's café scene with a local host.",
+      "experience": "shillong-after-dark",
+      "images": [
+        {
+          "src": "/media/home/police-bazar-8-kaga.jpg",
+          "alt": "Police Bazar, Shillong, in the evening"
+        },
+        {
+          "src": "/media/home/Cafe-Cherrapunji-1-kaga.jpg",
+          "alt": "A small café in the Khasi hills"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "4 hours",
+      "route": [
+        "Shillong"
+      ],
+      "rating": {
+        "average": 4.9,
+        "count": 41
+      },
+      "price": {
+        "from": 1500,
+        "unit": "per person"
+      },
+      "categories": [
+        "culture"
+      ],
+      "badge": "New",
+      "rank": 3,
+      "popular": true
+    },
+    {
+      "id": "double-decker-trek",
+      "title": "Double Decker Root Bridge Trek",
+      "summary": "3,500 steps down to Nongriat, a swim at the blue pools and the famous two-storey root bridge.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Double-Decker-5-kaga.jpg",
+          "alt": "Double decker root bridge, Nongriat"
+        },
+        {
+          "src": "/media/tours/Double-Decker-Root-Bridge.jpg",
+          "alt": "Root bridge over a stream"
+        },
+        {
+          "src": "/media/tours/Double-Decker-Trekking-Path-1-kaga.jpg",
+          "alt": "Stone steps on the Nongriat trail"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Full day",
+      "route": [
+        "Cherrapunji",
+        "Nongriat"
+      ],
+      "rating": {
+        "average": 4.8,
+        "count": 210
+      },
+      "price": {
+        "from": 2400,
+        "compareAt": 2900,
+        "unit": "per person"
+      },
+      "categories": [
+        "trekking",
+        "adventure"
+      ],
+      "rank": 4,
+      "popular": true
+    },
+    {
+      "id": "cherrapunji-waterfalls-trail",
+      "title": "Cherrapunji Waterfalls Trail",
+      "summary": "Seven Sisters, Wei Sawdong and Dainthlen — the falls at their fullest, with an overnight in the hills.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+          "alt": "Seven Sisters Falls"
+        },
+        {
+          "src": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
+          "alt": "Wei Sawdong falls"
+        },
+        {
+          "src": "/media/home/Dainthlen-Falls-1-kaga.jpg",
+          "alt": "Dainthlen Falls"
+        }
+      ],
+      "days": 2,
+      "durationLabel": "2 days · 1 night",
+      "route": [
+        "Shillong",
+        "Cherrapunji"
+      ],
+      "rating": {
+        "average": 4.6,
+        "count": 74
+      },
+      "price": {
+        "from": 6900,
+        "compareAt": 7900,
+        "unit": "per group"
+      },
+      "categories": [
+        "waterfalls",
+        "family"
+      ],
+      "rank": 5,
+      "popular": true
+    },
+    {
+      "id": "shnongpdeng-camping",
+      "title": "Riverside Camping at Shnongpdeng",
+      "summary": "Tents on the riverbank, kayaking and cliff jumps by day, a bonfire under the stars at night.",
+      "experience": "dawki-mawlynnong-day-trip",
+      "images": [
+        {
+          "src": "/media/home/Camping-at-Shnongpdeng-Dawki-1-kaga.jpg",
+          "alt": "Tents by the river at Shnongpdeng"
+        },
+        {
+          "src": "/media/home/Shnongpdeng-Kayaking-1-kaga.jpg",
+          "alt": "Kayaking at Shnongpdeng"
+        },
+        {
+          "src": "/media/home/Dawki-Shnongpdeng-Camping-3-kaga.jpg",
+          "alt": "Campsite at dusk"
+        }
+      ],
+      "days": 2,
+      "durationLabel": "2 days · 1 night",
+      "route": [
+        "Dawki",
+        "Shnongpdeng"
+      ],
+      "rating": {
+        "average": 4.7,
+        "count": 63
+      },
+      "price": {
+        "from": 4200,
+        "unit": "per person"
+      },
+      "categories": [
+        "camping",
+        "adventure"
+      ],
+      "badge": "Bestseller",
+      "rank": 6,
+      "popular": true
+    },
+    {
+      "id": "meghalaya-honeymoon-5d",
+      "title": "Meghalaya Honeymoon: Clouds & Quiet Stays",
+      "summary": "Slow mornings, canyon views and hand-picked stays — five unhurried days for two.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Laitlum-Canyons-1-kaga.jpeg",
+          "alt": "Laitlum Canyons in the clouds"
+        },
+        {
+          "src": "/media/home/umiam-lake-26-kaga.jpg",
+          "alt": "Umiam Lake at sunset"
+        },
+        {
+          "src": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+          "alt": "Green hills of Meghalaya"
+        }
+      ],
+      "days": 5,
+      "durationLabel": "5 days · 4 nights",
+      "route": [
+        "Shillong",
+        "Cherrapunji",
+        "Dawki",
+        "Mawlynnong"
+      ],
+      "rating": {
+        "average": 4.8,
+        "count": 52
+      },
+      "price": {
+        "from": 24500,
+        "compareAt": 28000,
+        "unit": "per group"
+      },
+      "categories": [
+        "honeymoon"
+      ],
+      "rank": 7
+    },
+    {
+      "id": "laitlum-sunrise",
+      "title": "Laitlum Canyons Sunrise Hike",
+      "summary": "An early start for the best view in the Khasi hills, as the valley fills with cloud below you.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+          "alt": "Laitlum Canyons at sunrise"
+        },
+        {
+          "src": "/media/home/meghalaya_mountains-1-kaga.jpg",
+          "alt": "Mountain ridges in Meghalaya"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Half day",
+      "route": [
+        "Shillong",
+        "Laitlum"
+      ],
+      "rating": {
+        "average": 4.6,
+        "count": 39
+      },
+      "price": {
+        "from": 1800,
+        "unit": "per person"
+      },
+      "categories": [
+        "trekking"
+      ],
+      "rank": 8
+    },
+    {
+      "id": "krang-suri-jowai",
+      "title": "Krang Suri Falls & Jowai Day Out",
+      "summary": "Turquoise pools at Krang Suri, the Nartiang monoliths and the quiet Jaintia hills.",
+      "experience": "dawki-mawlynnong-day-trip",
+      "images": [
+        {
+          "src": "/media/home/Krang-Suri-1-cvimg.jpg",
+          "alt": "Krang Suri Falls"
+        },
+        {
+          "src": "/media/home/krang-suri-falls-10-kaga.jpg",
+          "alt": "The blue pool at Krang Suri"
+        },
+        {
+          "src": "/media/home/Nartiang-Monoliths-3-kaga.jpg",
+          "alt": "Nartiang monoliths"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Full day",
+      "route": [
+        "Shillong",
+        "Jowai",
+        "Krang Suri"
+      ],
+      "rating": {
+        "average": 4.7,
+        "count": 57
+      },
+      "price": {
+        "from": 2900,
+        "unit": "per person"
+      },
+      "categories": [
+        "waterfalls",
+        "adventure"
+      ],
+      "rank": 9
+    },
+    {
+      "id": "mawsynram-rain-country",
+      "title": "Mawsynram Rain Country & Caves",
+      "summary": "The wettest place on earth, Mawjymbuin cave and lakeside camping in the rain hills.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Mawsynram-1-kaga.jpg",
+          "alt": "Hills around Mawsynram"
+        },
+        {
+          "src": "/media/home/Mawsynram-2-kaga.jpg",
+          "alt": "Clouds over Mawsynram"
+        },
+        {
+          "src": "/media/home/Lakefront-Nature-Camping-in-Mawsynram-2-kaga.jpg",
+          "alt": "Lakefront camp near Mawsynram"
+        }
+      ],
+      "days": 2,
+      "durationLabel": "2 days · 1 night",
+      "route": [
+        "Shillong",
+        "Mawsynram"
+      ],
+      "rating": {
+        "average": 4.5,
+        "count": 28
+      },
+      "price": {
+        "from": 5600,
+        "unit": "per group"
+      },
+      "categories": [
+        "adventure",
+        "family",
+        "camping"
+      ],
+      "rank": 10
+    },
+    {
+      "id": "mawphlang-sacred-forest",
+      "title": "Mawphlang Sacred Forest Walk",
+      "summary": "A guided walk through a forest the Khasi have protected for centuries — nothing leaves it.",
+      "experience": "shillong-after-dark",
+      "images": [
+        {
+          "src": "/media/home/mawphlang-sacred-forest-kaga-1.jpg",
+          "alt": "Inside the Mawphlang sacred forest"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Half day",
+      "route": [
+        "Shillong",
+        "Mawphlang"
+      ],
+      "rating": {
+        "average": 4.8,
+        "count": 45
+      },
+      "price": {
+        "from": 1600,
+        "unit": "per person"
+      },
+      "categories": [
+        "culture",
+        "family"
+      ],
+      "rank": 11
+    },
+    {
+      "id": "umiam-elephant-falls",
+      "title": "Umiam Lake & Elephant Falls Easy Day",
+      "summary": "An easy half-day for families: the lake, a boat ride and the three-step Elephant Falls.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Umiam-Lake-10-kaga.jpg",
+          "alt": "Umiam Lake"
+        },
+        {
+          "src": "/media/tours/Elephant-Falls-1-kaga.jpg",
+          "alt": "Elephant Falls near Shillong"
+        }
+      ],
+      "days": 1,
+      "durationLabel": "Half day",
+      "route": [
+        "Shillong",
+        "Umiam"
+      ],
+      "rating": {
+        "average": 4.4,
+        "count": 67
+      },
+      "price": {
+        "from": 1200,
+        "unit": "per person"
+      },
+      "categories": [
+        "family"
+      ],
+      "rank": 12
+    },
+    {
+      "id": "meghalaya-adventure-6d",
+      "title": "6-Day Meghalaya Adventure: Treks, Caves & Rivers",
+      "summary": "Root bridges, a night at the 100 waterfalls camp, caving and the river at Shnongpdeng.",
+      "experience": "shillong-cherrapunji-dawki-escape",
+      "images": [
+        {
+          "src": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-1-kaga.jpg",
+          "alt": "Camp at 100 Waterfalls, Cherrapunji"
+        },
+        {
+          "src": "/media/home/Bungee-Jumping-in-Meghalaya.jpg",
+          "alt": "Bungee jump over a gorge"
+        },
+        {
+          "src": "/media/home/Paragliding-Unsplash-1-kaga.jpg",
+          "alt": "Paragliding over green hills"
+        }
+      ],
+      "days": 6,
+      "durationLabel": "6 days · 5 nights",
+      "route": [
+        "Shillong",
+        "Cherrapunji",
+        "Nongriat",
+        "Dawki",
+        "Mawsynram"
+      ],
+      "rating": {
+        "average": 4.9,
+        "count": 31
+      },
+      "price": {
+        "from": 32000,
+        "compareAt": 36500,
+        "unit": "per group"
+      },
+      "categories": [
+        "trekking",
+        "adventure",
+        "camping"
+      ],
+      "badge": "New",
+      "rank": 13
+    }
+  ],
+  "attractions": [
+    {
+      "name": "Nohkalikai Falls",
+      "place": "Cherrapunji",
+      "text": "One of India's tallest plunge falls, dropping into a green-blue pool.",
+      "image": {
+        "src": "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+        "alt": "Nohkalikai Falls"
+      },
+      "stops": [
+        "Cherrapunji"
+      ],
+      "categories": [
+        "waterfalls"
+      ]
+    },
+    {
+      "name": "Double Decker Root Bridge",
+      "place": "Nongriat",
+      "text": "Two living bridges stacked over one stream, grown from rubber-tree roots.",
+      "image": {
+        "src": "/media/home/Double-Decker-5-kaga.jpg",
+        "alt": "Double decker root bridge"
+      },
+      "stops": [
+        "Nongriat"
+      ],
+      "categories": [
+        "trekking",
+        "adventure"
+      ]
+    },
+    {
+      "name": "Umngot River",
+      "place": "Dawki",
+      "text": "So clear in winter that the boats look like they hang in the air.",
+      "image": {
+        "src": "/media/home/Umngot-River-1-kaga.jpg",
+        "alt": "Umngot river at Dawki"
+      },
+      "stops": [
+        "Dawki",
+        "Shnongpdeng"
+      ],
+      "categories": [
+        "adventure",
+        "family"
+      ]
+    },
+    {
+      "name": "Laitlum Canyons",
+      "place": "Near Shillong",
+      "text": "A cliff edge above deep valleys, best when the morning cloud rolls in.",
+      "image": {
+        "src": "/media/home/Laitlum-Canyons-5-kaga.jpg",
+        "alt": "Laitlum Canyons"
+      },
+      "stops": [
+        "Laitlum"
+      ],
+      "categories": [
+        "trekking"
+      ]
+    },
+    {
+      "name": "Umiam Lake",
+      "place": "Near Shillong",
+      "text": "The big reservoir on the drive up from Guwahati, calm at sunset.",
+      "image": {
+        "src": "/media/home/umiam-lake-26-kaga.jpg",
+        "alt": "Umiam Lake"
+      },
+      "stops": [
+        "Umiam"
+      ],
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "name": "Krang Suri Falls",
+      "place": "Jowai",
+      "text": "A turquoise pool under a curtain of water in the Jaintia hills.",
+      "image": {
+        "src": "/media/home/krang-suri-falls-8-kaga.jpg",
+        "alt": "Krang Suri Falls"
+      },
+      "stops": [
+        "Krang Suri"
+      ],
+      "categories": [
+        "waterfalls"
+      ]
+    },
+    {
+      "name": "Mawphlang Sacred Forest",
+      "place": "Mawphlang",
+      "text": "A grove the Khasi have kept untouched for centuries.",
+      "image": {
+        "src": "/media/home/mawphlang-sacred-forest-kaga-1.jpg",
+        "alt": "Mawphlang sacred forest"
+      },
+      "stops": [
+        "Mawphlang"
+      ],
+      "categories": [
+        "culture"
+      ]
+    },
+    {
+      "name": "Seven Sisters Falls",
+      "place": "Cherrapunji",
+      "text": "Seven streams over one long cliff, fullest in the monsoon.",
+      "image": {
+        "src": "/media/home/Seven-Sisters-Falls-3-kaga.jpg",
+        "alt": "Seven Sisters Falls"
+      },
+      "stops": [
+        "Cherrapunji"
+      ],
+      "categories": [
+        "waterfalls"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Ananya R.",
+      "from": "Bengaluru",
+      "date": "2026-10-12",
+      "rating": 5,
+      "tour": "3-Day Shillong, Cherrapunji & Dawki Private Escape",
+      "text": "Our driver knew exactly when to leave so we beat the crowds at Dawki. The root bridge walk was the highlight of the whole trip."
+    },
+    {
+      "name": "Mark & Julia",
+      "from": "Berlin",
+      "date": "2026-09-28",
+      "rating": 5,
+      "tour": "Riverside Camping at Shnongpdeng",
+      "text": "Fell asleep to the river and woke up to fog on the water. Simple tents, very clean, and the kayaking was great fun."
+    },
+    {
+      "name": "Rohit S.",
+      "from": "Kolkata",
+      "date": "2026-09-03",
+      "rating": 4,
+      "tour": "Cherrapunji Waterfalls Trail",
+      "text": "Monsoon visit, so the falls were huge but the views came and went with the clouds. The team changed the plan on the day to work around the rain."
+    },
+    {
+      "name": "Priya & Karan",
+      "from": "Mumbai",
+      "date": "2026-08-17",
+      "rating": 5,
+      "tour": "Meghalaya Honeymoon: Clouds & Quiet Stays",
+      "text": "Exactly the pace we wanted. The stays were lovely and nobody rushed us anywhere."
+    },
+    {
+      "name": "Sneha D.",
+      "from": "Pune",
+      "date": "2026-07-30",
+      "rating": 5,
+      "tour": "Shillong After Dark: Food & Music Walk",
+      "text": "Ate far too much and heard a brilliant local band. Our host was so warm and full of stories."
+    },
+    {
+      "name": "Arjun M.",
+      "from": "Delhi",
+      "date": "2026-06-22",
+      "rating": 4,
+      "tour": "Double Decker Root Bridge Trek",
+      "text": "Tough on the legs coming back up, but worth every step. Start early and carry water."
+    }
+  ],
+  "info": {
+    "bestTime": {
+      "summary": "Come between October and April for clear skies and easy roads. Come in the monsoon (June to August) for the waterfalls at full power, with some rain on most days.",
+      "seasons": [
+        {
+          "name": "Cool & clear",
+          "months": "Oct – Apr",
+          "text": "Crisp days, clear rivers at Dawki and the best views from Laitlum. Nights get cold in December and January.",
+          "verdict": "best"
+        },
+        {
+          "name": "Shoulder",
+          "months": "May & Sep",
+          "text": "Fewer visitors and green hills. Showers come and go, so keep a flexible day.",
+          "verdict": "good"
+        },
+        {
+          "name": "Monsoon",
+          "months": "Jun – Aug",
+          "text": "The falls are at their biggest and the clouds sit low. Some roads slow down and the river at Dawki turns murky.",
+          "verdict": "wet"
+        }
+      ]
+    },
+    "reach": [
+      {
+        "mode": "air",
+        "title": "By air",
+        "text": "Fly into Guwahati (Lokpriya Gopinath Bordoloi airport). We pick you up there; Shillong is about three hours away by road."
+      },
+      {
+        "mode": "rail",
+        "title": "By train",
+        "text": "Guwahati railway station is the nearest major station. Our car meets you at the station."
+      },
+      {
+        "mode": "road",
+        "title": "By road",
+        "text": "Shillong is about 100 km from Guwahati on a good highway, past Umiam Lake. Most of our tours start from either city."
+      }
+    ],
+    "weather": {
+      "note": "Approximate Shillong averages. Cherrapunji and Mawsynram get far more rain.",
+      "months": [
+        {
+          "month": "Jan",
+          "high": 16,
+          "low": 4,
+          "rain": 15
+        },
+        {
+          "month": "Feb",
+          "high": 18,
+          "low": 6,
+          "rain": 30
+        },
+        {
+          "month": "Mar",
+          "high": 22,
+          "low": 10,
+          "rain": 60
+        },
+        {
+          "month": "Apr",
+          "high": 24,
+          "low": 14,
+          "rain": 150
+        },
+        {
+          "month": "May",
+          "high": 24,
+          "low": 16,
+          "rain": 300
+        },
+        {
+          "month": "Jun",
+          "high": 24,
+          "low": 18,
+          "rain": 500
+        },
+        {
+          "month": "Jul",
+          "high": 24,
+          "low": 18,
+          "rain": 450
+        },
+        {
+          "month": "Aug",
+          "high": 24,
+          "low": 18,
+          "rain": 350
+        },
+        {
+          "month": "Sep",
+          "high": 24,
+          "low": 17,
+          "rain": 300
+        },
+        {
+          "month": "Oct",
+          "high": 22,
+          "low": 13,
+          "rain": 180
+        },
+        {
+          "month": "Nov",
+          "high": 19,
+          "low": 8,
+          "rain": 40
+        },
+        {
+          "month": "Dec",
+          "high": 17,
+          "low": 5,
+          "rain": 10
+        }
+      ]
+    }
+  },
+  "guides": [
+    {
+      "title": "How many days do you need in Meghalaya?",
+      "tag": "Planning",
+      "minutes": 6,
+      "image": {
+        "src": "/media/home/meghalaya_mountains-1-kaga.jpg",
+        "alt": "Mountain ridges in Meghalaya"
+      }
+    },
+    {
+      "title": "When are the waterfalls at their best?",
+      "tag": "Seasons",
+      "minutes": 4,
+      "image": {
+        "src": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
+        "alt": "Wei Sawdong falls"
+      }
+    },
+    {
+      "title": "Root bridge trek: what to pack and when to start",
+      "tag": "Trekking",
+      "minutes": 5,
+      "image": {
+        "src": "/media/tours/Double-Decker-Trekking-Path-1-kaga.jpg",
+        "alt": "Steps on the root bridge trail"
+      }
+    },
+    {
+      "title": "Dawki: getting the boat ride right",
+      "tag": "Places",
+      "minutes": 4,
+      "image": {
+        "src": "/media/home/dawki-river-4-kaga.jpg",
+        "alt": "Boats on the Dawki river"
+      }
+    },
+    {
+      "title": "Eating your way through Shillong",
+      "tag": "Food",
+      "minutes": 7,
+      "image": {
+        "src": "/media/home/police-bazar-8-kaga.jpg",
+        "alt": "Police Bazar, Shillong"
+      }
+    },
+    {
+      "title": "Camping in Meghalaya: river, lake or hills?",
+      "tag": "Camping",
+      "minutes": 5,
+      "image": {
+        "src": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-6-kaga.jpg",
+        "alt": "Tents at 100 Waterfalls camp"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days are enough for a Meghalaya trip?",
+      "answer": "Three days covers Shillong, Cherrapunji and Dawki at a comfortable pace. With five or six days you can add the root bridge trek, Mawlynnong and a night camping by the river."
+    },
+    {
+      "question": "What is the best time to visit Meghalaya?",
+      "answer": "October to April for clear skies and easy travel. June to August if you want the waterfalls at full power and don't mind rain."
+    },
+    {
+      "question": "Do your tours start from Guwahati?",
+      "answer": "Yes. Most tours include pickup from Guwahati airport or railway station. Tours that start in Shillong say so on the tour page."
+    },
+    {
+      "question": "Are the tours private?",
+      "answer": "Yes. You get your own car and driver-guide; we don't put you in a shared group unless a tour says it is a group departure."
+    },
+    {
+      "question": "Do I need to pay when I book?",
+      "answer": "No. Send a booking request and we confirm availability and the final price first. You pay only after you're happy with the plan."
+    },
+    {
+      "question": "Can you change a tour to suit us?",
+      "answer": "Yes. Tell us your dates, pace and budget and we'll adjust the route, stays or number of days."
+    }
+  ],
+  "callback": {
+    "title": "Couldn't find what you're looking for?",
+    "text": "Don't worry. Our travel experts will put together a trip around your dates, budget and pace.",
+    "cta": "Get a callback"
+  },
+  "nearby": [
+    {
+      "name": "Kaziranga",
+      "text": "Rhinos and elephant grass",
+      "image": {
+        "src": "/media/home/Kaziranga-National-Park-1-kaga.jpg",
+        "alt": "Kaziranga National Park"
+      },
+      "href": "/tours/"
+    },
+    {
+      "name": "Assam",
+      "text": "Tea gardens and the Brahmaputra",
+      "image": {
+        "src": "/media/home/assam-unsplash-1-kaga.jpg",
+        "alt": "Tea gardens in Assam"
+      },
+      "href": "/tours/"
+    },
+    {
+      "name": "Guwahati",
+      "text": "Gateway to the North-East",
+      "image": {
+        "src": "/media/home/guwahati-assasm-unsplash-1-kaga.jpg",
+        "alt": "Guwahati by the river"
+      },
+      "href": "/tours/"
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "text": "High passes and monasteries",
+      "image": {
+        "src": "/media/home/arunachal-pradesh-unsplash-1-kaga.jpg",
+        "alt": "Mountains in Arunachal Pradesh"
+      },
+      "href": "/tours/"
+    },
+    {
+      "name": "Tawang",
+      "text": "The monastery town in the clouds",
+      "image": {
+        "src": "/media/home/tawang-arunachal-pradesh-unsplash-1-kaga.jpg",
+        "alt": "Tawang"
+      },
+      "href": "/tours/"
+    }
+  ],
+  "why": [
+    {
+      "title": "A local team in Shillong",
+      "text": "We live here. We know which falls are running, which roads are slow and where to eat."
+    },
+    {
+      "title": "Your own car and driver",
+      "text": "Every tour is private, with a driver-guide who knows the hills."
+    },
+    {
+      "title": "Pay after we confirm",
+      "text": "Send a request, get the final plan and price, and pay only when you're happy."
+    },
+    {
+      "title": "Stays we've checked",
+      "text": "We only book hotels and camps our team has stayed at or inspected."
+    }
+  ],
+  "tagGroups": [
+    {
+      "title": "Things to do in Meghalaya",
+      "links": [
+        {
+          "label": "Things to do in Shillong",
+          "href": "/things-to-do-in-shillong/"
+        },
+        {
+          "label": "Things to do in Cherrapunji",
+          "href": "/things-to-do-in-cherrapunji/"
+        },
+        {
+          "label": "Things to do in Dawki",
+          "href": "/things-to-do-in-dawki/"
+        },
+        {
+          "label": "Things to do in Mawsynram",
+          "href": "/things-to-do-in-mawsynram/"
+        },
+        {
+          "label": "Things to do in Jowai",
+          "href": "/things-to-do-in-jowai/"
+        },
+        {
+          "label": "Things to do in Meghalaya",
+          "href": "/things-to-do-in-meghalaya/"
+        }
+      ]
+    },
+    {
+      "title": "Top destinations",
+      "links": [
+        {
+          "label": "Shillong",
+          "href": "/shillong-tour-packages/"
+        },
+        {
+          "label": "Cherrapunji",
+          "href": "/cherrapunji-tourism/"
+        },
+        {
+          "label": "Dawki",
+          "href": "/dawki-tourism/"
+        },
+        {
+          "label": "Kaziranga",
+          "href": "/kaziranga-tour-packages/"
+        },
+        {
+          "label": "Guwahati",
+          "href": "/guwahati-tour-packages/"
+        },
+        {
+          "label": "Tawang",
+          "href": "/tawang-tour-packages/"
+        },
+        {
+          "label": "Majuli",
+          "href": "/majuli-tour-packages/"
+        }
+      ]
+    },
+    {
+      "title": "Popular attractions",
+      "links": [
+        {
+          "label": "Places to visit in Shillong",
+          "href": "/places-to-visit-in-shillong/"
+        },
+        {
+          "label": "Places to visit in Cherrapunji",
+          "href": "/places-to-visit-in-cherrapunji/"
+        },
+        {
+          "label": "Places to visit in Dawki",
+          "href": "/places-to-visit-in-dawki/"
+        },
+        {
+          "label": "Places to visit in Meghalaya",
+          "href": "/places-to-visit-in-meghalaya/"
+        }
+      ]
+    },
+    {
+      "title": "Tours in Northeast India",
+      "links": [
+        {
+          "label": "Meghalaya tour packages",
+          "href": "/meghalaya-tour-packages/"
+        },
+        {
+          "label": "Shillong tour packages",
+          "href": "/shillong-tour-packages/"
+        },
+        {
+          "label": "Assam tour packages",
+          "href": "/assam-tour-packages/"
+        },
+        {
+          "label": "Meghalaya honeymoon packages",
+          "href": "/meghalaya-honeymoon-packages/"
+        },
+        {
+          "label": "Camping in Meghalaya",
+          "href": "/camping-in-meghalaya/"
+        }
+      ]
+    }
+  ],
+  "cabs": [
+    {
+      "slug": "guwahati-airport-to-shillong-cabs",
+      "image": {
+        "src": "/media/home/Umiam-Lake-10-kaga.jpg",
+        "alt": "Umiam Lake on the road from Guwahati to Shillong"
+      },
+      "fare": 900
+    },
+    {
+      "slug": "shillong-to-cherrapunji-cabs",
+      "image": {
+        "src": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
+        "alt": "Wei Sawdong falls near Cherrapunji"
+      },
+      "fare": 3000
+    },
+    {
+      "slug": "shillong-to-dawki-cabs",
+      "image": {
+        "src": "/media/home/dawki-river-5-kaga.jpg",
+        "alt": "Boats on the river at Dawki"
+      },
+      "fare": 3500
+    },
+    {
+      "slug": "guwahati-to-cherrapunji-cabs",
+      "image": {
+        "src": "/media/home/Seven-Sisters-Falls-5-kaga.jpg",
+        "alt": "Seven Sisters Falls, Cherrapunji"
+      },
+      "fare": 5200
+    },
+    {
+      "slug": "shillong-to-guwahati-cabs",
+      "image": {
+        "src": "/media/home/guwahati-assasm-unsplash-2-kaga.jpg",
+        "alt": "Guwahati by the Brahmaputra"
+      },
+      "fare": 600
+    },
+    {
+      "slug": "shillong-to-guwahati-airport-cabs",
+      "image": {
+        "src": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
+        "alt": "Hills on the Shillong highway"
+      },
+      "fare": 900
+    },
+    {
+      "slug": "shillong-to-guwahati-shared-cabs",
+      "image": {
+        "src": "/media/home/umiam-lake-26-kaga.jpg",
+        "alt": "Umiam Lake at sunset"
+      },
+      "fare": 500
+    },
+    {
+      "slug": "kaziranga-to-shillong-cabs",
+      "image": {
+        "src": "/media/home/Kaziranga-national-park-4-kaga.jpg",
+        "alt": "Kaziranga grasslands"
+      },
+      "fare": 7000
+    },
+    {
+      "slug": "tempo-traveller-in-shillong",
+      "image": {
+        "src": "/media/home/police-bazar-8-kaga.jpg",
+        "alt": "Police Bazar, Shillong"
+      },
+      "fare": 7500
+    }
+  ]
+}

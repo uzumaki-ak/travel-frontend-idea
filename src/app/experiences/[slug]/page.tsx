@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { fromPrice, getExperience, getExperienceCards, listExperienceSlugs } from "@/content/experiences";
 import type { Experience } from "@/content/experiences/schema";
+import { destinationPathForRegion } from "@/content/destinations/slugs";
 import { experiencePath } from "@/content/experiences/slugs";
 import { resolveSitePath } from "@/content/routes";
 import { EnquiryDialog } from "@/features/enquiry/enquiry-dialog";
@@ -57,24 +58,25 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
   const related = await getExperienceCards(experience.related.filter((s) => s !== experience.slug));
   const crumbs = [
     { label: "Home", href: "/" },
-    { label: experience.location.region, href: "/tours/" },
+    // The region's hub once it is published, else the tours archive.
+    { label: experience.location.region, href: destinationPathForRegion(experience.location.region) ?? "/tours/" },
   ];
   const tagGroups = experience.tagGroups.map((g) => ({ title: g.title, links: g.links.map((l) => ({ label: l.label, href: resolveSitePath(l.href) })) }));
 
   return (
     <SiteShell section="/tours/" dockAction={<BookingDockButton />}>
-      <ExperienceHero experience={experience} crumbs={crumbs} from={fromPrice(experience)} />
+      <ExperienceHero experience={experience} crumbs={crumbs} />
       <ExperienceGallery photos={experience.gallery} title={experience.title} />
       <KeyFacts facts={experience.facts} />
       <SectionNav links={sectionLinks(experience)} />
 
       {/*
-        Price ticket: hidden on phones, shown under the title on tablets; from lg up it is
-        pinned in a right-hand column for the whole content (overview → FAQ). Once a package
+        Price ticket: desktop only (lg up), pinned in a right-hand column for the whole
+        content (overview → FAQ). Once a package
         is picked the ticket shows it, with "Book now".
       */}
       <div className="relative">
-        <StickyTicket afterId="hero-ticket">
+        <StickyTicket>
           <PriceTicket from={fromPrice(experience)} packageCount={experience.packages.length} />
         </StickyTicket>
 
