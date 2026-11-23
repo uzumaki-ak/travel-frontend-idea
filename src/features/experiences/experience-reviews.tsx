@@ -2,7 +2,8 @@
 
 /**
  * Reviews: overall score, per-aspect bars, star distribution, and the list,
- * newest first, four at a time.
+ * newest first. Phones: every review in a sideways-swipe row. Tablet up: a list,
+ * four at a time.
  */
 import { useMemo, useState } from "react";
 import type { Experience } from "@/content/experiences/schema";
@@ -66,9 +67,12 @@ export function ExperienceReviews({ rating, reviews }: { rating: Experience["rat
         </div>
 
         <div className="flex min-w-0 flex-col gap-6">
-          <ul className="flex flex-col">
-            {sorted.slice(0, shown).map((r) => (
-              <li key={`${r.name}-${r.date}`} className="flex flex-col gap-3 border-t border-ink/10 py-6 first:border-t-0 first:pt-0">
+          <ul className="scrollbar-none relative -mx-(--gutter-x) flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:mx-0 md:flex-col md:gap-0 md:overflow-visible md:px-0 md:pb-0">
+            {sorted.map((r, i) => (
+              <li
+                key={`${r.name}-${r.date}`}
+                className={`flex w-[85%] shrink-0 snap-start flex-col gap-3 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-cloud p-5 md:w-auto md:rounded-none md:border-t md:border-ink/10 md:bg-transparent md:px-0 md:py-6 md:first:border-t-0 md:first:pt-0 ${i >= shown ? "md:hidden" : ""}`}
+              >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-full bg-river font-display font-semibold text-jade">
@@ -103,7 +107,7 @@ export function ExperienceReviews({ rating, reviews }: { rating: Experience["rat
             <button
               type="button"
               onClick={() => setShown((n) => n + PAGE)}
-              className="self-start rounded-full border border-ink/25 px-6 py-3 font-display font-medium transition-colors hover:bg-ink hover:text-fog"
+              className="hidden self-start rounded-full border border-ink/25 px-6 py-3 font-display font-medium transition-colors hover:bg-ink hover:text-fog md:block"
             >
               Show more reviews ({sorted.length - shown})
             </button>
