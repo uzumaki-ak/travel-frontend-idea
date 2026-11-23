@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { getDestination, listDestinationSlugs } from "@/content/destinations";
+import { getDestination, getHubCabs, listDestinationSlugs } from "@/content/destinations";
 import type { Destination } from "@/content/destinations/schema";
 import { destinationPath } from "@/content/destinations/slugs";
 import { resolveSitePath } from "@/content/routes";
@@ -56,6 +56,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
     { label: "Tours", href: "/tours/" },
   ];
   const popular = listings.filter((l) => l.popular);
+  const cabs = await getHubCabs(destination);
   const stats = hubStats(destination);
   // Short outings (a day or less) are "experiences".
   const experiences = listings.filter((l) => l.days === 1);
@@ -86,7 +87,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
             {name} tour packages
           </h2>
         </div>
-        <HubBrowser name={name} categories={destination.categories} listings={listings} interlude={destination.interlude} />
+        <HubBrowser name={name} categories={destination.categories} listings={listings} interlude={destination.interlude} attractions={destination.attractions} cabs={cabs} />
       </section>
 
       {experiences.length ? (

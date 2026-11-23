@@ -10,16 +10,18 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { CrossIcon } from "@/ui/icons";
 
+export type Kind = "tour" | "experience" | "cab" | "attraction";
 export type Duration = "day" | "short" | "long";
-export type Filters = { themes: string[]; durations: Duration[] };
+export type Filters = { types: Kind[]; themes: string[]; durations: Duration[] };
 export type Option<T extends string> = { id: T; label: string; count: number };
 
-export const EMPTY: Filters = { themes: [], durations: [] };
+export const EMPTY: Filters = { types: [], themes: [], durations: [] };
 
 type Props = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   applied: Filters;
+  types: Option<Kind>[];
   themes: Option<string>[];
   durations: Option<Duration>[];
   /** How many results a set of filters would give. */
@@ -44,7 +46,7 @@ export function FilterSheet({ open, onOpenChange, ...rest }: Props) {
   );
 }
 
-function Panel({ applied, themes, durations, countFor, onApply, onClose }: Omit<Props, "open" | "onOpenChange"> & { onClose: () => void }) {
+function Panel({ applied, types, themes, durations, countFor, onApply, onClose }: Omit<Props, "open" | "onOpenChange"> & { onClose: () => void }) {
   const [draft, setDraft] = useState<Filters>(applied);
   const toggle = <K extends keyof Filters>(key: K, id: Filters[K][number]) =>
     setDraft((d) => {
@@ -65,12 +67,17 @@ function Panel({ applied, themes, durations, countFor, onApply, onClose }: Omit<
       </div>
 
       <div className="flex-1 overflow-y-auto overscroll-contain px-6">
+        <Group title="Type" options={types} picked={draft.types} onToggle={(id) => toggle("types", id)} />
         <Group title="Themes" options={themes} picked={draft.themes} onToggle={(id) => toggle("themes", id)} />
         <Group title="Duration" options={durations} picked={draft.durations} onToggle={(id) => toggle("durations", id)} last />
       </div>
 
       <div className="flex items-center justify-between gap-4 border-t border-ink/10 px-6 py-4" style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}>
-        <button type="button" onClick={() => setDraft(EMPTY)} className="cursor-pointer font-display font-semibold underline underline-offset-4 transition-colors hover:text-mandarin">
+        <button type="button" onClick={() => {
+            // Clears for real (not just the draft), so closing with X keeps it cleared.
+            setDraft(EMPTY);
+            onApply(EMPTY);
+          }} className="cursor-pointer font-display font-semibold underline underline-offset-4 transition-colors hover:text-mandarin">
           Clear all
         </button>
         <button
