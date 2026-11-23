@@ -3,8 +3,9 @@
 /**
  * A tour as listed on a destination hub. The whole card opens the tour's
  * experience page. With `gallery`, the photo area flips through the tour's
- * photos: dots everywhere, arrows on hover (desktop), swipe on touch screens.
- * Rails use it without a gallery, so a sideways swipe scrolls the rail instead.
+ * photos: a strip you scroll by hand on touch screens (it follows the finger and
+ * snaps), dots that track it, arrows on hover (desktop). Rails use it without a
+ * gallery, so a sideways swipe scrolls the rail instead.
  */
 import Image from "next/image";
 import Link from "next/link";
@@ -27,14 +28,16 @@ type Props = {
   style?: React.CSSProperties;
 };
 
-const SWIPE_PX = 40;
-
 export function TourCard({ listing, gallery = false, summary = false, rowOnPhone = false, sizes = "(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 85vw", className = "", style }: Props) {
   const photos = gallery ? listing.images : listing.images.slice(0, 1);
   const [index, setIndex] = useState(0);
-  const touchX = useRef<number | null>(null);
-  const swiped = useRef(false);
-  const go = (step: number) => setIndex((i) => (i + step + photos.length) % photos.length);
+  const strip = useRef<HTMLDivElement>(null);
+  const go = (to: number) => {
+    const el = strip.current;
+    if (!el) return;
+    const next = (to + photos.length) % photos.length;
+    el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
+  };
   const { price } = listing;
   const saving = savingPercent(price.from, price.compareAt);
   const href = experiencePath(listing.experience);
@@ -45,39 +48,39 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
       <div
         className={`relative overflow-hidden bg-cloud ${
           row
-            ? "aspect-[3/4] w-[40%] shrink-0 self-start rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:aspect-[4/5] sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]"
-            : "aspect-[4/5] rounded-tl-[2.25rem] rounded-br-[2.25rem]"
+            ? "aspect-[4/5] w-[34%] shrink-0 self-start rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]"
+            : "aspect-square rounded-tl-[2.25rem] rounded-br-[2.25rem]"
         }`}
-        onTouchStart={photos.length > 1 ? (e) => (touchX.current = e.touches[0]?.clientX ?? null) : undefined}
-        onTouchEnd={
-          photos.length > 1
-            ? (e) => {
-                const start = touchX.current;
-                const end = e.changedTouches[0]?.clientX;
-                touchX.current = null;
-                if (start == null || end == null || Math.abs(end - start) < SWIPE_PX) return;
-                swiped.current = true; // the tap that ends a swipe must not open the tour
-                go(end < start ? 1 : -1);
-              }
-            : undefined
-        }
       >
-        {photos.map((p, i) => (
-          <Image
-            key={p.src}
-            src={p.src}
-            alt={i === 0 ? p.alt : ""}
-            fill
-            sizes={sizes}
-            className={`object-cover transition-[opacity,scale] duration-700 ease-out-expo group-hover/card:scale-[1.04] ${i === index ? "opacity-100" : "opacity-0"}`}
-          />
-        ))}
+        {/* The photos: a scroll-snap strip, so a swipe moves with the finger. Each slide is a
+            link to the tour (hidden from screen readers; the title link is the real one). */}
+        <div
+          ref={strip}
+          onScroll={(e) => {
+            const el = e.currentTarget;
+            const i = Math.round(el.scrollLeft / Math.max(1, el.clientWidth));
+            if (i !== index) setIndex(i);
+          }}
+          className={`scrollbar-none absolute inset-0 z-[6] flex overscroll-x-contain ${photos.length > 1 ? "snap-x snap-mandatory overflow-x-auto" : "overflow-hidden"}`}
+        >
+          {photos.map((p) => (
+            <Link key={p.src} href={href} tabIndex={-1} aria-hidden="true" className="relative block h-full w-full shrink-0 snap-center snap-always overflow-hidden">
+              <Image
+                src={p.src}
+                alt=""
+                fill
+                sizes={sizes}
+                className="object-cover transition-[scale] duration-700 ease-out-expo group-hover/card:scale-[1.04]"
+              />
+            </Link>
+          ))}
+        </div>
         {/* Soft fade so the pills stay legible on bright photos. */}
-        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-river-deep/45 to-transparent" />
+        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[7] h-1/3 bg-gradient-to-t from-river-deep/45 to-transparent" />
 
-        {listing.badge ? <span className={`absolute z-10 rounded-full bg-mandarin label text-ink ${row ? "top-2.5 left-2.5 px-2 py-0.5 sm:top-4 sm:left-4 sm:px-3 sm:py-1" : "top-4 left-4 px-3 py-1"}`}>{listing.badge}</span> : null}
-        {saving ? <span className={`absolute top-4 right-4 z-10 rounded-full bg-jade px-2.5 py-1 label text-river-deep ${row ? "hidden sm:block" : ""}`}>−{saving}%</span> : null}
-        <span className={`absolute bottom-4 left-4 z-10 items-center gap-1.5 rounded-full bg-fog/90 px-3 py-1 text-[0.8rem] backdrop-blur ${row ? "hidden sm:inline-flex" : "inline-flex"}`}>
+        {listing.badge ? <span className={`pointer-events-none absolute z-10 rounded-full bg-mandarin label text-ink ${row ? "top-2.5 left-2.5 px-2 py-0.5 sm:top-4 sm:left-4 sm:px-3 sm:py-1" : "top-4 left-4 px-3 py-1"}`}>{listing.badge}</span> : null}
+        {saving ? <span className={`pointer-events-none absolute top-4 right-4 z-10 rounded-full bg-jade px-2.5 py-1 label text-river-deep ${row ? "hidden sm:block" : ""}`}>−{saving}%</span> : null}
+        <span className={`pointer-events-none absolute bottom-4 left-4 z-10 items-center gap-1.5 rounded-full bg-fog/90 px-3 py-1 text-[0.8rem] backdrop-blur ${row ? "hidden sm:inline-flex" : "inline-flex"}`}>
           <ClockIcon />
           {listing.durationLabel}
         </span>
@@ -91,7 +94,7 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
                   type="button"
                   aria-label={`Photo ${i + 1} of ${photos.length}`}
                   aria-pressed={i === index}
-                  onClick={() => setIndex(i)}
+                  onClick={() => go(i)}
                   className="grid size-4 cursor-pointer place-items-center"
                 >
                   <span className={`block rounded-full bg-fog transition-all duration-300 ${i === index ? "h-1.5 w-4" : "size-1.5 opacity-60"}`} />
@@ -99,10 +102,10 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
               ))}
             </span>
             <span className="pointer-events-none absolute inset-x-3 top-1/2 z-20 hidden -translate-y-1/2 justify-between opacity-0 transition-opacity duration-300 group-hover/card:opacity-100 md:flex">
-              <button type="button" aria-label="Previous photo" onClick={() => go(-1)} className="pointer-events-auto grid size-9 cursor-pointer place-items-center rounded-full bg-fog/90 text-ink backdrop-blur transition-colors hover:bg-fog">
+              <button type="button" aria-label="Previous photo" onClick={() => go(index - 1)} className="pointer-events-auto grid size-9 cursor-pointer place-items-center rounded-full bg-fog/90 text-ink backdrop-blur transition-colors hover:bg-fog">
                 <ArrowLeftIcon />
               </button>
-              <button type="button" aria-label="Next photo" onClick={() => go(1)} className="pointer-events-auto grid size-9 cursor-pointer place-items-center rounded-full bg-fog/90 text-ink backdrop-blur transition-colors hover:bg-fog">
+              <button type="button" aria-label="Next photo" onClick={() => go(index + 1)} className="pointer-events-auto grid size-9 cursor-pointer place-items-center rounded-full bg-fog/90 text-ink backdrop-blur transition-colors hover:bg-fog">
                 <ArrowRightIcon />
               </button>
             </span>
@@ -111,16 +114,10 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
       </div>
 
       <div className={`flex min-w-0 flex-1 flex-col ${row ? "gap-1.5 sm:gap-2" : "gap-2"}`}>
-        <h3 className={`font-display leading-snug font-semibold tracking-[-0.01em] ${row ? "line-clamp-3 text-[1rem] sm:line-clamp-none sm:text-[1.12rem]" : "text-[1.12rem]"}`}>
+        <h3 className={`font-display leading-snug font-semibold tracking-[-0.01em] ${row ? "line-clamp-3 text-[1rem] sm:line-clamp-none sm:text-[1.05rem]" : "text-[1.05rem]"}`}>
           <Link
             href={href}
-            onClick={(e) => {
-              if (swiped.current) {
-                e.preventDefault();
-                swiped.current = false;
-              }
-            }}
-            // The link covers the whole card; the gallery controls sit above it (z-20).
+            // The link covers the whole card; the photo strip (z-6) and gallery controls (z-20) sit above it.
             className="after:absolute after:inset-0 after:z-[5] focus-visible:outline-none group-has-focus-visible/card:underline"
           >
             {listing.title}

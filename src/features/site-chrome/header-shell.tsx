@@ -22,7 +22,7 @@ export function HeaderShell({ children }: { children: ReactNode }) {
   return (
     <header
       data-scrolled={scrolled || undefined}
-      className="group/header fixed inset-x-0 top-0 z-40 transition-[background-color,box-shadow] duration-500 ease-out-expo data-scrolled:bg-fog/85 data-scrolled:shadow-[0_1px_0_0_rgb(19_32_29/0.08)] data-scrolled:backdrop-blur-md"
+      className="group/header fixed inset-x-0 top-0 z-40 [view-transition-name:site-header] transition-[background-color,box-shadow] duration-500 ease-out-expo data-scrolled:bg-fog/85 data-scrolled:shadow-[0_1px_0_0_rgb(19_32_29/0.08)] data-scrolled:backdrop-blur-md"
       style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}
     >
       {children}

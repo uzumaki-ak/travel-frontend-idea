@@ -9,10 +9,10 @@ import { ArrowRightIcon, CarIcon, PinIcon } from "@/ui/icons";
 
 const ARTICLE = "group/card relative flex h-full gap-4 sm:flex-col";
 const PHOTO =
-  "relative aspect-[3/4] w-[40%] shrink-0 self-start overflow-hidden rounded-tl-[1.5rem] rounded-br-[1.5rem] bg-cloud sm:aspect-[4/5] sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]";
+  "relative aspect-[4/5] w-[34%] shrink-0 self-start overflow-hidden rounded-tl-[1.5rem] rounded-br-[1.5rem] bg-cloud sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]";
 const KIND = "absolute top-2.5 left-2.5 z-10 inline-flex items-center gap-1.5 rounded-full bg-ink px-2.5 py-1 text-[0.75rem] font-medium text-fog sm:top-4 sm:left-4";
-const TITLE = "font-display text-[1rem] leading-snug font-semibold tracking-[-0.01em] sm:text-[1.12rem]";
-const SIZES = "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 40vw";
+const TITLE = "font-display text-[1rem] leading-snug font-semibold tracking-[-0.01em] sm:text-[1.05rem]";
+const SIZES = "(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 45vw, 34vw";
 
 /** A cab route. Opens the real /cars/ page. */
 export function CabCard({ cab }: { cab: HubCabCard }) {

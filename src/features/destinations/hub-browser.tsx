@@ -60,7 +60,9 @@ function select(items: Item[], f: Filters): Item[] {
 }
 
 function withTransition(update: () => void) {
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Phones skip the reflow animation: its snapshots draw above the fixed header and
+  // enquiry bar, and the jump back to the list top makes them glitch.
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 767px)").matches;
   if (reduced || typeof document.startViewTransition !== "function") return update();
   document.startViewTransition(() => flushSync(update));
 }
@@ -205,7 +207,7 @@ export function HubBrowser({ name, categories, listings, interlude, attractions,
         </div>
 
         {shown.length ? (
-          <ul className="grid gap-x-6 gap-y-8 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3">
+          <ul className="grid gap-x-6 gap-y-8 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 xl:grid-cols-4">
             {shown.map((item, i) => (
               <Cell
                 key={item.key}
@@ -262,7 +264,7 @@ function Cell({ item, onPick, interlude }: { item: Item; onPick: (a: Destination
         ) : item.kind === "attraction" ? (
           <AttractionCard attraction={item.attraction} tours={item.tours} onPick={() => onPick(item.attraction)} />
         ) : (
-          <TourCard listing={item.listing} gallery summary rowOnPhone sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 40vw" />
+          <TourCard listing={item.listing} gallery summary rowOnPhone sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 45vw, 34vw" />
         )}
       </li>
       {interlude ? (

@@ -7,7 +7,7 @@ import { destinationPath } from "@/content/destinations/slugs";
 import { resolveSitePath } from "@/content/routes";
 import { experiencePath } from "@/content/experiences/slugs";
 import { DestinationHero, type HubStats } from "@/features/destinations/destination-hero";
-import { Attractions, FaqWithCallback, GuideCard, HubReviews, Nearby, RouteCard, SectionHead, WhyChoose } from "@/features/destinations/hub-sections";
+import { Attractions, FaqWithCallback, GuideCard, HubReviews, Nearby, SectionHead, WhyChoose } from "@/features/destinations/hub-sections";
 import { HubBrowser } from "@/features/destinations/hub-browser";
 import { TourCard } from "@/features/destinations/tour-card";
 import { TravelInfo } from "@/features/destinations/travel-info";
@@ -58,9 +58,8 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
   const popular = listings.filter((l) => l.popular);
   const cabs = await getHubCabs(destination);
   const stats = hubStats(destination);
-  // Short outings (a day or less) are "experiences"; multi-day tours are "itineraries".
+  // Short outings (a day or less) are "experiences".
   const experiences = listings.filter((l) => l.days === 1);
-  const itineraries = listings.filter((l) => l.days > 1).sort((a, b) => a.days - b.days || a.rank - b.rank);
   // Highest rated first, ties broken by how many people rated them.
   const recommended = [...listings].sort((a, b) => b.rating.average - a.rating.average || b.rating.count - a.rating.count).slice(0, 6);
   const tagGroups = destination.tagGroups.map((g) => ({ title: g.title, links: g.links.map((l) => ({ label: l.label, href: resolveSitePath(l.href) })) }));
@@ -74,8 +73,8 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <SectionHead id="popular-title" title={`Popular ${name} tours`} />
           <Rail label={`Popular ${name} tours`}>
             {popular.map((l) => (
-              <div key={l.id} className="w-[78vw] max-w-[22rem] shrink-0 snap-start sm:w-[21rem]">
-                <TourCard listing={l} sizes="(min-width: 640px) 336px, 78vw" />
+              <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
+                <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
               </div>
             ))}
           </Rail>
@@ -105,8 +104,8 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           />
           <Rail label={`Top ${name} experiences`}>
             {experiences.map((l) => (
-              <div key={l.id} className="w-[78vw] max-w-[22rem] shrink-0 snap-start sm:w-[21rem]">
-                <TourCard listing={l} sizes="(min-width: 640px) 336px, 78vw" />
+              <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
+                <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
               </div>
             ))}
           </Rail>
@@ -116,19 +115,6 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
       <Attractions name={name} attractions={destination.attractions} />
 
       <HubReviews name={name} rating={stats.rating} reviewCount={stats.reviews} reviews={destination.reviews} />
-
-      {itineraries.length ? (
-        <section aria-labelledby="itineraries-title" className="flex flex-col gap-10 py-20 md:py-28">
-          <SectionHead id="itineraries-title" title={`Best ${name} itineraries`} />
-          <Rail label={`${name} itineraries`}>
-            {itineraries.map((l) => (
-              <div key={l.id} className="w-[82vw] max-w-[23rem] shrink-0 snap-start sm:w-[22.5rem]">
-                <RouteCard listing={l} />
-              </div>
-            ))}
-          </Rail>
-        </section>
-      ) : null}
 
       {destination.info ? (
         <section aria-labelledby="info-title" className="bg-cloud py-20 md:py-28">
@@ -146,7 +132,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <SectionHead id="guides-title" title={`${name} travel guide`} />
           <Rail label={`${name} travel guide`}>
             {destination.guides.map((g) => (
-              <div key={g.title} className="w-[78vw] max-w-[22rem] shrink-0 snap-start sm:w-[21rem]">
+              <div key={g.title} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
                 <GuideCard guide={g} />
               </div>
             ))}
@@ -158,8 +144,8 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
         <SectionHead id="recommended-title" title={`Recommended ${name} tours`} />
         <Rail label={`Recommended ${name} tours`}>
           {recommended.map((l) => (
-            <div key={l.id} className="w-[78vw] max-w-[22rem] shrink-0 snap-start sm:w-[21rem]">
-              <TourCard listing={l} sizes="(min-width: 640px) 336px, 78vw" />
+            <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
+              <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
             </div>
           ))}
         </Rail>

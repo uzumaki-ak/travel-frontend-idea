@@ -3,13 +3,11 @@
  * nothing animates on scroll (the client asked for none).
  */
 import Image from "next/image";
-import Link from "next/link";
-import type { Destination, DestinationListing } from "@/content/destinations/schema";
-import { experiencePath } from "@/content/experiences/slugs";
+import type { Destination } from "@/content/destinations/schema";
 import { resolveSitePath } from "@/content/routes";
-import { formatInr, formatMonthYear, plural } from "@/features/experiences/format";
+import { formatMonthYear, plural } from "@/features/experiences/format";
 import { RatingStars } from "@/features/experiences/rating-stars";
-import { ArrowRightIcon, ArrowUpRightIcon, CarIcon, ClockIcon, HeadsetIcon, ShieldCheckIcon, WalletIcon } from "@/ui/icons";
+import { ArrowRightIcon, ArrowUpRightIcon, CarIcon, HeadsetIcon, ShieldCheckIcon, WalletIcon } from "@/ui/icons";
 
 /** Section title, with an optional action on the right. */
 export function SectionHead({ id, title, action }: { id: string; title: string; action?: React.ReactNode }) {
@@ -34,15 +32,15 @@ export function Attractions({ name, attractions }: { name: string; attractions: 
       <div className="sm:wrap">
       <ol className="scrollbar-none relative flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
         {attractions.map((a, i) => (
-          <li key={a.name} className="flex w-[72%] shrink-0 snap-start flex-col gap-4 sm:w-auto">
-            <div className={`relative aspect-[3/4] overflow-hidden bg-cloud ${i % 2 ? "rounded-t-full rounded-b-[1.75rem]" : "rounded-tl-[2.25rem] rounded-br-[2.25rem]"}`}>
-              <Image src={a.image.src} alt={a.image.alt} fill sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 72vw" className="object-cover" />
+          <li key={a.name} className="flex w-[60%] shrink-0 snap-start flex-col gap-4 sm:w-auto">
+            <div className={`relative aspect-[4/5] overflow-hidden bg-cloud sm:aspect-square ${i % 2 ? "rounded-t-full rounded-b-[1.75rem]" : "rounded-tl-[2.25rem] rounded-br-[2.25rem]"}`}>
+              <Image src={a.image.src} alt={a.image.alt} fill sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 60vw" className="object-cover" />
               <span aria-hidden="true" className="absolute bottom-4 left-4 rounded-full bg-fog/90 px-2.5 py-1 font-mono text-[0.75rem] font-semibold text-ink tabular-nums backdrop-blur">
                 {String(i + 1).padStart(2, "0")}
               </span>
             </div>
             <div className="flex flex-col gap-1.5">
-              <span className="font-display text-[1.15rem] leading-snug font-semibold tracking-[-0.01em]">{a.name}</span>
+              <span className="font-display text-[1.05rem] leading-snug font-semibold tracking-[-0.01em]">{a.name}</span>
               <span className="text-[0.85rem] font-medium text-mandarin">{a.place}</span>
               <span className="text-[0.92rem] leading-relaxed text-moss">{a.text}</span>
             </div>
@@ -96,47 +94,6 @@ export function HubReviews({ name, rating, reviewCount, reviews }: { name: strin
         </ul>
       </div>
     </section>
-  );
-}
-
-/* ---------------------------------------------------------------- Itineraries */
-
-/** A multi-day tour drawn as its route: stops on a line, one per place. */
-export function RouteCard({ listing }: { listing: DestinationListing }) {
-  return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-cloud">
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <Image src={listing.images[0]!.src} alt={listing.images[0]!.alt} fill sizes="(min-width: 640px) 360px, 82vw" className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.05]" />
-        <span className="absolute top-4 left-4 rounded-full bg-ink px-3 py-1 font-mono text-[0.75rem] font-semibold text-fog tabular-nums">{plural(listing.days, "day", "days")}</span>
-      </div>
-      <div className="flex flex-1 flex-col gap-5 p-6">
-        <h3 className="font-display text-[1.12rem] leading-snug font-semibold tracking-[-0.01em]">
-          <Link href={experiencePath(listing.experience)} className="after:absolute after:inset-0 focus-visible:outline-none group-has-focus-visible:underline">
-            {listing.title}
-          </Link>
-        </h3>
-        {/* The route. */}
-        <ol aria-label="Route" className="relative flex flex-col gap-2.5 pl-5">
-          <span aria-hidden="true" className="absolute top-2 bottom-2 left-[5px] w-px bg-ink/20" />
-          {listing.route.map((stop, i) => (
-            <li key={stop} className="relative flex items-center gap-2 text-[0.9rem]">
-              <span aria-hidden="true" className={`absolute -left-5 size-[11px] rounded-full border-2 ${i === 0 || i === listing.route.length - 1 ? "border-mandarin bg-mandarin" : "border-ink/40 bg-cloud"}`} />
-              {stop}
-            </li>
-          ))}
-        </ol>
-        <div className="mt-auto flex items-end justify-between gap-3 border-t border-ink/10 pt-4">
-          <span className="flex items-center gap-1.5 text-[0.85rem] text-moss">
-            <ClockIcon />
-            {listing.durationLabel}
-          </span>
-          <span className="flex flex-col items-end">
-            <span className="font-mono font-semibold tabular-nums">{formatInr(listing.price.from)}</span>
-            <span className="text-[0.7rem] text-moss">{listing.price.unit}</span>
-          </span>
-        </div>
-      </div>
-    </article>
   );
 }
 
@@ -253,11 +210,12 @@ export function WhyChoose({ why }: { why: Destination["why"] }) {
     <section aria-labelledby="why-title" className="bg-cloud py-20 md:py-28">
       <div className="flex flex-col gap-12">
         <SectionHead id="why-title" title="Planned by people who live here" />
-        <ul className="wrap grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="sm:wrap">
+        <ul className="scrollbar-none relative flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
           {why.map((w, i) => {
             const Icon = WHY_ICONS[i % WHY_ICONS.length]!;
             return (
-              <li key={w.title} className="flex flex-col gap-4 border-t border-ink/15 pt-6">
+              <li key={w.title} className="flex w-[72%] shrink-0 snap-start flex-col gap-4 rounded-[1.5rem] bg-fog p-6 sm:w-auto sm:rounded-none sm:border-t sm:border-ink/15 sm:bg-transparent sm:p-0 sm:pt-6">
                 <span className="grid size-12 place-items-center rounded-full bg-river text-xl text-jade">
                   <Icon />
                 </span>
@@ -267,6 +225,7 @@ export function WhyChoose({ why }: { why: Destination["why"] }) {
             );
           })}
         </ul>
+        </div>
       </div>
     </section>
   );

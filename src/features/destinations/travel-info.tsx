@@ -59,9 +59,9 @@ export function TravelInfo({ name, info }: { name: string; info: Info }) {
           })}
         </ol>
 
-        <ul className="grid gap-4 md:grid-cols-3">
+        <ul className="scrollbar-none relative -mx-(--gutter-x) flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
           {info.bestTime.seasons.map((s) => (
-            <li key={s.name} className="flex flex-col gap-3 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-fog p-6">
+            <li key={s.name} className="flex w-[80%] shrink-0 snap-start flex-col gap-3 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-fog p-6 md:w-auto">
               <span className="flex items-center justify-between gap-3">
                 <span className="font-mono text-[0.8rem] text-moss">{s.months}</span>
                 <span className={`rounded-full px-2.5 py-0.5 label ${VERDICT[s.verdict].className}`}>{VERDICT[s.verdict].label}</span>
@@ -74,11 +74,11 @@ export function TravelInfo({ name, info }: { name: string; info: Info }) {
       </Tabs.Content>
 
       <Tabs.Content value="reach" forceMount className="data-[state=inactive]:hidden">
-        <ol className="grid gap-4 md:grid-cols-3">
+        <ol className="scrollbar-none relative -mx-(--gutter-x) flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
           {info.reach.map((r, i) => {
             const Icon = MODE_ICON[r.mode];
             return (
-              <li key={r.mode} className="flex flex-col gap-4 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-fog p-6">
+              <li key={r.mode} className="flex w-[80%] shrink-0 snap-start flex-col gap-4 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-fog p-6 md:w-auto">
                 <span className="flex items-center justify-between">
                   <span className="grid size-11 place-items-center rounded-full bg-river text-xl text-jade">
                     <Icon />

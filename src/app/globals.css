@@ -219,6 +219,15 @@
   animation-duration: 0.5s;
   animation-timing-function: var(--ease-out-expo);
 }
+/* The fixed header stays put and above the cards while results reflow. */
+::view-transition-group(site-header) {
+  z-index: 10;
+  animation: none;
+}
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation: none;
+}
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),
   ::view-transition-old(*),
