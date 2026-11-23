@@ -4,6 +4,7 @@
  * Below it, the hub's numbers in one row and the intro with "Read more".
  * Entrance is load-time only (CSS); nothing animates on scroll.
  */
+import Link from "next/link";
 import type { Destination } from "@/content/destinations/schema";
 import { resolveSitePath } from "@/content/routes";
 import { formatInr } from "@/features/experiences/format";
@@ -22,9 +23,24 @@ export type HubStats = {
   fromUnit: "per person" | "per group";
 };
 
-type Crumb = { label: string; href: string };
+/** A breadcrumb step; without `href` it is plain text (no page there yet). */
+export type Crumb = { label: string; href?: string };
 
-export function DestinationHero({ destination, crumbs, stats }: { destination: Destination; crumbs: Crumb[]; stats: HubStats }) {
+export function DestinationHero({
+  destination,
+  crumbs,
+  stats,
+  toursHref,
+  current,
+}: {
+  destination: Destination;
+  crumbs: Crumb[];
+  stats: HubStats;
+  /** "#tours" scrolls to the list on this page; a path opens another page. */
+  toursHref: string;
+  /** Last breadcrumb (defaults to the destination's name). */
+  current?: string;
+}) {
   const { name, hero } = destination;
   const days = stats.minDays === stats.maxDays ? `${stats.maxDays} days` : `${stats.minDays}–${stats.maxDays} days`;
 
@@ -33,15 +49,19 @@ export function DestinationHero({ destination, crumbs, stats }: { destination: D
       <nav aria-label="Breadcrumb" className="wrap pb-4 md:pb-5">
         <ol className="flex flex-wrap items-center gap-2 text-[0.85rem] text-moss">
           {crumbs.map((c) => (
-            <li key={c.href} className="flex items-center gap-2">
-              <a href={resolveSitePath(c.href)} className="transition-colors hover:text-ink">
-                {c.label}
-              </a>
+            <li key={c.label} className="flex items-center gap-2">
+              {c.href ? (
+                <a href={resolveSitePath(c.href)} className="transition-colors hover:text-ink">
+                  {c.label}
+                </a>
+              ) : (
+                <span>{c.label}</span>
+              )}
               <span aria-hidden="true">/</span>
             </li>
           ))}
           <li aria-current="page" className="text-ink">
-            {name}
+            {current ?? name}
           </li>
         </ol>
       </nav>
@@ -62,15 +82,21 @@ export function DestinationHero({ destination, crumbs, stats }: { destination: D
             </p>
 
             <div className="hero-fade flex flex-wrap items-center gap-3 [--delay:680ms]">
-              <SmoothAnchor
-                href="#tours"
-                className="group inline-flex items-center gap-3 rounded-full bg-mandarin py-2 pr-2 pl-6 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
-              >
+              {toursHref.startsWith("#") ? (
+                <SmoothAnchor href={toursHref as `#${string}`} className="group inline-flex items-center gap-3 rounded-full bg-mandarin py-2 pr-2 pl-6 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5">
                 Browse all tours
                 <span className="grid size-10 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
                   <ArrowRightIcon />
                 </span>
               </SmoothAnchor>
+              ) : (
+                <Link href={toursHref} className="group inline-flex items-center gap-3 rounded-full bg-mandarin py-2 pr-2 pl-6 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5">
+                Browse all tours
+                <span className="grid size-10 place-items-center rounded-full bg-ink text-fog transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
+                  <ArrowRightIcon />
+                </span>
+              </Link>
+              )}
               <a
                 href="#enquiry"
                 className="inline-flex items-center rounded-full border border-fog/40 px-6 py-[0.95rem] font-display font-semibold text-fog backdrop-blur-sm transition-colors hover:bg-fog hover:text-ink"

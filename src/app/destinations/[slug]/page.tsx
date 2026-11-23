@@ -1,19 +1,23 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { getDestination, getHubCabs, listDestinationSlugs } from "@/content/destinations";
 import type { Destination } from "@/content/destinations/schema";
-import { destinationPath } from "@/content/destinations/slugs";
+import { destinationPath, destinationSectionPath } from "@/content/destinations/slugs";
 import { resolveSitePath } from "@/content/routes";
-import { experiencePath } from "@/content/experiences/slugs";
-import { DestinationHero, type HubStats } from "@/features/destinations/destination-hero";
-import { Attractions, FaqWithCallback, GuideCard, HubReviews, Nearby, SectionHead, WhyChoose } from "@/features/destinations/hub-sections";
-import { HubBrowser } from "@/features/destinations/hub-browser";
+import type { Crumb } from "@/features/destinations/destination-hero";
+import { ExploreWays, type Way } from "@/features/destinations/explore-ways";
+import { GoodToKnow, GuideHero, MustVisit, PlacesToVisit, ThingsToDo } from "@/features/destinations/guide-sections";
+import { Handbook } from "@/features/destinations/handbook";
+import { FaqWithCallback, HubReviews, Nearby, SectionHead, WhyChoose } from "@/features/destinations/hub-sections";
+import { hubStats, RAIL_ITEM, RAIL_SIZES } from "@/features/destinations/hub-stats";
+import { CabCard } from "@/features/destinations/result-cards";
+import { ThemedList } from "@/features/destinations/themed-list";
 import { TourCard } from "@/features/destinations/tour-card";
 import { TravelInfo } from "@/features/destinations/travel-info";
 import { EnquiryDialog } from "@/features/enquiry/enquiry-dialog";
 import { EnquirySection } from "@/features/enquiry/enquiry-section";
-import { SmoothAnchor } from "@/features/experiences/smooth-anchor";
 import { TagGroups } from "@/features/experiences/tag-groups";
 import { SiteShell } from "@/features/site-chrome/site-shell";
 import { JsonLd } from "@/ui/json-ld";
@@ -46,80 +50,73 @@ export async function generateMetadata({ params }: PageProps<"/destinations/[slu
   };
 }
 
+/**
+ * The destination page: everything about the place, with a way into each kind of
+ * thing to book. Tours have their own page (/destinations/<slug>/tours/) and cabs
+ * open the site's cab pages. Experiences and attractions are sections here until
+ * their own detailed pages are ready.
+ */
 export default async function DestinationPage({ params }: PageProps<"/destinations/[slug]">) {
   const destination = await getDestination((await params).slug);
   if (!destination) notFound();
 
-  const { name, listings } = destination;
-  const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Tours", href: "/tours/" },
-  ];
-  const popular = listings.filter((l) => l.popular);
-  const cabs = await getHubCabs(destination);
+  const { name, listings, attractions } = destination;
+  const toursHref = destinationSectionPath(destination.slug, "tours");
+  const crumbs: Crumb[] = [{ label: "Home", href: "/" }, { label: "India" }];
   const stats = hubStats(destination);
-  // Short outings (a day or less) are "experiences".
+  const cabs = await getHubCabs(destination);
+  // Short outings (a day) are "things to do".
   const experiences = listings.filter((l) => l.days === 1);
-  // Highest rated first, ties broken by how many people rated them.
-  const recommended = [...listings].sort((a, b) => b.rating.average - a.rating.average || b.rating.count - a.rating.count).slice(0, 6);
+  const popular = listings.filter((l) => l.popular);
   const tagGroups = destination.tagGroups.map((g) => ({ title: g.title, links: g.links.map((l) => ({ label: l.label, href: resolveSitePath(l.href) })) }));
+
+  const ways: Way[] = [
+    { label: `${name} tours`, count: listings.length, unit: "packages, a day to a week", href: toursHref, image: destination.hero.images[0]! },
+    ...(experiences.length ? [{ label: "Things to do", count: experiences.length, unit: "day experiences", href: "#things-to-do", image: experiences[0]!.images[0]! }] : []),
+    ...(attractions.length ? [{ label: "Attractions", count: attractions.length, unit: "places to see", href: "#attractions", image: attractions[0]!.image }] : []),
+    ...(cabs.length ? [{ label: "Cabs", count: cabs.length, unit: "routes with drivers", href: "/cars/", image: cabs[0]!.image }] : []),
+  ];
+
+  const seeAll = (href: string, label: string) => (
+    <Link href={href} className="group inline-flex items-center gap-2 font-display font-semibold underline decoration-mandarin decoration-2 underline-offset-[6px]">
+      {label}
+      <span aria-hidden="true" className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
+        →
+      </span>
+    </Link>
+  );
 
   return (
     <SiteShell section="/tours/">
-      <DestinationHero destination={destination} crumbs={crumbs} stats={stats} />
+      <GuideHero destination={destination} crumbs={crumbs} />
+
+      <MustVisit destination={destination} />
+
+      <ExploreWays name={name} ways={ways} />
 
       {popular.length ? (
-        <section aria-labelledby="popular-title" className="flex flex-col gap-10 pt-24 pb-20 md:pt-32 md:pb-28">
-          <SectionHead id="popular-title" title={`Popular ${name} tours`} />
-          <Rail label={`Popular ${name} tours`}>
+        <section aria-labelledby="popular-title" className="flex flex-col gap-8 pt-24 md:pt-32">
+          <SectionHead id="popular-title" title={`${name}'s most popular tours`} action={seeAll(toursHref, `See all ${listings.length} tours`)} />
+          <Rail label={`${name}'s most popular tours`}>
             {popular.map((l) => (
-              <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
-                <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
+              <div key={l.id} className={RAIL_ITEM}>
+                <TourCard listing={l} sizes={RAIL_SIZES} />
               </div>
             ))}
           </Rail>
         </section>
       ) : null}
 
-      <section id="tours" aria-labelledby="tours-title" className="scroll-mt-28 bg-cloud pt-20 pb-24 md:scroll-mt-36 md:pt-28 md:pb-32">
-        <div className="wrap pb-8">
-          <h2 id="tours-title" className="font-display text-title font-bold tracking-[-0.03em]">
-            {name} tour packages
-          </h2>
-        </div>
-        <HubBrowser name={name} categories={destination.categories} listings={listings} interlude={destination.interlude} attractions={destination.attractions} cabs={cabs} />
-      </section>
+      <PlacesToVisit name={name} attractions={attractions} themes={destination.attractionThemes} />
 
-      {experiences.length ? (
-        <section aria-labelledby="experiences-title" className="flex flex-col gap-10 pt-24 pb-20 md:pt-32 md:pb-28">
-          <SectionHead
-            id="experiences-title"
-            title={`Top ${name} experiences`}
-            action={
-              <SmoothAnchor href="#tours" className="group inline-flex items-center gap-2 font-display font-semibold underline decoration-mandarin decoration-2 underline-offset-[6px]">
-                See all {listings.length} tours
-                <span aria-hidden="true" className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1">→</span>
-              </SmoothAnchor>
-            }
-          />
-          <Rail label={`Top ${name} experiences`}>
-            {experiences.map((l) => (
-              <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
-                <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
-              </div>
-            ))}
-          </Rail>
-        </section>
-      ) : null}
+      <ThingsToDo name={name} experiences={experiences} themes={destination.experienceThemes} />
 
-      <Attractions name={name} attractions={destination.attractions} />
-
-      <HubReviews name={name} rating={stats.rating} reviewCount={stats.reviews} reviews={destination.reviews} />
-
+      {/* One pale band: facts, then the practical information. */}
+      <GoodToKnow name={name} facts={destination.facts} />
       {destination.info ? (
-        <section aria-labelledby="info-title" className="bg-cloud py-20 md:py-28">
+        <section aria-labelledby="info-title" className={`bg-cloud pb-20 md:pb-28 ${destination.facts.length ? "" : "pt-20 md:pt-28"}`}>
           <div className="flex flex-col gap-10">
-            <SectionHead id="info-title" title={`Important information about ${name}`} />
+            <SectionHead id="info-title" title="Essential travel information" />
             <div className="wrap">
               <TravelInfo name={name} info={destination.info} />
             </div>
@@ -127,39 +124,32 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
         </section>
       ) : null}
 
-      {destination.guides.length ? (
-        <section aria-labelledby="guides-title" className="flex flex-col gap-10 py-20 md:py-28">
-          <SectionHead id="guides-title" title={`${name} travel guide`} />
-          <Rail label={`${name} travel guide`}>
-            {destination.guides.map((g) => (
-              <div key={g.title} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
-                <GuideCard guide={g} />
-              </div>
-            ))}
-          </Rail>
+      <Handbook name={name} guides={destination.guides} />
+
+      {cabs.length ? (
+        <section id="cabs" aria-labelledby="cabs-title" className="flex scroll-mt-28 flex-col gap-8 py-24 md:scroll-mt-36 md:py-32">
+          <SectionHead id="cabs-title" title={`Cabs in ${name}`} action={seeAll("/cars/", "All cab routes")} />
+          <ThemedList
+            rail
+            label={`Cabs in ${name}`}
+            themes={destination.cabThemes}
+            itemClassName={RAIL_ITEM}
+            items={cabs.map((c) => ({ key: c.slug, themes: c.themes, node: <CabCard cab={c} tall /> }))}
+          />
         </section>
       ) : null}
 
-      <section aria-labelledby="recommended-title" className="flex flex-col gap-10 pb-20 md:pb-28">
-        <SectionHead id="recommended-title" title={`Recommended ${name} tours`} />
-        <Rail label={`Recommended ${name} tours`}>
-          {recommended.map((l) => (
-            <div key={l.id} className="w-[68vw] max-w-[18rem] shrink-0 snap-start sm:w-[17.5rem]">
-              <TourCard listing={l} sizes="(min-width: 640px) 280px, 68vw" />
-            </div>
-          ))}
-        </Rail>
-      </section>
+      <HubReviews name={name} rating={stats.rating} reviewCount={stats.reviews} reviews={destination.reviews} />
 
-      <FaqWithCallback name={name} faqs={destination.faqs} callback={destination.callback} />
+      <FaqWithCallback title={`Questions about ${name}`} faqs={destination.faqs} callback={destination.callback} />
 
-      <Nearby nearby={destination.nearby} />
+      <Nearby nearby={destination.nearby} title="Popular related destinations" />
 
       <WhyChoose why={destination.why} />
 
       {tagGroups.length ? (
         <div className="wrap py-20 md:py-24">
-          <TagGroups groups={tagGroups} title={`More from ${name}`} />
+          <TagGroups groups={tagGroups} title={`Explore ${name}`} />
         </div>
       ) : null}
 
@@ -168,38 +158,23 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
         <EnquirySection title="Talk to a local expert" inDialog />
       </EnquiryDialog>
 
-      <JsonLd data={structuredData(destination, crumbs)} />
+      <JsonLd data={structuredData(destination)} />
     </SiteShell>
   );
 }
 
-function hubStats({ listings }: Destination): HubStats {
-  const reviews = listings.reduce((n, l) => n + l.rating.count, 0);
-  const weighted = reviews ? listings.reduce((n, l) => n + l.rating.average * l.rating.count, 0) / reviews : 0;
-  const byDays = [...listings].sort((a, b) => a.days - b.days);
-  const cheapest = listings.reduce((a, b) => (b.price.from < a.price.from ? b : a));
-  return {
-    tours: listings.length,
-    rating: weighted,
-    reviews,
-    minDays: byDays[0]?.days ?? 0,
-    maxDays: byDays.at(-1)?.days ?? 0,
-    fromPrice: cheapest.price.from,
-    fromUnit: cheapest.price.unit,
-  };
-}
-
-/** Breadcrumb, FAQ and the tour list. No rating markup while tours and reviews are sample content. */
-function structuredData(destination: Destination, crumbs: { label: string; href: string }[]) {
+/** Breadcrumb and FAQ. No rating markup while tours and reviews are sample content. */
+function structuredData(destination: Destination) {
   const url = `${siteConfig.url}${destinationPath(destination.slug)}`;
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
-        itemListElement: [...crumbs.map((c) => ({ name: c.label, item: `${siteConfig.url}${c.href}` })), { name: destination.name, item: url }].map(
-          (entry, i) => ({ "@type": "ListItem", position: i + 1, ...entry }),
-        ),
+        itemListElement: [
+          { name: "Home", item: `${siteConfig.url}/` },
+          { name: destination.name, item: url },
+        ].map((entry, i) => ({ "@type": "ListItem", position: i + 1, ...entry })),
       },
       ...(destination.faqs.length
         ? [
@@ -210,16 +185,7 @@ function structuredData(destination: Destination, crumbs: { label: string; href:
             },
           ]
         : []),
-      {
-        "@type": "ItemList",
-        url,
-        itemListElement: destination.listings.map((l, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          name: l.title,
-          url: `${siteConfig.url}${experiencePath(l.experience)}`,
-        })),
-      },
+      { "@type": "TouristDestination", name: destination.name, url, description: destination.seo.description },
     ],
   };
 }

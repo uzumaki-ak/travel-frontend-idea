@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { Destination } from "@/content/destinations/schema";
 import { resolveSitePath } from "@/content/routes";
 import { formatMonthYear, plural } from "@/features/experiences/format";
+import { NearbyPanels } from "./nearby-panels";
 import { RatingStars } from "@/features/experiences/rating-stars";
 import { ArrowRightIcon, ArrowUpRightIcon, CarIcon, HeadsetIcon, ShieldCheckIcon, WalletIcon } from "@/ui/icons";
 
@@ -20,6 +21,8 @@ export function SectionHead({ id, title, action }: { id: string; title: string; 
     </div>
   );
 }
+
+/* ---------------------------------------------------------------- Attractions */
 
 /* ---------------------------------------------------------------- Attractions */
 
@@ -120,14 +123,14 @@ export function GuideCard({ guide }: { guide: Destination["guides"][number] }) {
 
 /* ------------------------------------------------------------ FAQ + callback */
 
-export function FaqWithCallback({ name, faqs, callback }: { name: string; faqs: Destination["faqs"]; callback: Destination["callback"] }) {
+export function FaqWithCallback({ title, faqs, callback }: { title: string; faqs: Destination["faqs"]; callback: Destination["callback"] }) {
   if (!faqs.length && !callback) return null;
   return (
     <section aria-labelledby="faq-title" className="py-20 md:py-28">
       <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="flex flex-col gap-8 lg:col-span-8">
           <h2 id="faq-title" className="font-display text-title font-bold tracking-[-0.03em]">
-            Questions about {name} tours
+            {title}
           </h2>
           <div className="flex flex-col">
             {faqs.map((f) => (
@@ -172,11 +175,59 @@ export function FaqWithCallback({ name, faqs, callback }: { name: string; faqs: 
 
 /* --------------------------------------------------------------------- Nearby */
 
-export function Nearby({ nearby }: { nearby: Destination["nearby"] }) {
+/**
+ * Nearby places. Desktop: a row of tall photo panels; the one you point at (or
+ * tab to) opens wide and shows its line. Phones: a plain list with thumbnails.
+ */
+export function Nearby({
+  nearby,
+  title = "Explore tours nearby",
+  variant = "panels",
+}: {
+  nearby: Destination["nearby"];
+  title?: string;
+  /** "arches": the tour page's original cards. */
+  variant?: "panels" | "arches";
+}) {
+  if (!nearby.length) return null;
+  if (variant === "arches") return <NearbyArches nearby={nearby} title={title} />;
+  return (
+    <section aria-labelledby="nearby-title" className="flex flex-col gap-10 py-20 md:py-28">
+      <SectionHead id="nearby-title" title={title} />
+      <div className="wrap">
+        {/* Phones and tablets: list. */}
+        <ul className="flex flex-col border-b border-ink/12 lg:hidden">
+          {nearby.map((n) => (
+            <li key={n.name} className="border-t border-ink/12">
+              <a href={resolveSitePath(n.href)} className="group flex items-center gap-4 py-4">
+                <span className="relative size-16 shrink-0 overflow-hidden rounded-tl-[1.25rem] rounded-br-[1.25rem] rounded-tr-sm rounded-bl-sm bg-cloud">
+                  <Image src={n.image.src} alt="" fill sizes="64px" className="object-cover" />
+                </span>
+                <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+                  <span className="font-display text-[1.1rem] font-semibold tracking-[-0.01em]">{n.name}</span>
+                  <span className="truncate text-[0.88rem] text-moss">{n.text}</span>
+                </span>
+                <span className="grid size-10 shrink-0 place-items-center rounded-full border border-ink/15 transition-colors group-hover:bg-ink group-hover:text-fog">
+                  <ArrowUpRightIcon />
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop: panels that open on hover / focus. */}
+        <NearbyPanels nearby={nearby.map((n) => ({ ...n, href: resolveSitePath(n.href) }))} />
+      </div>
+    </section>
+  );
+}
+
+/** The tour page's nearby band: arch-topped photo cards. */
+function NearbyArches({ nearby, title }: { nearby: Destination["nearby"]; title: string }) {
   if (!nearby.length) return null;
   return (
     <section aria-labelledby="nearby-title" className="flex flex-col gap-10 py-20 md:py-28">
-      <SectionHead id="nearby-title" title="Explore tours nearby" />
+      <SectionHead id="nearby-title" title={title} />
       <div className="md:wrap">
       <ul className="scrollbar-none relative flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:grid md:grid-cols-5 md:overflow-visible md:px-0 md:pb-0">
         {nearby.map((n) => (

@@ -1,8 +1,9 @@
 "use client";
 
 /**
- * The hub's full filter panel. Phones: a sheet that slides up from the bottom.
- * Tablet up: a panel that slides in from the right. Ticks are a draft until
+ * The tour list's filter panel for phones and tablets: a sheet that slides up
+ * from the bottom (phones) or in from the right (tablets). Desktop shows the same
+ * groups (`FilterGroups`) in a sidebar next to the list instead. Ticks are a draft until
  * "Show N results"; the count updates live as you tick. Radix Dialog gives focus
  * trap, Esc, scroll lock and outside-click to close.
  */
@@ -10,18 +11,16 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { CrossIcon } from "@/ui/icons";
 
-export type Kind = "tour" | "experience" | "cab" | "attraction";
 export type Duration = "day" | "short" | "long";
-export type Filters = { types: Kind[]; themes: string[]; durations: Duration[] };
+export type Filters = { themes: string[]; durations: Duration[] };
 export type Option<T extends string> = { id: T; label: string; count: number };
 
-export const EMPTY: Filters = { types: [], themes: [], durations: [] };
+export const EMPTY: Filters = { themes: [], durations: [] };
 
 type Props = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   applied: Filters;
-  types: Option<Kind>[];
   themes: Option<string>[];
   durations: Option<Duration>[];
   /** How many results a set of filters would give. */
@@ -46,7 +45,7 @@ export function FilterSheet({ open, onOpenChange, ...rest }: Props) {
   );
 }
 
-function Panel({ applied, types, themes, durations, countFor, onApply, onClose }: Omit<Props, "open" | "onOpenChange"> & { onClose: () => void }) {
+function Panel({ applied, themes, durations, countFor, onApply, onClose }: Omit<Props, "open" | "onOpenChange"> & { onClose: () => void }) {
   const [draft, setDraft] = useState<Filters>(applied);
   const toggle = <K extends keyof Filters>(key: K, id: Filters[K][number]) =>
     setDraft((d) => {
@@ -67,9 +66,7 @@ function Panel({ applied, types, themes, durations, countFor, onApply, onClose }
       </div>
 
       <div className="flex-1 overflow-y-auto overscroll-contain px-6">
-        <Group title="Type" options={types} picked={draft.types} onToggle={(id) => toggle("types", id)} />
-        <Group title="Themes" options={themes} picked={draft.themes} onToggle={(id) => toggle("themes", id)} />
-        <Group title="Duration" options={durations} picked={draft.durations} onToggle={(id) => toggle("durations", id)} last />
+        <FilterGroups values={draft} themes={themes} durations={durations} onToggle={toggle} />
       </div>
 
       <div className="flex items-center justify-between gap-4 border-t border-ink/10 px-6 py-4" style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}>
@@ -92,6 +89,26 @@ function Panel({ applied, types, themes, durations, countFor, onApply, onClose }
           {count === 0 ? "No results" : `Show ${count} ${count === 1 ? "result" : "results"}`}
         </button>
       </div>
+    </>
+  );
+}
+
+/** The filter groups (Themes, Duration), shared by the sheet and the desktop sidebar. */
+export function FilterGroups({
+  values,
+  themes,
+  durations,
+  onToggle,
+}: {
+  values: Filters;
+  themes: Option<string>[];
+  durations: Option<Duration>[];
+  onToggle: <K extends keyof Filters>(key: K, id: Filters[K][number]) => void;
+}) {
+  return (
+    <>
+      <Group title="Themes" options={themes} picked={values.themes} onToggle={(id) => onToggle("themes", id)} />
+      <Group title="Duration" options={durations} picked={values.durations} onToggle={(id) => onToggle("durations", id)} last />
     </>
   );
 }

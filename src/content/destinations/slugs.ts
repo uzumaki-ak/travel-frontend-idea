@@ -5,6 +5,18 @@
 export const destinationSlugs = ["meghalaya"] as const;
 
 export const destinationPath = (slug: string) => `/destinations/${slug}/`;
+/** The destination's full tour list (child of the destination page). */
+export const destinationToursPath = (slug: string) => `/destinations/${slug}/tours/`;
+/** The destination's own pages under its overview. */
+export const destinationSections = ["tours", "experiences", "attractions"] as const;
+export type DestinationSection = (typeof destinationSections)[number];
+/**
+ * Section pages that are open to visitors. Experiences and attractions get their
+ * own detailed pages later; until then their tabs show but do not link, and their
+ * URLs return 404.
+ */
+export const liveDestinationSections: readonly DestinationSection[] = ["tours"];
+export const destinationSectionPath = (slug: string, section: DestinationSection) => `/destinations/${slug}/${section}/`;
 
 /** The hub for a region name ("Meghalaya" → "/destinations/meghalaya/"), or null if none is published. */
 export function destinationPathForRegion(region: string): string | null {

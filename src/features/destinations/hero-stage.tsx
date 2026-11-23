@@ -24,7 +24,21 @@ const SLIDE_MS = 6500;
 const CONTROL =
   "grid size-9 cursor-pointer place-items-center rounded-full border border-fog/35 text-fog backdrop-blur-sm transition-colors hover:bg-fog hover:text-ink md:size-11 md:text-lg";
 
-export function HeroStage({ slides, video, children }: { slides: StageSlide[]; video?: { src: string; poster: string }; children: React.ReactNode }) {
+/** `short`: a cinematic band (destination guide) instead of the near full-screen stage. */
+export function HeroStage({
+  slides,
+  video,
+  children,
+  short = false,
+  contentClassName = "absolute inset-x-0 bottom-0 p-5 md:p-10 lg:p-12",
+}: {
+  slides: StageSlide[];
+  video?: { src: string; poster: string };
+  children: React.ReactNode;
+  short?: boolean;
+  /** Where the overlaid content sits (default: along the bottom). */
+  contentClassName?: string;
+}) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false); // by the button
   const [held, setHeld] = useState(false); // by hover / focus / hidden tab
@@ -86,7 +100,9 @@ export function HeroStage({ slides, video, children }: { slides: StageSlide[]; v
       onBlur={(e) => {
         if (!root.current?.contains(e.relatedTarget as Node | null)) setHeld(false);
       }}
-      className="relative isolate h-[max(27rem,62svh)] overflow-hidden rounded-[1.75rem] bg-river-deep text-fog md:h-[max(38rem,min(calc(100svh-var(--header-h)-3.5rem),62rem))] md:rounded-[2.75rem]"
+      className={`relative isolate overflow-hidden rounded-[1.75rem] bg-river-deep text-fog md:rounded-[2.75rem] ${
+        short ? "h-[26rem] md:h-[min(68svh,40rem)]" : "h-[max(27rem,62svh)] md:h-[max(38rem,min(calc(100svh-var(--header-h)-3.5rem),62rem))]"
+      }`}
     >
       {/* Media. */}
       {film ? (
@@ -183,7 +199,7 @@ export function HeroStage({ slides, video, children }: { slides: StageSlide[]; v
       ) : null}
 
       {/* Title block (server content), full width. */}
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 lg:p-12">{children}</div>
+      <div className={contentClassName}>{children}</div>
     </div>
   );
 }

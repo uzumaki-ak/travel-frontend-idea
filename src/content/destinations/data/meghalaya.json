@@ -39,6 +39,29 @@
       "poster": "/media/home/Nohkalikai-Falls-1-kaga.jpg"
     }
   },
+  "statement": "Waterfalls that drop out of the clouds, [bridges grown from living roots] and a river so clear [the boats seem to float].",
+  "quickFacts": [
+    {
+      "label": "Best time",
+      "value": "October to April"
+    },
+    {
+      "label": "Ideal trip",
+      "value": "4 to 6 days"
+    },
+    {
+      "label": "Nearest airport",
+      "value": "Guwahati (GAU), 3 h to Shillong"
+    },
+    {
+      "label": "Capital",
+      "value": "Shillong"
+    },
+    {
+      "label": "Languages",
+      "value": "Khasi, Garo, English"
+    }
+  ],
   "categories": [
     {
       "id": "waterfalls",
@@ -67,6 +90,76 @@
     {
       "id": "culture",
       "label": "Culture & food"
+    }
+  ],
+  "experienceThemes": [
+    {
+      "id": "walks",
+      "label": "Walks & treks"
+    },
+    {
+      "id": "water",
+      "label": "On the water"
+    },
+    {
+      "id": "views",
+      "label": "Sunrise & views"
+    },
+    {
+      "id": "village",
+      "label": "Village life"
+    },
+    {
+      "id": "food",
+      "label": "Food & culture"
+    },
+    {
+      "id": "night",
+      "label": "After dark"
+    }
+  ],
+  "attractionThemes": [
+    {
+      "id": "waterfalls",
+      "label": "Waterfalls"
+    },
+    {
+      "id": "root-bridges",
+      "label": "Living root bridges"
+    },
+    {
+      "id": "rivers-lakes",
+      "label": "Rivers & lakes"
+    },
+    {
+      "id": "viewpoints",
+      "label": "Viewpoints"
+    },
+    {
+      "id": "sacred",
+      "label": "Sacred forests"
+    }
+  ],
+  "cabThemes": [
+    {
+      "id": "airport",
+      "label": "Airport transfers"
+    },
+    {
+      "id": "sightseeing",
+      "label": "Day sightseeing"
+    },
+    {
+      "id": "outstation",
+      "label": "Outstation"
+    },
+    {
+      "id": "shared",
+      "label": "Shared cabs"
+    },
+    {
+      "id": "groups",
+      "label": "Group travel"
     }
   ],
   "interlude": {
@@ -159,7 +252,11 @@
         "culture"
       ],
       "rank": 2,
-      "popular": true
+      "popular": true,
+      "experienceThemes": [
+        "water",
+        "village"
+      ]
     },
     {
       "id": "shillong-after-dark",
@@ -194,7 +291,11 @@
       ],
       "badge": "New",
       "rank": 3,
-      "popular": true
+      "popular": true,
+      "experienceThemes": [
+        "night",
+        "food"
+      ]
     },
     {
       "id": "double-decker-trek",
@@ -235,7 +336,10 @@
         "adventure"
       ],
       "rank": 4,
-      "popular": true
+      "popular": true,
+      "experienceThemes": [
+        "walks"
+      ]
     },
     {
       "id": "cherrapunji-waterfalls-trail",
@@ -392,7 +496,11 @@
       "categories": [
         "trekking"
       ],
-      "rank": 8
+      "rank": 8,
+      "experienceThemes": [
+        "views",
+        "walks"
+      ]
     },
     {
       "id": "krang-suri-jowai",
@@ -432,7 +540,11 @@
         "waterfalls",
         "adventure"
       ],
-      "rank": 9
+      "rank": 9,
+      "experienceThemes": [
+        "water",
+        "walks"
+      ]
     },
     {
       "id": "mawsynram-rain-country",
@@ -503,7 +615,11 @@
         "culture",
         "family"
       ],
-      "rank": 11
+      "rank": 11,
+      "experienceThemes": [
+        "village",
+        "walks"
+      ]
     },
     {
       "id": "umiam-elephant-falls",
@@ -537,7 +653,11 @@
       "categories": [
         "family"
       ],
-      "rank": 12
+      "rank": 12,
+      "experienceThemes": [
+        "water",
+        "views"
+      ]
     },
     {
       "id": "meghalaya-adventure-6d",
@@ -599,6 +719,9 @@
       ],
       "categories": [
         "waterfalls"
+      ],
+      "themes": [
+        "waterfalls"
       ]
     },
     {
@@ -615,6 +738,9 @@
       "categories": [
         "trekking",
         "adventure"
+      ],
+      "themes": [
+        "root-bridges"
       ]
     },
     {
@@ -632,6 +758,9 @@
       "categories": [
         "adventure",
         "family"
+      ],
+      "themes": [
+        "rivers-lakes"
       ]
     },
     {
@@ -647,6 +776,9 @@
       ],
       "categories": [
         "trekking"
+      ],
+      "themes": [
+        "viewpoints"
       ]
     },
     {
@@ -662,6 +794,10 @@
       ],
       "categories": [
         "family"
+      ],
+      "themes": [
+        "rivers-lakes",
+        "viewpoints"
       ]
     },
     {
@@ -676,6 +812,9 @@
         "Krang Suri"
       ],
       "categories": [
+        "waterfalls"
+      ],
+      "themes": [
         "waterfalls"
       ]
     },
@@ -692,6 +831,9 @@
       ],
       "categories": [
         "culture"
+      ],
+      "themes": [
+        "sacred"
       ]
     },
     {
@@ -707,6 +849,10 @@
       ],
       "categories": [
         "waterfalls"
+      ],
+      "themes": [
+        "waterfalls",
+        "viewpoints"
       ]
     }
   ],
@@ -879,6 +1025,38 @@
       ]
     }
   },
+  "facts": [
+    {
+      "value": "11,800 mm",
+      "label": "of rain a year",
+      "text": "Mawsynram, next to Cherrapunji, is one of the wettest places on earth. That rain is why the waterfalls are so loud."
+    },
+    {
+      "value": "Abode of clouds",
+      "label": "what the name means",
+      "text": "Meghalaya comes from Sanskrit. On the plateau the clouds really do roll through the roads and villages."
+    },
+    {
+      "value": "Living bridges",
+      "label": "grown, not built",
+      "text": "Khasi villagers train rubber-fig roots across streams. A bridge takes decades to grow and then lasts for generations."
+    },
+    {
+      "value": "Mother's line",
+      "label": "a matrilineal society",
+      "text": "Khasi and Garo families pass the family name and property through the mother, usually to the youngest daughter."
+    },
+    {
+      "value": "Cleanest village",
+      "label": "Mawlynnong",
+      "text": "Often called the cleanest village in Asia: bamboo dustbins on every path and flowers along every fence."
+    },
+    {
+      "value": "Under the hills",
+      "label": "some of India's longest caves",
+      "text": "The Jaintia hills hide cave systems that run for kilometres. Most visitors only see the first few hundred metres."
+    }
+  ],
   "guides": [
     {
       "title": "How many days do you need in Meghalaya?",
@@ -887,7 +1065,8 @@
       "image": {
         "src": "/media/home/meghalaya_mountains-1-kaga.jpg",
         "alt": "Mountain ridges in Meghalaya"
-      }
+      },
+      "excerpt": "Two days covers Shillong and Cherrapunji in a rush. Here is how to split four, five or six days so you see more and drive less."
     },
     {
       "title": "When are the waterfalls at their best?",
@@ -896,7 +1075,8 @@
       "image": {
         "src": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
         "alt": "Wei Sawdong falls"
-      }
+      },
+      "excerpt": "Monsoon makes them roar, winter makes them blue. Month by month, which falls are worth the trip."
     },
     {
       "title": "Root bridge trek: what to pack and when to start",
@@ -905,7 +1085,8 @@
       "image": {
         "src": "/media/tours/Double-Decker-Trekking-Path-1-kaga.jpg",
         "alt": "Steps on the root bridge trail"
-      }
+      },
+      "excerpt": "The 3,500 steps down to Nongriat are easy going down and hard coming up. Shoes, water, timing and where to stay the night."
     },
     {
       "title": "Dawki: getting the boat ride right",
@@ -914,7 +1095,8 @@
       "image": {
         "src": "/media/home/dawki-river-4-kaga.jpg",
         "alt": "Boats on the Dawki river"
-      }
+      },
+      "excerpt": "When the river is clear, how long the ride lasts, and why going early beats going on a weekend."
     },
     {
       "title": "Eating your way through Shillong",
@@ -923,7 +1105,8 @@
       "image": {
         "src": "/media/home/police-bazar-8-kaga.jpg",
         "alt": "Police Bazar, Shillong"
-      }
+      },
+      "excerpt": "Jadoh, tungrymbai, pork with black sesame and the stalls of Police Bazar: a local's short list."
     },
     {
       "title": "Camping in Meghalaya: river, lake or hills?",
@@ -932,7 +1115,8 @@
       "image": {
         "src": "/media/home/Camping-at-100-Waterfalls-Cherrapunji-6-kaga.jpg",
         "alt": "Tents at 100 Waterfalls camp"
-      }
+      },
+      "excerpt": "Shnongpdeng by the river, Umiam by the lake or the hills at Laitlum: which camp suits which trip."
     }
   ],
   "faqs": [
@@ -1148,7 +1332,10 @@
         "src": "/media/home/Umiam-Lake-10-kaga.jpg",
         "alt": "Umiam Lake on the road from Guwahati to Shillong"
       },
-      "fare": 900
+      "fare": 900,
+      "themes": [
+        "airport"
+      ]
     },
     {
       "slug": "shillong-to-cherrapunji-cabs",
@@ -1156,7 +1343,10 @@
         "src": "/media/home/Wei-Sawdong-Falls-4-kaga.jpg",
         "alt": "Wei Sawdong falls near Cherrapunji"
       },
-      "fare": 3000
+      "fare": 3000,
+      "themes": [
+        "sightseeing"
+      ]
     },
     {
       "slug": "shillong-to-dawki-cabs",
@@ -1164,7 +1354,10 @@
         "src": "/media/home/dawki-river-5-kaga.jpg",
         "alt": "Boats on the river at Dawki"
       },
-      "fare": 3500
+      "fare": 3500,
+      "themes": [
+        "sightseeing"
+      ]
     },
     {
       "slug": "guwahati-to-cherrapunji-cabs",
@@ -1172,7 +1365,10 @@
         "src": "/media/home/Seven-Sisters-Falls-5-kaga.jpg",
         "alt": "Seven Sisters Falls, Cherrapunji"
       },
-      "fare": 5200
+      "fare": 5200,
+      "themes": [
+        "outstation"
+      ]
     },
     {
       "slug": "shillong-to-guwahati-cabs",
@@ -1180,7 +1376,10 @@
         "src": "/media/home/guwahati-assasm-unsplash-2-kaga.jpg",
         "alt": "Guwahati by the Brahmaputra"
       },
-      "fare": 600
+      "fare": 600,
+      "themes": [
+        "outstation"
+      ]
     },
     {
       "slug": "shillong-to-guwahati-airport-cabs",
@@ -1188,7 +1387,10 @@
         "src": "/media/home/scenic-mountains-meghalaya-1-kaga.jpg",
         "alt": "Hills on the Shillong highway"
       },
-      "fare": 900
+      "fare": 900,
+      "themes": [
+        "airport"
+      ]
     },
     {
       "slug": "shillong-to-guwahati-shared-cabs",
@@ -1196,7 +1398,10 @@
         "src": "/media/home/umiam-lake-26-kaga.jpg",
         "alt": "Umiam Lake at sunset"
       },
-      "fare": 500
+      "fare": 500,
+      "themes": [
+        "shared"
+      ]
     },
     {
       "slug": "kaziranga-to-shillong-cabs",
@@ -1204,7 +1409,10 @@
         "src": "/media/home/Kaziranga-national-park-4-kaga.jpg",
         "alt": "Kaziranga grasslands"
       },
-      "fare": 7000
+      "fare": 7000,
+      "themes": [
+        "outstation"
+      ]
     },
     {
       "slug": "tempo-traveller-in-shillong",
@@ -1212,7 +1420,10 @@
         "src": "/media/home/police-bazar-8-kaga.jpg",
         "alt": "Police Bazar, Shillong"
       },
-      "fare": 7500
+      "fare": 7500,
+      "themes": [
+        "groups"
+      ]
     }
   ]
 }

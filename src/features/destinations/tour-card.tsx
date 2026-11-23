@@ -48,7 +48,7 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
       <div
         className={`relative overflow-hidden bg-cloud ${
           row
-            ? "aspect-[4/5] w-[34%] shrink-0 self-start rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]"
+            ? "aspect-[4/5] w-[31%] shrink-0 self-start rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]"
             : "aspect-square rounded-tl-[2.25rem] rounded-br-[2.25rem]"
         }`}
       >
@@ -114,7 +114,7 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
       </div>
 
       <div className={`flex min-w-0 flex-1 flex-col ${row ? "gap-1.5 sm:gap-2" : "gap-2"}`}>
-        <h3 className={`font-display leading-snug font-semibold tracking-[-0.01em] ${row ? "line-clamp-3 text-[1rem] sm:line-clamp-none sm:text-[1.05rem]" : "text-[1.05rem]"}`}>
+        <h3 className={`font-display leading-snug font-semibold tracking-[-0.01em] ${row ? "line-clamp-3 text-[1rem] sm:line-clamp-none sm:text-[1rem]" : "text-[1rem]"}`}>
           <Link
             href={href}
             // The link covers the whole card; the photo strip (z-6) and gallery controls (z-20) sit above it.
@@ -148,7 +148,7 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
           )}
           <span className="flex flex-col items-end">
             {price.compareAt && saving ? <s className="font-mono text-[0.78rem] text-moss tabular-nums">{formatInr(price.compareAt)}</s> : null}
-            <span className="font-mono text-[1.05rem] font-semibold tabular-nums">{formatInr(price.from)}</span>
+            <span className="font-mono text-[1rem] font-semibold tabular-nums">{formatInr(price.from)}</span>
             <span className="text-[0.7rem] text-moss">{price.unit}</span>
           </span>
         </div>

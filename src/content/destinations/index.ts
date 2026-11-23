@@ -29,6 +29,6 @@ export async function getHubCabs(destination: Destination): Promise<HubCabCard[]
     if (!page) return [];
     const h1 = page.blocks.find((b) => b.type === "heading" && b.level === 1);
     const title = h1 && h1.type === "heading" ? h1.text : c.slug.replace(/-/g, " ");
-    return [{ slug: c.slug, title, href: `/cars/${c.slug}/`, image: c.image, fare: c.fare }];
+    return [{ slug: c.slug, title, href: `/cars/${c.slug}/`, image: c.image, fare: c.fare, themes: c.themes }];
   });
 }
