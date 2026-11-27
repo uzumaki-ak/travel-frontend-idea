@@ -59,10 +59,10 @@ function Tile({ way, big, wide }: { way: Way; big: boolean; wide: boolean }) {
     </>
   );
   const shape = big
-    ? "aspect-[4/3] md:aspect-auto md:h-full md:min-h-[30rem] rounded-tl-[2.75rem] rounded-br-[2.75rem] rounded-tr-lg rounded-bl-lg"
+    ? "aspect-[4/3] md:aspect-auto md:h-full md:min-h-[30rem] rounded-xl"
     : wide
-      ? "aspect-[16/9] md:aspect-auto md:h-full rounded-tr-[2.25rem] rounded-bl-[2.25rem] rounded-tl-lg rounded-br-lg"
-      : "aspect-[4/5] md:aspect-auto md:h-full rounded-[1.5rem]";
+      ? "aspect-[16/9] md:aspect-auto md:h-full rounded-xl"
+      : "aspect-[4/5] md:aspect-auto md:h-full rounded-xl";
   const className = `group relative block h-full overflow-hidden bg-cloud ${shape}`;
   // The tours tile opens its own page; the rest scroll to their section here.
   return way.href.startsWith("#") ? (

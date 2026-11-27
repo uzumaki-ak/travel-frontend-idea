@@ -48,8 +48,8 @@ export function TourCard({ listing, gallery = false, summary = false, rowOnPhone
       <div
         className={`relative overflow-hidden bg-cloud ${
           row
-            ? "aspect-[4/5] w-[31%] shrink-0 self-start rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]"
-            : "aspect-square rounded-tl-[2.25rem] rounded-br-[2.25rem]"
+            ? "aspect-square w-[31%] shrink-0 self-start rounded-lg sm:w-auto sm:self-stretch sm:rounded-xl"
+            : "aspect-square rounded-xl"
         }`}
       >
         {/* The photos: a scroll-snap strip, so a swipe moves with the finger. Each slide is a

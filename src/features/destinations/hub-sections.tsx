@@ -36,7 +36,7 @@ export function Attractions({ name, attractions }: { name: string; attractions: 
       <ol className="scrollbar-none relative flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
         {attractions.map((a, i) => (
           <li key={a.name} className="flex w-[60%] shrink-0 snap-start flex-col gap-4 sm:w-auto">
-            <div className={`relative aspect-[4/5] overflow-hidden bg-cloud sm:aspect-square ${i % 2 ? "rounded-t-full rounded-b-[1.75rem]" : "rounded-tl-[2.25rem] rounded-br-[2.25rem]"}`}>
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-cloud">
               <Image src={a.image.src} alt={a.image.alt} fill sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 60vw" className="object-cover" />
               <span aria-hidden="true" className="absolute bottom-4 left-4 rounded-full bg-fog/90 px-2.5 py-1 font-mono text-[0.75rem] font-semibold text-ink tabular-nums backdrop-blur">
                 {String(i + 1).padStart(2, "0")}
@@ -58,9 +58,24 @@ export function Attractions({ name, attractions }: { name: string; attractions: 
 /* -------------------------------------------------------------------- Reviews */
 
 /** Dark band: the hub's overall score and a wall of short reviews. */
-export function HubReviews({ name, rating, reviewCount, reviews }: { name: string; rating: number; reviewCount: number; reviews: Destination["reviews"] }) {
+export function HubReviews({
+  name,
+  rating,
+  reviewCount,
+  reviews,
+  limit,
+  viewAllHref,
+}: {
+  name: string;
+  rating: number;
+  reviewCount: number;
+  reviews: Destination["reviews"];
+  /** Show only the newest few (the reviews page shows them all). */
+  limit?: number;
+  viewAllHref?: string;
+}) {
   if (!reviews.length) return null;
-  const sorted = [...reviews].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = [...reviews].sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit ?? reviews.length);
   return (
     <section aria-labelledby="reviews-title" className="bg-river-deep py-20 text-fog md:py-28">
       <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-10">
@@ -75,11 +90,22 @@ export function HubReviews({ name, rating, reviewCount, reviews }: { name: strin
               <span className="text-[0.9rem] text-fog/60">{plural(reviewCount, "review", "reviews")} across our {name} tours</span>
             </span>
           </div>
+          {viewAllHref ? (
+            <a
+              href={viewAllHref}
+              className="group inline-flex items-center gap-3 self-start rounded-full bg-fog py-2 pr-2 pl-5 font-display font-semibold text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-0.5"
+            >
+              View all reviews
+              <span className="grid size-9 place-items-center rounded-full bg-mandarin text-ink transition-transform duration-500 ease-out-expo group-hover:translate-x-1">
+                <ArrowRightIcon />
+              </span>
+            </a>
+          ) : null}
         </div>
 
         <ul className="scrollbar-none relative -mx-(--gutter-x) flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0 lg:col-span-8">
           {sorted.map((r) => (
-            <li key={`${r.name}-${r.date}`} className="flex w-[85%] shrink-0 snap-start flex-col gap-4 rounded-tl-[1.75rem] rounded-br-[1.75rem] bg-white/[0.06] p-6 md:w-auto">
+            <li key={`${r.name}-${r.date}`} className={`flex w-[85%] shrink-0 snap-start flex-col gap-4 bg-white/[0.06] p-6 md:w-auto rounded-xl`}>
               <span className="flex items-center justify-between gap-3">
                 <RatingStars value={r.rating} className="text-[0.95rem] [&>span:first-child]:text-fog/20" />
                 <span className="sr-only">{r.rating} out of 5</span>
@@ -106,7 +132,7 @@ export function HubReviews({ name, rating, reviewCount, reviews }: { name: strin
 export function GuideCard({ guide }: { guide: Destination["guides"][number] }) {
   return (
     <article className="flex h-full flex-col gap-4">
-      <div className="relative aspect-[16/11] overflow-hidden rounded-[1.75rem] rounded-tr-[4rem] bg-cloud">
+      <div className="relative aspect-[16/11] overflow-hidden rounded-xl bg-cloud">
         <Image src={guide.image.src} alt={guide.image.alt} fill sizes="(min-width: 640px) 336px, 78vw" className="object-cover" />
       </div>
       <div className="flex flex-col gap-2">
@@ -150,7 +176,7 @@ export function FaqWithCallback({ title, faqs, callback }: { title: string; faqs
 
         {callback ? (
           <aside className="lg:col-span-4">
-            <div className="relative flex flex-col gap-6 overflow-hidden rounded-tr-[2.25rem] rounded-bl-[2.25rem] bg-mandarin p-7 text-ink lg:sticky lg:top-48">
+            <div className="relative flex flex-col gap-6 overflow-hidden rounded-xl bg-mandarin p-7 text-ink lg:sticky lg:top-48">
               <span className="grid size-12 place-items-center rounded-full bg-ink text-xl text-fog">
                 <HeadsetIcon />
               </span>
@@ -200,7 +226,7 @@ export function Nearby({
           {nearby.map((n) => (
             <li key={n.name} className="border-t border-ink/12">
               <a href={resolveSitePath(n.href)} className="group flex items-center gap-4 py-4">
-                <span className="relative size-16 shrink-0 overflow-hidden rounded-tl-[1.25rem] rounded-br-[1.25rem] rounded-tr-sm rounded-bl-sm bg-cloud">
+                <span className="relative size-16 shrink-0 overflow-hidden rounded-lg bg-cloud">
                   <Image src={n.image.src} alt="" fill sizes="64px" className="object-cover" />
                 </span>
                 <span className="flex min-w-0 flex-1 flex-col gap-0.5">
@@ -232,7 +258,7 @@ function NearbyArches({ nearby, title }: { nearby: Destination["nearby"]; title:
       <ul className="scrollbar-none relative flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-(--gutter-x) px-(--gutter-x) pb-1 md:grid md:grid-cols-5 md:overflow-visible md:px-0 md:pb-0">
         {nearby.map((n) => (
           <li key={n.name} className="w-[58%] shrink-0 snap-start md:w-auto">
-            <a href={resolveSitePath(n.href)} className="group relative block aspect-[3/4] overflow-hidden rounded-t-full rounded-b-[1.75rem] bg-cloud">
+            <a href={resolveSitePath(n.href)} className="group relative block aspect-[3/4] overflow-hidden rounded-xl bg-cloud">
               <Image src={n.image.src} alt={n.image.alt} fill sizes="(min-width: 768px) 19vw, 58vw" className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.06]" />
               <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-river-deep/85 via-river-deep/10 to-transparent" />
               <span className="absolute inset-x-0 bottom-0 flex flex-col gap-1 p-5 text-fog">

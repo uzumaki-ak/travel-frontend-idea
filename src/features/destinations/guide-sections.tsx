@@ -20,6 +20,7 @@ import { ReadMore } from "@/features/experiences/read-more";
 import { ArrowRightIcon, StarIcon } from "@/ui/icons";
 import type { Crumb } from "./destination-hero";
 import { DestinationTabs, tabCounts } from "./destination-tabs";
+import { StickyTabs } from "./sticky-tabs";
 import { HeroStage } from "./hero-stage";
 import { SectionHead } from "./hub-sections";
 import { ThemedList, type ThemedItem } from "./themed-list";
@@ -73,7 +74,9 @@ export function GuideHero({ destination, crumbs }: { destination: Destination; c
             <p className="hero-fade max-w-[34ch] font-display text-[clamp(1.05rem,1.6vw,1.4rem)] leading-[1.3] font-medium text-fog/90 [--delay:520ms]">{hero.tagline}</p>
           </div>
           <div className="hero-fade w-full [--delay:700ms]">
-            <DestinationTabs slug={destination.slug} current="overview" counts={tabCounts(destination)} variant="glass" />
+            <StickyTabs floating={<DestinationTabs slug={destination.slug} current="overview" counts={tabCounts(destination)} variant="float" />}>
+              <DestinationTabs slug={destination.slug} current="overview" counts={tabCounts(destination)} variant="glass" />
+            </StickyTabs>
           </div>
         </HeroStage>
       </div>
@@ -113,10 +116,10 @@ function Statement({ text }: { text: string }) {
 
 // Where the floating photos sit around the statement (desktop).
 const FLOAT = [
-  "top-0 left-0 w-[13%] aspect-[3/4] rounded-tl-[2rem] rounded-br-[2rem]",
-  "top-10 right-[2%] w-[17%] aspect-[4/3] rounded-[1.25rem]",
-  "bottom-6 left-[5%] w-[16%] aspect-[4/3] rounded-t-full rounded-b-[1.25rem]",
-  "right-0 bottom-0 w-[12%] aspect-[3/4] rounded-tr-[2rem] rounded-bl-[2rem]",
+  "top-0 left-0 w-[13%] aspect-[3/4] rounded-xl",
+  "top-10 right-[2%] w-[17%] aspect-[4/3] rounded-xl",
+  "bottom-6 left-[5%] w-[16%] aspect-[4/3] rounded-xl",
+  "right-0 bottom-0 w-[12%] aspect-[3/4] rounded-xl",
 ];
 
 export function MustVisit({ destination }: { destination: Destination }) {
@@ -140,8 +143,8 @@ export function MustVisit({ destination }: { destination: Destination }) {
         ) : null}
         {/* Phones: the photos as a small strip under the statement. */}
         <div aria-hidden="true" className="scrollbar-none -mx-(--gutter-x) flex w-[calc(100%+2*var(--gutter-x))] gap-3 overflow-x-auto px-(--gutter-x) lg:hidden">
-          {photos.map((p, i) => (
-            <div key={p.src} className={`relative aspect-[3/4] w-[38%] shrink-0 overflow-hidden bg-cloud sm:w-[22%] ${i % 2 ? "rounded-t-full rounded-b-[1rem]" : "rounded-tl-[1.5rem] rounded-br-[1.5rem]"}`}>
+          {photos.map((p) => (
+            <div key={p.src} className={`relative aspect-[3/4] w-[38%] shrink-0 overflow-hidden bg-cloud sm:w-[22%] rounded-xl`}>
               <Image src={p.src} alt="" fill sizes="(min-width: 640px) 22vw, 38vw" className="object-cover" />
             </div>
           ))}
@@ -183,7 +186,7 @@ export function PlacesToVisit({
     themes: a.themes,
     node: (
       <>
-        <div className="relative aspect-[3/4] overflow-hidden rounded-tl-[1.75rem] rounded-br-[1.75rem] rounded-tr-md rounded-bl-md bg-cloud">
+        <div className="relative aspect-square overflow-hidden rounded-xl bg-cloud">
           <Image src={a.image.src} alt={a.image.alt} fill sizes="(min-width: 640px) 216px, 44vw" className="object-cover transition-[scale] duration-[1.2s] ease-out-expo group-hover:scale-[1.04]" />
           <span className="absolute bottom-3 left-3 max-w-[calc(100%-1.5rem)] truncate rounded-full bg-fog/90 px-3 py-1 text-[0.78rem] font-medium backdrop-blur md:bottom-4 md:left-4">
             {a.place}
@@ -239,7 +242,7 @@ export function ThingsToDo({
         <span aria-hidden="true" className="w-9 shrink-0 font-display text-[1.9rem] leading-none font-bold tracking-[-0.04em] text-ink/20 tabular-nums transition-colors group-hover:text-mandarin md:w-12 md:text-[2.6rem]">
           {String(i + 1).padStart(2, "0")}
         </span>
-        <div className="relative aspect-square w-24 shrink-0 overflow-hidden rounded-tl-[1.5rem] rounded-br-[1.5rem] bg-cloud md:w-32">
+        <div className="relative aspect-square w-24 shrink-0 overflow-hidden rounded-xl bg-cloud md:w-32">
           <Image src={l.images[0]!.src} alt={l.images[0]!.alt} fill sizes="128px" className="object-cover transition-[scale] duration-700 ease-out-expo group-hover:scale-[1.06]" />
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-1.5">
@@ -293,7 +296,7 @@ export function GoodToKnow({ name, facts }: { name: string; facts: Destination["
             {facts.map((f) => (
               <li
                 key={f.label}
-                className="flex w-[78%] shrink-0 snap-start flex-col gap-4 rounded-[1.5rem] bg-fog p-6 md:w-auto md:rounded-none md:border-t md:border-ink/12 md:bg-transparent md:px-8 md:py-10 md:[&:nth-child(3n+1)]:pl-0 lg:border-l lg:[&:nth-child(3n+1)]:border-l-0"
+                className="flex w-[78%] shrink-0 snap-start flex-col gap-4 rounded-xl bg-fog p-6 md:w-auto md:rounded-none md:border-t md:border-ink/12 md:bg-transparent md:px-8 md:py-10 md:[&:nth-child(3n+1)]:pl-0 lg:border-l lg:[&:nth-child(3n+1)]:border-l-0"
               >
                 <span className={`font-display text-[clamp(2.2rem,4.2vw,3.6rem)] leading-[0.95] font-bold tracking-[-0.04em] text-river`}>{f.value}</span>
                 <span className="self-start rounded-full border border-ink/25 px-3 py-1 text-[0.8rem] font-medium">{f.label}</span>

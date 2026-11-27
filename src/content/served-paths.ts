@@ -3,6 +3,7 @@
  * WordPress site). Kept free of server-only imports so both the route resolver
  * and `src/proxy.ts` can use it. Add a path group here when its pages are rebuilt.
  */
+import cabBooking from "./cab-booking/data.json";
 import cabIndex from "./cabs/index.json";
 import tourArchive from "./tour-archive.json";
 import { destinationPath, destinationSectionPath, destinationSlugs, liveDestinationSections } from "./destinations/slugs";
@@ -17,6 +18,9 @@ export const servedPaths: ReadonlySet<string> = new Set<string>([
   ...archivePages,
   ...tourIndex.tours.map((t) => `/tours/${t.slug}/`),
   "/cars/",
+  "/cab-search/",
+  "/taxi-packages/",
+  ...cabBooking.packages.map((p) => `/taxi-packages/${p.slug}/`),
   ...cabIndex.slugs.map((s) => `/cars/${s}/`),
   ...experienceSlugs.map(experiencePath),
   ...destinationSlugs.map(destinationPath),

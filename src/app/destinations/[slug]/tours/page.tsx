@@ -8,6 +8,7 @@ import { experiencePath } from "@/content/experiences/slugs";
 import { resolveSitePath } from "@/content/routes";
 import { DestinationHero, type Crumb } from "@/features/destinations/destination-hero";
 import { DestinationTabs, tabCounts } from "@/features/destinations/destination-tabs";
+import { StickyTabs } from "@/features/destinations/sticky-tabs";
 import { HubBrowser } from "@/features/destinations/hub-browser";
 import { Attractions, FaqWithCallback, GuideCard, HubReviews, Nearby, SectionHead, WhyChoose } from "@/features/destinations/hub-sections";
 import { hubStats, RAIL_ITEM, RAIL_SIZES } from "@/features/destinations/hub-stats";
@@ -73,12 +74,21 @@ export default async function DestinationToursPage({ params }: PageProps<"/desti
 
   return (
     <SiteShell section="/tours/">
-      <DestinationHero destination={destination} crumbs={crumbs} stats={stats} toursHref="#tours" current="Tours" />
+      <DestinationHero
+        destination={destination}
+        crumbs={crumbs}
+        stats={stats}
+        toursHref="#tours"
+        current="Tours"
+        tabs={
+          // Same glass bar as the destination page; its sticky copy shows from desktop up
+          // (smaller screens have the list's own sticky filter bar).
+          <StickyTabs desktopOnly floating={<DestinationTabs slug={destination.slug} current="tours" counts={tabCounts(destination)} variant="float" />}>
+            <DestinationTabs slug={destination.slug} current="tours" counts={tabCounts(destination)} variant="glass" />
+          </StickyTabs>
+        }
+      />
 
-      {/* The destination's sections, so Overview and Cabs are one tap away. */}
-      <div className="wrap pt-14 md:pt-16">
-        <DestinationTabs slug={destination.slug} current="tours" counts={tabCounts(destination)} variant="line" />
-      </div>
 
       {popular.length ? (
         <section aria-labelledby="popular-title" className="flex flex-col gap-10 pt-20 pb-20 md:pt-24 md:pb-28">

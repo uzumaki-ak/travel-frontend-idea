@@ -1,13 +1,17 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import { siteConfig } from "@/config/site";
-import { cabForm, type CabBlock, type CabPage } from "@/content/cabs";
+import { cabPageBooking, boxConfig, cabSettings, routeCard } from "@/content/cab-booking";
+import { type CabBlock, type CabPage } from "@/content/cabs";
 import { home } from "@/content/home";
 import { resolveSitePath } from "@/content/routes";
 import { SiteShell } from "@/features/site-chrome/site-shell";
 import { CarIcon, CheckIcon, HeadsetIcon, RupeeCheckIcon, SteeringIcon } from "@/ui/icons";
 import { JsonLd } from "@/ui/json-ld";
 import { CabBlocks } from "./cab-blocks";
-import { CabEnquiryForm, type CabFormCopy } from "./cab-enquiry-form";
+import { BookingBox } from "@/features/cab-booking/booking-box";
+import { CabsOverview } from "@/features/cab-booking/cabs-overview";
+import { RouteCabs } from "@/features/cab-booking/route-cabs";
 
 const FEATURE_ICONS: Record<string, typeof CheckIcon> = {
   "Clean & Maintained Cars": CarIcon,
@@ -26,18 +30,8 @@ export function CabPageView({ page }: { page: CabPage }) {
   const [homeNav, , cabsNav] = home.nav;
   const crumbs = [homeNav, ...(page.slug && cabsNav ? [cabsNav] : [])].filter(Boolean);
 
-  const copy: CabFormCopy = {
-    pickup: cabForm.pickup,
-    drop: cabForm.drop,
-    time: cabForm.time,
-    vehicle: cabForm.vehicle,
-    countryCodes: cabForm.countryCodes,
-    placeholders: cabForm.placeholders,
-    submitLabel: cabForm.submitLabel,
-    honeypotLabel: cabForm.honeypotLabel,
-    dateRule: cabForm.dateRule,
-    fallback: { label: home.contact.whatsapp.label, value: home.contact.whatsapp.value, href: home.enquiry.whatsappHref },
-  };
+  const booking = cabPageBooking(page.slug);
+  const s = cabSettings();
 
   return (
     <SiteShell section="/cars/">
@@ -53,8 +47,8 @@ export function CabPageView({ page }: { page: CabPage }) {
           </div>
         ) : null}
 
-        <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-12">
-          <div className="flex flex-col gap-6 text-cloud lg:col-span-6 lg:pb-6">
+        <div className="grid items-end gap-8 lg:grid-cols-12 lg:gap-10">
+          <div className="flex flex-col gap-6 text-cloud lg:col-span-12">
             <nav aria-label="Breadcrumb" className="hero-fade [--delay:100ms]">
               <ol className="flex flex-wrap items-center gap-2 label text-cloud/70">
                 {crumbs.map((c) => (
@@ -82,11 +76,11 @@ export function CabPageView({ page }: { page: CabPage }) {
             ) : null}
           </div>
 
-          <div
-            id="enquiry"
-            className="hero-pop scroll-mt-28 rounded-tl-[2rem] rounded-br-[2rem] bg-fog p-5 shadow-[0_30px_80px_-30px_rgb(0_0_0/0.6)] sm:p-7 lg:col-span-6 [--delay:250ms]"
-          >
-            <CabEnquiryForm copy={copy} page={page.slug || undefined} />
+          {/* The booking box (Outstation, Sightseeing, Airport, Hourly), opened on this page's route. */}
+          <div id="enquiry" className="hero-pop scroll-mt-28 text-ink lg:col-span-12 [--delay:250ms]">
+            <Suspense fallback={<div className="h-48 rounded-2xl bg-fog/90" />}>
+              <BookingBox config={boxConfig()} initial={booking.initial} sticky />
+            </Suspense>
           </div>
         </div>
         </div>
@@ -109,6 +103,22 @@ export function CabPageView({ page }: { page: CabPage }) {
           </ul>
         </section>
       ) : null}
+
+      {booking.route ? (
+        <section aria-labelledby="fares-title" className="wrap flex flex-col gap-6 pt-16 md:pt-24">
+          <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+            <h2 id="fares-title" className="font-display text-title font-bold tracking-[-0.03em]">
+              {booking.route.from} to {booking.route.to} cab fares
+            </h2>
+            <p className="rounded-full bg-jade/40 px-4 py-1.5 text-[0.9rem] font-medium text-river-deep">
+              {booking.route.distanceKm} km · {booking.route.duration}
+            </p>
+          </div>
+          <RouteCabs from={booking.route.from} to={booking.route.to} quotes={routeCard(booking.route)} freeCancelHours={s.freeCancelHours} />
+        </section>
+      ) : page.slug ? null : (
+        <CabsOverview />
+      )}
 
       <article className="wrap py-16 md:py-24">
         <CabBlocks blocks={body} />

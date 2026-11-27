@@ -8,6 +8,7 @@ import type { Destination } from "@/content/destinations/schema";
 import { resolveSitePath } from "@/content/routes";
 import type { Crumb } from "./destination-hero";
 import { DestinationTabs, tabCounts, type DestinationTab } from "./destination-tabs";
+import { StickyTabs } from "./sticky-tabs";
 
 export type HeaderFact = { value: React.ReactNode; label: string };
 
@@ -69,16 +70,18 @@ export function SectionHeader({
 
           {/* Two photos, offset: a quiet collage rather than a second hero. */}
           <div aria-hidden="true" className="relative hidden h-56 lg:col-span-5 lg:block xl:h-64">
-            <div className="absolute inset-y-0 right-0 w-[68%] overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] bg-cloud">
+            <div className="absolute inset-y-0 right-0 w-[68%] overflow-hidden rounded-xl bg-cloud">
               <Image src={first.src} alt="" fill sizes="(min-width: 1024px) 26vw, 1px" className="object-cover" priority />
             </div>
-            <div className="absolute bottom-0 left-0 h-[62%] w-[42%] overflow-hidden rounded-t-full rounded-b-[1.5rem] border-[6px] border-fog bg-cloud">
+            <div className="absolute bottom-0 left-0 h-[62%] w-[42%] overflow-hidden rounded-xl border-[6px] border-fog bg-cloud">
               <Image src={second.src} alt="" fill sizes="(min-width: 1024px) 16vw, 1px" className="object-cover" />
             </div>
           </div>
         </div>
 
-        <DestinationTabs slug={destination.slug} current={current} counts={tabCounts(destination)} variant="line" />
+        <StickyTabs floating={<DestinationTabs slug={destination.slug} current={current} counts={tabCounts(destination)} variant="float" />}>
+          <DestinationTabs slug={destination.slug} current={current} counts={tabCounts(destination)} variant="float" />
+        </StickyTabs>
       </div>
     </section>
   );

@@ -139,7 +139,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
         </section>
       ) : null}
 
-      <HubReviews name={name} rating={stats.rating} reviewCount={stats.reviews} reviews={destination.reviews} />
+      <HubReviews name={name} rating={stats.rating} reviewCount={stats.reviews} reviews={destination.reviews} limit={4} viewAllHref={destinationSectionPath(destination.slug, "reviews")} />
 
       <FaqWithCallback title={`Questions about ${name}`} faqs={destination.faqs} callback={destination.callback} />
 

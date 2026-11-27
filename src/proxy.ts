@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { legacyUrl } from "@/config/site";
+import cabBooking from "@/content/cab-booking/data.json";
 import cabIndex from "@/content/cabs/index.json";
 import cabRedirects from "@/content/cabs/redirects.json";
 import { destinationSlugs, liveDestinationSections } from "@/content/destinations/slugs";
@@ -18,6 +19,7 @@ const knownTours = new Set(tourIndex.tours.map((t) => t.slug));
 const knownCabs = new Set(cabIndex.slugs);
 const knownExperiences = new Set<string>(experienceSlugs);
 const knownDestinations = new Set<string>(destinationSlugs);
+const knownPackages = new Set<string>(cabBooking.packages.map((p) => p.slug));
 const liveSections = new Set<string>(liveDestinationSections);
 const lastPagedUrl = tourArchive.lastPagedUrl;
 const redirects = new Map<string, string>(cabRedirects.map((r) => [r.from, r.to]));
@@ -46,6 +48,8 @@ function isKnown(pathname: string): boolean {
   if (cab) return knownCabs.has(cab[1]);
   const experience = pathname.match(/^\/experiences\/([^/]+)\/?$/);
   if (experience) return knownExperiences.has(experience[1]);
+  const pkg = pathname.match(/^\/taxi-packages\/([^/]+)\/?$/);
+  if (pkg) return knownPackages.has(pkg[1]);
   const destination = pathname.match(/^\/destinations\/([^/]+)(?:\/([^/]+))?\/?$/);
   if (destination) return knownDestinations.has(destination[1]) && (!destination[2] || liveSections.has(destination[2]));
   return true;
@@ -90,5 +94,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/tours/:slug/", "/tours/page/:n/", "/cars/:slug/", "/experiences/:slug/", "/destinations/:slug/", "/destinations/:slug/tours/", "/destinations/:slug/experiences/", "/destinations/:slug/attractions/"],
+  matcher: ["/tours/:slug/", "/tours/page/:n/", "/cars/:slug/", "/experiences/:slug/", "/destinations/:slug/", "/destinations/:slug/tours/", "/taxi-packages/:slug/", "/destinations/:slug/experiences/", "/destinations/:slug/attractions/"],
 };

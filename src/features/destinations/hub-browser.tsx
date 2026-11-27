@@ -148,7 +148,7 @@ export function HubBrowser({ name, categories, listings, interlude }: Props) {
 
       <div className="wrap pt-8 pb-4 lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-start lg:gap-10 xl:grid-cols-[16.5rem_minmax(0,1fr)] xl:gap-12">
         {/* Desktop: filter sidebar. */}
-        <aside aria-label="Filter tours" className="sticky top-[calc(var(--header-h)+3rem)] hidden max-h-[calc(100dvh-var(--header-h)-4rem)] flex-col overflow-hidden rounded-tl-[1.75rem] rounded-br-[1.75rem] border border-ink/10 bg-fog lg:flex">
+        <aside aria-label="Filter tours" className="sticky top-[calc(var(--header-h)+3rem)] hidden max-h-[calc(100dvh-var(--header-h)-4rem)] flex-col overflow-hidden rounded-xl border border-ink/10 bg-fog lg:flex">
           <div className="flex items-center justify-between gap-3 border-b border-ink/10 px-5 py-4">
             <span className="flex items-center gap-2 font-display text-[1.1rem] font-bold tracking-[-0.01em]">
               Filters
@@ -185,7 +185,7 @@ export function HubBrowser({ name, categories, listings, interlude }: Props) {
             ))}
           </ul>
         ) : (
-          <div className="flex flex-col items-start gap-4 rounded-tl-[2rem] rounded-br-[2rem] bg-fog p-8">
+          <div className="flex flex-col items-start gap-4 rounded-xl bg-fog p-8">
             <p className="font-display text-[1.3rem] font-semibold">Nothing matches that mix yet.</p>
             <button type="button" onClick={() => apply(EMPTY)} className="cursor-pointer font-display font-semibold underline decoration-mandarin decoration-2 underline-offset-[6px]">
               Clear filters
@@ -230,7 +230,7 @@ function Cell({ listing, interlude }: { listing: DestinationListing; interlude: 
       </li>
       {interlude ? (
         <li style={{ viewTransitionName: "res-interlude" }}>
-          <aside className="relative flex h-full min-h-[22rem] flex-col justify-between gap-8 overflow-hidden rounded-tr-[2.25rem] rounded-bl-[2.25rem] bg-river-deep p-7 text-fog">
+          <aside className="relative flex h-full min-h-[22rem] flex-col justify-between gap-8 overflow-hidden rounded-xl bg-river-deep p-7 text-fog">
             {/* Contour lines, drawn once — a quiet nod to the hills. */}
             <svg aria-hidden="true" viewBox="0 0 200 200" className="pointer-events-none absolute -right-16 -bottom-16 size-72 text-jade/15">
               {[90, 72, 54, 36, 18].map((r) => (

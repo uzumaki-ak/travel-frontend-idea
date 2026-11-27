@@ -32,6 +32,7 @@ export function DestinationHero({
   stats,
   toursHref,
   current,
+  tabs,
 }: {
   destination: Destination;
   crumbs: Crumb[];
@@ -40,6 +41,8 @@ export function DestinationHero({
   toursHref: string;
   /** Last breadcrumb (defaults to the destination's name). */
   current?: string;
+  /** The destination's tabs (glass bar), shown at the foot of the stage. */
+  tabs?: React.ReactNode;
 }) {
   const { name, hero } = destination;
   const days = stats.minDays === stats.maxDays ? `${stats.maxDays} days` : `${stats.minDays}–${stats.maxDays} days`;
@@ -104,6 +107,7 @@ export function DestinationHero({
                 Talk to a local expert
               </a>
             </div>
+            {tabs ? <div className="hero-fade w-full pt-2 [--delay:820ms]">{tabs}</div> : null}
           </div>
         </HeroStage>
       </div>

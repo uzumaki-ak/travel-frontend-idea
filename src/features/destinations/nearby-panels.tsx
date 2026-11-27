@@ -25,7 +25,7 @@ export function NearbyPanels({ nearby }: { nearby: Destination["nearby"] }) {
           >
             <a
               href={n.href}
-              className="group absolute inset-0 overflow-hidden rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-md rounded-bl-md bg-cloud text-fog focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mandarin"
+              className="group absolute inset-0 overflow-hidden rounded-xl bg-cloud text-fog focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mandarin"
             >
               <Image src={n.image.src} alt={n.image.alt} fill sizes="40vw" className="object-cover" />
               <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-river-deep/85 via-river-deep/15 to-transparent" />

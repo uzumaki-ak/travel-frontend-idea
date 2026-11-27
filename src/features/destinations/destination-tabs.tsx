@@ -28,9 +28,11 @@ export function DestinationTabs({
   variant,
 }: {
   slug: string;
-  current: DestinationTab;
+  /** The page this is (none on pages outside the five, e.g. reviews). */
+  current?: DestinationTab;
   counts: Partial<Record<DestinationTab, number>>;
-  variant: "glass" | "line";
+  /** "float": the glass bar's sticky copy, on a solid backdrop. */
+  variant: "glass" | "float" | "line";
 }) {
   const section = (s: DestinationSection) => (liveDestinationSections.includes(s) ? destinationSectionPath(slug, s) : null);
   const tabs: { id: DestinationTab; label: string; href: string | null }[] = [
@@ -41,10 +43,12 @@ export function DestinationTabs({
     { id: "cabs", label: "Cabs", href: "/cars/" },
   ];
 
-  if (variant === "glass") {
+  if (variant === "glass" || variant === "float") {
     return (
       <nav aria-label="Explore this destination" className="w-full max-w-full">
-        <ul className="scrollbar-none mx-auto flex w-max max-w-full gap-1 overflow-x-auto rounded-full border border-fog/25 bg-river-deep/30 p-1.5 backdrop-blur-md">
+        <ul className={`scrollbar-none mx-auto flex w-max max-w-full gap-1 overflow-x-auto rounded-full border p-1.5 backdrop-blur-md ${
+            variant === "float" ? "border-fog/10 bg-river-deep/90 shadow-[0_12px_40px_-12px_rgb(8_44_41/0.6)]" : "border-fog/25 bg-river-deep/30"
+          }`}>
           {tabs.map((t) => {
             const on = t.id === current;
             return (

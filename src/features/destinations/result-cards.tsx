@@ -9,7 +9,7 @@ import { ArrowRightIcon, CarIcon, PinIcon } from "@/ui/icons";
 
 const ARTICLE = "group/card relative flex h-full gap-4 sm:flex-col";
 const PHOTO =
-  "relative aspect-[4/5] w-[31%] shrink-0 self-start overflow-hidden rounded-tl-[1.5rem] rounded-br-[1.5rem] bg-cloud sm:aspect-square sm:w-auto sm:self-stretch sm:rounded-tl-[2.25rem] sm:rounded-br-[2.25rem]";
+  "relative aspect-square w-[31%] shrink-0 self-start overflow-hidden rounded-lg bg-cloud sm:w-auto sm:self-stretch sm:rounded-xl";
 const KIND = "absolute top-2.5 left-2.5 z-10 inline-flex items-center gap-1.5 rounded-full bg-ink px-2.5 py-1 text-[0.75rem] font-medium text-fog sm:top-4 sm:left-4";
 const TITLE = "font-display text-[1rem] leading-snug font-semibold tracking-[-0.01em] sm:text-[1.05rem]";
 const SIZES = "(min-width: 1024px) 22vw, (min-width: 768px) 30vw, (min-width: 640px) 45vw, 34vw";
@@ -19,7 +19,7 @@ const RAIL_SIZES = "(min-width: 640px) 248px, 60vw";
 export function CabCard({ cab, tall = false }: { cab: HubCabCard; tall?: boolean }) {
   return (
     <article className={tall ? "group/card relative flex h-full flex-col gap-4" : ARTICLE}>
-      <div className={tall ? "relative aspect-square overflow-hidden rounded-tl-[2.25rem] rounded-br-[2.25rem] bg-cloud" : PHOTO}>
+      <div className={tall ? "relative aspect-square overflow-hidden rounded-xl bg-cloud" : PHOTO}>
         <Image src={cab.image.src} alt={cab.image.alt} fill sizes={tall ? RAIL_SIZES : SIZES} className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover/card:scale-[1.04]" />
         <span className={KIND}>
           <CarIcon />

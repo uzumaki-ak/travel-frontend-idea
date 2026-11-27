@@ -1,0 +1,1485 @@
+{
+  "settings": {
+    "phone": "+91-6033114867",
+    "whatsapp": "916033114867",
+    "partPercent": 25,
+    "packagePartPercent": 30,
+    "holdMinutes": 15,
+    "minLeadMinutes": 120,
+    "maxAdvanceDays": 90,
+    "serviceHours": {
+      "start": 8,
+      "end": 20,
+      "services": [
+        "outstation",
+        "sightseeing",
+        "hourly"
+      ]
+    },
+    "defaultPickupHour": 9,
+    "freeCancelHours": 24,
+    "airportFreeWait": 45,
+    "hourlyCities": [
+      "Shillong",
+      "Guwahati"
+    ],
+    "dropNote": "If your exact drop address is more than 5 km from the selected city, extra charges will apply. Our team will tell you the amount before the trip."
+  },
+  "vehicles": [
+    {
+      "id": "hatchback",
+      "name": "Swift / Similar",
+      "category": "Hatchback",
+      "seats": 4,
+      "ac": true,
+      "extraKm": 11,
+      "extraHour": 120,
+      "waiting": 120,
+      "perExtraDay": 1800,
+      "shape": "hatch",
+      "order": 0
+    },
+    {
+      "id": "sedan",
+      "name": "Dzire / Similar",
+      "category": "Sedan",
+      "seats": 4,
+      "ac": true,
+      "extraKm": 12,
+      "extraHour": 150,
+      "waiting": 150,
+      "perExtraDay": 2000,
+      "shape": "sedan",
+      "order": 1
+    },
+    {
+      "id": "compact-suv",
+      "name": "Brezza / Similar",
+      "category": "Compact SUV",
+      "seats": 4,
+      "ac": true,
+      "extraKm": 14,
+      "extraHour": 180,
+      "waiting": 150,
+      "perExtraDay": 2300,
+      "shape": "suv",
+      "order": 2
+    },
+    {
+      "id": "ertiga",
+      "name": "Ertiga / Similar",
+      "category": "MUV",
+      "seats": 6,
+      "ac": true,
+      "extraKm": 15,
+      "extraHour": 200,
+      "waiting": 200,
+      "perExtraDay": 2500,
+      "shape": "suv",
+      "order": 3
+    },
+    {
+      "id": "innova-crysta",
+      "name": "Innova Crysta / Similar",
+      "category": "SUV",
+      "seats": 7,
+      "ac": true,
+      "extraKm": 18,
+      "extraHour": 250,
+      "waiting": 250,
+      "perExtraDay": 3000,
+      "shape": "suv",
+      "order": 4
+    },
+    {
+      "id": "tempo-traveller",
+      "name": "Tempo Traveller",
+      "category": "Mini Bus",
+      "seats": 12,
+      "ac": true,
+      "extraKm": 25,
+      "extraHour": 350,
+      "waiting": 300,
+      "perExtraDay": 4500,
+      "shape": "van",
+      "order": 5
+    }
+  ],
+  "routes": [
+    {
+      "id": "guwahati-to-shillong",
+      "from": "Guwahati",
+      "to": "Shillong",
+      "distanceKm": 100,
+      "duration": "3 hrs",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 2200,
+          "round": 3700
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 2500,
+          "round": 4200
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 3000,
+          "round": 5100
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 4200,
+          "round": 7100
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 5500,
+          "round": 9400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 8500,
+          "round": 14400
+        }
+      ]
+    },
+    {
+      "id": "shillong-to-guwahati",
+      "from": "Shillong",
+      "to": "Guwahati",
+      "distanceKm": 100,
+      "duration": "3 hrs",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 2200,
+          "round": 3700
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 2500,
+          "round": 4200
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 3000,
+          "round": 5100
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 4200,
+          "round": 7100
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 5500,
+          "round": 9400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 8500,
+          "round": 14400
+        }
+      ],
+      "page": "shillong-to-guwahati-cabs"
+    },
+    {
+      "id": "shillong-to-cherrapunji",
+      "from": "Shillong",
+      "to": "Cherrapunji",
+      "distanceKm": 55,
+      "duration": "1 hr 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 2000,
+          "round": 3400
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 2300,
+          "round": 3900
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 2700,
+          "round": 4600
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 3200,
+          "round": 5400
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 4000,
+          "round": 6800
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 6500,
+          "round": 11000
+        }
+      ],
+      "page": "shillong-to-cherrapunji-cabs"
+    },
+    {
+      "id": "shillong-to-dawki",
+      "from": "Shillong",
+      "to": "Dawki",
+      "distanceKm": 82,
+      "duration": "2 hrs 15 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 2800,
+          "round": 4800
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 3000,
+          "round": 5100
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 3400,
+          "round": 5800
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 3800,
+          "round": 6500
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 4800,
+          "round": 8200
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 7500,
+          "round": 12800
+        }
+      ],
+      "page": "shillong-to-dawki-cabs"
+    },
+    {
+      "id": "guwahati-to-cherrapunji",
+      "from": "Guwahati",
+      "to": "Cherrapunji",
+      "distanceKm": 150,
+      "duration": "4 hrs 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 4200,
+          "round": 7100
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 4800,
+          "round": 8200
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 5400,
+          "round": 9200
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 6000,
+          "round": 10200
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 7500,
+          "round": 12800
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 11000,
+          "round": 18700
+        }
+      ],
+      "page": "guwahati-to-cherrapunji-cabs"
+    },
+    {
+      "id": "guwahati-to-kaziranga",
+      "from": "Guwahati",
+      "to": "Kaziranga",
+      "distanceKm": 195,
+      "duration": "4 hrs 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 4500,
+          "round": 7600
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 5000,
+          "round": 8500
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 5800,
+          "round": 9900
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 6500,
+          "round": 11000
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 8000,
+          "round": 13600
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 12000,
+          "round": 20400
+        }
+      ],
+      "page": "guwahati-to-kaziranga-cabs"
+    },
+    {
+      "id": "kaziranga-to-shillong",
+      "from": "Kaziranga",
+      "to": "Shillong",
+      "distanceKm": 290,
+      "duration": "7 hrs",
+      "fares": [
+        {
+          "vehicle": "sedan",
+          "oneWay": 7000,
+          "round": 11900
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 7800,
+          "round": 13300
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 8500,
+          "round": 14400
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 10500,
+          "round": 17800
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 15000,
+          "round": 25500
+        }
+      ],
+      "page": "kaziranga-to-shillong-cabs"
+    },
+    {
+      "id": "shillong-to-kaziranga",
+      "from": "Shillong",
+      "to": "Kaziranga",
+      "distanceKm": 290,
+      "duration": "7 hrs",
+      "fares": [
+        {
+          "vehicle": "sedan",
+          "oneWay": 7000,
+          "round": 11900
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 7800,
+          "round": 13300
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 8500,
+          "round": 14400
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 10500,
+          "round": 17800
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "oneWay": 15000,
+          "round": 25500
+        }
+      ],
+      "page": "shillong-to-kaziranga-cabs"
+    },
+    {
+      "id": "jorhat-to-kaziranga",
+      "from": "Jorhat",
+      "to": "Kaziranga",
+      "distanceKm": 95,
+      "duration": "2 hrs",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "oneWay": 2400,
+          "round": 4100
+        },
+        {
+          "vehicle": "sedan",
+          "oneWay": 2700,
+          "round": 4600
+        },
+        {
+          "vehicle": "compact-suv",
+          "oneWay": 3100,
+          "round": 5300
+        },
+        {
+          "vehicle": "ertiga",
+          "oneWay": 3600,
+          "round": 6100
+        },
+        {
+          "vehicle": "innova-crysta",
+          "oneWay": 4500,
+          "round": 7600
+        }
+      ],
+      "page": "jorhat-to-kaziranga-cabs"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "guwahati-airport-shillong",
+      "airport": "Guwahati Airport",
+      "area": "Shillong",
+      "distanceKm": 125,
+      "duration": "3 hrs 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 2700,
+          "drop": 2600
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 3000,
+          "drop": 2800
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 3400,
+          "drop": 3200
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 4500,
+          "drop": 4300
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 5700,
+          "drop": 5400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 8700,
+          "drop": 8300
+        }
+      ]
+    },
+    {
+      "id": "guwahati-airport-guwahati-city",
+      "airport": "Guwahati Airport",
+      "area": "Guwahati City",
+      "distanceKm": 25,
+      "duration": "50 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 800,
+          "drop": 800
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 900,
+          "drop": 900
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 1000,
+          "drop": 1000
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 1400,
+          "drop": 1300
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 1700,
+          "drop": 1600
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 2600,
+          "drop": 2500
+        }
+      ]
+    },
+    {
+      "id": "guwahati-airport-cherrapunji",
+      "airport": "Guwahati Airport",
+      "area": "Cherrapunji",
+      "distanceKm": 180,
+      "duration": "5 hrs",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 4700,
+          "drop": 4400
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 5200,
+          "drop": 4900
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 5800,
+          "drop": 5500
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 7800,
+          "drop": 7400
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 9900,
+          "drop": 9400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 15100,
+          "drop": 14300
+        }
+      ]
+    },
+    {
+      "id": "guwahati-airport-dawki",
+      "airport": "Guwahati Airport",
+      "area": "Dawki",
+      "distanceKm": 210,
+      "duration": "5 hrs 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 5200,
+          "drop": 5000
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 5800,
+          "drop": 5500
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 6500,
+          "drop": 6200
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 8700,
+          "drop": 8300
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 11000,
+          "drop": 10500
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 16800,
+          "drop": 16000
+        }
+      ]
+    },
+    {
+      "id": "guwahati-airport-kaziranga",
+      "airport": "Guwahati Airport",
+      "area": "Kaziranga",
+      "distanceKm": 215,
+      "duration": "5 hrs",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 5000,
+          "drop": 4700
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 5500,
+          "drop": 5200
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 6200,
+          "drop": 5900
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 8200,
+          "drop": 7800
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 10400,
+          "drop": 9900
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 16000,
+          "drop": 15200
+        }
+      ]
+    },
+    {
+      "id": "shillong-airport-shillong",
+      "airport": "Shillong Airport (Umroi)",
+      "area": "Shillong",
+      "distanceKm": 30,
+      "duration": "50 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 1300,
+          "drop": 1200
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 1400,
+          "drop": 1300
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 1600,
+          "drop": 1500
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 2100,
+          "drop": 2000
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 2700,
+          "drop": 2500
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 4100,
+          "drop": 3900
+        }
+      ]
+    },
+    {
+      "id": "shillong-airport-cherrapunji",
+      "airport": "Shillong Airport (Umroi)",
+      "area": "Cherrapunji",
+      "distanceKm": 85,
+      "duration": "2 hrs 30 min",
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "pickup": 2700,
+          "drop": 2600
+        },
+        {
+          "vehicle": "sedan",
+          "pickup": 3000,
+          "drop": 2800
+        },
+        {
+          "vehicle": "compact-suv",
+          "pickup": 3400,
+          "drop": 3200
+        },
+        {
+          "vehicle": "ertiga",
+          "pickup": 4500,
+          "drop": 4300
+        },
+        {
+          "vehicle": "innova-crysta",
+          "pickup": 5700,
+          "drop": 5400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "pickup": 8700,
+          "drop": 8300
+        }
+      ]
+    }
+  ],
+  "hourly": [
+    {
+      "id": "2h-20km",
+      "hours": 2,
+      "km": 20,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 800
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 900
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 1050
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 1250
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 1600
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 2500
+        }
+      ]
+    },
+    {
+      "id": "4h-40km",
+      "hours": 4,
+      "km": 40,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 1350
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 1500
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 1700
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 2100
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 2700
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 4200
+        }
+      ]
+    },
+    {
+      "id": "6h-60km",
+      "hours": 6,
+      "km": 60,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 1900
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 2100
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 2400
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 2950
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 3800
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 5900
+        }
+      ]
+    },
+    {
+      "id": "8h-80km",
+      "hours": 8,
+      "km": 80,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 2350
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 2600
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 3000
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 3650
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 4700
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 7300
+        }
+      ]
+    },
+    {
+      "id": "10h-100km",
+      "hours": 10,
+      "km": 100,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 2800
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 3100
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 3550
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 4350
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 5600
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 8700
+        }
+      ]
+    },
+    {
+      "id": "12h-120km",
+      "hours": 12,
+      "km": 120,
+      "fares": [
+        {
+          "vehicle": "hatchback",
+          "fare": 3250
+        },
+        {
+          "vehicle": "sedan",
+          "fare": 3600
+        },
+        {
+          "vehicle": "compact-suv",
+          "fare": 4150
+        },
+        {
+          "vehicle": "ertiga",
+          "fare": 5050
+        },
+        {
+          "vehicle": "innova-crysta",
+          "fare": 6500
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "fare": 10100
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "guwahati",
+      "name": "Guwahati"
+    },
+    {
+      "id": "shillong",
+      "name": "Shillong"
+    },
+    {
+      "id": "cherrapunji",
+      "name": "Cherrapunji"
+    },
+    {
+      "id": "dawki",
+      "name": "Dawki"
+    }
+  ],
+  "packages": [
+    {
+      "slug": "shillong-local-sightseeing-1-day",
+      "title": "Shillong Local Sightseeing",
+      "excerpt": "Ward's Lake, Elephant Falls, Shillong Peak and Police Bazar in one easy day.",
+      "about": [
+        "A relaxed day around Shillong with your own cab and driver. Start with the falls just outside town, take in the view from the peak, and end the day in Police Bazar for shopping and street food.",
+        "The driver waits at every stop, so you set the pace."
+      ],
+      "days": 1,
+      "nights": 0,
+      "start": "Shillong hotel",
+      "end": "Shillong hotel",
+      "places": [
+        "Elephant Falls",
+        "Shillong Peak",
+        "Ward's Lake",
+        "Police Bazar"
+      ],
+      "locations": [
+        "shillong"
+      ],
+      "cover": "/media/tours/Elephant-Falls-1-kaga.jpg",
+      "gallery": [
+        "/media/tours/Elephant-Falls-1-kaga.jpg",
+        "/media/tours/Lady-Hydari-Park-1-kaga.jpg",
+        "/media/home/police-bazar-8-kaga.jpg",
+        "/media/home/umiam-lake-26-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Falls, peak and the city",
+          "text": "Pickup from your hotel at 9 AM. Elephant Falls, Shillong Peak viewpoint, Lady Hydari Park and Ward's Lake. Evening at Police Bazar, then drop at your hotel."
+        }
+      ],
+      "inclusions": [
+        "Private cab with driver for the day",
+        "Fuel, tolls and parking",
+        "Driver allowance"
+      ],
+      "exclusions": [
+        "Entry tickets at sights",
+        "Meals",
+        "Anything not listed under included"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 2500
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 3400
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 4200
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 6500
+        }
+      ]
+    },
+    {
+      "slug": "cherrapunji-day-trip-from-shillong",
+      "title": "Cherrapunji Day Trip from Shillong",
+      "excerpt": "Nohkalikai, Seven Sisters Falls, Mawsmai Cave and the Eco Park in a single day.",
+      "about": [
+        "The classic day out from Shillong: waterfalls dropping off the plateau, a limestone cave you can walk through, and views over the Bangladesh plains on a clear day."
+      ],
+      "days": 1,
+      "nights": 0,
+      "start": "Shillong hotel",
+      "end": "Shillong hotel",
+      "places": [
+        "Nohkalikai Falls",
+        "Seven Sisters Falls",
+        "Mawsmai Cave",
+        "Eco Park"
+      ],
+      "locations": [
+        "shillong",
+        "cherrapunji"
+      ],
+      "cover": "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+      "gallery": [
+        "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+        "/media/home/Seven-Sisters-Falls-4-kaga.jpg",
+        "/media/tours/Eco-Park-1-kaga.jpg",
+        "/media/home/Dainthlen-Falls-1-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Shillong to Cherrapunji and back",
+          "text": "Leave Shillong at 8 AM. Stop at Duwan Sing Syiem viewpoint, then Nohkalikai Falls, Mawsmai Cave, Seven Sisters Falls and the Eco Park. Back in Shillong by evening."
+        }
+      ],
+      "inclusions": [
+        "Private cab with driver",
+        "Fuel, tolls and parking",
+        "Driver allowance"
+      ],
+      "exclusions": [
+        "Cave and park entry tickets",
+        "Meals"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 3200
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 4300
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 5400
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 8300
+        }
+      ]
+    },
+    {
+      "slug": "dawki-mawlynnong-day-trip",
+      "title": "Dawki & Mawlynnong Day Trip",
+      "excerpt": "The clear Umngot river at Dawki, the living root bridge at Riwai and Mawlynnong village.",
+      "about": [
+        "A full day south of Shillong: the boats on the glass-clear Umngot at Dawki, the root bridge at Riwai and a walk through Mawlynnong, often called Asia's cleanest village."
+      ],
+      "days": 1,
+      "nights": 0,
+      "start": "Shillong hotel",
+      "end": "Shillong hotel",
+      "places": [
+        "Dawki",
+        "Shnongpdeng",
+        "Riwai Root Bridge",
+        "Mawlynnong"
+      ],
+      "locations": [
+        "shillong",
+        "dawki"
+      ],
+      "cover": "/media/home/dawki-river-5-kaga.jpg",
+      "gallery": [
+        "/media/home/dawki-river-5-kaga.jpg",
+        "/media/home/Shnongpdeng-1-kaga.jpg",
+        "/media/home/Umngot-River-1-kaga.jpg",
+        "/media/tours/Balancing-Rock-1-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Shillong to Dawki and Mawlynnong",
+          "text": "Leave at 7:30 AM. Boat ride at Dawki (paid there), lunch at Shnongpdeng, the root bridge at Riwai, then Mawlynnong and the balancing rock. Back in Shillong by night."
+        }
+      ],
+      "inclusions": [
+        "Private cab with driver",
+        "Fuel, tolls and parking",
+        "Driver allowance"
+      ],
+      "exclusions": [
+        "Boat ride",
+        "Entry fees",
+        "Meals"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 3800
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 5100
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 6500
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 9900
+        }
+      ]
+    },
+    {
+      "slug": "shillong-cherrapunji-2n-3d",
+      "title": "Shillong & Cherrapunji 2N/3D",
+      "excerpt": "Pickup at Guwahati, two days in the hills and drop back at Guwahati airport.",
+      "about": [
+        "Three days that cover the best of Meghalaya without rushing: Umiam Lake on the way up, a full day in Cherrapunji, and Dawki before you head back to Guwahati."
+      ],
+      "days": 3,
+      "nights": 2,
+      "start": "Guwahati Airport",
+      "end": "Guwahati Airport",
+      "places": [
+        "Umiam Lake",
+        "Shillong",
+        "Cherrapunji",
+        "Dawki"
+      ],
+      "locations": [
+        "guwahati",
+        "shillong",
+        "cherrapunji"
+      ],
+      "cover": "/media/home/Seven-Sisters-Falls-5-kaga.jpg",
+      "gallery": [
+        "/media/home/Seven-Sisters-Falls-5-kaga.jpg",
+        "/media/home/Umiam-Lake-10-kaga.jpg",
+        "/media/home/Nohkalikai-Falls-1-kaga.jpg",
+        "/media/home/dawki-river-4-kaga.jpg",
+        "/media/home/Double-Decker-5-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Guwahati to Shillong",
+          "text": "Pickup at Guwahati airport or station. Stop at Umiam Lake, check in at Shillong, evening at Police Bazar."
+        },
+        {
+          "title": "Cherrapunji",
+          "text": "Full day in Cherrapunji: Nohkalikai Falls, Mawsmai Cave, Seven Sisters Falls and the Eco Park. Back to Shillong."
+        },
+        {
+          "title": "Dawki and drop",
+          "text": "Morning at Dawki for the river, then drive to Guwahati for your onward journey."
+        }
+      ],
+      "inclusions": [
+        "Private cab for all three days",
+        "Fuel, tolls, parking and permits",
+        "Driver allowance and stay"
+      ],
+      "exclusions": [
+        "Hotels",
+        "Entry tickets and boat rides",
+        "Meals"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 9500
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 12800
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 16200
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 24700
+        }
+      ]
+    },
+    {
+      "slug": "meghalaya-explorer-4n-5d",
+      "title": "Meghalaya Explorer 4N/5D",
+      "excerpt": "Shillong, Cherrapunji, Dawki, Mawlynnong and the Double Decker root bridge.",
+      "about": [
+        "Five days for travellers who want more than the highlights, including the trek down to the Double Decker root bridge at Nongriat."
+      ],
+      "days": 5,
+      "nights": 4,
+      "start": "Guwahati Airport",
+      "end": "Guwahati Airport",
+      "places": [
+        "Shillong",
+        "Cherrapunji",
+        "Nongriat",
+        "Dawki",
+        "Mawlynnong"
+      ],
+      "locations": [
+        "guwahati",
+        "shillong",
+        "cherrapunji",
+        "dawki"
+      ],
+      "cover": "/media/home/Double-Decker-5-kaga.jpg",
+      "gallery": [
+        "/media/home/Double-Decker-5-kaga.jpg",
+        "/media/tours/Double-Decker-Trekking-Path-1-kaga.jpg",
+        "/media/home/Laitlum-Canyons-5-kaga.jpg",
+        "/media/home/dawki-river-6-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Guwahati to Shillong",
+          "text": "Pickup in Guwahati, Umiam Lake on the way, evening free in Shillong."
+        },
+        {
+          "title": "Shillong sightseeing",
+          "text": "Laitlum Canyons in the morning, Elephant Falls and Shillong Peak after lunch."
+        },
+        {
+          "title": "Cherrapunji",
+          "text": "Drive to Cherrapunji, falls and caves through the day, night in Cherrapunji."
+        },
+        {
+          "title": "Double Decker root bridge",
+          "text": "Trek down to Nongriat and back (about 3,500 steps each way). Rest in the evening."
+        },
+        {
+          "title": "Dawki and drop",
+          "text": "Dawki and Mawlynnong, then the drive to Guwahati for your onward journey."
+        }
+      ],
+      "inclusions": [
+        "Private cab for all five days",
+        "Fuel, tolls, parking and permits",
+        "Driver allowance and stay"
+      ],
+      "exclusions": [
+        "Hotels",
+        "Guide for the trek",
+        "Entry tickets and boat rides",
+        "Meals"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 16000
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 21600
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 27200
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 41600
+        }
+      ]
+    },
+    {
+      "slug": "guwahati-city-tour-1-day",
+      "title": "Guwahati City Tour",
+      "excerpt": "Kamakhya Temple, Umananda, the riverfront and the state museum.",
+      "about": [
+        "A day around Guwahati with a driver who knows the traffic: the temple on Nilachal Hill in the morning, the Brahmaputra riverfront in the evening."
+      ],
+      "days": 1,
+      "nights": 0,
+      "start": "Guwahati hotel",
+      "end": "Guwahati hotel",
+      "places": [
+        "Kamakhya Temple",
+        "Umananda",
+        "Brahmaputra riverfront"
+      ],
+      "locations": [
+        "guwahati"
+      ],
+      "cover": "/media/home/guwahati-assasm-unsplash-1-kaga.jpg",
+      "gallery": [
+        "/media/home/guwahati-assasm-unsplash-1-kaga.jpg",
+        "/media/home/guwahati-assasm-unsplash-2-kaga.jpg",
+        "/media/home/assam-unsplash-1-kaga.jpg"
+      ],
+      "itinerary": [
+        {
+          "title": "Around Guwahati",
+          "text": "Kamakhya Temple, Basistha Ashram, the state museum and an evening on the riverfront."
+        }
+      ],
+      "inclusions": [
+        "Private cab with driver",
+        "Fuel and parking",
+        "Driver allowance"
+      ],
+      "exclusions": [
+        "Entry tickets",
+        "Ferry to Umananda",
+        "Meals"
+      ],
+      "prices": [
+        {
+          "vehicle": "sedan",
+          "price": 2200
+        },
+        {
+          "vehicle": "ertiga",
+          "price": 3000
+        },
+        {
+          "vehicle": "innova-crysta",
+          "price": 3700
+        },
+        {
+          "vehicle": "tempo-traveller",
+          "price": 5700
+        }
+      ]
+    }
+  ],
+  "areas": [
+    {
+      "name": "Meghalaya",
+      "cities": [
+        "Shillong",
+        "Cherrapunji",
+        "Dawki",
+        "Shillong Airport (Umroi)"
+      ],
+      "stock": {
+        "hatchback": 4,
+        "sedan": 6,
+        "compact-suv": 3,
+        "ertiga": 4,
+        "innova-crysta": 3,
+        "tempo-traveller": 1
+      }
+    },
+    {
+      "name": "Assam",
+      "cities": [
+        "Guwahati",
+        "Guwahati Airport",
+        "Guwahati City",
+        "Kaziranga",
+        "Jorhat"
+      ],
+      "stock": {
+        "hatchback": 5,
+        "sedan": 8,
+        "compact-suv": 3,
+        "ertiga": 4,
+        "innova-crysta": 4,
+        "tempo-traveller": 2
+      }
+    }
+  ],
+  "terms": {
+    "notices": [
+      "Cab and driver details will be shared up to 30 mins before departure.",
+      "Cab operator will be assigned on booking completion."
+    ],
+    "sections": {
+      "inclusions": [
+        [
+          "Toll, tax and other charges",
+          "Tolls and state taxes are included in the fare"
+        ],
+        [
+          "Driver allowance",
+          "Driver food and stay charges are included"
+        ],
+        [
+          "Fuel charges included",
+          "Fuel cost for your trip is included in the fare"
+        ]
+      ],
+      "exclusions": [
+        [
+          "Parking and entry fees",
+          "Paid directly at actuals, if any"
+        ],
+        [
+          "Extra stops",
+          "Stops not agreed at booking may be charged extra"
+        ],
+        [
+          "Extra km",
+          "Charged per km beyond the included km"
+        ]
+      ],
+      "cab": [
+        [
+          "Driver details",
+          "Driver details will be shared up to 30 mins before departure. If the driver or cab that arrives is different from what we have shared, please call us before boarding."
+        ],
+        [
+          "Car type",
+          "You get the cab category you booked. The model shown is indicative (\"or similar\")."
+        ],
+        [
+          "AC usage",
+          "AC may be switched off on steep hill stretches."
+        ],
+        [
+          "Delays",
+          "In case of traffic, weather or road conditions, pickup may be delayed by up to 30 mins."
+        ]
+      ],
+      "cancellation": [
+        [
+          "After the free period",
+          "No refund for cancellations after the free cancellation time."
+        ]
+      ],
+      "luggage": [
+        [
+          "Bags",
+          "Boot space depends on the cab. Please tell us in advance if you are carrying extra luggage."
+        ]
+      ],
+      "other": [
+        [
+          "Contact",
+          "For any change to your booking, call us on +91-6033114867."
+        ],
+        [
+          "Pets",
+          "Please tell us in advance if you are travelling with pets."
+        ]
+      ]
+    }
+  },
+  "pagePrefill": {
+    "guwahati-airport-to-shillong-cabs": {
+      "tab": "airport",
+      "dir": "from",
+      "from": "Guwahati Airport",
+      "to": "Shillong"
+    },
+    "shillong-to-guwahati-airport-cabs": {
+      "tab": "airport",
+      "dir": "to",
+      "from": "Shillong",
+      "to": "Guwahati Airport"
+    },
+    "shillong-to-guwahati-shared-cabs": {
+      "tab": "outstation",
+      "from": "Shillong",
+      "to": "Guwahati"
+    },
+    "tempo-traveller-in-shillong": {
+      "tab": "hourly",
+      "city": "Shillong"
+    },
+    "tempo-traveller-in-guwahati": {
+      "tab": "hourly",
+      "city": "Guwahati"
+    },
+    "urbania-in-guwahati": {
+      "tab": "hourly",
+      "city": "Guwahati"
+    }
+  }
+}
